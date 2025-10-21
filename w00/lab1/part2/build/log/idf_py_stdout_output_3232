@@ -1,0 +1,160 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\User\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\STIC 1\Week-13-FreeRTOS_Worksheets\w00\lab1\part2\build\part2.elf D:\STIC 1\Week-13-FreeRTOS_Worksheets\w00\lab1\part2\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\User\esp\v5.5.1\esp-idf\tools\idf.py'
+Y�"%=5
+[0;32mI (41) boot.esp32�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 21 2025 23:42:59[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a330h ( 41776) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001a358 vaddr=3ffb0000 size=023f8h (  9208) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c758 vaddr=40080000 size=038c0h ( 14528) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=14770h ( 83824) map[0m
+[0;32mI (142) esp_image: segment 4: paddr=00034798 vaddr=400838c0 size=096f0h ( 38640) load[0m
+[0;32mI (158) esp_image: segment 5: paddr=0003de90 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (164) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (164) boot: Disabling RNG early entropy source...[0m
+[0;32mI (176) cpu_start: Multicore app[0m
+[0;32mI (184) cpu_start: Pro cpu start user code[0m
+[0;32mI (184) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (184) app_init: Application information:[0m
+[0;32mI (184) app_init: Project name:     part2[0m
+[0;32mI (188) app_init: App version:      f7526bb[0m
+[0;32mI (192) app_init: Compile time:     Oct 21 2025 23:42:31[0m
+[0;32mI (197) app_init: ELF file SHA256:  dc8867c4c...[0m
+[0;32mI (201) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (205) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (209) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (213) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (217) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (223) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (228) heap_init: At 3FFB2CC0 len 0002D340 (180 KiB): DRAM[0m
+[0;32mI (233) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (239) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (244) heap_init: At 4008CFB0 len 00013050 (76 KiB): IRAM[0m
+[0;32mI (251) spi_flash: detected chip: generic[0m
+[0;32mI (253) spi_flash: flash io: dio[0m
+[0;33mW (256) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (269) main_task: Started on CPU0[0m
+[0;32mI (279) main_task: Calling app_main()[0m
+[0;32mI (279) MULTITASK: Multitasking System Started[0m
+[0;32mI (279) MULTITASK: Reading sensor...[0m
+[0;32mI (279) MULTITASK: Controlling actuator...[0m
+[0;32mI (279) MULTITASK: Processing data...[0m
+[0;32mI (289) main_task: Returned from app_main()[0m
+[0;32mI (889) MULTITASK: Processing data...[0m
+[0;32mI (1279) MULTITASK: Reading sensor...[0m
+[0;32mI (1279) MULTITASK: Controlling actuator...[0m
+[0;32mI (1489) MULTITASK: Processing data...[0m
+[0;32mI (2089) MULTITASK: Processing data...[0m
+[0;32mI (2279) MULTITASK: Reading sensor...[0m
+[0;32mI (2279) MULTITASK: Controlling actuator...[0m
+[0;32mI (2689) MULTITASK: Processing data...[0m
+[0;32mI (3279) MULTITASK: Reading sensor...[0m
+[0;32mI (3279) MULTITASK: Controlling actuator...[0m
+[0;32mI (3289) MULTITASK: Processing data...[0m
+[0;33mW (3799) MULTITASK: EMERGENCY! Button pressed - Immediate response![0m
+[0;32mI (3889) MULTITASK: Processing data...[0m
+[0;33mW (3909) MULTITASK: EMERGENCY! Button pressed - Immediate response![0m
+[0;33mW (4019) MULTITASK: EMERGENCY! Button pressed - Immediate response![0m
+[0;33mW (4129) MULTITASK: EMERGENCY! Button pressed - Immediate response![0m
+[0;33mW (4239) MULTITASK: EMERGENCY! Button pressed - Immediate response![0m
+[0;32mI (4279) MULTITASK: Reading sensor...[0m
+[0;32mI (4279) MULTITASK: Controlling actuator...[0m
+[0;32mI (4489) MULTITASK: Processing data...[0m
+[0;32mI (5089) MULTITASK: Processing data...[0m
+[0;32mI (5279) MULTITASK: Reading sensor...[0m
+[0;32mI (5279) MULTITASK: Controlling actuator...[0m
+[0;32mI (5689) MULTITASK: Processing data...[0m
+[0;32mI (6279) MULTITASK: Reading sensor...[0m
+[0;32mI (6279) MULTITASK: Controlling actuator...[0m
+[0;32mI (6289) MULTITASK: Processing data...[0m
+[0;32mI (6889) MULTITASK: Processing data...[0m
+[0;32mI (7279) MULTITASK: Reading sensor...[0m
+[0;32mI (7279) MULTITASK: Controlling actuator...[0m
+[0;32mI (7489) MULTITASK: Processing data...[0m
+[0;32mI (8089) MULTITASK: Processing data...[0m
+[0;32mI (8279) MULTITASK: Reading sensor...[0m
+[0;32mI (8279) MULTITASK: Controlling actuator...[0m
+[0;32mI (8689) MULTITASK: Processing data...[0m
+[0;32mI (9279) MULTITASK: Reading sensor...[0m
+[0;32mI (9279) MULTITASK: Controlling actuator...[0m
+[0;32mI (9289) MULTITASK: Processing data...[0m
+[0;32mI (9889) MULTITASK: Processing data...[0m
+[0;33mW (10199) MULTITASK: EMERGENCY! Button pressed - Immediate response![0m
+[0;32mI (10279) MULTITASK: Reading sensor...[0m
+[0;32mI (10279) MULTITASK: Controlling actuator...[0m
+[0;33mW (10309) MULTITASK: EMERGENCY! Button pressed - Immediate response![0m
+[0;32mI (10489) MULTITASK: Processing data...[0m
+[0;32mI (11089) MULTITASK: Processing data...[0m
+[0;32mI (11279) MULTITASK: Reading sensor...[0m
+[0;32mI (11279) MULTITASK: Controlling actuator...[0m
+[0;32mI (11689) MULTITASK: Processing data...[0m
+[0;33mW (11879) MULTITASK: EMERGENCY! Button pressed - Immediate response![0m
+[0;33mW (11989) MULTITASK: EMERGENCY! Button pressed - Immediate response![0m
+[0;32mI (12279) MULTITASK: Reading sensor...[0m
+[0;32mI (12279) MULTITASK: Controlling actuator...[0m
+[0;32mI (12289) MULTITASK: Processing data...[0m
+[0;32mI (12889) MULTITASK: Processing data...[0m
+[0;32mI (13279) MULTITASK: Reading sensor...[0m
+[0;32mI (13279) MULTITASK: Controlling actuator...[0m
+[0;32mI (13489) MULTITASK: Processing data...[0m
+[0;32mI (14089) MULTITASK: Processing data...[0m
+[0;33mW (14249) MULTITASK: EMERGENCY! Button pressed - Immediate response![0m
+[0;32mI (14279) MULTITASK: Reading sensor...[0m
+[0;32mI (14279) MULTITASK: Controlling actuator...[0m
+[0;32mI (14689) MULTITASK: Processing data...[0m
+[0;32mI (15279) MULTITASK: Reading sensor...[0m
+[0;32mI (15279) MULTITASK: Controlling actuator...[0m
+[0;32mI (15289) MULTITASK: Processing data...[0m
+[0;32mI (15889) MULTITASK: Processing data...[0m
+[0;32mI (16279) MULTITASK: Reading sensor...[0m
+[0;32mI (16279) MULTITASK: Controlling actuator...[0m
+[0;33mW (16419) MULTITASK: EMERGENCY! Button pressed - Immediate response![0m
+[0;32mI (16489) MULTITASK: Processing data...[0m
+[0;32mI (17089) MULTITASK: Processing data...[0m
+[0;32mI (17279) MULTITASK: Reading sensor...[0m
+[0;32mI (17279) MULTITASK: Controlling actuator...[0m
+[0;33mW (17469) MULTITASK: EMERGENCY! Button pressed - Immediate response![0m
+[0;32mI (17689) MULTITASK: Processing data...[0m
+[0;32mI (18279) MULTITASK: Reading sensor...[0m
+[0;32mI (18279) MULTITASK: Controlling actuator...[0m
+[0;32mI (18289) MULTITASK: Processing data...[0m
+[0;33mW (18599) MULTITASK: EMERGENCY! Button pressed - Immediate response![0m
+[0;32mI (18889) MULTITASK: Processing data...[0m
+[0;32mI (19279) MULTITASK: Reading sensor...[0m
+[0;32mI (19279) MULTITASK: Controlling actuator...[0m
+[0;33mW (19349) MULTITASK: EMERGENCY! Button pressed - Immediate response![0m
+[0;32mI (19489) MULTITASK: Processing data...[0m
+[0;33mW (20009) MULTITASK: EMERGENCY! Button pressed - Immediate response![0m
+[0;32mI (20089) MULTITASK: Processing data...[0m
+[0;32mI (20279) MULTITASK: Reading sensor...[0m
+[0;32mI (20279) MULTITASK: Controlling actuator...[0m
+[0;32mI (20689) MULTITASK: Processing data...[0m
+[0;33mW (20809) MULTITASK: EMERGENCY! Button pressed - Immediate response![0m
+[0;32mI (21279) MULTITASK: Reading sensor...[0m
+[0;32mI (21279) MULTITASK: Controlling actuator...[0m
+[0;32mI (21289) MULTITASK: Processing data...[0m
+[0;32mI (21889) MULTITASK: Processing data...[0m
+[0;32mI (22279) MULTITASK: Reading sensor...[0m
+[0;32mI (22279) MULTITASK: Controlling actuator...[0m
+[0;32mI (22489) MULTITASK: Processing data...[0m
