@@ -1,0 +1,127 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\User\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\STIC 1\Week-13-FreeRTOS_Worksheets\02-tasks-and-scheduling\w02\lab3\Stack_Monitoring\build\Stack_Monitoring.elf D:\STIC 1\Week-13-FreeRTOS_Worksheets\02-tasks-and-scheduling\w02\lab3\Stack_Monitoring\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\User\esp\v5.5.1\esp-idf\tools\idf.py'
+$�"%=5
+[0;32mI (41) boot.esp�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 23 2025 17:16:52[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a880h ( 43136) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001a8a8 vaddr=3ffb0000 size=023f8h (  9208) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001cca8 vaddr=40080000 size=03370h ( 13168) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17be0h ( 97248) map[0m
+[0;32mI (147) esp_image: segment 4: paddr=00037c08 vaddr=40083370 size=09c30h ( 39984) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=00041840 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (170) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (170) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (190) cpu_start: Pro cpu start user code[0m
+[0;32mI (190) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (190) app_init: Application information:[0m
+[0;32mI (190) app_init: Project name:     Stack_Monitoring[0m
+[0;32mI (194) app_init: App version:      40bce8f-dirty[0m
+[0;32mI (199) app_init: Compile time:     Oct 23 2025 17:16:16[0m
+[0;32mI (204) app_init: ELF file SHA256:  c0fa38e34...[0m
+[0;32mI (208) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (212) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (216) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (220) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (224) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (230) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (235) heap_init: At 3FFB2CD0 len 0002D330 (180 KiB): DRAM[0m
+[0;32mI (240) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (246) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (251) heap_init: At 4008CFA0 len 00013060 (76 KiB): IRAM[0m
+[0;32mI (258) spi_flash: detected chip: generic[0m
+[0;32mI (260) spi_flash: flash io: dio[0m
+[0;33mW (263) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (276) main_task: Started on CPU0[0m
+[0;32mI (286) main_task: Calling app_main()[0m
+[0;32mI (286) STACK_MONITOR: === FreeRTOS Stack Monitoring Demo (Step 3: Optimization) ===[0m
+[0;32mI (286) STACK_MONITOR: LED: GPIO2=OK, GPIO4=Warning/Critical[0m
+[0;32mI (286) STACK_MONITOR: Light Stack Task started (minimal usage)[0m
+[0;32mI (296) STACK_MONITOR: Medium Stack Task started (moderate usage)[0m
+[0;32mI (306) STACK_MONITOR: Optimized Heavy Task started[0m
+[0;32mI (306) STACK_MONITOR: Optimized task cycle 1: Using heap instead of stack[0m
+[0;32mI (316) STACK_MONITOR: Optimized task stack: 1256 bytes remaining[0m
+[0;32mI (316) STACK_MONITOR: Stack Monitor Task started[0m
+[0;32mI (326) STACK_MONITOR: All tasks created. Monitor will report every 3 seconds.[0m
+[0;32mI (326) main_task: Returned from app_main()[0m
+[0;32mI (446) STACK_MONITOR: Light task cycle: 1[0m
+[0;32mI (506) STACK_MONITOR: Medium task: buffer[0]=A, numbers[49]=2401[0m
+[0;32mI (626) STACK_MONITOR: [0m
+=== STACK USAGE REPORT ===
+[0;32mI (626) STACK_MONITOR: LightTask: 1252 bytes remaining[0m
+[0;32mI (626) STACK_MONITOR: MediumTask: 768 bytes remaining[0m
+[0;32mI (626) STACK_MONITOR: HeavyTask(OPT): 1256 bytes remaining[0m
+[0;32mI (626) STACK_MONITOR: StackMonitor: 2228 bytes remaining[0m
+[0;32mI (636) STACK_MONITOR: Free heap: 292464 bytes[0m
+[0;32mI (636) STACK_MONITOR: Min free heap: 288008 bytes[0m
+[0;32mI (2446) STACK_MONITOR: Light task cycle: 2[0m
+[0;32mI (3506) STACK_MONITOR: Medium task: buffer[0]=A, numbers[49]=2401[0m
+[0;32mI (3646) STACK_MONITOR: [0m
+=== STACK USAGE REPORT ===
+[0;32mI (3646) STACK_MONITOR: LightTask: 1252 bytes remaining[0m
+[0;32mI (3646) STACK_MONITOR: MediumTask: 768 bytes remaining[0m
+[0;32mI (3646) STACK_MONITOR: HeavyTask(OPT): 1256 bytes remaining[0m
+[0;32mI (3646) STACK_MONITOR: StackMonitor: 2228 bytes remaining[0m
+[0;32mI (3656) STACK_MONITOR: Free heap: 292464 bytes[0m
+[0;32mI (3656) STACK_MONITOR: Min free heap: 288008 bytes[0m
+[0;32mI (4316) STACK_MONITOR: Optimized task cycle 2: Using heap instead of stack[0m
+[0;32mI (4316) STACK_MONITOR: Optimized task stack: 1256 bytes remaining[0m
+[0;32mI (4446) STACK_MONITOR: Light task cycle: 3[0m
+[0;32mI (6446) STACK_MONITOR: Light task cycle: 4[0m
+[0;32mI (6506) STACK_MONITOR: Medium task: buffer[0]=A, numbers[49]=2401[0m
+[0;32mI (6666) STACK_MONITOR: [0m
+=== STACK USAGE REPORT ===
+[0;32mI (6666) STACK_MONITOR: LightTask: 1252 bytes remaining[0m
+[0;32mI (6666) STACK_MONITOR: MediumTask: 768 bytes remaining[0m
+[0;32mI (6666) STACK_MONITOR: HeavyTask(OPT): 1256 bytes remaining[0m
+[0;32mI (6666) STACK_MONITOR: StackMonitor: 2228 bytes remaining[0m
+[0;32mI (6676) STACK_MONITOR: Free heap: 292464 bytes[0m
+[0;32mI (6676) STACK_MONITOR: Min free heap: 288008 bytes[0m
+[0;32mI (8316) STACK_MONITOR: Optimized task cycle 3: Using heap instead of stack[0m
+[0;32mI (8316) STACK_MONITOR: Optimized task stack: 1256 bytes remaining[0m
+[0;32mI (8446) STACK_MONITOR: Light task cycle: 5[0m
+[0;32mI (9506) STACK_MONITOR: Medium task: buffer[0]=A, numbers[49]=2401[0m
+[0;32mI (9686) STACK_MONITOR: [0m
+=== STACK USAGE REPORT ===
+[0;32mI (9686) STACK_MONITOR: LightTask: 1252 bytes remaining[0m
+[0;32mI (9686) STACK_MONITOR: MediumTask: 768 bytes remaining[0m
+[0;32mI (9686) STACK_MONITOR: HeavyTask(OPT): 1256 bytes remaining[0m
+[0;32mI (9686) STACK_MONITOR: StackMonitor: 2228 bytes remaining[0m
+[0;32mI (9696) STACK_MONITOR: Free heap: 292464 bytes[0m
+[0;32mI (9696) STACK_MONITOR: Min free heap: 288008 bytes[0m
+[0;32mI (10446) STACK_MONITOR: Light task cycle: 6[0m
+[0;32mI (12316) STACK_MONITOR: Optimized task cycle 4: Using heap instead of stack[0m
+[0;32mI (12316) STACK_MONITOR: Optimized task stack: 1256 bytes remaining[0m
+[0;32mI (12446) STACK_MONITOR: Light task cycle: 7[0m
+[0;32mI (12506) STACK_MONITOR: Medium task: buffer[0]=A, numbers[49]=2401[0m
+[0;32mI (12706) STACK_MONITOR: [0m
+=== STACK USAGE REPORT ===
+[0;32mI (12706) STACK_MONITOR: LightTask: 1252 bytes remaining[0m
+[0;32mI (12706) STACK_MONITOR: MediumTask: 768 bytes remaining[0m
+[0;32mI (12706) STACK_MONITOR: HeavyTask(OPT): 1256 bytes remaining[0m
+[0;32mI (12706) STACK_MONITOR: StackMonitor: 2228 bytes remaining[0m
+[0;32mI (12716) STACK_MONITOR: Free heap: 292464 bytes[0m
+[0;32mI (12716) STACK_MONITOR: Min free heap: 288008 bytes[0m
+[0;32mI (14446) STACK_MONITOR: Light task cycle: 8[0m

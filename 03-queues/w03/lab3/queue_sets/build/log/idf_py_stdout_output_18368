@@ -1,0 +1,149 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\User\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\STIC 1\Week-13-FreeRTOS_Worksheets\03-queues\w03\lab3\queue_sets\build\queue_sets.elf D:\STIC 1\Week-13-FreeRTOS_Worksheets\03-queues\w03\lab3\queue_sets\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\User\esp\v5.5.1\esp-idf\tools\idf.py'
+s Jul 29 20�LJ��ѹesp32: SPI Flash S�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 23 2025 18:11:22[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a458h ( 42072) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001a480 vaddr=3ffb0000 size=023f8h (  9208) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c880 vaddr=40080000 size=03798h ( 14232) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142e8h ( 82664) map[0m
+[0;32mI (142) esp_image: segment 4: paddr=00034310 vaddr=40083798 size=099e8h ( 39400) load[0m
+[0;32mI (158) esp_image: segment 5: paddr=0003dd00 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (164) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (164) boot: Disabling RNG early entropy source...[0m
+[0;32mI (176) cpu_start: Multicore app[0m
+[0;32mI (184) cpu_start: Pro cpu start user code[0m
+[0;32mI (184) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (184) app_init: Application information:[0m
+[0;32mI (184) app_init: Project name:     queue_sets[0m
+[0;32mI (188) app_init: App version:      40bce8f-dirty[0m
+[0;32mI (193) app_init: Compile time:     Oct 23 2025 18:10:30[0m
+[0;32mI (198) app_init: ELF file SHA256:  fbbea1807...[0m
+[0;32mI (202) app_init: ESP-IDF:          v5.5.1[0m
+I (206) efuse_init: Min chip rev:     v0.0
+[0;32mI (210) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (214) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (218) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (224) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (229) heap_init: At 3FFB2CE8 len 0002D318 (180 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (240) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 4008D180 len 00012E80 (75 KiB): IRAM[0m
+[0;32mI (252) spi_flash: detected chip: generic[0m
+[0;32mI (254) spi_flash: flash io: dio[0m
+[0;33mW (257) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (270) main_task: Started on CPU0[0m
+[0;32mI (280) main_task: Calling app_main()[0m
+[0;32mI (280) QUEUE_SETS: Queue Sets Implementation Lab Starting...[0m
+[0;32mI (280) QUEUE_SETS: Queue set created and configured successfully[0m
+[0;32mI (280) QUEUE_SETS: User input task started[0m
+[0;32mI (290) QUEUE_SETS: 🔘 User: Button 3 pressed for 279ms[0m
+[0;32mI (290) QUEUE_SETS: Network task started[0m
+[0;32mI (290) QUEUE_SETS: 🌐 Network [WiFi]: Heartbeat signal (P:3)[0m
+[0;32mI (300) QUEUE_SETS: Timer task started[0m
+[0;32mI (300) QUEUE_SETS: Processor task started - waiting for events...[0m
+I (310) QUEUE_SETS: → Processing USER input: Button 3 (279ms)
+[0;32mI (320) QUEUE_SETS: ⚙️  Action: Settings menu[0m
+[0;32mI (320) QUEUE_SETS: All tasks created. System operational.[0m
+[0;32mI (330) QUEUE_SETS: System monitor started[0m
+[0;32mI (520) QUEUE_SETS: → Processing NETWORK msg: [WiFi] Heartbeat signal[0m
+[0;32mI (2430) main_task: Returned from app_main()[0m
+[0;32mI (4030) QUEUE_SETS: → Processing NETWORK msg: [WiFi] Alert notification[0m
+[0;32mI (4030) QUEUE_SETS: 🌐 Network [WiFi]: Alert notification (P:1)[0m
+[0;32mI (4040) QUEUE_SETS: 🔘 User: Button 1 pressed for 234ms[0m
+[0;32mI (4230) QUEUE_SETS: → Processing USER input: Button 1 (234ms)[0m
+[0;32mI (4230) QUEUE_SETS: 💡 Action: Toggle LED[0m
+[0;32mI (5630) QUEUE_SETS: → Processing NETWORK msg: [LoRa] Data synchronization[0m
+[0;32mI (5630) QUEUE_SETS: 🌐 Network [LoRa]: Data synchronization (P:1)[0m
+[0;32mI (7890) QUEUE_SETS: → Processing NETWORK msg: [Bluetooth] Data synchronization[0m
+[0;33mW (7890) QUEUE_SETS: 🚨 High priority network message![0m
+[0;32mI (7890) QUEUE_SETS: 🌐 Network [Bluetooth]: Data synchronization (P:5)[0m
+[0;32mI (10300) QUEUE_SETS: → Processing TIMER event: Periodic maintenance[0m
+[0;32mI (10300) QUEUE_SETS: 📈 Stats - Sensor:0, User:2, Network:4, Timer:1[0m
+[0;32mI (10300) QUEUE_SETS: ⏰ Timer: Periodic timer fired[0m
+[0;32mI (11500) QUEUE_SETS: → Processing NETWORK msg: [Ethernet] Heartbeat signal[0m
+[0;32mI (11500) QUEUE_SETS: 🌐 Network [Ethernet]: Heartbeat signal (P:1)[0m
+[0;32mI (12010) QUEUE_SETS: → Processing USER input: Button 3 (466ms)[0m
+[0;32mI (12010) QUEUE_SETS: ⚙️  Action: Settings menu[0m
+[0;32mI (12010) QUEUE_SETS: 🔘 User: Button 3 pressed for 466ms[0m
+[0;32mI (12790) QUEUE_SETS: → Processing NETWORK msg: [Ethernet] Configuration changed[0m
+[0;32mI (12790) QUEUE_SETS: 🌐 Network [Ethernet]: Configuration changed (P:1)[0m
+[0;32mI (14660) QUEUE_SETS: → Processing NETWORK msg: [Bluetooth] Heartbeat signal[0m
+[0;32mI (14660) QUEUE_SETS: 🌐 Network [Bluetooth]: Heartbeat signal (P:3)[0m
+[0;32mI (15330) QUEUE_SETS: [0m
+═══ SYSTEM MONITOR ═══
+[0;32mI (15330) QUEUE_SETS: Queue States:[0m
+[0;32mI (15330) QUEUE_SETS:   Sensor Queue:  0/5[0m
+[0;32mI (15330) QUEUE_SETS:   User Queue:    0/3[0m
+[0;32mI (15330) QUEUE_SETS:   Network Queue: 0/8[0m
+[0;32mI (15330) QUEUE_SETS: Message Statistics:[0m
+[0;32mI (15340) QUEUE_SETS:   Sensor:  0 messages[0m
+[0;32mI (15340) QUEUE_SETS:   User:    3 messages[0m
+[0;32mI (15350) QUEUE_SETS:   Network: 7 messages[0m
+[0;32mI (15350) QUEUE_SETS:   Timer:   1 events[0m
+[0;32mI (15350) QUEUE_SETS: ═══════════════════════[0m
+
+[0;32mI (15730) QUEUE_SETS: → Processing USER input: Button 3 (685ms)[0m
+[0;32mI (15730) QUEUE_SETS: ⚙️  Action: Settings menu[0m
+[0;32mI (15730) QUEUE_SETS: 🔘 User: Button 3 pressed for 685ms[0m
+[0;32mI (18340) QUEUE_SETS: → Processing NETWORK msg: [Ethernet] Data synchronization[0m
+[0;33mW (18340) QUEUE_SETS: 🚨 High priority network message![0m
+[0;32mI (18340) QUEUE_SETS: 🌐 Network [Ethernet]: Data synchronization (P:4)[0m
+[0;32mI (19340) QUEUE_SETS: → Processing USER input: Button 3 (166ms)[0m
+[0;32mI (19340) QUEUE_SETS: ⚙️  Action: Settings menu[0m
+[0;32mI (19340) QUEUE_SETS: 🔘 User: Button 3 pressed for 166ms[0m
+[0;32mI (20400) QUEUE_SETS: → Processing TIMER event: Periodic maintenance[0m
+[0;32mI (20400) QUEUE_SETS: 📈 Stats - Sensor:0, User:5, Network:8, Timer:2[0m
+[0;32mI (20400) QUEUE_SETS: ⏰ Timer: Periodic timer fired[0m
+[0;32mI (21710) QUEUE_SETS: → Processing NETWORK msg: [LoRa] Configuration changed[0m
+[0;33mW (21710) QUEUE_SETS: 🚨 High priority network message![0m
+[0;32mI (21710) QUEUE_SETS: 🌐 Network [LoRa]: Configuration changed (P:5)[0m
+[0;32mI (24720) QUEUE_SETS: → Processing NETWORK msg: [Bluetooth] Configuration changed[0m
+[0;32mI (24720) QUEUE_SETS: 🌐 Network [Bluetooth]: Configuration changed (P:1)[0m
+[0;32mI (24870) QUEUE_SETS: 🔘 User: Button 1 pressed for 888ms[0m
+[0;32mI (24920) QUEUE_SETS: → Processing USER input: Button 1 (888ms)[0m
+[0;32mI (24920) QUEUE_SETS: 💡 Action: Toggle LED[0m
+[0;32mI (27170) QUEUE_SETS: → Processing NETWORK msg: [WiFi] Alert notification[0m
+[0;32mI (27170) QUEUE_SETS: 🌐 Network [WiFi]: Alert notification (P:1)[0m
+[0;32mI (29980) QUEUE_SETS: → Processing NETWORK msg: [WiFi] Status update received[0m
+[0;32mI (29980) QUEUE_SETS: 🌐 Network [WiFi]: Status update received (P:2)[0m
+[0;32mI (30360) QUEUE_SETS: [0m
+═══ SYSTEM MONITOR ═══
+[0;32mI (30360) QUEUE_SETS: Queue States:[0m
+[0;32mI (30360) QUEUE_SETS:   Sensor Queue:  0/5[0m
+[0;32mI (30360) QUEUE_SETS:   User Queue:    0/3[0m
+[0;32mI (30360) QUEUE_SETS:   Network Queue: 0/8[0m
+[0;32mI (30360) QUEUE_SETS: Message Statistics:[0m
+[0;32mI (30370) QUEUE_SETS:   Sensor:  0 messages[0m
+[0;32mI (30370) QUEUE_SETS:   User:    6 messages[0m
+[0;32mI (30380) QUEUE_SETS:   Network: 12 messages[0m
+[0;32mI (30380) QUEUE_SETS:   Timer:   2 events[0m
+[0;32mI (30380) QUEUE_SETS: ═══════════════════════[0m
+
+[0;32mI (30500) QUEUE_SETS: → Processing TIMER event: Periodic maintenance[0m
+[0;32mI (30500) QUEUE_SETS: 📈 Stats - Sensor:0, User:6, Network:12, Timer:3[0m
+[0;32mI (30500) QUEUE_SETS: ⏰ Timer: Periodic timer fired[0m
+[0;32mI (31440) QUEUE_SETS: → Processing USER input: Button 3 (529ms)[0m
+[0;32mI (31440) QUEUE_SETS: ⚙️  Action: Settings menu[0m
+[0;32mI (31440) QUEUE_SETS: 🔘 User: Button 3 pressed for 529ms[0m

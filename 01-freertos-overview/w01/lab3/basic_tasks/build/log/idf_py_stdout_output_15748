@@ -1,0 +1,187 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\User\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\STIC 1\Week-13-FreeRTOS_Worksheets\01-freertos-overview\w01\lab3\basic_tasks\build\basic_tasks.elf D:\STIC 1\Week-13-FreeRTOS_Worksheets\01-freertos-overview\w01\lab3\basic_tasks\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\User\esp\v5.5.1\esp-idf\tools\idf.py'
+      : DIO
+[0;32mI (41) boot.esp32�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 23 2025 15:35:27[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b870h ( 47216) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001b898 vaddr=3ffb0000 size=02488h (  9352) load[0m
+[0;32mI (108) esp_image: segment 2: paddr=0001dd28 vaddr=40080000 size=022f0h (  8944) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17de0h ( 97760) map[0m
+[0;32mI (149) esp_image: segment 4: paddr=00037e08 vaddr=400822f0 size=0b910h ( 47376) load[0m
+[0;32mI (168) esp_image: segment 5: paddr=00043720 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (175) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (175) boot: Disabling RNG early entropy source...[0m
+[0;32mI (186) cpu_start: Multicore app[0m
+[0;32mI (194) cpu_start: Pro cpu start user code[0m
+[0;32mI (194) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (194) app_init: Application information:[0m
+[0;32mI (194) app_init: Project name:     basic_tasks[0m
+[0;32mI (198) app_init: App version:      40bce8f-dirty[0m
+[0;32mI (203) app_init: Compile time:     Oct 23 2025 15:36:13[0m
+[0;32mI (208) app_init: ELF file SHA256:  271da9abf...[0m
+[0;32mI (212) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (216) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (220) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (224) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (228) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (234) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFB2F18 len 0002D0E8 (180 KiB): DRAM[0m
+[0;32mI (244) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (255) heap_init: At 4008DC00 len 00012400 (73 KiB): IRAM[0m
+[0;32mI (262) spi_flash: detected chip: generic[0m
+[0;32mI (264) spi_flash: flash io: dio[0m
+[0;33mW (267) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (280) main_task: Started on CPU0[0m
+[0;32mI (290) main_task: Calling app_main()[0m
+[0;32mI (290) STEP3_EX2: === Step 3 + Exercise 2 ===[0m
+[0;32mI (290) STEP3_EX2: LED1 Task started with ID: 1[0m
+[0;32mI (290) STEP3_EX2: LED1 ON[0m
+[0;32mI (290) STEP3_EX2: LED2 Task started: FastBlinker[0m
+[0;32mI (300) STEP3_EX2: LED2 Blink Fast[0m
+[0;32mI (300) STEP3_EX2: Task Manager started[0m
+[0;32mI (300) STEP3_EX2: Manager: Suspending LED1[0m
+[0;32mI (310) STEP3_EX2: System Info Task started[0m
+[0;32mI (310) STEP3_EX2: High Priority Task started[0m
+[0;32mI (310) STEP3_EX2: Producer Task started[0m
+[0;33mW (310) STEP3_EX2: HIGH PRIORITY TASK RUNNING![0m
+[0;32mI (320) STEP3_EX2: Producer: counter = 1[0m
+[0;32mI (310) STEP3_EX2: Low Priority Task started[0m
+[0;32mI (330) STEP3_EX2: Low priority task running[0m
+[0;32mI (330) STEP3_EX2: Low priority work: 1/100[0m
+[0;32mI (310) STEP3_EX2: Consumer Task started[0m
+[0;32mI (340) STEP3_EX2: Consumer: received new value = 1[0m
+[0;32mI (310) STEP3_EX2: Runtime Stats Task started[0m
+[0;32mI (350) STEP3_EX2: [0m
+=== Runtime Statistics ===
+[0;32mI (310) STEP3_EX2: === System Information ===[0m
+[0;32mI (360) STEP3_EX2: Free heap: 273580 bytes[0m
+[0;32mI (360) STEP3_EX2: Min free heap: 273580 bytes[0m
+[0;32mI (370) STEP3_EX2: Number of tasks: 14[0m
+[0;32mI (370) STEP3_EX2: Uptime: 0 seconds[0m
+[0;32mI (370) STEP3_EX2: Task		Abs Time	Percent Time[0m
+HighPrio       	4158		4%
+SysInfo_Task   	4119		4%
+RtStats        	72		<1%
+main           	12355		12%
+IDLE1          	38623		38%
+IDLE0          	7375		7%
+LowPrio        	11920		11%
+Consumer       	8267		8%
+Producer       	7356		7%
+TaskManager    	7368		7%
+LED2_Task      	7501		7%
+ipc1           	20179		20%
+LED1_Task      	4971		4%
+ipc0           	19395		19%
+
+[0;32mI (410) STEP3_EX2: [0m
+=== Task List ===
+[0;32mI (420) STEP3_EX2: Name		State	Prio	Stack	Num[0m
+HighPrio       	R	4	2268	10	-1
+RtStats        	X	1	2252	12	-1
+main           	R	1	2088	3	0
+IDLE0          	R	0	1028	4	0
+IDLE1          	R	0	1024	5	1
+LED2_Task      	B	2	228	7	-1
+Consumer       	B	1	204	14	-1
+Producer       	B	2	228	13	-1
+TaskManager    	B	3	212	9	-1
+SysInfo_Task   	B	1	1228	8	-1
+LowPrio        	B	1	1220	11	-1
+LED1_Task      	S	2	236	6	-1
+ipc0           	S	24	496	1	0
+ipc1           	S	24	504	2	1
+
+[0;33mW (420) STEP3_EX2: High priority task yielding[0m
+[0;32mI (310) STEP3_EX2: Free heap: 276212 bytes[0m
+[0;32mI (440) STEP3_EX2: Low priority work: 2/100[0m
+[0;32mI (570) STEP3_EX2: Low priority work: 3/100[0m
+[0;32mI (670) STEP3_EX2: Low priority work: 4/100[0m
+[0;32mI (770) STEP3_EX2: Low priority work: 5/100[0m
+[0;32mI (870) STEP3_EX2: Low priority work: 6/100[0m
+[0;32mI (970) STEP3_EX2: Low priority work: 7/100[0m
+[0;32mI (1070) STEP3_EX2: Low priority work: 8/100[0m
+[0;32mI (1170) STEP3_EX2: Low priority work: 9/100[0m
+[0;32mI (1270) STEP3_EX2: Low priority work: 10/100[0m
+[0;32mI (1330) STEP3_EX2: Producer: counter = 2[0m
+[0;32mI (1350) STEP3_EX2: Consumer: received new value = 2[0m
+[0;32mI (1370) STEP3_EX2: Low priority work: 11/100[0m
+[0;32mI (1470) STEP3_EX2: Low priority work: 12/100[0m
+[0;32mI (1570) STEP3_EX2: Low priority work: 13/100[0m
+[0;32mI (1670) STEP3_EX2: Low priority work: 14/100[0m
+[0;32mI (1770) STEP3_EX2: Low priority work: 15/100[0m
+[0;32mI (1870) STEP3_EX2: Low priority work: 16/100[0m
+[0;32mI (1970) STEP3_EX2: Low priority work: 17/100[0m
+[0;32mI (2070) STEP3_EX2: Low priority work: 18/100[0m
+[0;32mI (2170) STEP3_EX2: Low priority work: 19/100[0m
+[0;32mI (2270) STEP3_EX2: Low priority work: 20/100[0m
+[0;32mI (2300) STEP3_EX2: LED2 Blink Fast[0m
+[0;32mI (2310) STEP3_EX2: Manager: Resuming LED1[0m
+[0;32mI (2310) STEP3_EX2: LED1 OFF[0m
+[0;32mI (2330) STEP3_EX2: Producer: counter = 3[0m
+[0;32mI (2350) STEP3_EX2: Consumer: received new value = 3[0m
+[0;32mI (2370) STEP3_EX2: Low priority work: 21/100[0m
+[0;32mI (2470) STEP3_EX2: Low priority work: 22/100[0m
+[0;32mI (2570) STEP3_EX2: Low priority work: 23/100[0m
+[0;32mI (2670) STEP3_EX2: Low priority work: 24/100[0m
+[0;32mI (2770) STEP3_EX2: Low priority work: 25/100[0m
+[0;32mI (2810) STEP3_EX2: LED1 ON[0m
+[0;32mI (2870) STEP3_EX2: Low priority work: 26/100[0m
+[0;32mI (2970) STEP3_EX2: Low priority work: 27/100[0m
+[0;32mI (3070) STEP3_EX2: Low priority work: 28/100[0m
+[0;32mI (3170) STEP3_EX2: Low priority work: 29/100[0m
+[0;32mI (3270) STEP3_EX2: Low priority work: 30/100[0m
+[0;32mI (3310) STEP3_EX2: LED1 OFF[0m
+[0;32mI (3330) STEP3_EX2: Producer: counter = 4[0m
+[0;32mI (3350) STEP3_EX2: Consumer: received new value = 4[0m
+[0;32mI (3370) STEP3_EX2: === System Information ===[0m
+[0;32mI (3370) STEP3_EX2: Free heap: 274160 bytes[0m
+[0;32mI (3370) STEP3_EX2: Min free heap: 273580 bytes[0m
+[0;32mI (3370) STEP3_EX2: Low priority work: 31/100[0m
+[0;32mI (3370) STEP3_EX2: Number of tasks: 14[0m
+[0;32mI (3370) STEP3_EX2: Uptime: 3 seconds[0m
+[0;32mI (3470) STEP3_EX2: Low priority work: 32/100[0m
+[0;32mI (3570) STEP3_EX2: Low priority work: 33/100[0m
+[0;32mI (3670) STEP3_EX2: Low priority work: 34/100[0m
+[0;32mI (3770) STEP3_EX2: Low priority work: 35/100[0m
+[0;32mI (3810) STEP3_EX2: LED1 ON[0m
+[0;32mI (3870) STEP3_EX2: Low priority work: 36/100[0m
+[0;32mI (3970) STEP3_EX2: Low priority work: 37/100[0m
+[0;32mI (4070) STEP3_EX2: Low priority work: 38/100[0m
+[0;32mI (4170) STEP3_EX2: Low priority work: 39/100[0m
+[0;32mI (4270) STEP3_EX2: Low priority work: 40/100[0m
+[0;32mI (4300) STEP3_EX2: LED2 Blink Fast[0m
+[0;32mI (4310) STEP3_EX2: Manager: Suspending LED2[0m
+[0;32mI (4310) STEP3_EX2: LED1 OFF[0m
+[0;32mI (4330) STEP3_EX2: Producer: counter = 5[0m
+[0;32mI (4350) STEP3_EX2: Consumer: received new value = 5[0m
+[0;32mI (4370) STEP3_EX2: Low priority work: 41/100[0m
+[0;32mI (4470) STEP3_EX2: Low priority work: 42/100[0m
+[0;32mI (4570) STEP3_EX2: Low priority work: 43/100[0m
+[0;32mI (4670) STEP3_EX2: Low priority work: 44/100[0m
+[0;32mI (4770) STEP3_EX2: Low priority work: 45/100[0m
+[0;32mI (4810) STEP3_EX2: LED1 ON[0m
+[0;32mI (4870) STEP3_EX2: Low priority work: 46/100[0m

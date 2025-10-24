@@ -1,0 +1,380 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\User\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\STIC 1\Week-13-FreeRTOS_Worksheets\01-freertos-overview\w01\lab3\basic_tasks\build\basic_tasks.elf D:\STIC 1\Week-13-FreeRTOS_Worksheets\01-freertos-overview\w01\lab3\basic_tasks\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\User\esp\v5.5.1\esp-idf\tools\idf.py'
+Y�"%=5
+[0;32mI (41)ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 23 2025 15:35:27[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b8d0h ( 47312) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001b8f8 vaddr=3ffb0000 size=02488h (  9352) load[0m
+[0;32mI (108) esp_image: segment 2: paddr=0001dd88 vaddr=40080000 size=02290h (  8848) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17e30h ( 97840) map[0m
+[0;32mI (149) esp_image: segment 4: paddr=00037e58 vaddr=40082290 size=0ba60h ( 47712) load[0m
+[0;32mI (168) esp_image: segment 5: paddr=000438c0 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (175) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (175) boot: Disabling RNG early entropy source...[0m
+[0;32mI (186) cpu_start: Multicore app[0m
+[0;32mI (194) cpu_start: Pro cpu start user code[0m
+[0;32mI (194) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (194) app_init: Application information:[0m
+[0;32mI (194) app_init: Project name:     basic_tasks[0m
+[0;32mI (199) app_init: App version:      40bce8f-dirty[0m
+[0;32mI (203) app_init: Compile time:     Oct 23 2025 15:36:13[0m
+[0;32mI (208) app_init: ELF file SHA256:  0ce52a37a...[0m
+[0;32mI (213) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (216) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (220) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (224) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (228) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (234) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFB2F18 len 0002D0E8 (180 KiB): DRAM[0m
+[0;32mI (245) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (256) heap_init: At 4008DCF0 len 00012310 (72 KiB): IRAM[0m
+[0;32mI (262) spi_flash: detected chip: generic[0m
+[0;32mI (264) spi_flash: flash io: dio[0m
+[0;33mW (267) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (280) main_task: Started on CPU0[0m
+[0;32mI (290) main_task: Calling app_main()[0m
+[0;32mI (290) STEP3_EX3: === Step 3 + Exercise 3 ===[0m
+[0;32mI (290) STEP3_EX3: LED1 Task started with ID: 1[0m
+[0;32mI (290) STEP3_EX3: LED1 ON[0m
+[0;32mI (290) STEP3_EX3: LED2 Task started: FastBlinker[0m
+[0;32mI (300) STEP3_EX3: LED2 Blink Fast[0m
+[0;32mI (300) STEP3_EX3: Task Manager started[0m
+[0;32mI (300) STEP3_EX3: Manager: Suspending LED1[0m
+[0;32mI (310) STEP3_EX3: System Info Task started[0m
+[0;32mI (310) STEP3_EX3: High Priority Task started[0m
+[0;32mI (310) STEP3_EX3: Sensor Task started[0m
+[0;33mW (310) STEP3_EX3: HIGH PRIORITY TASK RUNNING![0m
+[0;32mI (320) STEP3_EX3: Sensor sent data: 33[0m
+[0;32mI (310) STEP3_EX3: Display Task started[0m
+[0;32mI (330) STEP3_EX3: Display received data: 33[0m
+[0;32mI (310) STEP3_EX3: Low Priority Task started[0m
+[0;32mI (340) STEP3_EX3: Low priority task running[0m
+[0;32mI (340) STEP3_EX3: Low priority work: 1/100[0m
+[0;32mI (310) STEP3_EX3: === System Information ===[0m
+[0;32mI (350) STEP3_EX3: Free heap: 276044 bytes[0m
+[0;32mI (350) STEP3_EX3: Min free heap: 276044 bytes[0m
+[0;32mI (360) STEP3_EX3: Number of tasks: 14[0m
+[0;32mI (360) STEP3_EX3: Uptime: 0 seconds[0m
+[0;32mI (310) STEP3_EX3: Runtime Stats Task started[0m
+[0;32mI (370) STEP3_EX3: [0m
+=== Runtime Statistics ===
+[0;32mI (370) STEP3_EX3: Task		Abs Time	Percent Time[0m
+HighPrio       	4157		3%
+RtStats        	1518		1%
+main           	12316		10%
+IDLE1          	38461		32%
+IDLE0          	7367		6%
+LowPrio        	11916		10%
+SensorTask     	7077		6%
+TaskManager    	7368		6%
+SysInfo_Task   	22921		19%
+LED2_Task      	7482		6%
+ipc1           	20172		17%
+LED1_Task      	5038		4%
+DisplayTask    	7616		6%
+ipc0           	19421		16%
+
+[0;32mI (410) STEP3_EX3: [0m
+=== Task List ===
+[0;32mI (420) STEP3_EX3: Name		State	Prio	Stack	Num[0m
+HighPrio       	R	4	2268	10	-1
+RtStats        	X	1	2252	12	-1
+main           	R	1	2088	3	0
+IDLE0          	R	0	1028	4	0
+IDLE1          	R	0	1024	5	1
+LED2_Task      	B	2	228	7	-1
+SensorTask     	B	2	184	13	-1
+TaskManager    	B	3	212	9	-1
+SysInfo_Task   	B	1	1228	8	-1
+LowPrio        	B	1	1220	11	-1
+LED1_Task      	S	2	236	6	-1
+DisplayTask    	B	2	208	14	-1
+ipc0           	S	24	496	1	0
+ipc1           	S	24	504	2	1
+
+[0;33mW (420) STEP3_EX3: High priority task yielding[0m
+[0;32mI (310) STEP3_EX3: Free heap: 276072 bytes[0m
+[0;32mI (450) STEP3_EX3: Low priority work: 2/100[0m
+[0;32mI (570) STEP3_EX3: Low priority work: 3/100[0m
+[0;32mI (670) STEP3_EX3: Low priority work: 4/100[0m
+[0;32mI (770) STEP3_EX3: Low priority work: 5/100[0m
+[0;32mI (870) STEP3_EX3: Low priority work: 6/100[0m
+[0;32mI (970) STEP3_EX3: Low priority work: 7/100[0m
+[0;32mI (1070) STEP3_EX3: Low priority work: 8/100[0m
+[0;32mI (1170) STEP3_EX3: Low priority work: 9/100[0m
+[0;32mI (1270) STEP3_EX3: Low priority work: 10/100[0m
+[0;32mI (1330) STEP3_EX3: Sensor sent data: 43[0m
+[0;32mI (1330) STEP3_EX3: Display received data: 43[0m
+[0;32mI (1370) STEP3_EX3: Low priority work: 11/100[0m
+[0;32mI (1470) STEP3_EX3: Low priority work: 12/100[0m
+[0;32mI (1570) STEP3_EX3: Low priority work: 13/100[0m
+[0;32mI (1670) STEP3_EX3: Low priority work: 14/100[0m
+[0;32mI (1770) STEP3_EX3: Low priority work: 15/100[0m
+[0;32mI (1870) STEP3_EX3: Low priority work: 16/100[0m
+[0;32mI (1970) STEP3_EX3: Low priority work: 17/100[0m
+[0;32mI (2070) STEP3_EX3: Low priority work: 18/100[0m
+[0;32mI (2170) STEP3_EX3: Low priority work: 19/100[0m
+[0;32mI (2270) STEP3_EX3: Low priority work: 20/100[0m
+[0;32mI (2300) STEP3_EX3: LED2 Blink Fast[0m
+[0;32mI (2310) STEP3_EX3: Manager: Resuming LED1[0m
+[0;32mI (2310) STEP3_EX3: LED1 OFF[0m
+[0;32mI (2330) STEP3_EX3: Sensor sent data: 62[0m
+[0;32mI (2330) STEP3_EX3: Display received data: 62[0m
+[0;32mI (2370) STEP3_EX3: Low priority work: 21/100[0m
+[0;32mI (2470) STEP3_EX3: Low priority work: 22/100[0m
+[0;32mI (2570) STEP3_EX3: Low priority work: 23/100[0m
+[0;32mI (2670) STEP3_EX3: Low priority work: 24/100[0m
+[0;32mI (2770) STEP3_EX3: Low priority work: 25/100[0m
+[0;32mI (2810) STEP3_EX3: LED1 ON[0m
+[0;32mI (2870) STEP3_EX3: Low priority work: 26/100[0m
+[0;32mI (2970) STEP3_EX3: Low priority work: 27/100[0m
+[0;32mI (3070) STEP3_EX3: Low priority work: 28/100[0m
+[0;32mI (3170) STEP3_EX3: Low priority work: 29/100[0m
+[0;32mI (3270) STEP3_EX3: Low priority work: 30/100[0m
+[0;32mI (3310) STEP3_EX3: LED1 OFF[0m
+[0;32mI (3330) STEP3_EX3: Sensor sent data: 29[0m
+[0;32mI (3330) STEP3_EX3: Display received data: 29[0m
+[0;32mI (3360) STEP3_EX3: === System Information ===[0m
+[0;32mI (3360) STEP3_EX3: Free heap: 273992 bytes[0m
+[0;32mI (3360) STEP3_EX3: Min free heap: 273412 bytes[0m
+[0;32mI (3360) STEP3_EX3: Number of tasks: 14[0m
+[0;32mI (3360) STEP3_EX3: Uptime: 3 seconds[0m
+[0;32mI (3370) STEP3_EX3: Low priority work: 31/100[0m
+[0;32mI (3470) STEP3_EX3: Low priority work: 32/100[0m
+[0;32mI (3570) STEP3_EX3: Low priority work: 33/100[0m
+[0;32mI (3670) STEP3_EX3: Low priority work: 34/100[0m
+[0;32mI (3770) STEP3_EX3: Low priority work: 35/100[0m
+[0;32mI (3810) STEP3_EX3: LED1 ON[0m
+[0;32mI (3870) STEP3_EX3: Low priority work: 36/100[0m
+[0;32mI (3970) STEP3_EX3: Low priority work: 37/100[0m
+[0;32mI (4070) STEP3_EX3: Low priority work: 38/100[0m
+[0;32mI (4170) STEP3_EX3: Low priority work: 39/100[0m
+[0;32mI (4270) STEP3_EX3: Low priority work: 40/100[0m
+[0;32mI (4300) STEP3_EX3: LED2 Blink Fast[0m
+[0;32mI (4310) STEP3_EX3: Manager: Suspending LED2[0m
+[0;32mI (4310) STEP3_EX3: LED1 OFF[0m
+[0;32mI (4330) STEP3_EX3: Sensor sent data: 0[0m
+[0;32mI (4330) STEP3_EX3: Display received data: 0[0m
+[0;32mI (4370) STEP3_EX3: Low priority work: 41/100[0m
+[0;32mI (4470) STEP3_EX3: Low priority work: 42/100[0m
+[0;32mI (4570) STEP3_EX3: Low priority work: 43/100[0m
+[0;32mI (4670) STEP3_EX3: Low priority work: 44/100[0m
+[0;32mI (4770) STEP3_EX3: Low priority work: 45/100[0m
+[0;32mI (4810) STEP3_EX3: LED1 ON[0m
+[0;32mI (4870) STEP3_EX3: Low priority work: 46/100[0m
+[0;32mI (4970) STEP3_EX3: Low priority work: 47/100[0m
+[0;32mI (5070) STEP3_EX3: Low priority work: 48/100[0m
+[0;32mI (5170) STEP3_EX3: Low priority work: 49/100[0m
+[0;32mI (5270) STEP3_EX3: Low priority work: 50/100[0m
+[0;32mI (5310) STEP3_EX3: LED1 OFF[0m
+[0;32mI (5330) STEP3_EX3: Sensor sent data: 8[0m
+[0;32mI (5330) STEP3_EX3: Display received data: 8[0m
+[0;32mI (5370) STEP3_EX3: Low priority work: 51/100[0m
+[0;33mW (5460) STEP3_EX3: HIGH PRIORITY TASK RUNNING![0m
+[0;32mI (5470) STEP3_EX3: Low priority work: 52/100[0m
+[0;33mW (5560) STEP3_EX3: High priority task yielding[0m
+[0;32mI (5560) STEP3_EX3: Free heap: 273992 bytes[0m
+[0;32mI (5570) STEP3_EX3: Low priority work: 53/100[0m
+[0;32mI (5670) STEP3_EX3: Low priority work: 54/100[0m
+[0;32mI (5770) STEP3_EX3: Low priority work: 55/100[0m
+[0;32mI (5810) STEP3_EX3: LED1 ON[0m
+[0;32mI (5870) STEP3_EX3: Low priority work: 56/100[0m
+[0;32mI (5970) STEP3_EX3: Low priority work: 57/100[0m
+[0;32mI (6070) STEP3_EX3: Low priority work: 58/100[0m
+[0;32mI (6170) STEP3_EX3: Low priority work: 59/100[0m
+[0;32mI (6270) STEP3_EX3: Low priority work: 60/100[0m
+[0;32mI (6310) STEP3_EX3: Manager: Resuming LED2[0m
+[0;32mI (6310) STEP3_EX3: LED1 OFF[0m
+[0;32mI (6330) STEP3_EX3: Sensor sent data: 52[0m
+[0;32mI (6330) STEP3_EX3: Display received data: 52[0m
+[0;32mI (6360) STEP3_EX3: === System Information ===[0m
+[0;32mI (6360) STEP3_EX3: Free heap: 273992 bytes[0m
+[0;32mI (6360) STEP3_EX3: Min free heap: 273412 bytes[0m
+[0;32mI (6360) STEP3_EX3: Number of tasks: 14[0m
+[0;32mI (6360) STEP3_EX3: Uptime: 6 seconds[0m
+[0;32mI (6370) STEP3_EX3: Low priority work: 61/100[0m
+[0;32mI (6470) STEP3_EX3: Low priority work: 62/100[0m
+[0;32mI (6570) STEP3_EX3: Low priority work: 63/100[0m
+[0;32mI (6670) STEP3_EX3: Low priority work: 64/100[0m
+[0;32mI (6770) STEP3_EX3: Low priority work: 65/100[0m
+[0;32mI (6810) STEP3_EX3: LED1 ON[0m
+[0;32mI (6870) STEP3_EX3: Low priority work: 66/100[0m
+[0;32mI (6970) STEP3_EX3: Low priority work: 67/100[0m
+[0;32mI (7070) STEP3_EX3: Low priority work: 68/100[0m
+[0;32mI (7170) STEP3_EX3: Low priority work: 69/100[0m
+[0;32mI (7270) STEP3_EX3: Low priority work: 70/100[0m
+[0;32mI (7310) STEP3_EX3: LED1 OFF[0m
+[0;32mI (7330) STEP3_EX3: Sensor sent data: 56[0m
+[0;32mI (7330) STEP3_EX3: Display received data: 56[0m
+[0;32mI (7370) STEP3_EX3: Low priority work: 71/100[0m
+[0;32mI (7470) STEP3_EX3: Low priority work: 72/100[0m
+[0;32mI (7570) STEP3_EX3: Low priority work: 73/100[0m
+[0;32mI (7670) STEP3_EX3: Low priority work: 74/100[0m
+[0;32mI (7770) STEP3_EX3: Low priority work: 75/100[0m
+[0;32mI (7810) STEP3_EX3: LED1 ON[0m
+[0;32mI (7870) STEP3_EX3: Low priority work: 76/100[0m
+[0;32mI (7970) STEP3_EX3: Low priority work: 77/100[0m
+[0;32mI (8070) STEP3_EX3: Low priority work: 78/100[0m
+[0;32mI (8170) STEP3_EX3: Low priority work: 79/100[0m
+[0;32mI (8210) STEP3_EX3: LED2 Blink Fast[0m
+[0;32mI (8270) STEP3_EX3: Low priority work: 80/100[0m
+[0;32mI (8310) STEP3_EX3: LED1 State: Ready[0m
+[0;32mI (8310) STEP3_EX3: LED2 State: Ready[0m
+[0;32mI (8310) STEP3_EX3: LED1 OFF[0m
+[0;32mI (8330) STEP3_EX3: Sensor sent data: 56[0m
+[0;32mI (8330) STEP3_EX3: Display received data: 56[0m
+[0;32mI (8370) STEP3_EX3: Low priority work: 81/100[0m
+[0;32mI (8470) STEP3_EX3: Low priority work: 82/100[0m
+[0;32mI (8570) STEP3_EX3: Low priority work: 83/100[0m
+[0;32mI (8670) STEP3_EX3: Low priority work: 84/100[0m
+[0;32mI (8770) STEP3_EX3: Low priority work: 85/100[0m
+[0;32mI (8810) STEP3_EX3: LED1 ON[0m
+[0;32mI (8870) STEP3_EX3: Low priority work: 86/100[0m
+[0;32mI (8970) STEP3_EX3: Low priority work: 87/100[0m
+[0;32mI (9070) STEP3_EX3: Low priority work: 88/100[0m
+[0;32mI (9170) STEP3_EX3: Low priority work: 89/100[0m
+[0;32mI (9270) STEP3_EX3: Low priority work: 90/100[0m
+[0;32mI (9310) STEP3_EX3: LED1 OFF[0m
+[0;32mI (9330) STEP3_EX3: Sensor sent data: 19[0m
+[0;32mI (9330) STEP3_EX3: Display received data: 19[0m
+[0;32mI (9360) STEP3_EX3: === System Information ===[0m
+[0;32mI (9360) STEP3_EX3: Free heap: 273992 bytes[0m
+[0;32mI (9360) STEP3_EX3: Min free heap: 273412 bytes[0m
+[0;32mI (9360) STEP3_EX3: Number of tasks: 14[0m
+[0;32mI (9360) STEP3_EX3: Uptime: 9 seconds[0m
+[0;32mI (9370) STEP3_EX3: Low priority work: 91/100[0m
+[0;32mI (9470) STEP3_EX3: Low priority work: 92/100[0m
+[0;32mI (9570) STEP3_EX3: Low priority work: 93/100[0m
+[0;32mI (9670) STEP3_EX3: Low priority work: 94/100[0m
+[0;32mI (9770) STEP3_EX3: Low priority work: 95/100[0m
+[0;32mI (9810) STEP3_EX3: LED1 ON[0m
+[0;32mI (9870) STEP3_EX3: Low priority work: 96/100[0m
+[0;32mI (9970) STEP3_EX3: Low priority work: 97/100[0m
+[0;32mI (10070) STEP3_EX3: Low priority work: 98/100[0m
+[0;32mI (10170) STEP3_EX3: Low priority work: 99/100[0m
+[0;32mI (10210) STEP3_EX3: LED2 Blink Fast[0m
+[0;32mI (10270) STEP3_EX3: Low priority work: 100/100[0m
+[0;32mI (10310) STEP3_EX3: Manager: Reset cycle[0m
+[0;32mI (10310) STEP3_EX3: LED1 OFF[0m
+[0;32mI (10330) STEP3_EX3: Sensor sent data: 11[0m
+[0;32mI (10330) STEP3_EX3: Display received data: 11[0m
+[0;32mI (10370) STEP3_EX3: Low priority task running[0m
+[0;32mI (10370) STEP3_EX3: Low priority work: 1/100[0m
+[0;32mI (10460) STEP3_EX3: [0m
+=== Runtime Statistics ===
+[0;32mI (10460) STEP3_EX3: Task		Abs Time	Percent Time[0m
+RtStats        	92761		<1%
+IDLE1          	10017146		98%
+IDLE0          	9886450		96%
+LED2_Task      	8626		<1%
+HighPrio       	214204		2%
+main           	16290		<1%
+LED1_Task      	6767		<1%
+SensorTask     	8529		<1%
+TaskManager    	8094		<1%
+SysInfo_Task   	47531		<1%
+LowPrio        	34328		<1%
+DisplayTask    	9218		<1%
+ipc1           	20172		<1%
+ipc0           	19421		<1%
+
+[0;32mI (10470) STEP3_EX3: Low priority work: 2/100[0m
+[0;32mI (10490) STEP3_EX3: [0m
+=== Task List ===
+[0;32mI (10500) STEP3_EX3: Name		State	Prio	Stack	Num[0m
+RtStats        	X	1	2252	12	-1
+IDLE1          	R	0	1024	5	1
+IDLE0          	R	0	1028	4	0
+HighPrio       	B	4	2268	10	-1
+main           	B	1	2088	3	0
+LowPrio        	B	1	1220	11	-1
+LED1_Task      	B	2	236	6	-1
+SensorTask     	B	2	184	13	-1
+TaskManager    	B	3	212	9	-1
+SysInfo_Task   	B	1	1228	8	-1
+LED2_Task      	B	2	228	7	-1
+ipc1           	S	24	504	2	1
+ipc0           	S	24	496	1	0
+DisplayTask    	B	2	208	14	-1
+
+[0;33mW (10560) STEP3_EX3: HIGH PRIORITY TASK RUNNING![0m
+[0;32mI (10590) STEP3_EX3: Low priority work: 3/100[0m
+[0;33mW (10660) STEP3_EX3: High priority task yielding[0m
+[0;32mI (10660) STEP3_EX3: Free heap: 273992 bytes[0m
+[0;32mI (10690) STEP3_EX3: Low priority work: 4/100[0m
+[0;32mI (10790) STEP3_EX3: Low priority work: 5/100[0m
+[0;32mI (10810) STEP3_EX3: LED1 ON[0m
+[0;32mI (10890) STEP3_EX3: Low priority work: 6/100[0m
+[0;32mI (10990) STEP3_EX3: Low priority work: 7/100[0m
+[0;32mI (11090) STEP3_EX3: Low priority work: 8/100[0m
+[0;32mI (11190) STEP3_EX3: Low priority work: 9/100[0m
+[0;32mI (11290) STEP3_EX3: Low priority work: 10/100[0m
+[0;32mI (11310) STEP3_EX3: LED1 OFF[0m
+[0;32mI (11330) STEP3_EX3: Sensor sent data: 51[0m
+[0;32mI (11330) STEP3_EX3: Display received data: 51[0m
+[0;32mI (11390) STEP3_EX3: Low priority work: 11/100[0m
+[0;32mI (11490) STEP3_EX3: Low priority work: 12/100[0m
+[0;32mI (11590) STEP3_EX3: Low priority work: 13/100[0m
+[0;32mI (11690) STEP3_EX3: Low priority work: 14/100[0m
+[0;32mI (11790) STEP3_EX3: Low priority work: 15/100[0m
+[0;32mI (11810) STEP3_EX3: LED1 ON[0m
+[0;32mI (11890) STEP3_EX3: Low priority work: 16/100[0m
+[0;32mI (11990) STEP3_EX3: Low priority work: 17/100[0m
+[0;32mI (12090) STEP3_EX3: Low priority work: 18/100[0m
+[0;32mI (12190) STEP3_EX3: Low priority work: 19/100[0m
+[0;32mI (12210) STEP3_EX3: LED2 Blink Fast[0m
+[0;32mI (12290) STEP3_EX3: Low priority work: 20/100[0m
+[0;32mI (12310) STEP3_EX3: Manager: Suspending LED1[0m
+[0;32mI (12330) STEP3_EX3: Sensor sent data: 43[0m
+[0;32mI (12330) STEP3_EX3: Display received data: 43[0m
+[0;32mI (12360) STEP3_EX3: === System Information ===[0m
+[0;32mI (12360) STEP3_EX3: Free heap: 273992 bytes[0m
+[0;32mI (12360) STEP3_EX3: Min free heap: 273412 bytes[0m
+[0;32mI (12360) STEP3_EX3: Number of tasks: 14[0m
+[0;32mI (12360) STEP3_EX3: Uptime: 12 seconds[0m
+[0;32mI (12390) STEP3_EX3: Low priority work: 21/100[0m
+[0;32mI (12490) STEP3_EX3: Low priority work: 22/100[0m
+[0;32mI (12590) STEP3_EX3: Low priority work: 23/100[0m
+[0;32mI (12690) STEP3_EX3: Low priority work: 24/100[0m
+[0;32mI (12790) STEP3_EX3: Low priority work: 25/100[0m
+[0;32mI (12890) STEP3_EX3: Low priority work: 26/100[0m
+[0;32mI (12990) STEP3_EX3: Low priority work: 27/100[0m
+[0;32mI (13090) STEP3_EX3: Low priority work: 28/100[0m
+[0;32mI (13190) STEP3_EX3: Low priority work: 29/100[0m
+[0;32mI (13290) STEP3_EX3: Low priority work: 30/100[0m
+[0;32mI (13330) STEP3_EX3: Sensor sent data: 5[0m
+[0;32mI (13330) STEP3_EX3: Display received data: 5[0m
+[0;32mI (13390) STEP3_EX3: Low priority work: 31/100[0m
+[0;32mI (13490) STEP3_EX3: Low priority work: 32/100[0m
+[0;32mI (13590) STEP3_EX3: Low priority work: 33/100[0m
+[0;32mI (13690) STEP3_EX3: Low priority work: 34/100[0m
+[0;32mI (13790) STEP3_EX3: Low priority work: 35/100[0m
+[0;32mI (13890) STEP3_EX3: Low priority work: 36/100[0m
+[0;32mI (13990) STEP3_EX3: Low priority work: 37/100[0m
+[0;32mI (14090) STEP3_EX3: Low priority work: 38/100[0m
+[0;32mI (14190) STEP3_EX3: Low priority work: 39/100[0m
+[0;32mI (14210) STEP3_EX3: LED2 Blink Fast[0m
+[0;32mI (14290) STEP3_EX3: Low priority work: 40/100[0m

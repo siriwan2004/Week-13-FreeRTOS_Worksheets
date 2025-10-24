@@ -1,0 +1,173 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\User\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\STIC 1\Week-13-FreeRTOS_Worksheets\02-tasks-and-scheduling\w02\lab1\Priority\build\Priority.elf D:\STIC 1\Week-13-FreeRTOS_Worksheets\02-tasks-and-scheduling\w02\lab1\Priority\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\User\esp\v5.5.1\esp-idf\tools\idf.py'
+��"%=5
+[0;32mI (41) boot.espets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 23 2025 16:07:57[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a680h ( 42624) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001a6a8 vaddr=3ffb0000 size=023f8h (  9208) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001caa8 vaddr=40080000 size=03570h ( 13680) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=14cc8h ( 85192) map[0m
+[0;32mI (143) esp_image: segment 4: paddr=00034cf0 vaddr=40083570 size=09a40h ( 39488) load[0m
+[0;32mI (159) esp_image: segment 5: paddr=0003e738 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (165) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (166) boot: Disabling RNG early entropy source...[0m
+[0;32mI (177) cpu_start: Multicore app[0m
+[0;32mI (185) cpu_start: Pro cpu start user code[0m
+[0;32mI (185) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (185) app_init: Application information:[0m
+[0;32mI (185) app_init: Project name:     Priority[0m
+[0;32mI (189) app_init: App version:      40bce8f-dirty[0m
+[0;32mI (194) app_init: Compile time:     Oct 23 2025 16:07:21[0m
+[0;32mI (199) app_init: ELF file SHA256:  792e551b2...[0m
+[0;32mI (203) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (207) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (211) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (215) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (219) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (225) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (230) heap_init: At 3FFB2CD8 len 0002D328 (180 KiB): DRAM[0m
+[0;32mI (235) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (241) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (246) heap_init: At 4008CFB0 len 00013050 (76 KiB): IRAM[0m
+[0;32mI (253) spi_flash: detected chip: generic[0m
+[0;32mI (255) spi_flash: flash io: dio[0m
+[0;33mW (258) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (271) main_task: Started on CPU0[0m
+[0;32mI (281) main_task: Calling app_main()[0m
+[0;32mI (281) LAB_STEP3: === STEP3: Priority + Round-Robin + Priority Inversion ===[0m
+[0;32mI (281) LAB_STEP3: High Priority Task started (prio=5)[0m
+[0;32mI (281) LAB_STEP3: Medium Priority Task started (prio=3)[0m
+[0;32mI (291) LAB_STEP3: [EQ1] started (prio=2)[0m
+[0;32mI (291) LAB_STEP3: Control Task started (prio=4)[0m
+[0;32mI (291) LAB_STEP3: Low Priority Task started (prio=1)[0m
+[0;32mI (301) LAB_STEP3: INV High started (prio=5)[0m
+[0;32mI (301) LAB_STEP3: INV Medium started (prio=4)[0m
+[0;32mI (301) LAB_STEP3: [EQ2] started (prio=2)[0m
+[0;32mI (301) LAB_STEP3: [EQ3] started (prio=2)[0m
+[0;32mI (301) LAB_STEP3: Press BUTTON (GPIO23) to start 10s test. LEDs: 16=High, 17=Med, 18=Low[0m
+[0;32mI (321) main_task: Returned from app_main()[0m
+[0;32mI (301) LAB_STEP3: INV Low started (prio=1)[0m
+[0;33mW (11501) LAB_STEP3: === START TEST (10s) ===[0m
+[0;32mI (11501) LAB_STEP3: [EQ3] running[0m
+[0;32mI (11531) LAB_STEP3: [EQ2] running[0m
+[0;32mI (11561) LAB_STEP3: [EQ1] running[0m
+[0;32mI (11841) LAB_STEP3: [EQ3] running[0m
+[0;32mI (11851) LAB_STEP3: [EQ2] running[0m
+[0;32mI (11911) LAB_STEP3: [EQ1] running[0m
+[0;32mI (12161) LAB_STEP3: [EQ3] running[0m
+[0;32mI (12181) LAB_STEP3: [EQ2] running[0m
+[0;32mI (12261) LAB_STEP3: [EQ1] running[0m
+[0;33mW (12301) LAB_STEP3: High needs shared resource[0m
+[0;32mI (12301) LAB_STEP3: High got resource (mutex)[0m
+[0;32mI (12481) LAB_STEP3: [EQ3] running[0m
+[0;32mI (12511) LAB_STEP3: [EQ2] running[0m
+[0;32mI (12601) LAB_STEP3: [EQ1] running[0m
+[0;32mI (12771) LAB_STEP3: [EQ3] running[0m
+[0;32mI (12821) LAB_STEP3: [EQ2] running[0m
+[0;32mI (12951) LAB_STEP3: [EQ1] running[0m
+[0;32mI (13031) LAB_STEP3: [EQ3] running[0m
+[0;32mI (13121) LAB_STEP3: [EQ2] running[0m
+[0;32mI (13271) LAB_STEP3: [EQ1] running[0m
+[0;32mI (13321) LAB_STEP3: [EQ3] running[0m
+[0;32mI (13381) LAB_STEP3: [EQ2] running[0m
+[0;33mW (13401) LAB_STEP3: High needs shared resource[0m
+[0;32mI (13401) LAB_STEP3: High got resource (mutex)[0m
+[0;32mI (13611) LAB_STEP3: [EQ1] running[0m
+[0;32mI (13641) LAB_STEP3: [EQ3] running[0m
+[0;32mI (13731) LAB_STEP3: [EQ2] running[0m
+[0;32mI (13931) LAB_STEP3: [EQ1] running[0m
+[0;32mI (13961) LAB_STEP3: [EQ3] running[0m
+[0;32mI (14071) LAB_STEP3: [EQ2] running[0m
+[0;32mI (14241) LAB_STEP3: [EQ1] running[0m
+[0;32mI (14271) LAB_STEP3: [EQ3] running[0m
+[0;32mI (14421) LAB_STEP3: [EQ2] running[0m
+[0;33mW (14501) LAB_STEP3: High needs shared resource[0m
+[0;32mI (14501) LAB_STEP3: High got resource (mutex)[0m
+[0;32mI (14501) LAB_STEP3: [EQ1] running[0m
+[0;32mI (14591) LAB_STEP3: [EQ3] running[0m
+[0;32mI (14741) LAB_STEP3: [EQ2] running[0m
+[0;32mI (14791) LAB_STEP3: [EQ1] running[0m
+[0;32mI (14851) LAB_STEP3: [EQ3] running[0m
+[0;32mI (15081) LAB_STEP3: [EQ2] running[0m
+[0;32mI (15111) LAB_STEP3: [EQ1] running[0m
+[0;32mI (15201) LAB_STEP3: [EQ3] running[0m
+[0;32mI (15401) LAB_STEP3: [EQ2] running[0m
+[0;32mI (15431) LAB_STEP3: [EQ1] running[0m
+[0;32mI (15541) LAB_STEP3: [EQ3] running[0m
+[0;33mW (15601) LAB_STEP3: High needs shared resource[0m
+[0;32mI (15601) LAB_STEP3: High got resource (mutex)[0m
+[0;32mI (15691) LAB_STEP3: [EQ2] running[0m
+[0;32mI (15741) LAB_STEP3: [EQ1] running[0m
+[0;32mI (15891) LAB_STEP3: [EQ3] running[0m
+[0;32mI (16011) LAB_STEP3: [EQ2] running[0m
+[0;32mI (16041) LAB_STEP3: [EQ1] running[0m
+[0;32mI (16211) LAB_STEP3: [EQ3] running[0m
+[0;32mI (16261) LAB_STEP3: [EQ2] running[0m
+[0;32mI (16351) LAB_STEP3: [EQ1] running[0m
+[1;31mE (16491) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (16491) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (16491) task_wdt: Tasks currently running:[0m
+[1;31mE (16491) task_wdt: CPU 0: InvMed[0m
+[1;31mE (16491) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (16491) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400D86BA:0x3FFB1070 0x400D8A7C:0x3FFB1090 0x40082925:0x3FFB10C0 0x400D61AE:0x3FFBB590 0x400D6467:0x3FFBB5C0 0x40085CED:0x3FFBB5E0
+
+[0;32mI (16601) LAB_STEP3: [EQ2] running[0m
+[0;32mI (16631) LAB_STEP3: [EQ3] running[0m
+[0;33mW (16701) LAB_STEP3: High needs shared resource[0m
+[0;32mI (16701) LAB_STEP3: High got resource (mutex)[0m
+[0;32mI (16721) LAB_STEP3: [EQ1] running[0m
+[0;32mI (16921) LAB_STEP3: [EQ2] running[0m
+[0;32mI (16951) LAB_STEP3: [EQ3] running[0m
+[0;32mI (17071) LAB_STEP3: [EQ1] running[0m
+[0;32mI (17231) LAB_STEP3: [EQ2] running[0m
+[0;32mI (17271) LAB_STEP3: [EQ3] running[0m
+[0;32mI (17411) LAB_STEP3: [EQ1] running[0m
+[0;32mI (17531) LAB_STEP3: [EQ2] running[0m
+[0;32mI (17581) LAB_STEP3: [EQ3] running[0m
+[0;32mI (17761) LAB_STEP3: [EQ1] running[0m
+[0;33mW (17801) LAB_STEP3: High needs shared resource[0m
+[0;32mI (17801) LAB_STEP3: High got resource (mutex)[0m
+[0;32mI (17841) LAB_STEP3: [EQ2] running[0m
+[0;32mI (17871) LAB_STEP3: [EQ3] running[0m
+[0;32mI (18041) LAB_STEP3: [EQ1] running[0m
+[0;32mI (18141) LAB_STEP3: [EQ2] running[0m
+[0;32mI (18191) LAB_STEP3: [EQ3] running[0m
+[0;32mI (18391) LAB_STEP3: [EQ1] running[0m
+[0;32mI (18451) LAB_STEP3: [EQ2] running[0m
+[0;32mI (18541) LAB_STEP3: [EQ3] running[0m
+[0;32mI (18701) LAB_STEP3: [EQ1] running[0m
+[0;32mI (18741) LAB_STEP3: [EQ2] running[0m
+[0;32mI (18881) LAB_STEP3: [EQ3] running[0m
+[0;33mW (18901) LAB_STEP3: High needs shared resource[0m
+[0;32mI (18901) LAB_STEP3: High got resource (mutex)[0m
+[0;32mI (19001) LAB_STEP3: [EQ1] running[0m
+[0;32mI (19051) LAB_STEP3: [EQ2] running[0m
+[0;32mI (19231) LAB_STEP3: [EQ3] running[0m
+[0;32mI (19311) LAB_STEP3: [EQ1] running[0m
+[0;32mI (19401) LAB_STEP3: [EQ2] running[0m
+[0;32mI (19521) LAB_STEP3: [EQ3] running[0m

@@ -1,0 +1,132 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\User\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\STIC 1\Week-13-FreeRTOS_Worksheets\02-tasks-and-scheduling\w02\lab2\Task_States\build\Task_States.elf D:\STIC 1\Week-13-FreeRTOS_Worksheets\02-tasks-and-scheduling\w02\lab2\Task_States\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\User\esp\v5.5.1\esp-idf\tools\idf.py'
+	�"%=5
+[0;32mI (41) booets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 23 2025 16:59:29[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a6e0h ( 42720) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001a708 vaddr=3ffb0000 size=02408h (  9224) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001cb18 vaddr=40080000 size=03500h ( 13568) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=14b34h ( 84788) map[0m
+[0;32mI (143) esp_image: segment 4: paddr=00034b5c vaddr=40083500 size=09d1ch ( 40220) load[0m
+[0;32mI (159) esp_image: segment 5: paddr=0003e880 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (166) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (166) boot: Disabling RNG early entropy source...[0m
+[0;32mI (177) cpu_start: Multicore app[0m
+[0;32mI (185) cpu_start: Pro cpu start user code[0m
+[0;32mI (185) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (186) app_init: Application information:[0m
+[0;32mI (186) app_init: Project name:     Task_States[0m
+[0;32mI (190) app_init: App version:      40bce8f-dirty[0m
+[0;32mI (194) app_init: Compile time:     Oct 23 2025 16:58:55[0m
+[0;32mI (199) app_init: ELF file SHA256:  8fdd4e199...[0m
+[0;32mI (204) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (207) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (211) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (215) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (219) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (225) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (230) heap_init: At 3FFB2CE8 len 0002D318 (180 KiB): DRAM[0m
+[0;32mI (236) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (241) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (247) heap_init: At 4008D21C len 00012DE4 (75 KiB): IRAM[0m
+[0;32mI (253) spi_flash: detected chip: generic[0m
+[0;32mI (256) spi_flash: flash io: dio[0m
+[0;33mW (258) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (271) main_task: Started on CPU0[0m
+[0;32mI (281) main_task: Calling app_main()[0m
+[0;32mI (281) EX2_STATE_INDICATOR: === Exercise 2: Custom State Indicator ===[0m
+[0;32mI (281) EX2_STATE_INDICATOR: State Demo Task started (prio=3)[0m
+[0;32mI (281) EX2_STATE_INDICATOR: Transition: Ready -> Running[0m
+[0;32mI (291) EX2_STATE_INDICATOR: === Cycle 1 ===[0m
+[0;32mI (451) EX2_STATE_INDICATOR: Transition: Running -> Ready[0m
+[0;32mI (451) EX2_STATE_INDICATOR: Transition: Ready -> Running[0m
+[0;32mI (451) EX2_STATE_INDICATOR: Transition: Running -> Blocked[0m
+[0;32mI (451) EX2_STATE_INDICATOR: Ready State Demo started (prio=3)[0m
+[0;32mI (471) EX2_STATE_INDICATOR: Control Task started (prio=4)[0m
+[0;32mI (471) EX2_STATE_INDICATOR: Self-delete lifetime = 10 s[0m
+[0;32mI (471) EX2_STATE_INDICATOR: Self-delete countdown: 10[0m
+[0;32mI (471) EX2_STATE_INDICATOR: External-delete task started (prio=2)[0m
+[0;32mI (481) EX2_STATE_INDICATOR: ExtDelete running: 0[0m
+[0;32mI (481) EX2_STATE_INDICATOR: LED: 2=Running, 4=Ready, 5=Blocked, 18=Suspended[0m
+[0;32mI (491) EX2_STATE_INDICATOR: BTN: GPIO0=Susp/Resume, GPIO35=Semaphore (need external pull-up)[0m
+[0;32mI (501) main_task: Returned from app_main()[0m
+[0;32mI (1471) EX2_STATE_INDICATOR: Self-delete countdown: 9[0m
+[0;32mI (1481) EX2_STATE_INDICATOR: ExtDelete running: 1[0m
+[0;32mI (2451) EX2_STATE_INDICATOR: Semaphore timeout[0m
+[0;32mI (2471) EX2_STATE_INDICATOR: Self-delete countdown: 8[0m
+[0;32mI (2481) EX2_STATE_INDICATOR: ExtDelete running: 2[0m
+[0;32mI (2621) EX2_STATE_INDICATOR: Transition: Running -> Suspended[0m
+[0;33mW (2621) EX2_STATE_INDICATOR: === SUSPEND StateDemo ===[0m
+[0;32mI (3471) EX2_STATE_INDICATOR: Self-delete countdown: 7[0m
+[0;32mI (3481) EX2_STATE_INDICATOR: ExtDelete running: 3[0m
+[0;32mI (4471) EX2_STATE_INDICATOR: Self-delete countdown: 6[0m
+[0;32mI (4481) EX2_STATE_INDICATOR: ExtDelete running: 4[0m
+[0;32mI (5471) EX2_STATE_INDICATOR: Self-delete countdown: 5[0m
+[0;32mI (5481) EX2_STATE_INDICATOR: ExtDelete running: 5[0m
+[0;33mW (5801) EX2_STATE_INDICATOR: === GIVE SEMAPHORE ===[0m
+[0;32mI (6471) EX2_STATE_INDICATOR: Self-delete countdown: 4[0m
+[0;32mI (6481) EX2_STATE_INDICATOR: ExtDelete running: 6[0m
+[0;32mI (7471) EX2_STATE_INDICATOR: Self-delete countdown: 3[0m
+[0;32mI (7481) EX2_STATE_INDICATOR: ExtDelete running: 7[0m
+[0;32mI (7791) EX2_STATE_INDICATOR: Transition: Suspended -> Ready[0m
+[0;33mW (7791) EX2_STATE_INDICATOR: === RESUME StateDemo ===[0m
+[0;32mI (7791) EX2_STATE_INDICATOR: Transition: Blocked -> Running[0m
+[0;32mI (7791) EX2_STATE_INDICATOR: === Cycle 2 ===[0m
+[0;32mI (7951) EX2_STATE_INDICATOR: Transition: Running -> Ready[0m
+[0;32mI (7951) EX2_STATE_INDICATOR: Transition: Ready -> Running[0m
+[0;32mI (7951) EX2_STATE_INDICATOR: Transition: Running -> Blocked[0m
+[0;32mI (7961) EX2_STATE_INDICATOR: Transition: Blocked -> Running[0m
+[0;32mI (7961) EX2_STATE_INDICATOR: Got semaphore -> short RUNNING then delay(500)[0m
+[0;32mI (7971) EX2_STATE_INDICATOR: Transition: Running -> Blocked[0m
+[0;32mI (8471) EX2_STATE_INDICATOR: Transition: Blocked -> Running[0m
+[0;32mI (8471) EX2_STATE_INDICATOR: Transition: Running -> Blocked[0m
+[0;32mI (8471) EX2_STATE_INDICATOR: Self-delete countdown: 2[0m
+[0;32mI (8481) EX2_STATE_INDICATOR: ExtDelete running: 8[0m
+[0;33mW (9251) EX2_STATE_INDICATOR: === GIVE SEMAPHORE ===[0m
+[0;32mI (9471) EX2_STATE_INDICATOR: Transition: Blocked -> Running[0m
+[0;32mI (9471) EX2_STATE_INDICATOR: === Cycle 3 ===[0m
+[0;32mI (9471) EX2_STATE_INDICATOR: Self-delete countdown: 1[0m
+[0;32mI (9481) EX2_STATE_INDICATOR: ExtDelete running: 9[0m
+[0;32mI (9621) EX2_STATE_INDICATOR: Transition: Running -> Ready[0m
+[0;32mI (9621) EX2_STATE_INDICATOR: Transition: Ready -> Running[0m
+[0;32mI (9621) EX2_STATE_INDICATOR: Transition: Running -> Blocked[0m
+[0;32mI (9631) EX2_STATE_INDICATOR: Transition: Blocked -> Running[0m
+[0;32mI (9631) EX2_STATE_INDICATOR: Got semaphore -> short RUNNING then delay(500)[0m
+[0;32mI (9641) EX2_STATE_INDICATOR: Transition: Running -> Blocked[0m
+[0;32mI (10151) EX2_STATE_INDICATOR: Transition: Blocked -> Running[0m
+[0;32mI (10151) EX2_STATE_INDICATOR: Transition: Running -> Blocked[0m
+[0;32mI (10471) EX2_STATE_INDICATOR: Self-delete -> DELETED[0m
+[0;32mI (10481) EX2_STATE_INDICATOR: ExtDelete running: 10[0m
+[0;32mI (11151) EX2_STATE_INDICATOR: Transition: Blocked -> Running[0m
+[0;32mI (11151) EX2_STATE_INDICATOR: === Cycle 4 ===[0m
+[0;32mI (11301) EX2_STATE_INDICATOR: Transition: Running -> Ready[0m
+[0;32mI (11301) EX2_STATE_INDICATOR: Transition: Ready -> Running[0m
+[0;32mI (11301) EX2_STATE_INDICATOR: Transition: Running -> Blocked[0m
+[0;32mI (11481) EX2_STATE_INDICATOR: ExtDelete running: 11[0m
+[0;32mI (12481) EX2_STATE_INDICATOR: ExtDelete running: 12[0m
+[0;32mI (13311) EX2_STATE_INDICATOR: Semaphore timeout[0m
+[0;32mI (13481) EX2_STATE_INDICATOR: ExtDelete running: 13[0m
+[0;32mI (14311) EX2_STATE_INDICATOR: Transition: Blocked -> Running[0m
+[0;32mI (14311) EX2_STATE_INDICATOR: === Cycle 5 ===[0m

@@ -1,0 +1,311 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\User\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\STIC 1\Week-13-FreeRTOS_Worksheets\04-semaphores\w04\lab2\mutex_critical_sections\build\mutex_critical_sections.elf D:\STIC 1\Week-13-FreeRTOS_Worksheets\04-semaphores\w04\lab2\mutex_critical_sections\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\User\esp\v5.5.1\esp-idf\tools\idf.py'
+      : DIO
+[0;32mI (41) boot.esp�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 24 2025 21:39:50[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a880h ( 43136) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001a8a8 vaddr=3ffb0000 size=023f8h (  9208) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001cca8 vaddr=40080000 size=03370h ( 13168) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17570h ( 95600) map[0m
+[0;32mI (147) esp_image: segment 4: paddr=00037598 vaddr=40083370 size=09ce0h ( 40160) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=00041280 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (170) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) app_init: Application information:[0m
+[0;32mI (189) app_init: Project name:     mutex_critical_sections[0m
+[0;32mI (195) app_init: App version:      40bce8f-dirty[0m
+[0;32mI (199) app_init: Compile time:     Oct 23 2025 18:38:06[0m
+[0;32mI (204) app_init: ELF file SHA256:  d64a90385...[0m
+[0;32mI (208) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (212) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (216) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (220) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (224) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (230) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (235) heap_init: At 3FFB2D50 len 0002D2B0 (180 KiB): DRAM[0m
+[0;32mI (241) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (246) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (251) heap_init: At 4008D050 len 00012FB0 (75 KiB): IRAM[0m
+[0;32mI (258) spi_flash: detected chip: generic[0m
+[0;32mI (260) spi_flash: flash io: dio[0m
+[0;33mW (263) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (276) main_task: Started on CPU0[0m
+[0;32mI (286) main_task: Calling app_main()[0m
+[0;32mI (286) MUTEX_LAB: Mutex and Critical Sections Lab Starting...[0m
+[0;32mI (286) MUTEX_LAB: Mutex created successfully[0m
+[0;32mI (286) MUTEX_LAB: High Priority Task started (Priority: 5)[0m
+[0;32mI (296) MUTEX_LAB: [HIGH_PRI] Requesting access to shared resource...[0m
+[0;32mI (296) MUTEX_LAB: [HIGH_PRI] ✓ Mutex acquired - entering critical section[0m
+[0;32mI (306) MUTEX_LAB: [HIGH_PRI] Current state - Counter: 0, Buffer: 'Initial state'[0m
+[0;32mI (316) MUTEX_LAB: Medium Priority Task started (Priority: 3)[0m
+[0;32mI (316) MUTEX_LAB: [MED_PRI] Requesting access to shared resource...[0m
+[0;32mI (326) MUTEX_LAB: Low Priority Task started (Priority: 2)[0m
+[0;32mI (326) MUTEX_LAB: [LOW_PRI] Requesting access to shared resource...[0m
+[0;32mI (336) MUTEX_LAB: Priority Inversion Monitor started[0m
+[0;32mI (336) MUTEX_LAB: System monitor started[0m
+[0;32mI (346) MUTEX_LAB: All tasks created with priorities:[0m
+[0;32mI (346) MUTEX_LAB: Race Condition Demo task started (initially disabled)[0m
+[0;32mI (346) MUTEX_LAB:   High Priority Task: 5[0m
+[0;32mI (356) MUTEX_LAB:   Priority Inversion: 4[0m
+[0;32mI (366) MUTEX_LAB:   Medium Priority:    3[0m
+[0;32mI (366) MUTEX_LAB:   Low Priority:       2[0m
+[0;32mI (366) MUTEX_LAB:   Monitor & Demo:     1[0m
+[0;32mI (376) MUTEX_LAB: [0m
+System operational - watch for mutex contention!
+[0;32mI (1156) MUTEX_LAB: [HIGH_PRI] ✓ Modified - Counter: 1, Buffer: 'Modified by HIGH_PRI #1'[0m
+[0;32mI (1566) MUTEX_LAB: [HIGH_PRI] Mutex released[0m
+[0;32mI (1566) MUTEX_LAB: [MED_PRI] ✓ Mutex acquired - entering critical section[0m
+[0;32mI (1566) MUTEX_LAB: [MED_PRI] Current state - Counter: 1, Buffer: 'Modified by HIGH_PRI #1'[0m
+[0;32mI (2166) MUTEX_LAB: [MED_PRI] ✓ Modified - Counter: 2, Buffer: 'Modified by MED_PRI #2'[0m
+[0;32mI (2576) main_task: Returned from app_main()[0m
+[0;32mI (2766) MUTEX_LAB: [MED_PRI] Mutex released[0m
+[0;32mI (2766) MUTEX_LAB: [LOW_PRI] ✓ Mutex acquired - entering critical section[0m
+[0;32mI (2766) MUTEX_LAB: [LOW_PRI] Current state - Counter: 2, Buffer: 'Modified by MED_PRI #2'[0m
+[0;32mI (3876) MUTEX_LAB: [LOW_PRI] ✓ Modified - Counter: 3, Buffer: 'Modified by LOW_PRI #3'[0m
+[0;32mI (4196) MUTEX_LAB: [LOW_PRI] Mutex released[0m
+[0;32mI (6536) MUTEX_LAB: [MED_PRI] Requesting access to shared resource...[0m
+[0;32mI (6536) MUTEX_LAB: [MED_PRI] ✓ Mutex acquired - entering critical section[0m
+[0;32mI (6536) MUTEX_LAB: [MED_PRI] Current state - Counter: 3, Buffer: 'Modified by LOW_PRI #3'[0m
+[0;32mI (6566) MUTEX_LAB: [LOW_PRI] Requesting access to shared resource...[0m
+[0;32mI (7176) MUTEX_LAB: [HIGH_PRI] Requesting access to shared resource...[0m
+[0;32mI (8026) MUTEX_LAB: [MED_PRI] ✓ Modified - Counter: 4, Buffer: 'Modified by MED_PRI #4'[0m
+[0;32mI (8326) MUTEX_LAB: [HIGH_PRI] ✓ Mutex acquired - entering critical section[0m
+[0;32mI (8326) MUTEX_LAB: [HIGH_PRI] Current state - Counter: 4, Buffer: 'Modified by MED_PRI #4'[0m
+[0;32mI (8326) MUTEX_LAB: [MED_PRI] Mutex released[0m
+[0;32mI (9016) MUTEX_LAB: [HIGH_PRI] ✓ Modified - Counter: 5, Buffer: 'Modified by HIGH_PRI #5'[0m
+[0;32mI (9346) MUTEX_LAB: [HIGH_PRI] Mutex released[0m
+[0;32mI (9346) MUTEX_LAB: [LOW_PRI] ✓ Mutex acquired - entering critical section[0m
+[0;32mI (9346) MUTEX_LAB: [LOW_PRI] Current state - Counter: 5, Buffer: 'Modified by HIGH_PRI #5'[0m
+[0;32mI (10336) MUTEX_LAB: 🔄 Simulating CPU-intensive background work...[0m
+[0;32mI (10456) MUTEX_LAB: Background work completed in 120 ms[0m
+[0;32mI (10696) MUTEX_LAB: [LOW_PRI] ✓ Modified - Counter: 6, Buffer: 'Modified by LOW_PRI #6'[0m
+[0;32mI (11026) MUTEX_LAB: [LOW_PRI] Mutex released[0m
+[0;32mI (12936) MUTEX_LAB: [MED_PRI] Requesting access to shared resource...[0m
+[0;32mI (12936) MUTEX_LAB: [MED_PRI] ✓ Mutex acquired - entering critical section[0m
+[0;32mI (12936) MUTEX_LAB: [MED_PRI] Current state - Counter: 6, Buffer: 'Modified by LOW_PRI #6'[0m
+[0;32mI (13416) MUTEX_LAB: [LOW_PRI] Requesting access to shared resource...[0m
+[0;32mI (13996) MUTEX_LAB: [MED_PRI] ✓ Modified - Counter: 7, Buffer: 'Modified by MED_PRI #7'[0m
+[0;32mI (14426) MUTEX_LAB: [HIGH_PRI] Requesting access to shared resource...[0m
+[0;32mI (14456) MUTEX_LAB: [HIGH_PRI] ✓ Mutex acquired - entering critical section[0m
+[0;32mI (14456) MUTEX_LAB: [HIGH_PRI] Current state - Counter: 7, Buffer: 'Modified by MED_PRI #7'[0m
+[0;32mI (14456) MUTEX_LAB: [MED_PRI] Mutex released[0m
+[0;32mI (15056) MUTEX_LAB: [HIGH_PRI] ✓ Modified - Counter: 8, Buffer: 'Modified by HIGH_PRI #8'[0m
+[0;32mI (15346) MUTEX_LAB: [0m
+═══ MUTEX SYSTEM MONITOR ═══
+[0;32mI (15346) MUTEX_LAB: Mutex Available: NO (Held by task)[0m
+[0;32mI (15346) MUTEX_LAB: Shared Resource State:[0m
+[0;32mI (15346) MUTEX_LAB:   Counter: 8[0m
+[0;32mI (15346) MUTEX_LAB:   Buffer: 'Modified by HIGH_PRI #8'[0m
+[0;32mI (15356) MUTEX_LAB:   Access Count: 8[0m
+[0;32mI (15356) MUTEX_LAB:   Checksum: 19635[0m
+[0;32mI (15356) MUTEX_LAB: Access Statistics:[0m
+[0;32mI (15366) MUTEX_LAB:   Successful: 8[0m
+[0;32mI (15366) MUTEX_LAB:   Failed:     0[0m
+[0;32mI (15366) MUTEX_LAB:   Corrupted:  0[0m
+[0;32mI (15376) MUTEX_LAB:   Success Rate: 100.0%[0m
+[0;32mI (15376) MUTEX_LAB: ══════════════════════════[0m
+
+[0;32mI (15556) MUTEX_LAB: [HIGH_PRI] Mutex released[0m
+[0;32mI (15556) MUTEX_LAB: [LOW_PRI] ✓ Mutex acquired - entering critical section[0m
+[0;32mI (15556) MUTEX_LAB: [LOW_PRI] Current state - Counter: 8, Buffer: 'Modified by HIGH_PRI #8'[0m
+[0;32mI (16236) MUTEX_LAB: [LOW_PRI] ✓ Modified - Counter: 9, Buffer: 'Modified by LOW_PRI #9'[0m
+[0;32mI (16776) MUTEX_LAB: [LOW_PRI] Mutex released[0m
+[0;32mI (18926) MUTEX_LAB: [MED_PRI] Requesting access to shared resource...[0m
+[0;32mI (18926) MUTEX_LAB: [MED_PRI] ✓ Mutex acquired - entering critical section[0m
+[0;32mI (18926) MUTEX_LAB: [MED_PRI] Current state - Counter: 9, Buffer: 'Modified by LOW_PRI #9'[0m
+[0;32mI (19736) MUTEX_LAB: [LOW_PRI] Requesting access to shared resource...[0m
+[0;32mI (19936) MUTEX_LAB: [MED_PRI] ✓ Modified - Counter: 10, Buffer: 'Modified by MED_PRI #10'[0m
+[0;32mI (20176) MUTEX_LAB: [MED_PRI] Mutex released[0m
+[0;32mI (20176) MUTEX_LAB: [LOW_PRI] ✓ Mutex acquired - entering critical section[0m
+[0;32mI (20176) MUTEX_LAB: [LOW_PRI] Current state - Counter: 10, Buffer: 'Modified by MED_PRI #10'[0m
+[0;32mI (20456) MUTEX_LAB: 🔄 Simulating CPU-intensive background work...[0m
+[0;32mI (20576) MUTEX_LAB: Background work completed in 120 ms[0m
+[0;32mI (21376) MUTEX_LAB: [LOW_PRI] ✓ Modified - Counter: 11, Buffer: 'Modified by LOW_PRI #11'[0m
+[0;32mI (21596) MUTEX_LAB: [HIGH_PRI] Requesting access to shared resource...[0m
+[0;32mI (21946) MUTEX_LAB: [HIGH_PRI] ✓ Mutex acquired - entering critical section[0m
+[0;32mI (21946) MUTEX_LAB: [HIGH_PRI] Current state - Counter: 11, Buffer: 'Modified by LOW_PRI #11'[0m
+[0;32mI (21946) MUTEX_LAB: [LOW_PRI] Mutex released[0m
+[0;32mI (23406) MUTEX_LAB: [HIGH_PRI] ✓ Modified - Counter: 12, Buffer: 'Modified by HIGH_PRI #12'[0m
+[0;32mI (23706) MUTEX_LAB: [HIGH_PRI] Mutex released[0m
+[0;32mI (24376) MUTEX_LAB: [LOW_PRI] Requesting access to shared resource...[0m
+[0;32mI (24376) MUTEX_LAB: [LOW_PRI] ✓ Mutex acquired - entering critical section[0m
+[0;32mI (24376) MUTEX_LAB: [LOW_PRI] Current state - Counter: 12, Buffer: 'Modified by HIGH_PRI #12'[0m
+[0;32mI (24646) MUTEX_LAB: [MED_PRI] Requesting access to shared resource...[0m
+[0;32mI (25726) MUTEX_LAB: [LOW_PRI] ✓ Modified - Counter: 13, Buffer: 'Modified by LOW_PRI #13'[0m
+[0;32mI (25966) MUTEX_LAB: [MED_PRI] ✓ Mutex acquired - entering critical section[0m
+[0;32mI (25966) MUTEX_LAB: [MED_PRI] Current state - Counter: 13, Buffer: 'Modified by LOW_PRI #13'[0m
+[0;32mI (25966) MUTEX_LAB: [LOW_PRI] Mutex released[0m
+[0;32mI (26506) MUTEX_LAB: [MED_PRI] ✓ Modified - Counter: 14, Buffer: 'Modified by MED_PRI #14'[0m
+[0;32mI (26886) MUTEX_LAB: [MED_PRI] Mutex released[0m
+[0;32mI (28196) MUTEX_LAB: [LOW_PRI] Requesting access to shared resource...[0m
+[0;32mI (28196) MUTEX_LAB: [LOW_PRI] ✓ Mutex acquired - entering critical section[0m
+[0;32mI (28196) MUTEX_LAB: [LOW_PRI] Current state - Counter: 14, Buffer: 'Modified by MED_PRI #14'[0m
+[0;32mI (29556) MUTEX_LAB: [LOW_PRI] ✓ Modified - Counter: 15, Buffer: 'Modified by LOW_PRI #15'[0m
+[0;32mI (30136) MUTEX_LAB: [LOW_PRI] Mutex released[0m
+[0;32mI (30276) MUTEX_LAB: [MED_PRI] Requesting access to shared resource...[0m
+[0;32mI (30276) MUTEX_LAB: [MED_PRI] ✓ Mutex acquired - entering critical section[0m
+[0;32mI (30276) MUTEX_LAB: [MED_PRI] Current state - Counter: 15, Buffer: 'Modified by LOW_PRI #15'[0m
+[0;33mW (30356) MUTEX_LAB: [0m
+🎭 DEMONSTRATION: Simulating race condition...
+[0;33mW (30356) MUTEX_LAB: Temporarily bypassing mutex for educational purposes[0m
+[0;33mW (30356) MUTEX_LAB: ⚠️  UNSAFE ACCESS - NO MUTEX PROTECTION[0m
+[0;32mI (30386) MUTEX_LAB: [0m
+═══ MUTEX SYSTEM MONITOR ═══
+[0;32mI (30386) MUTEX_LAB: Mutex Available: NO (Held by task)[0m
+[0;32mI (30386) MUTEX_LAB: Shared Resource State:[0m
+[0;32mI (30386) MUTEX_LAB:   Counter: 15[0m
+[0;32mI (30386) MUTEX_LAB:   Buffer: 'Modified by LOW_PRI #15'[0m
+[0;32mI (30396) MUTEX_LAB:   Access Count: 15[0m
+[0;32mI (30396) MUTEX_LAB:   Checksum: 19478[0m
+[0;32mI (30396) MUTEX_LAB: Access Statistics:[0m
+[0;32mI (30406) MUTEX_LAB:   Successful: 16[0m
+[0;32mI (30406) MUTEX_LAB:   Failed:     0[0m
+[0;32mI (30406) MUTEX_LAB:   Corrupted:  0[0m
+[0;32mI (30416) MUTEX_LAB:   Success Rate: 100.0%[0m
+[0;32mI (30416) MUTEX_LAB: ══════════════════════════[0m
+
+[0;33mW (30456) MUTEX_LAB: Demo complete - race condition may have occurred[0m
+[0;33mW (30456) MUTEX_LAB: In real applications, ALWAYS use proper synchronization![0m
+
+[0;32mI (30576) MUTEX_LAB: 🔄 Simulating CPU-intensive background work...[0m
+[0;32mI (30696) MUTEX_LAB: Background work completed in 120 ms[0m
+[0;32mI (30916) MUTEX_LAB: [HIGH_PRI] Requesting access to shared resource...[0m
+[0;32mI (31376) MUTEX_LAB: [MED_PRI] ✓ Modified - Counter: 16, Buffer: 'Modified by MED_PRI #16'[0m
+[0;32mI (31856) MUTEX_LAB: [HIGH_PRI] ✓ Mutex acquired - entering critical section[0m
+[0;32mI (31856) MUTEX_LAB: [HIGH_PRI] Current state - Counter: 16, Buffer: 'Modified by MED_PRI #16'[0m
+[0;32mI (31856) MUTEX_LAB: [MED_PRI] Mutex released[0m
+[0;32mI (32446) MUTEX_LAB: [HIGH_PRI] ✓ Modified - Counter: 17, Buffer: 'Modified by HIGH_PRI #17'[0m
+[0;32mI (32956) MUTEX_LAB: [HIGH_PRI] Mutex released[0m
+[0;32mI (33126) MUTEX_LAB: [LOW_PRI] Requesting access to shared resource...[0m
+[0;32mI (33126) MUTEX_LAB: [LOW_PRI] ✓ Mutex acquired - entering critical section[0m
+[0;32mI (33126) MUTEX_LAB: [LOW_PRI] Current state - Counter: 17, Buffer: 'Modified by HIGH_PRI #17'[0m
+[0;32mI (33746) MUTEX_LAB: [LOW_PRI] ✓ Modified - Counter: 18, Buffer: 'Modified by LOW_PRI #18'[0m
+[0;32mI (33976) MUTEX_LAB: [LOW_PRI] Mutex released[0m
+[0;32mI (34956) MUTEX_LAB: [MED_PRI] Requesting access to shared resource...[0m
+[0;32mI (34956) MUTEX_LAB: [MED_PRI] ✓ Mutex acquired - entering critical section[0m
+[0;32mI (34956) MUTEX_LAB: [MED_PRI] Current state - Counter: 18, Buffer: 'Modified by LOW_PRI #18'[0m
+[0;32mI (35826) MUTEX_LAB: [MED_PRI] ✓ Modified - Counter: 19, Buffer: 'Modified by MED_PRI #19'[0m
+[0;32mI (36336) MUTEX_LAB: [MED_PRI] Mutex released[0m
+[0;32mI (36806) MUTEX_LAB: [LOW_PRI] Requesting access to shared resource...[0m
+[0;32mI (36806) MUTEX_LAB: [LOW_PRI] ✓ Mutex acquired - entering critical section[0m
+[0;32mI (36806) MUTEX_LAB: [LOW_PRI] Current state - Counter: 19, Buffer: 'Modified by MED_PRI #19'[0m
+[0;32mI (37326) MUTEX_LAB: [LOW_PRI] ✓ Modified - Counter: 20, Buffer: 'Modified by LOW_PRI #20'[0m
+[0;32mI (37756) MUTEX_LAB: [LOW_PRI] Mutex released[0m
+[0;32mI (38056) MUTEX_LAB: [HIGH_PRI] Requesting access to shared resource...[0m
+[0;32mI (38056) MUTEX_LAB: [HIGH_PRI] ✓ Mutex acquired - entering critical section[0m
+[0;32mI (38056) MUTEX_LAB: [HIGH_PRI] Current state - Counter: 20, Buffer: 'Modified by LOW_PRI #20'[0m
+[0;32mI (39346) MUTEX_LAB: [HIGH_PRI] ✓ Modified - Counter: 21, Buffer: 'Modified by HIGH_PRI #21'[0m
+[0;32mI (39836) MUTEX_LAB: [HIGH_PRI] Mutex released[0m
+[0;32mI (40566) MUTEX_LAB: [LOW_PRI] Requesting access to shared resource...[0m
+[0;32mI (40566) MUTEX_LAB: [LOW_PRI] ✓ Mutex acquired - entering critical section[0m
+[0;32mI (40566) MUTEX_LAB: [LOW_PRI] Current state - Counter: 21, Buffer: 'Modified by HIGH_PRI #21'[0m
+[0;32mI (40696) MUTEX_LAB: 🔄 Simulating CPU-intensive background work...[0m
+[0;32mI (40816) MUTEX_LAB: Background work completed in 120 ms[0m
+[0;32mI (41246) MUTEX_LAB: [LOW_PRI] ✓ Modified - Counter: 22, Buffer: 'Modified by LOW_PRI #22'[0m
+[0;32mI (41296) MUTEX_LAB: [MED_PRI] Requesting access to shared resource...[0m
+[0;32mI (41706) MUTEX_LAB: [MED_PRI] ✓ Mutex acquired - entering critical section[0m
+[0;32mI (41706) MUTEX_LAB: [MED_PRI] Current state - Counter: 22, Buffer: 'Modified by LOW_PRI #22'[0m
+[0;32mI (41706) MUTEX_LAB: [LOW_PRI] Mutex released[0m
+[0;32mI (42656) MUTEX_LAB: [MED_PRI] ✓ Modified - Counter: 23, Buffer: 'Modified by MED_PRI #23'[0m
+[0;32mI (42976) MUTEX_LAB: [MED_PRI] Mutex released[0m
+[0;32mI (43796) MUTEX_LAB: [LOW_PRI] Requesting access to shared resource...[0m
+[0;32mI (43796) MUTEX_LAB: [LOW_PRI] ✓ Mutex acquired - entering critical section[0m
+[0;32mI (43796) MUTEX_LAB: [LOW_PRI] Current state - Counter: 23, Buffer: 'Modified by MED_PRI #23'[0m
+[0;32mI (44786) MUTEX_LAB: [LOW_PRI] ✓ Modified - Counter: 24, Buffer: 'Modified by LOW_PRI #24'[0m
+[0;32mI (45186) MUTEX_LAB: [LOW_PRI] Mutex released[0m
+[0;32mI (45426) MUTEX_LAB: [0m
+═══ MUTEX SYSTEM MONITOR ═══
+[0;32mI (45426) MUTEX_LAB: Mutex Available: YES[0m
+[0;32mI (45426) MUTEX_LAB: Shared Resource State:[0m
+[0;32mI (45426) MUTEX_LAB:   Counter: 24[0m
+[0;32mI (45426) MUTEX_LAB:   Buffer: 'Modified by LOW_PRI #24'[0m
+[0;32mI (45436) MUTEX_LAB:   Access Count: 24[0m
+[0;32mI (45436) MUTEX_LAB:   Checksum: 19486[0m
+[0;32mI (45436) MUTEX_LAB: Access Statistics:[0m
+[0;32mI (45446) MUTEX_LAB:   Successful: 24[0m
+[0;32mI (45446) MUTEX_LAB:   Failed:     0[0m
+[0;32mI (45446) MUTEX_LAB:   Corrupted:  0[0m
+[0;32mI (45456) MUTEX_LAB:   Success Rate: 100.0%[0m
+[0;32mI (45456) MUTEX_LAB: ══════════════════════════[0m
+
+[0;32mI (47236) MUTEX_LAB: [HIGH_PRI] Requesting access to shared resource...[0m
+[0;32mI (47236) MUTEX_LAB: [HIGH_PRI] ✓ Mutex acquired - entering critical section[0m
+[0;32mI (47236) MUTEX_LAB: [HIGH_PRI] Current state - Counter: 24, Buffer: 'Modified by LOW_PRI #24'[0m
+[0;32mI (47736) MUTEX_LAB: [MED_PRI] Requesting access to shared resource...[0m
+[0;32mI (47886) MUTEX_LAB: [HIGH_PRI] ✓ Modified - Counter: 25, Buffer: 'Modified by HIGH_PRI #25'[0m
+[0;32mI (48146) MUTEX_LAB: [LOW_PRI] Requesting access to shared resource...[0m
+[0;32mI (48416) MUTEX_LAB: [HIGH_PRI] Mutex released[0m
+[0;32mI (48416) MUTEX_LAB: [MED_PRI] ✓ Mutex acquired - entering critical section[0m
+[0;32mI (48416) MUTEX_LAB: [MED_PRI] Current state - Counter: 25, Buffer: 'Modified by HIGH_PRI #25'[0m
+[0;32mI (49656) MUTEX_LAB: [MED_PRI] ✓ Modified - Counter: 26, Buffer: 'Modified by MED_PRI #26'[0m
+[0;32mI (50276) MUTEX_LAB: [MED_PRI] Mutex released[0m
+[0;32mI (50276) MUTEX_LAB: [LOW_PRI] ✓ Mutex acquired - entering critical section[0m
+[0;32mI (50276) MUTEX_LAB: [LOW_PRI] Current state - Counter: 26, Buffer: 'Modified by MED_PRI #26'[0m
+[0;32mI (50816) MUTEX_LAB: 🔄 Simulating CPU-intensive background work...[0m
+[0;32mI (50936) MUTEX_LAB: Background work completed in 120 ms[0m
+[0;32mI (51316) MUTEX_LAB: [LOW_PRI] ✓ Modified - Counter: 27, Buffer: 'Modified by LOW_PRI #27'[0m
+[0;32mI (51996) MUTEX_LAB: [LOW_PRI] Mutex released[0m
+[0;32mI (53806) MUTEX_LAB: [MED_PRI] Requesting access to shared resource...[0m
+[0;32mI (53806) MUTEX_LAB: [MED_PRI] ✓ Mutex acquired - entering critical section[0m
+[0;32mI (53806) MUTEX_LAB: [MED_PRI] Current state - Counter: 27, Buffer: 'Modified by LOW_PRI #27'[0m
+[0;32mI (54366) MUTEX_LAB: [LOW_PRI] Requesting access to shared resource...[0m
+[0;32mI (54606) MUTEX_LAB: [MED_PRI] ✓ Modified - Counter: 28, Buffer: 'Modified by MED_PRI #28'[0m
+[0;32mI (54926) MUTEX_LAB: [MED_PRI] Mutex released[0m
+[0;32mI (54926) MUTEX_LAB: [LOW_PRI] ✓ Mutex acquired - entering critical section[0m
+[0;32mI (54926) MUTEX_LAB: [LOW_PRI] Current state - Counter: 28, Buffer: 'Modified by MED_PRI #28'[0m
+[0;32mI (55786) MUTEX_LAB: [HIGH_PRI] Requesting access to shared resource...[0m
+[0;32mI (56306) MUTEX_LAB: [LOW_PRI] ✓ Modified - Counter: 29, Buffer: 'Modified by LOW_PRI #29'[0m
+[0;32mI (56816) MUTEX_LAB: [HIGH_PRI] ✓ Mutex acquired - entering critical section[0m
+[0;32mI (56816) MUTEX_LAB: [HIGH_PRI] Current state - Counter: 29, Buffer: 'Modified by LOW_PRI #29'[0m
+[0;32mI (56816) MUTEX_LAB: [LOW_PRI] Mutex released[0m
+[0;32mI (58266) MUTEX_LAB: [HIGH_PRI] ✓ Modified - Counter: 30, Buffer: 'Modified by HIGH_PRI #30'[0m
+[0;32mI (58646) MUTEX_LAB: [HIGH_PRI] Mutex released[0m
+[0;32mI (58876) MUTEX_LAB: [LOW_PRI] Requesting access to shared resource...[0m
+[0;32mI (58876) MUTEX_LAB: [LOW_PRI] ✓ Mutex acquired - entering critical section[0m
+[0;32mI (58876) MUTEX_LAB: [LOW_PRI] Current state - Counter: 30, Buffer: 'Modified by HIGH_PRI #30'[0m
+[0;32mI (59716) MUTEX_LAB: [MED_PRI] Requesting access to shared resource...[0m
+[0;32mI (59986) MUTEX_LAB: [LOW_PRI] ✓ Modified - Counter: 31, Buffer: 'Modified by LOW_PRI #31'[0m
+[0;32mI (60466) MUTEX_LAB: [0m
+═══ MUTEX SYSTEM MONITOR ═══
+[0;32mI (60466) MUTEX_LAB: Mutex Available: NO (Held by task)[0m
+[0;32mI (60466) MUTEX_LAB: Shared Resource State:[0m
+[0;32mI (60466) MUTEX_LAB:   Counter: 31[0m
+[0;32mI (60466) MUTEX_LAB:   Buffer: 'Modified by LOW_PRI #31'[0m
+[0;32mI (60476) MUTEX_LAB:   Access Count: 31[0m
+[0;32mI (60476) MUTEX_LAB:   Checksum: 19446[0m
+[0;32mI (60476) MUTEX_LAB: Access Statistics:[0m
+[0;32mI (60486) MUTEX_LAB:   Successful: 31[0m
+[0;32mI (60486) MUTEX_LAB:   Failed:     0[0m
+[0;32mI (60486) MUTEX_LAB:   Corrupted:  0[0m
+[0;32mI (60496) MUTEX_LAB:   Success Rate: 100.0%[0m
+[0;32mI (60496) MUTEX_LAB: ══════════════════════════[0m
+
+[0;32mI (60636) MUTEX_LAB: [MED_PRI] ✓ Mutex acquired - entering critical section[0m
+[0;32mI (60636) MUTEX_LAB: [MED_PRI] Current state - Counter: 31, Buffer: 'Modified by LOW_PRI #31'[0m
+[0;32mI (60636) MUTEX_LAB: [LOW_PRI] Mutex released[0m
+[0;32mI (60936) MUTEX_LAB: 🔄 Simulating CPU-intensive background work...[0m

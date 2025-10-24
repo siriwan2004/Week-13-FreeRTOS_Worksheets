@@ -1,0 +1,126 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\User\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\STIC 1\Week-13-FreeRTOS_Worksheets\04-semaphores\w04\lab2\mutex_critical_sections\build\mutex_critical_sections.elf D:\STIC 1\Week-13-FreeRTOS_Worksheets\04-semaphores\w04\lab2\mutex_critical_sections\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\User\esp\v5.5.1\esp-idf\tools\idf.py'
+Y�"%=5
+[0;32mI (41)ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 24 2025 21:39:50[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a5a0h ( 42400) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001a5c8 vaddr=3ffb0000 size=023f8h (  9208) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c9c8 vaddr=40080000 size=03650h ( 13904) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17334h ( 95028) map[0m
+[0;32mI (146) esp_image: segment 4: paddr=0003735c vaddr=40083650 size=099c8h ( 39368) load[0m
+[0;32mI (162) esp_image: segment 5: paddr=00040d2c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Multicore app[0m
+[0;32mI (188) cpu_start: Pro cpu start user code[0m
+[0;32mI (188) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) app_init: Application information:[0m
+[0;32mI (189) app_init: Project name:     mutex_critical_sections[0m
+[0;32mI (194) app_init: App version:      40bce8f-dirty[0m
+[0;32mI (198) app_init: Compile time:     Oct 23 2025 18:38:06[0m
+[0;32mI (203) app_init: ELF file SHA256:  6e22a5ab9...[0m
+[0;32mI (208) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (230) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (235) heap_init: At 3FFB2D48 len 0002D2B8 (180 KiB): DRAM[0m
+[0;32mI (240) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (251) heap_init: At 4008D018 len 00012FE8 (75 KiB): IRAM[0m
+[0;32mI (257) spi_flash: detected chip: generic[0m
+[0;32mI (260) spi_flash: flash io: dio[0m
+[0;33mW (263) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (275) main_task: Started on CPU0[0m
+[0;32mI (285) main_task: Calling app_main()[0m
+[0;33mW (285) MUTEX_LAB_EXP2: Experiment #2: DISABLE MUTEX to observe race conditions[0m
+[0;32mI (285) MUTEX_LAB_EXP2: High Priority Task started (prio:5)[0m
+[0;32mI (285) MUTEX_LAB_EXP2: [HIGH_PRI] Requesting access to shared resource (NO MUTEX)...[0m
+[0;33mW (295) MUTEX_LAB_EXP2: [HIGH_PRI] ⚠ ENTERING CRITICAL SECTION WITHOUT MUTEX (UNSAFE)[0m
+[0;32mI (305) MUTEX_LAB_EXP2: [HIGH_PRI] Current - Counter:0  Buffer:'Initial state'[0m
+[0;32mI (315) MUTEX_LAB_EXP2: CPU Load Task started (prio:4)[0m
+[0;32mI (315) MUTEX_LAB_EXP2: Medium Priority Task started (prio:3)[0m
+[0;32mI (325) MUTEX_LAB_EXP2: [MED_PRI] Requesting access to shared resource (NO MUTEX)...[0m
+[0;33mW (325) MUTEX_LAB_EXP2: [MED_PRI] ⚠ ENTERING CRITICAL SECTION WITHOUT MUTEX (UNSAFE)[0m
+[0;32mI (335) MUTEX_LAB_EXP2: [MED_PRI] Current - Counter:0  Buffer:'Initial state'[0m
+[0;32mI (345) MUTEX_LAB_EXP2: Low Priority Task started (prio:2)[0m
+[0;32mI (345) MUTEX_LAB_EXP2: [LOW_PRI] Requesting access to shared resource (NO MUTEX)...[0m
+[0;33mW (355) MUTEX_LAB_EXP2: [LOW_PRI] ⚠ ENTERING CRITICAL SECTION WITHOUT MUTEX (UNSAFE)[0m
+[0;32mI (365) MUTEX_LAB_EXP2: [LOW_PRI] Current - Counter:0  Buffer:'Initial state'[0m
+[0;33mW (375) MUTEX_LAB_EXP2: ⚠ SYSTEM RUNNING WITHOUT MUTEX — EXPECT DATA CORRUPTION[0m
+[0;32mI (375) MUTEX_LAB_EXP2: System monitor started (prio:1)[0m
+[0;32mI (1425) MUTEX_LAB_EXP2: [MED_PRI] ✓ Modified - Counter:1  Buffer:'Modified by MED_PRI #1'[0m
+[0;32mI (1455) MUTEX_LAB_EXP2: [LOW_PRI] ✓ Modified - Counter:1  Buffer:'Modified by LOW_PRI #1'[0m
+[0;32mI (1655) MUTEX_LAB_EXP2: [HIGH_PRI] ✓ Modified - Counter:1  Buffer:'Modified by HIGH_PRI #1'[0m
+[0;32mI (2575) main_task: Returned from app_main()[0m
+[0;32mI (4745) MUTEX_LAB_EXP2: [LOW_PRI] Requesting access to shared resource (NO MUTEX)...[0m
+[0;33mW (4745) MUTEX_LAB_EXP2: [LOW_PRI] ⚠ ENTERING CRITICAL SECTION WITHOUT MUTEX (UNSAFE)[0m
+[0;32mI (4745) MUTEX_LAB_EXP2: [LOW_PRI] Current - Counter:1  Buffer:'Modified by HIGH_PRI #1'[0m
+[0;32mI (5905) MUTEX_LAB_EXP2: [MED_PRI] Requesting access to shared resource (NO MUTEX)...[0m
+[0;33mW (5905) MUTEX_LAB_EXP2: [MED_PRI] ⚠ ENTERING CRITICAL SECTION WITHOUT MUTEX (UNSAFE)[0m
+[0;32mI (5905) MUTEX_LAB_EXP2: [MED_PRI] Current - Counter:1  Buffer:'Modified by HIGH_PRI #1'[0m
+[0;32mI (6015) MUTEX_LAB_EXP2: [LOW_PRI] ✓ Modified - Counter:2  Buffer:'Modified by LOW_PRI #2'[0m
+[0;32mI (7155) MUTEX_LAB_EXP2: [HIGH_PRI] Requesting access to shared resource (NO MUTEX)...[0m
+[0;33mW (7155) MUTEX_LAB_EXP2: [HIGH_PRI] ⚠ ENTERING CRITICAL SECTION WITHOUT MUTEX (UNSAFE)[0m
+[0;32mI (7155) MUTEX_LAB_EXP2: [HIGH_PRI] Current - Counter:2  Buffer:'Modified by LOW_PRI #2'[0m
+[0;32mI (7185) MUTEX_LAB_EXP2: [MED_PRI] ✓ Modified - Counter:2  Buffer:'Modified by MED_PRI #2'[0m
+[0;32mI (8275) MUTEX_LAB_EXP2: [HIGH_PRI] ✓ Modified - Counter:3  Buffer:'Modified by HIGH_PRI #3'[0m
+[0;32mI (9035) MUTEX_LAB_EXP2: [LOW_PRI] Requesting access to shared resource (NO MUTEX)...[0m
+[0;33mW (9035) MUTEX_LAB_EXP2: [LOW_PRI] ⚠ ENTERING CRITICAL SECTION WITHOUT MUTEX (UNSAFE)[0m
+[0;32mI (9035) MUTEX_LAB_EXP2: [LOW_PRI] Current - Counter:3  Buffer:'Modified by HIGH_PRI #3'[0m
+[0;32mI (10075) MUTEX_LAB_EXP2: [LOW_PRI] ✓ Modified - Counter:4  Buffer:'Modified by LOW_PRI #4'[0m
+[0;32mI (10315) MUTEX_LAB_EXP2: 🔄 Simulating CPU-intensive background work (no mutex)...[0m
+[0;32mI (10435) MUTEX_LAB_EXP2: Background work took 120 ms[0m
+[0;32mI (11265) MUTEX_LAB_EXP2: [MED_PRI] Requesting access to shared resource (NO MUTEX)...[0m
+[0;33mW (11265) MUTEX_LAB_EXP2: [MED_PRI] ⚠ ENTERING CRITICAL SECTION WITHOUT MUTEX (UNSAFE)[0m
+[0;32mI (11265) MUTEX_LAB_EXP2: [MED_PRI] Current - Counter:4  Buffer:'Modified by LOW_PRI #4'[0m
+[0;32mI (12225) MUTEX_LAB_EXP2: [MED_PRI] ✓ Modified - Counter:5  Buffer:'Modified by MED_PRI #5'[0m
+[0;32mI (13495) MUTEX_LAB_EXP2: [LOW_PRI] Requesting access to shared resource (NO MUTEX)...[0m
+[0;33mW (13495) MUTEX_LAB_EXP2: [LOW_PRI] ⚠ ENTERING CRITICAL SECTION WITHOUT MUTEX (UNSAFE)[0m
+[0;32mI (13495) MUTEX_LAB_EXP2: [LOW_PRI] Current - Counter:5  Buffer:'Modified by MED_PRI #5'[0m
+[0;32mI (14405) MUTEX_LAB_EXP2: [LOW_PRI] ✓ Modified - Counter:6  Buffer:'Modified by LOW_PRI #6'[0m
+[0;32mI (15385) MUTEX_LAB_EXP2: [0m
+═══ MUTEX SYSTEM MONITOR (EXP#2) ═══
+[0;33mW (15385) MUTEX_LAB_EXP2: Mutex State: BYPASSED (NOT USED in this experiment)[0m
+[0;32mI (15385) MUTEX_LAB_EXP2: Shared Resource:[0m
+[0;32mI (15385) MUTEX_LAB_EXP2:   Counter      : 6[0m
+[0;32mI (15395) MUTEX_LAB_EXP2:   Buffer       : 'Modified by LOW_PRI #6'[0m
+[0;32mI (15395) MUTEX_LAB_EXP2:   Access Count : 9[0m
+[0;32mI (15405) MUTEX_LAB_EXP2:   Checksum     : 18360[0m
+[0;32mI (15405) MUTEX_LAB_EXP2: Access Stats:[0m
+[0;32mI (15405) MUTEX_LAB_EXP2:   Successful : 9  (UNPROTECTED in Exp#2)[0m
+[0;32mI (15415) MUTEX_LAB_EXP2:   Failed     : 0  (timeout not applicable)[0m
+[0;32mI (15425) MUTEX_LAB_EXP2:   Corrupted  : 0[0m
+[0;32mI (15425) MUTEX_LAB_EXP2:   Success Rate: 100.0%[0m
+[0;32mI (15425) MUTEX_LAB_EXP2: ══════════════════════════════════[0m
+
+[0;32mI (16205) MUTEX_LAB_EXP2: [HIGH_PRI] Requesting access to shared resource (NO MUTEX)...[0m
+[0;33mW (16205) MUTEX_LAB_EXP2: [HIGH_PRI] ⚠ ENTERING CRITICAL SECTION WITHOUT MUTEX (UNSAFE)[0m
+[0;32mI (16205) MUTEX_LAB_EXP2: [HIGH_PRI] Current - Counter:6  Buffer:'Modified by LOW_PRI #6'[0m
+[0;32mI (16705) MUTEX_LAB_EXP2: [MED_PRI] Requesting access to shared resource (NO MUTEX)...[0m
+[0;33mW (16705) MUTEX_LAB_EXP2: [MED_PRI] ⚠ ENTERING CRITICAL SECTION WITHOUT MUTEX (UNSAFE)[0m
+[0;32mI (16705) MUTEX_LAB_EXP2: [MED_PRI] Current - Counter:6  Buffer:'Modified by LOW_PRI #6'[0m
+[0;32mI (17435) MUTEX_LAB_EXP2: [HIGH_PRI] ✓ Modified - Counter:7  Buffer:'Modified by HIGH_PRI #7'[0m

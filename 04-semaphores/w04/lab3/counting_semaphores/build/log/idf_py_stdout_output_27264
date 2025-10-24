@@ -1,0 +1,145 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\User\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\STIC 1\Week-13-FreeRTOS_Worksheets\04-semaphores\w04\lab3\counting_semaphores\build\counting_semaphores.elf D:\STIC 1\Week-13-FreeRTOS_Worksheets\04-semaphores\w04\lab3\counting_semaphores\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\User\esp\v5.5.1\esp-idf\tools\idf.py'
+    : DIO
+[0;32mI (41) boot.esp32: SPI Flash Size�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 24 2025 21:55:37[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a710h ( 42768) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001a738 vaddr=3ffb0000 size=024b8h (  9400) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001cbf8 vaddr=40080000 size=03420h ( 13344) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=174bch ( 95420) map[0m
+[0;32mI (147) esp_image: segment 4: paddr=000374e4 vaddr=40083420 size=09c58h ( 40024) load[0m
+[0;32mI (162) esp_image: segment 5: paddr=00041144 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) app_init: Application information:[0m
+[0;32mI (189) app_init: Project name:     counting_semaphores[0m
+[0;32mI (194) app_init: App version:      40bce8f-dirty[0m
+[0;32mI (198) app_init: Compile time:     Oct 24 2025 21:55:03[0m
+[0;32mI (203) app_init: ELF file SHA256:  4b8181f4f...[0m
+[0;32mI (208) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (212) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (224) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (230) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (235) heap_init: At 3FFB2DA0 len 0002D260 (180 KiB): DRAM[0m
+[0;32mI (240) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (251) heap_init: At 4008D078 len 00012F88 (75 KiB): IRAM[0m
+[0;32mI (258) spi_flash: detected chip: generic[0m
+[0;32mI (260) spi_flash: flash io: dio[0m
+[0;33mW (263) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (276) main_task: Started on CPU0[0m
+[0;32mI (286) main_task: Calling app_main()[0m
+[0;32mI (286) COUNTING_SEM: Counting Semaphores Lab Starting...[0m
+[0;32mI (286) COUNTING_SEM: Counting semaphore created (max count: 5)[0m
+[0;32mI (286) COUNTING_SEM: Producer1 started[0m
+[0;32mI (296) COUNTING_SEM: 🏭 Producer1: Requesting resource...[0m
+[0;32mI (296) COUNTING_SEM: Producer2 started[0m
+[0;32mI (296) COUNTING_SEM: 🏭 Producer2: Requesting resource...[0m
+[0;32mI (306) COUNTING_SEM: Producer3 started[0m
+[0;32mI (306) COUNTING_SEM: 🏭 Producer3: Requesting resource...[0m
+[0;32mI (316) COUNTING_SEM: Producer4 started[0m
+[0;32mI (316) COUNTING_SEM: 🏭 Producer4: Requesting resource...[0m
+[0;32mI (326) COUNTING_SEM: Producer5 started[0m
+[0;32mI (326) COUNTING_SEM: 🏭 Producer5: Requesting resource...[0m
+[0;32mI (336) COUNTING_SEM: Resource monitor started[0m
+[0;32mI (336) COUNTING_SEM: Load generator started[0m
+[0;32mI (336) COUNTING_SEM: Statistics task started[0m
+[0;32mI (346) COUNTING_SEM: ✓ Producer1: Acquired resource 1 (wait: 0ms)[0m
+[0;32mI (346) COUNTING_SEM: 🔧 Producer1: Using resource 1 for 3778ms[0m
+[0;32mI (356) COUNTING_SEM: ✓ Producer2: Acquired resource 2 (wait: 0ms)[0m
+[0;32mI (366) COUNTING_SEM: ✓ Producer3: Acquired resource 3 (wait: 0ms)[0m
+[0;32mI (366) COUNTING_SEM: 🔧 Producer2: Using resource 2 for 1041ms[0m
+[0;32mI (366) COUNTING_SEM: 🔧 Producer3: Using resource 3 for 2821ms[0m
+[0;32mI (376) COUNTING_SEM: ✓ Producer4: Acquired resource 4 (wait: 0ms)[0m
+[0;32mI (386) COUNTING_SEM: ✓ Producer5: Acquired resource 5 (wait: 0ms)[0m
+[0;32mI (386) COUNTING_SEM: 🔧 Producer4: Using resource 4 for 1821ms[0m
+[0;32mI (396) COUNTING_SEM: 🔧 Producer5: Using resource 5 for 3527ms[0m
+[0;32mI (356) COUNTING_SEM: System created with:[0m
+[0;32mI (406) COUNTING_SEM:   Resources: 5[0m
+[0;32mI (416) COUNTING_SEM:   Producers: 5[0m
+[0;32mI (416) COUNTING_SEM:   Initial semaphore count: 5[0m
+[0;32mI (416) COUNTING_SEM: [0m
+System operational - monitoring resource pool usage!
+[0;32mI (1416) COUNTING_SEM: ✓ Producer2: Released resource 2[0m
+[0;32mI (2216) COUNTING_SEM: ✓ Producer4: Released resource 4[0m
+[0;32mI (2326) main_task: Returned from app_main()[0m
+[0;32mI (3196) COUNTING_SEM: ✓ Producer3: Released resource 3[0m
+[0;32mI (3926) COUNTING_SEM: ✓ Producer5: Released resource 5[0m
+[0;32mI (4126) COUNTING_SEM: ✓ Producer1: Released resource 1[0m
+[0;32mI (5026) COUNTING_SEM: 🏭 Producer2: Requesting resource...[0m
+[0;32mI (5076) COUNTING_SEM: ✓ Producer2: Acquired resource 1 (wait: 0ms)[0m
+[0;32mI (5076) COUNTING_SEM: 🔧 Producer2: Using resource 1 for 2934ms[0m
+[0;32mI (5336) COUNTING_SEM: [0m
+📊 RESOURCE POOL STATUS
+[0;32mI (5336) COUNTING_SEM: Available resources: 4/5[0m
+[0;32mI (5336) COUNTING_SEM: Resources in use: 1[0m
+[0;32mI (5336) COUNTING_SEM:   Resource 1: BUSY (User: Producer2, Usage: 2 times)[0m
+[0;32mI (5336) COUNTING_SEM:   Resource 2: FREE (Total usage: 1 times)[0m
+[0;32mI (5346) COUNTING_SEM:   Resource 3: FREE (Total usage: 1 times)[0m
+[0;32mI (5346) COUNTING_SEM:   Resource 4: FREE (Total usage: 1 times)[0m
+[0;32mI (5356) COUNTING_SEM:   Resource 5: FREE (Total usage: 1 times)[0m
+Pool: [■□□□□] Available: 4
+[0;32mI (5366) COUNTING_SEM: ═══════════════════════════[0m
+
+[0;32mI (6156) COUNTING_SEM: 🏭 Producer5: Requesting resource...[0m
+[0;32mI (6206) COUNTING_SEM: ✓ Producer5: Acquired resource 2 (wait: 0ms)[0m
+[0;32mI (6206) COUNTING_SEM: 🔧 Producer5: Using resource 2 for 1695ms[0m
+[0;32mI (6756) COUNTING_SEM: 🏭 Producer3: Requesting resource...[0m
+[0;32mI (6806) COUNTING_SEM: ✓ Producer3: Acquired resource 3 (wait: 0ms)[0m
+[0;32mI (6806) COUNTING_SEM: 🔧 Producer3: Using resource 3 for 2838ms[0m
+[0;32mI (6856) COUNTING_SEM: 🏭 Producer4: Requesting resource...[0m
+[0;32mI (6906) COUNTING_SEM: ✓ Producer4: Acquired resource 4 (wait: 0ms)[0m
+[0;32mI (6906) COUNTING_SEM: 🔧 Producer4: Using resource 4 for 1787ms[0m
+[0;32mI (7866) COUNTING_SEM: 🏭 Producer1: Requesting resource...[0m
+[0;32mI (7896) COUNTING_SEM: ✓ Producer5: Released resource 2[0m
+[0;32mI (7916) COUNTING_SEM: ✓ Producer1: Acquired resource 2 (wait: 0ms)[0m
+[0;32mI (7916) COUNTING_SEM: 🔧 Producer1: Using resource 2 for 2735ms[0m
+[0;32mI (8006) COUNTING_SEM: ✓ Producer2: Released resource 1[0m
+[0;32mI (8686) COUNTING_SEM: ✓ Producer4: Released resource 4[0m
+[0;32mI (9636) COUNTING_SEM: ✓ Producer3: Released resource 3[0m
+[0;32mI (10156) COUNTING_SEM: 🏭 Producer2: Requesting resource...[0m
+[0;32mI (10206) COUNTING_SEM: ✓ Producer2: Acquired resource 1 (wait: 0ms)[0m
+[0;32mI (10206) COUNTING_SEM: 🔧 Producer2: Using resource 1 for 3805ms[0m
+[0;32mI (10376) COUNTING_SEM: [0m
+📊 RESOURCE POOL STATUS
+[0;32mI (10376) COUNTING_SEM: Available resources: 3/5[0m
+[0;32mI (10376) COUNTING_SEM: Resources in use: 2[0m
+[0;32mI (10376) COUNTING_SEM:   Resource 1: BUSY (User: Producer2, Usage: 3 times)[0m
+[0;32mI (10376) COUNTING_SEM:   Resource 2: BUSY (User: Producer1, Usage: 3 times)[0m
+[0;32mI (10386) COUNTING_SEM:   Resource 3: FREE (Total usage: 2 times)[0m
+[0;32mI (10396) COUNTING_SEM:   Resource 4: FREE (Total usage: 2 times)[0m
+[0;32mI (10396) COUNTING_SEM:   Resource 5: FREE (Total usage: 1 times)[0m
+Pool: [■■□□□] Available: 3
+[0;32mI (10406) COUNTING_SEM: ═══════════════════════════[0m
+
+[0;32mI (10646) COUNTING_SEM: ✓ Producer1: Released resource 2[0m
+[0;32mI (10876) COUNTING_SEM: 🏭 Producer5: Requesting resource...[0m
+[0;32mI (10926) COUNTING_SEM: ✓ Producer5: Acquired resource 2 (wait: 0ms)[0m
+[0;32mI (10926) COUNTING_SEM: 🔧 Producer5: Using resource 2 for 1823ms[0m

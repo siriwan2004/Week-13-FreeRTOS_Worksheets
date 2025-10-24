@@ -1,0 +1,332 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\User\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\STIC 1\Week-13-FreeRTOS_Worksheets\02-tasks-and-scheduling\w02\lab1\Priority\build\Priority.elf D:\STIC 1\Week-13-FreeRTOS_Worksheets\02-tasks-and-scheduling\w02\lab1\Priority\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\User\esp\v5.5.1\esp-idf\tools\idf.py'
+V�"%=5
+I (�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 23 2025 16:07:57[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a530h ( 42288) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001a558 vaddr=3ffb0000 size=023f8h (  9208) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c958 vaddr=40080000 size=036c0h ( 14016) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=14b1ch ( 84764) map[0m
+[0;32mI (143) esp_image: segment 4: paddr=00034b44 vaddr=400836c0 size=098f0h ( 39152) load[0m
+[0;32mI (158) esp_image: segment 5: paddr=0003e43c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (165) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (165) boot: Disabling RNG early entropy source...[0m
+[0;32mI (176) cpu_start: Multicore app[0m
+[0;32mI (185) cpu_start: Pro cpu start user code[0m
+[0;32mI (185) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (185) app_init: Application information:[0m
+[0;32mI (185) app_init: Project name:     Priority[0m
+[0;32mI (189) app_init: App version:      40bce8f-dirty[0m
+[0;32mI (193) app_init: Compile time:     Oct 23 2025 16:07:21[0m
+[0;32mI (198) app_init: ELF file SHA256:  358496d53...[0m
+[0;32mI (203) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (207) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (210) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (214) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (218) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (225) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (230) heap_init: At 3FFB2CD0 len 0002D330 (180 KiB): DRAM[0m
+[0;32mI (235) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (240) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (246) heap_init: At 4008CFB0 len 00013050 (76 KiB): IRAM[0m
+[0;32mI (252) spi_flash: detected chip: generic[0m
+[0;32mI (255) spi_flash: flash io: dio[0m
+[0;33mW (258) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (270) main_task: Started on CPU0[0m
+[0;32mI (280) main_task: Calling app_main()[0m
+[0;32mI (280) STEP1_PLUS_ROUNDROBIN: === Step1 + Round-Robin Demo ===[0m
+[0;32mI (280) STEP1_PLUS_ROUNDROBIN: High Priority Task started (prio=5)[0m
+[0;32mI (280) STEP1_PLUS_ROUNDROBIN: Medium Priority Task started (prio=3)[0m
+[0;32mI (290) STEP1_PLUS_ROUNDROBIN: [EQ1] started (prio=2)[0m
+[0;32mI (290) STEP1_PLUS_ROUNDROBIN: Control Task started (prio=4)[0m
+[0;32mI (290) STEP1_PLUS_ROUNDROBIN: Low Priority Task started (prio=1)[0m
+[0;32mI (300) STEP1_PLUS_ROUNDROBIN: [EQ2] started (prio=2)[0m
+[0;32mI (300) STEP1_PLUS_ROUNDROBIN: [EQ3] started (prio=2)[0m
+[0;32mI (300) STEP1_PLUS_ROUNDROBIN: Press button (GPIO23) to run 10s test. LEDs: 16=High,17=Med,18=Low[0m
+[0;32mI (320) main_task: Returned from app_main()[0m
+[0;33mW (51450) STEP1_PLUS_ROUNDROBIN: === START TEST (10s) ===[0m
+[0;32mI (51450) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (51460) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (51470) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (51580) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (51590) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (51610) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (51670) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (51700) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (51710) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (51780) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (51830) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (51840) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (51880) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (51940) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (51950) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (51970) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (52040) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (52050) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (52080) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (52170) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (52180) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (52220) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (52260) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (52270) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (52300) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (52370) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (52390) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (52410) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (52480) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (52510) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (52550) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (52590) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (52620) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (52650) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (52680) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (52710) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (52750) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (52810) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (52850) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (52870) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (52900) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (52960) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (52970) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (52990) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (53070) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (53080) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (53110) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (53200) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (53210) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (53220) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (53300) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (53310) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (53320) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (53430) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (53440) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (53450) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (53530) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (53540) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (53550) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (53640) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (53650) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (53660) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (53760) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (53770) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (53780) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (53870) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (53880) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (53890) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (53970) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (53980) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (53990) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (54100) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (54110) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (54120) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (54200) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (54220) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (54230) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (54310) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (54320) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (54330) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (54440) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (54450) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (54460) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (54540) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (54550) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (54560) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (54650) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (54660) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (54670) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (54770) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (54780) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (54790) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (54880) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (54890) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (54900) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (54980) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (54990) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (55000) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (55110) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (55120) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (55130) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (55210) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (55220) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (55230) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (55320) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (55350) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (55360) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (55440) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (55450) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (55460) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (55550) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (55560) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (55570) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (55670) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (55690) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (55700) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (55780) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (55790) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (55800) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (55880) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (55900) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (55910) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (56010) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (56020) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (56030) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (56120) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (56130) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (56140) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (56220) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (56230) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (56240) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (56350) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (56360) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (56370) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (56450) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (56460) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (56470) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (56560) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (56570) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (56580) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (56680) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (56690) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (56700) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (56790) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (56800) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (56810) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (56890) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (56900) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (56910) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (57020) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (57030) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (57040) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (57120) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (57130) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (57140) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (57230) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (57240) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (57250) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (57350) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (57370) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (57380) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (57460) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (57470) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (57480) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (57560) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (57580) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (57610) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (57690) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (57700) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (57710) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (57800) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (57810) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (57820) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (57900) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (57930) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (57940) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (58030) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (58040) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (58050) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (58130) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (58140) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (58150) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (58260) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (58270) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (58280) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (58360) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (58370) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (58380) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (58470) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (58480) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (58490) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (58590) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (58600) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (58610) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (58700) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (58710) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (58720) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (58800) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (58810) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (58820) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (58930) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (58940) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (58950) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (59030) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (59050) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (59060) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (59140) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (59150) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (59160) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (59270) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (59280) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (59290) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (59370) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (59380) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (59390) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (59480) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (59490) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (59500) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (59600) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (59610) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (59620) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (59710) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (59720) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (59730) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (59810) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (59820) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (59850) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (59940) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (59950) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (59960) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (60040) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (60050) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (60060) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (60170) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (60180) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (60190) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (60270) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (60280) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (60290) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (60380) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (60390) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (60400) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (60500) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (60520) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (60530) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (60610) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (60620) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (60630) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (60710) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (60730) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (60740) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (60840) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (60850) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (60860) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (60950) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (60960) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (60970) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (61050) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (61060) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m
+[0;32mI (61070) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (61180) STEP1_PLUS_ROUNDROBIN: [EQ1] running[0m
+[0;32mI (61190) STEP1_PLUS_ROUNDROBIN: [EQ3] running[0m
+[0;32mI (61200) STEP1_PLUS_ROUNDROBIN: [EQ2] running[0m

@@ -1,0 +1,425 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\User\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\STIC 1\Week-13-FreeRTOS_Worksheets\01-freertos-overview\w01\lab3\basic_tasks\build\basic_tasks.elf D:\STIC 1\Week-13-FreeRTOS_Worksheets\01-freertos-overview\w01\lab3\basic_tasks\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\User\esp\v5.5.1\esp-idf\tools\idf.py'
+IO
+[0;32mI (41) boot.esp32: S�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 23 2025 15:19:59[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a5e0h ( 42464) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001a608 vaddr=3ffb0000 size=02408h (  9224) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001ca18 vaddr=40080000 size=03600h ( 13824) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=14a1ch ( 84508) map[0m
+[0;32mI (143) esp_image: segment 4: paddr=00034a44 vaddr=40083600 size=09cfch ( 40188) load[0m
+[0;32mI (159) esp_image: segment 5: paddr=0003e748 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (165) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (166) boot: Disabling RNG early entropy source...[0m
+[0;32mI (177) cpu_start: Multicore app[0m
+[0;32mI (185) cpu_start: Pro cpu start user code[0m
+[0;32mI (185) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (185) app_init: Application information:[0m
+[0;32mI (185) app_init: Project name:     basic_tasks[0m
+[0;32mI (190) app_init: App version:      40bce8f-dirty[0m
+[0;32mI (194) app_init: Compile time:     Oct 23 2025 15:19:22[0m
+[0;32mI (199) app_init: ELF file SHA256:  54a8a9322...[0m
+[0;32mI (203) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (207) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (211) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (215) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (219) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (225) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (230) heap_init: At 3FFB2CD0 len 0002D330 (180 KiB): DRAM[0m
+[0;32mI (235) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (241) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (246) heap_init: At 4008D2FC len 00012D04 (75 KiB): IRAM[0m
+[0;32mI (253) spi_flash: detected chip: generic[0m
+[0;32mI (255) spi_flash: flash io: dio[0m
+[0;33mW (258) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (271) main_task: Started on CPU0[0m
+[0;32mI (281) main_task: Calling app_main()[0m
+[0;32mI (281) STEP2_1PLUS2: === Step 2: (1+2) Basic + Manager ===[0m
+[0;32mI (281) STEP2_1PLUS2: LED1 Task started with ID: 1[0m
+[0;32mI (281) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (281) STEP2_1PLUS2: LED2 Task started: FastBlinker[0m
+[0;32mI (291) STEP2_1PLUS2: LED2 Blink Fast[0m
+[0;32mI (291) STEP2_1PLUS2: Task Manager started[0m
+[0;32mI (301) STEP2_1PLUS2: Manager: Suspending LED1[0m
+[0;32mI (301) STEP2_1PLUS2: System Info Task started[0m
+[0;32mI (301) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (301) STEP2_1PLUS2: === System Information ===[0m
+[0;32mI (311) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (321) STEP2_1PLUS2: Min free heap: 294452 bytes[0m
+[0;32mI (321) STEP2_1PLUS2: Number of tasks: 9[0m
+[0;32mI (321) STEP2_1PLUS2: Uptime: 0 seconds[0m
+[0;32mI (2291) STEP2_1PLUS2: LED2 Blink Fast[0m
+[0;32mI (2301) STEP2_1PLUS2: Manager: Resuming LED1[0m
+[0;32mI (2301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (2801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (3301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (3331) STEP2_1PLUS2: === System Information ===[0m
+[0;32mI (3331) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (3331) STEP2_1PLUS2: Min free heap: 294452 bytes[0m
+[0;32mI (3331) STEP2_1PLUS2: Number of tasks: 9[0m
+[0;32mI (3331) STEP2_1PLUS2: Uptime: 3 seconds[0m
+[0;32mI (3801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (4291) STEP2_1PLUS2: LED2 Blink Fast[0m
+[0;32mI (4301) STEP2_1PLUS2: Manager: Suspending LED2[0m
+[0;32mI (4301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (4801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (5301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (5311) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (5801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (6301) STEP2_1PLUS2: Manager: Resuming LED2[0m
+[0;32mI (6301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (6331) STEP2_1PLUS2: === System Information ===[0m
+[0;32mI (6331) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (6331) STEP2_1PLUS2: Min free heap: 294452 bytes[0m
+[0;32mI (6331) STEP2_1PLUS2: Number of tasks: 9[0m
+[0;32mI (6331) STEP2_1PLUS2: Uptime: 6 seconds[0m
+[0;32mI (6801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (7301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (7801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (8201) STEP2_1PLUS2: LED2 Blink Fast[0m
+[0;32mI (8301) STEP2_1PLUS2: LED1 State: Ready[0m
+[0;32mI (8301) STEP2_1PLUS2: LED2 State: Ready[0m
+[0;32mI (8301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (8801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (9301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (9331) STEP2_1PLUS2: === System Information ===[0m
+[0;32mI (9331) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (9331) STEP2_1PLUS2: Min free heap: 294452 bytes[0m
+[0;32mI (9331) STEP2_1PLUS2: Number of tasks: 9[0m
+[0;32mI (9331) STEP2_1PLUS2: Uptime: 9 seconds[0m
+[0;32mI (9801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (10201) STEP2_1PLUS2: LED2 Blink Fast[0m
+[0;32mI (10301) STEP2_1PLUS2: Manager: Reset cycle[0m
+[0;32mI (10301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (10311) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (10801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (11301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (11801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (12201) STEP2_1PLUS2: LED2 Blink Fast[0m
+[0;32mI (12301) STEP2_1PLUS2: Manager: Suspending LED1[0m
+[0;32mI (12331) STEP2_1PLUS2: === System Information ===[0m
+[0;32mI (12331) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (12331) STEP2_1PLUS2: Min free heap: 294452 bytes[0m
+[0;32mI (12331) STEP2_1PLUS2: Number of tasks: 9[0m
+[0;32mI (12331) STEP2_1PLUS2: Uptime: 12 seconds[0m
+[0;32mI (14201) STEP2_1PLUS2: LED2 Blink Fast[0m
+[0;32mI (14301) STEP2_1PLUS2: Manager: Resuming LED1[0m
+[0;32mI (14301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (14801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (15301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (15311) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (15331) STEP2_1PLUS2: === System Information ===[0m
+[0;32mI (15331) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (15331) STEP2_1PLUS2: Min free heap: 294452 bytes[0m
+[0;32mI (15331) STEP2_1PLUS2: Number of tasks: 9[0m
+[0;32mI (15331) STEP2_1PLUS2: Uptime: 15 seconds[0m
+[0;32mI (15801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (16201) STEP2_1PLUS2: LED2 Blink Fast[0m
+[0;32mI (16301) STEP2_1PLUS2: Manager: Suspending LED2[0m
+[0;32mI (16301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (16801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (17301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (17801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (18301) STEP2_1PLUS2: Manager: Resuming LED2[0m
+[0;32mI (18301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (18331) STEP2_1PLUS2: === System Information ===[0m
+[0;32mI (18331) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (18331) STEP2_1PLUS2: Min free heap: 294452 bytes[0m
+[0;32mI (18331) STEP2_1PLUS2: Number of tasks: 9[0m
+[0;32mI (18331) STEP2_1PLUS2: Uptime: 18 seconds[0m
+[0;32mI (18801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (19301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (19801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (20201) STEP2_1PLUS2: LED2 Blink Fast[0m
+[0;32mI (20301) STEP2_1PLUS2: LED1 State: Ready[0m
+[0;32mI (20301) STEP2_1PLUS2: LED2 State: Ready[0m
+[0;32mI (20301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (20311) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (20801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (21301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (21331) STEP2_1PLUS2: === System Information ===[0m
+[0;32mI (21331) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (21331) STEP2_1PLUS2: Min free heap: 294452 bytes[0m
+[0;32mI (21331) STEP2_1PLUS2: Number of tasks: 9[0m
+[0;32mI (21331) STEP2_1PLUS2: Uptime: 21 seconds[0m
+[0;32mI (21801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (22201) STEP2_1PLUS2: LED2 Blink Fast[0m
+[0;32mI (22301) STEP2_1PLUS2: Manager: Reset cycle[0m
+[0;32mI (22301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (22801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (23301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (23801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (24201) STEP2_1PLUS2: LED2 Blink Fast[0m
+[0;32mI (24301) STEP2_1PLUS2: Manager: Suspending LED1[0m
+[0;32mI (24331) STEP2_1PLUS2: === System Information ===[0m
+[0;32mI (24331) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (24331) STEP2_1PLUS2: Min free heap: 294452 bytes[0m
+[0;32mI (24331) STEP2_1PLUS2: Number of tasks: 9[0m
+[0;32mI (24331) STEP2_1PLUS2: Uptime: 24 seconds[0m
+[0;32mI (25311) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (26201) STEP2_1PLUS2: LED2 Blink Fast[0m
+[0;32mI (26301) STEP2_1PLUS2: Manager: Resuming LED1[0m
+[0;32mI (26301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (26801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (27301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (27331) STEP2_1PLUS2: === System Information ===[0m
+[0;32mI (27331) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (27331) STEP2_1PLUS2: Min free heap: 294452 bytes[0m
+[0;32mI (27331) STEP2_1PLUS2: Number of tasks: 9[0m
+[0;32mI (27331) STEP2_1PLUS2: Uptime: 27 seconds[0m
+[0;32mI (27801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (28201) STEP2_1PLUS2: LED2 Blink Fast[0m
+[0;32mI (28301) STEP2_1PLUS2: Manager: Suspending LED2[0m
+[0;32mI (28301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (28801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (29301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (29801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (30301) STEP2_1PLUS2: Manager: Resuming LED2[0m
+[0;32mI (30301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (30311) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (30331) STEP2_1PLUS2: === System Information ===[0m
+[0;32mI (30331) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (30331) STEP2_1PLUS2: Min free heap: 294452 bytes[0m
+[0;32mI (30331) STEP2_1PLUS2: Number of tasks: 9[0m
+[0;32mI (30331) STEP2_1PLUS2: Uptime: 30 seconds[0m
+[0;32mI (30801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (31301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (31801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (32201) STEP2_1PLUS2: LED2 Blink Fast[0m
+[0;32mI (32301) STEP2_1PLUS2: LED1 State: Ready[0m
+[0;32mI (32301) STEP2_1PLUS2: LED2 State: Ready[0m
+[0;32mI (32301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (32801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (33301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (33331) STEP2_1PLUS2: === System Information ===[0m
+[0;32mI (33331) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (33331) STEP2_1PLUS2: Min free heap: 294452 bytes[0m
+[0;32mI (33331) STEP2_1PLUS2: Number of tasks: 9[0m
+[0;32mI (33331) STEP2_1PLUS2: Uptime: 33 seconds[0m
+[0;32mI (33801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (34201) STEP2_1PLUS2: LED2 Blink Fast[0m
+[0;32mI (34301) STEP2_1PLUS2: Manager: Reset cycle[0m
+[0;32mI (34301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (34801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (35301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (35311) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (35801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (36201) STEP2_1PLUS2: LED2 Blink Fast[0m
+[0;32mI (36301) STEP2_1PLUS2: Manager: Suspending LED1[0m
+[0;32mI (36331) STEP2_1PLUS2: === System Information ===[0m
+[0;32mI (36331) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (36331) STEP2_1PLUS2: Min free heap: 294452 bytes[0m
+[0;32mI (36331) STEP2_1PLUS2: Number of tasks: 9[0m
+[0;32mI (36331) STEP2_1PLUS2: Uptime: 36 seconds[0m
+[0;32mI (38201) STEP2_1PLUS2: LED2 Blink Fast[0m
+[0;32mI (38301) STEP2_1PLUS2: Manager: Resuming LED1[0m
+[0;32mI (38301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (38801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (39301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (39331) STEP2_1PLUS2: === System Information ===[0m
+[0;32mI (39331) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (39331) STEP2_1PLUS2: Min free heap: 294452 bytes[0m
+[0;32mI (39331) STEP2_1PLUS2: Number of tasks: 9[0m
+[0;32mI (39331) STEP2_1PLUS2: Uptime: 39 seconds[0m
+[0;32mI (39801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (40201) STEP2_1PLUS2: LED2 Blink Fast[0m
+[0;32mI (40301) STEP2_1PLUS2: Manager: Suspending LED2[0m
+[0;32mI (40301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (40311) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (40801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (41301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (41801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (42301) STEP2_1PLUS2: Manager: Resuming LED2[0m
+[0;32mI (42301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (42331) STEP2_1PLUS2: === System Information ===[0m
+[0;32mI (42331) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (42331) STEP2_1PLUS2: Min free heap: 294452 bytes[0m
+[0;32mI (42331) STEP2_1PLUS2: Number of tasks: 9[0m
+[0;32mI (42331) STEP2_1PLUS2: Uptime: 42 seconds[0m
+[0;32mI (42801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (43301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (43801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (44201) STEP2_1PLUS2: LED2 Blink Fast[0m
+[0;32mI (44301) STEP2_1PLUS2: LED1 State: Ready[0m
+[0;32mI (44301) STEP2_1PLUS2: LED2 State: Ready[0m
+[0;32mI (44301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (44801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (45301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (45311) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (45331) STEP2_1PLUS2: === System Information ===[0m
+[0;32mI (45331) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (45331) STEP2_1PLUS2: Min free heap: 294452 bytes[0m
+[0;32mI (45331) STEP2_1PLUS2: Number of tasks: 9[0m
+[0;32mI (45331) STEP2_1PLUS2: Uptime: 45 seconds[0m
+[0;32mI (45801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (46201) STEP2_1PLUS2: LED2 Blink Fast[0m
+[0;32mI (46301) STEP2_1PLUS2: Manager: Reset cycle[0m
+[0;32mI (46301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (46801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (47301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (47801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (48201) STEP2_1PLUS2: LED2 Blink Fast[0m
+[0;32mI (48301) STEP2_1PLUS2: Manager: Suspending LED1[0m
+[0;32mI (48331) STEP2_1PLUS2: === System Information ===[0m
+[0;32mI (48331) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (48331) STEP2_1PLUS2: Min free heap: 294452 bytes[0m
+[0;32mI (48331) STEP2_1PLUS2: Number of tasks: 9[0m
+[0;32mI (48331) STEP2_1PLUS2: Uptime: 48 seconds[0m
+[0;32mI (50201) STEP2_1PLUS2: LED2 Blink Fast[0m
+[0;32mI (50301) STEP2_1PLUS2: Manager: Resuming LED1[0m
+[0;32mI (50301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (50311) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (50801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (51301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (51331) STEP2_1PLUS2: === System Information ===[0m
+[0;32mI (51331) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (51331) STEP2_1PLUS2: Min free heap: 294452 bytes[0m
+[0;32mI (51331) STEP2_1PLUS2: Number of tasks: 9[0m
+[0;32mI (51331) STEP2_1PLUS2: Uptime: 51 seconds[0m
+[0;32mI (51801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (52201) STEP2_1PLUS2: LED2 Blink Fast[0m
+[0;32mI (52301) STEP2_1PLUS2: Manager: Suspending LED2[0m
+[0;32mI (52301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (52801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (53301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (53801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (54301) STEP2_1PLUS2: Manager: Resuming LED2[0m
+[0;32mI (54301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (54331) STEP2_1PLUS2: === System Information ===[0m
+[0;32mI (54331) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (54331) STEP2_1PLUS2: Min free heap: 294452 bytes[0m
+[0;32mI (54331) STEP2_1PLUS2: Number of tasks: 9[0m
+[0;32mI (54331) STEP2_1PLUS2: Uptime: 54 seconds[0m
+[0;32mI (54801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (55301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (55311) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (55801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (56201) STEP2_1PLUS2: LED2 Blink Fast[0m
+[0;32mI (56301) STEP2_1PLUS2: LED1 State: Ready[0m
+[0;32mI (56301) STEP2_1PLUS2: LED2 State: Ready[0m
+[0;32mI (56301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (56801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (57301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (57331) STEP2_1PLUS2: === System Information ===[0m
+[0;32mI (57331) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (57331) STEP2_1PLUS2: Min free heap: 294452 bytes[0m
+[0;32mI (57331) STEP2_1PLUS2: Number of tasks: 9[0m
+[0;32mI (57331) STEP2_1PLUS2: Uptime: 57 seconds[0m
+[0;32mI (57801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (58201) STEP2_1PLUS2: LED2 Blink Fast[0m
+[0;32mI (58301) STEP2_1PLUS2: Manager: Reset cycle[0m
+[0;32mI (58301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (58801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (59301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (59801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (60201) STEP2_1PLUS2: LED2 Blink Fast[0m
+[0;32mI (60301) STEP2_1PLUS2: Manager: Suspending LED1[0m
+[0;32mI (60311) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (60331) STEP2_1PLUS2: === System Information ===[0m
+[0;32mI (60331) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (60331) STEP2_1PLUS2: Min free heap: 294452 bytes[0m
+[0;32mI (60331) STEP2_1PLUS2: Number of tasks: 9[0m
+[0;32mI (60331) STEP2_1PLUS2: Uptime: 60 seconds[0m
+[0;32mI (62201) STEP2_1PLUS2: LED2 Blink Fast[0m
+[0;32mI (62301) STEP2_1PLUS2: Manager: Resuming LED1[0m
+[0;32mI (62301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (62801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (63301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (63331) STEP2_1PLUS2: === System Information ===[0m
+[0;32mI (63331) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (63331) STEP2_1PLUS2: Min free heap: 294452 bytes[0m
+[0;32mI (63331) STEP2_1PLUS2: Number of tasks: 9[0m
+[0;32mI (63331) STEP2_1PLUS2: Uptime: 63 seconds[0m
+[0;32mI (63801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (64201) STEP2_1PLUS2: LED2 Blink Fast[0m
+[0;32mI (64301) STEP2_1PLUS2: Manager: Suspending LED2[0m
+[0;32mI (64301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (64801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (65301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (65311) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (65801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (66301) STEP2_1PLUS2: Manager: Resuming LED2[0m
+[0;32mI (66301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (66331) STEP2_1PLUS2: === System Information ===[0m
+[0;32mI (66331) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (66331) STEP2_1PLUS2: Min free heap: 294452 bytes[0m
+[0;32mI (66331) STEP2_1PLUS2: Number of tasks: 9[0m
+[0;32mI (66331) STEP2_1PLUS2: Uptime: 66 seconds[0m
+[0;32mI (66801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (67301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (67801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (68201) STEP2_1PLUS2: LED2 Blink Fast[0m
+[0;32mI (68301) STEP2_1PLUS2: LED1 State: Ready[0m
+[0;32mI (68301) STEP2_1PLUS2: LED2 State: Ready[0m
+[0;32mI (68301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (68801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (69301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (69331) STEP2_1PLUS2: === System Information ===[0m
+[0;32mI (69331) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (69331) STEP2_1PLUS2: Min free heap: 294452 bytes[0m
+[0;32mI (69331) STEP2_1PLUS2: Number of tasks: 9[0m
+[0;32mI (69331) STEP2_1PLUS2: Uptime: 69 seconds[0m
+[0;32mI (69801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (70201) STEP2_1PLUS2: LED2 Blink Fast[0m
+[0;32mI (70301) STEP2_1PLUS2: Manager: Reset cycle[0m
+[0;32mI (70301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (70311) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (70801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (71301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (71801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (72201) STEP2_1PLUS2: LED2 Blink Fast[0m
+[0;32mI (72301) STEP2_1PLUS2: Manager: Suspending LED1[0m
+[0;32mI (72331) STEP2_1PLUS2: === System Information ===[0m
+[0;32mI (72331) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (72331) STEP2_1PLUS2: Min free heap: 294452 bytes[0m
+[0;32mI (72331) STEP2_1PLUS2: Number of tasks: 9[0m
+[0;32mI (72331) STEP2_1PLUS2: Uptime: 72 seconds[0m
+[0;32mI (74201) STEP2_1PLUS2: LED2 Blink Fast[0m
+[0;32mI (74301) STEP2_1PLUS2: Manager: Resuming LED1[0m
+[0;32mI (74301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (74801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (75301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (75311) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (75331) STEP2_1PLUS2: === System Information ===[0m
+[0;32mI (75331) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (75331) STEP2_1PLUS2: Min free heap: 294452 bytes[0m
+[0;32mI (75331) STEP2_1PLUS2: Number of tasks: 9[0m
+[0;32mI (75331) STEP2_1PLUS2: Uptime: 75 seconds[0m
+[0;32mI (75801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (76201) STEP2_1PLUS2: LED2 Blink Fast[0m
+[0;32mI (76301) STEP2_1PLUS2: Manager: Suspending LED2[0m
+[0;32mI (76301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (76801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (77301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (77801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (78301) STEP2_1PLUS2: Manager: Resuming LED2[0m
+[0;32mI (78301) STEP2_1PLUS2: LED1 OFF[0m
+[0;32mI (78331) STEP2_1PLUS2: === System Information ===[0m
+[0;32mI (78331) STEP2_1PLUS2: Free heap: 294452 bytes[0m
+[0;32mI (78331) STEP2_1PLUS2: Min free heap: 294452 bytes[0m
+[0;32mI (78331) STEP2_1PLUS2: Number of tasks: 9[0m
+[0;32mI (78331) STEP2_1PLUS2: Uptime: 78 seconds[0m
+[0;32mI (78801) STEP2_1PLUS2: LED1 ON[0m
+[0;32mI (79301) STEP2_1PLUS2: LED1 OFF[0m
