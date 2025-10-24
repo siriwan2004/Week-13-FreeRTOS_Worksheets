@@ -1,0 +1,160 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\User\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\STIC 1\Week-13-FreeRTOS_Worksheets\08-esp-idf-specific\w08\ESP32\build\ESP32.elf D:\STIC 1\Week-13-FreeRTOS_Worksheets\08-esp-idf-specific\w08\ESP32\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\User\esp\v5.5.1\esp-idf\tools\idf.py'
+	�"%=5
+I (41�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 25 2025 02:10:30[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1c680h (116352) map[0m
+[0;32mI (128) esp_image: segment 1: paddr=0002c6a8 vaddr=3ffb0000 size=03970h ( 14704) load[0m
+[0;32mI (133) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=8bfdch (573404) map[0m
+[0;32mI (330) esp_image: segment 3: paddr=000bc004 vaddr=3ffb3970 size=00704h (  1796) load[0m
+[0;32mI (331) esp_image: segment 4: paddr=000bc710 vaddr=40080000 size=19e60h (106080) load[0m
+[0;32mI (375) esp_image: segment 5: paddr=000d6578 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (388) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (388) boot: Disabling RNG early entropy source...[0m
+[0;32mI (398) cpu_start: Multicore app[0m
+[0;32mI (407) cpu_start: Pro cpu start user code[0m
+[0;32mI (407) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (407) app_init: Application information:[0m
+[0;32mI (407) app_init: Project name:     ESP32[0m
+[0;32mI (410) app_init: App version:      8e74e47[0m
+[0;32mI (414) app_init: Compile time:     Oct 25 2025 02:09:56[0m
+[0;32mI (419) app_init: ELF file SHA256:  05ead175e...[0m
+[0;32mI (424) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (427) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (431) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (435) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (439) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (446) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (451) heap_init: At 3FFB81F8 len 00027E08 (159 KiB): DRAM[0m
+[0;32mI (456) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (461) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (467) heap_init: At 40099E60 len 000061A0 (24 KiB): IRAM[0m
+[0;32mI (473) spi_flash: detected chip: generic[0m
+[0;32mI (476) spi_flash: flash io: dio[0m
+[0;33mW (479) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (492) main_task: Started on CPU0[0m
+[0;32mI (502) main_task: Calling app_main()[0m
+[0;32mI (502) PERIPH: Peripheral Integration Demo; Main on Core 0[0m
+[0;32mI (532) wifi:wifi driver task: 3ffc04c4, prio:23, stack:6656, core=0[0m
+[0;32mI (542) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (542) wifi:wifi certification version: v7.0[0m
+[0;32mI (542) wifi:config NVS flash: enabled[0m
+[0;32mI (542) wifi:config nano formatting: disabled[0m
+[0;32mI (552) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (552) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (552) wifi:Init management short buffer num: 32[0m
+[0;32mI (562) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (562) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (572) wifi:Init static rx buffer num: 10[0m
+[0;32mI (572) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (582) wifi_init: rx ba win: 6[0m
+[0;32mI (582) wifi_init: accept mbox: 6[0m
+[0;32mI (582) wifi_init: tcpip mbox: 32[0m
+[0;32mI (582) wifi_init: udp mbox: 6[0m
+[0;32mI (592) wifi_init: tcp mbox: 6[0m
+[0;32mI (592) wifi_init: tcp tx win: 5760[0m
+[0;32mI (592) wifi_init: tcp rx win: 5760[0m
+[0;32mI (602) wifi_init: tcp mss: 1440[0m
+[0;32mI (602) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (602) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (652) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (722) wifi:mode : sta (94:b5:55:f8:22:78)[0m
+[0;32mI (722) wifi:enable tsf[0m
+[0;32mI (732) PERIPH: Timer worker start on Core 0[0m
+[0;32mI (732) WIFI: STA start, connecting...[0m
+[0;32mI (732) PERIPH: Button task start on Core 0[0m
+[0;32mI (732) PERIPH: WiFi worker start on Core 1[0m
+[0;32mI (732) PERIPH: Free heap: 202268 bytes | seq=0 i2c_whoami=0x00 spi_echo=0x00000000 updated=0 us[0m
+[0;32mI (732) PERIPH: I2C task start on Core 1[0m
+[0;33mW (752) PERIPH: TIP: ถ้าจะใช้ SPI echo ให้จัมพ์ MOSI(23) ↔ MISO(19)[0m
+[0;32mI (732) PERIPH: SPI task start on Core 1[0m
+[0;32mI (732) PERIPH: System started: WiFi + Timer + GPIO ISR + I2C + SPI, shared safely across cores.[0m
+[0;33mW (762) PERIPH: TIP: ถ้าจะทดสอบ echo ให้จัมพ์ MOSI(23) ↔ MISO(19)[0m
+[0;32mI (762) PERIPH: I2C WHO_AM_I=0x68[0m
+[0;32mI (772) main_task: Returned from app_main()[0m
+[0;32mI (782) PERIPH: SPI tx=0x00000000 rx=0x00000000[0m
+[0;32mI (1732) PERIPH: Timer rate ~ 1000.0 Hz[0m
+[0;32mI (1792) PERIPH: I2C WHO_AM_I=0x68[0m
+[0;32mI (1792) PERIPH: SPI tx=0x00000001 rx=0x00000000[0m
+[0;32mI (2732) PERIPH: Timer rate ~ 1000.0 Hz[0m
+[0;32mI (2792) PERIPH: SPI tx=0x00000002 rx=0x00000000[0m
+[0;32mI (2802) PERIPH: I2C WHO_AM_I=0x68[0m
+[0;33mW (3142) WIFI: Disconnected, retry...[0m
+[0;32mI (3732) PERIPH: Timer rate ~ 1000.0 Hz[0m
+[0;32mI (3792) PERIPH: SPI tx=0x00000003 rx=0x00000000[0m
+[0;32mI (3812) PERIPH: I2C WHO_AM_I=0x68[0m
+[0;32mI (4732) PERIPH: Timer rate ~ 1000.0 Hz[0m
+[0;32mI (4792) PERIPH: SPI tx=0x00000004 rx=0x00000000[0m
+[0;32mI (4822) PERIPH: I2C WHO_AM_I=0x68[0m
+[0;33mW (5562) WIFI: Disconnected, retry...[0m
+[0;32mI (5732) PERIPH: Timer rate ~ 1000.0 Hz[0m
+[0;32mI (5742) PERIPH: Free heap: 204292 bytes | seq=10 i2c_whoami=0x68 spi_echo=0x00000000 updated=4350508 us[0m
+[0;32mI (5792) PERIPH: SPI tx=0x00000005 rx=0x00000000[0m
+[0;32mI (5832) PERIPH: I2C WHO_AM_I=0x68[0m
+[0;32mI (6732) PERIPH: Timer rate ~ 1000.0 Hz[0m
+[0;32mI (6792) PERIPH: SPI tx=0x00000006 rx=0x00000000[0m
+[0;32mI (6842) PERIPH: I2C WHO_AM_I=0x68[0m
+[0;32mI (7732) PERIPH: Timer rate ~ 1000.0 Hz[0m
+[0;32mI (7792) PERIPH: SPI tx=0x00000007 rx=0x00000000[0m
+[0;32mI (7852) PERIPH: I2C WHO_AM_I=0x68[0m
+[0;33mW (7972) WIFI: Disconnected, retry...[0m
+[0;32mI (8732) PERIPH: Timer rate ~ 1000.0 Hz[0m
+[0;32mI (8792) PERIPH: SPI tx=0x00000008 rx=0x00000000[0m
+[0;32mI (8862) PERIPH: I2C WHO_AM_I=0x68[0m
+[0;32mI (9732) PERIPH: Timer rate ~ 1000.0 Hz[0m
+[0;32mI (9792) PERIPH: SPI tx=0x00000009 rx=0x00000000[0m
+[0;32mI (9872) PERIPH: I2C WHO_AM_I=0x68[0m
+[0;33mW (10392) WIFI: Disconnected, retry...[0m
+[0;32mI (10732) PERIPH: Timer rate ~ 1000.0 Hz[0m
+[0;32mI (10742) PERIPH: Free heap: 204292 bytes | seq=20 i2c_whoami=0x68 spi_echo=0x00000000 updated=9400508 us[0m
+[0;32mI (10792) PERIPH: SPI tx=0x0000000a rx=0x00000000[0m
+[0;32mI (10882) PERIPH: I2C WHO_AM_I=0x68[0m
+[0;32mI (11732) PERIPH: Timer rate ~ 1000.0 Hz[0m
+[0;32mI (11792) PERIPH: SPI tx=0x0000000b rx=0x00000000[0m
+[0;32mI (11892) PERIPH: I2C WHO_AM_I=0x68[0m
+[0;32mI (12732) PERIPH: Timer rate ~ 1000.0 Hz[0m
+[0;32mI (12792) PERIPH: SPI tx=0x0000000c rx=0x00000000[0m
+[0;33mW (12802) WIFI: Disconnected, retry...[0m
+[0;32mI (12902) PERIPH: I2C WHO_AM_I=0x68[0m
+[0;32mI (13732) PERIPH: Timer rate ~ 1000.0 Hz[0m
+[0;32mI (13792) PERIPH: SPI tx=0x0000000d rx=0x00000000[0m
+[0;32mI (13912) PERIPH: I2C WHO_AM_I=0x68[0m
+[0;32mI (14732) PERIPH: Timer rate ~ 1000.0 Hz[0m
+[0;32mI (14792) PERIPH: SPI tx=0x0000000e rx=0x00000000[0m
+[0;32mI (14922) PERIPH: I2C WHO_AM_I=0x68[0m
+[0;33mW (15222) WIFI: Disconnected, retry...[0m
+[0;32mI (15732) PERIPH: Timer rate ~ 1000.0 Hz[0m
+[0;32mI (15742) PERIPH: Free heap: 204292 bytes | seq=30 i2c_whoami=0x68 spi_echo=0x00000000 updated=14450508 us[0m
+[0;32mI (15792) PERIPH: SPI tx=0x0000000f rx=0x00000000[0m
+[0;32mI (15932) PERIPH: I2C WHO_AM_I=0x68[0m
+[0;32mI (16732) PERIPH: Timer rate ~ 1000.0 Hz[0m
+[0;32mI (16792) PERIPH: SPI tx=0x00000010 rx=0x00000000[0m
+[0;32mI (16942) PERIPH: I2C WHO_AM_I=0x68[0m
+[0;33mW (17632) WIFI: Disconnected, retry...[0m
+[0;32mI (17732) PERIPH: Timer rate ~ 1000.0 Hz[0m
+[0;32mI (17792) PERIPH: SPI tx=0x00000011 rx=0x00000000[0m
+[0;32mI (17952) PERIPH: I2C WHO_AM_I=0x68[0m
+[0;32mI (18732) PERIPH: Timer rate ~ 1000.0 Hz[0m
+[0;32mI (18792) PERIPH: SPI tx=0x00000012 rx=0x00000000[0m

@@ -1,0 +1,345 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\User\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\STIC 1\Week-13-FreeRTOS_Worksheets\07-memory-management\w07\lab3\memory_optimization\build\memory_optimization.elf D:\STIC 1\Week-13-FreeRTOS_Worksheets\07-memory-management\w07\lab3\memory_optimization\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\User\esp\v5.5.1\esp-idf\tools\idf.py'
+$�"%=5
+[0;32mI (41) boot.esp�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 25 2025 01:24:08[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0add8h ( 44504) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001ae00 vaddr=3ffb0000 size=023f8h (  9208) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d200 vaddr=40080000 size=02e18h ( 11800) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=14d4ch ( 85324) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=00034d74 vaddr=40082e18 size=0a1e0h ( 41440) load[0m
+[0;32mI (160) esp_image: segment 5: paddr=0003ef5c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;32mI (178) cpu_start: Multicore app[0m
+[0;32mI (187) cpu_start: Pro cpu start user code[0m
+[0;32mI (187) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (187) app_init: Application information:[0m
+[0;32mI (187) app_init: Project name:     memory_optimization[0m
+[0;32mI (192) app_init: App version:      8e74e47[0m
+[0;32mI (196) app_init: Compile time:     Oct 25 2025 01:23:36[0m
+[0;32mI (201) app_init: ELF file SHA256:  8c8cfb893...[0m
+[0;32mI (205) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (209) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (213) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (217) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (221) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (227) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (232) heap_init: At 3FFBD250 len 00022DB0 (139 KiB): DRAM[0m
+[0;32mI (237) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (243) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (248) heap_init: At 4008CFF8 len 00013008 (76 KiB): IRAM[0m
+[0;32mI (255) spi_flash: detected chip: generic[0m
+[0;32mI (257) spi_flash: flash io: dio[0m
+[0;33mW (260) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (273) main_task: Started on CPU0[0m
+[0;32mI (283) main_task: Calling app_main()[0m
+[0;32mI (283) MEM_OPT: 🚀 Memory Optimization Lab Starting...[0m
+[0;32mI (283) MEM_OPT: Static memory system initialized[0m
+[0;32mI (283) MEM_OPT: [0m
+🗺️ ═══ MEMORY REGION ANALYSIS ═══
+[0;32mI (293) MEM_OPT: Internal RAM:[0m
+[0;32mI (293) MEM_OPT:   Total:         355944 bytes (347.6 KB)[0m
+[0;32mI (293) MEM_OPT:   Free:          339584 bytes (331.6 KB)[0m
+[0;32mI (303) MEM_OPT:   Largest Block: 131072 bytes[0m
+[0;32mI (303) MEM_OPT:   Utilization:   4.6%[0m
+[0;32mI (313) MEM_OPT:   Fragmentation: 61.4%[0m
+[0;32mI (313) MEM_OPT:   Executable:    No[0m
+[0;32mI (313) MEM_OPT:   DMA Capable:   Yes[0m
+[0;32mI (323) MEM_OPT: [0m
+[0;32mI (323) MEM_OPT: DMA Capable:[0m
+[0;32mI (323) MEM_OPT:   Total:         278112 bytes (271.6 KB)[0m
+[0;32mI (333) MEM_OPT:   Free:          262420 bytes (256.3 KB)[0m
+[0;32mI (333) MEM_OPT:   Largest Block: 131072 bytes[0m
+[0;32mI (343) MEM_OPT:   Utilization:   5.6%[0m
+[0;32mI (343) MEM_OPT:   Fragmentation: 50.1%[0m
+[0;32mI (343) MEM_OPT:   Executable:    No[0m
+[0;32mI (353) MEM_OPT:   DMA Capable:   Yes[0m
+[0;32mI (353) MEM_OPT: [0m
+[0;32mI (353) MEM_OPT: Executable:[0m
+[0;32mI (353) MEM_OPT:   Total:         206744 bytes (201.9 KB)[0m
+[0;32mI (363) MEM_OPT:   Free:          204560 bytes (199.8 KB)[0m
+[0;32mI (363) MEM_OPT:   Largest Block: 110592 bytes[0m
+[0;32mI (373) MEM_OPT:   Utilization:   1.1%[0m
+[0;32mI (373) MEM_OPT:   Fragmentation: 45.9%[0m
+[0;32mI (383) MEM_OPT:   Executable:    Yes[0m
+[0;32mI (383) MEM_OPT:   DMA Capable:   No[0m
+[0;32mI (383) MEM_OPT: [0m
+[0;32mI (383) MEM_OPT: 32-bit Aligned:[0m
+[0;32mI (393) MEM_OPT:   Total:         355944 bytes (347.6 KB)[0m
+[0;32mI (393) MEM_OPT:   Free:          339356 bytes (331.4 KB)[0m
+[0;32mI (403) MEM_OPT:   Largest Block: 131072 bytes[0m
+[0;32mI (403) MEM_OPT:   Utilization:   4.7%[0m
+[0;32mI (403) MEM_OPT:   Fragmentation: 61.4%[0m
+[0;32mI (413) MEM_OPT:   Executable:    No[0m
+[0;32mI (413) MEM_OPT:   DMA Capable:   Yes[0m
+[0;32mI (413) MEM_OPT: [0m
+[0;32mI (423) MEM_OPT: ═══════════════════════════════════════[0m
+[0;32mI (433) MEM_OPT: [0m
+🏗️ ═══ STRUCT OPTIMIZATION DEMO ═══
+[0;32mI (433) MEM_OPT: Bad struct size:  15 bytes[0m
+[0;32mI (443) MEM_OPT: Good struct size: 16 bytes[0m
+[0;32mI (443) MEM_OPT: Memory saved:     -1 bytes per instance[0m
+[0;32mI (453) MEM_OPT: Array of 1000 elements:[0m
+[0;32mI (453) MEM_OPT:   Bad alignment:  15000 bytes[0m
+[0;32mI (463) MEM_OPT:   Good alignment: 16000 bytes[0m
+[0;32mI (463) MEM_OPT:   Total saved:    -1000 bytes (4194303.0 KB)[0m
+[0;32mI (573) MEM_OPT: ═══════════════════════════════════════[0m
+[0;32mI (573) MEM_OPT: [0m
+🏗️ ═══ STATIC ALLOCATION SETUP ═══
+[0;32mI (573) MEM_OPT: Static buffers: 8 × 4096 bytes = 32 KB total[0m
+[0;32mI (583) MEM_OPT: Task stacks: 4 × 2048 bytes = 8 KB total[0m
+[0;32mI (583) MEM_OPT: ═══════════════════════════════════════[0m
+[0;32mI (593) MEM_OPT: Creating optimization test tasks...[0m
+[0;32mI (603) MEM_OPT: 🧪 Optimization test task started[0m
+[0;32mI (603) MEM_OPT: [0m
+🏗️ ═══ STRUCT OPTIMIZATION DEMO ═══
+[0;32mI (613) MEM_OPT: Bad struct size:  15 bytes[0m
+[0;32mI (613) MEM_OPT: Good struct size: 16 bytes[0m
+[0;32mI (623) MEM_OPT: Memory saved:     -1 bytes per instance[0m
+[0;32mI (623) MEM_OPT: Array of 1000 elements:[0m
+[0;32mI (633) MEM_OPT:   Bad alignment:  15000 bytes[0m
+[0;32mI (633) MEM_OPT:   Good alignment: 16000 bytes[0m
+[0;32mI (643) MEM_OPT:   Total saved:    -1000 bytes (4194303.0 KB)[0m
+[0;32mI (643) MEM_OPT: ✅ Created static task 'OptTest' in slot 0[0m
+[0;32mI (653) MEM_OPT: 📊 Memory usage test task started[0m
+[0;32mI (653) MEM_OPT: 📊 Testing static buffer allocation...[0m
+[0;32mI (663) MEM_OPT:   Allocated static buffer 0: 0x3ffb504c[0m
+[0;32mI (663) MEM_OPT:   Allocated static buffer 1: 0x3ffb604c[0m
+[0;32mI (673) MEM_OPT:   Allocated static buffer 2: 0x3ffb704c[0m
+[0;32mI (673) MEM_OPT:   Allocated static buffer 3: 0x3ffb804c[0m
+[0;32mI (683) MEM_OPT: ✅ Created static task 'MemUsage' in slot 1[0m
+[0;32mI (683) MEM_OPT: 📈 Optimization monitor started[0m
+[0;32mI (693) MEM_OPT: All tasks created successfully[0m
+[0;32mI (693) MEM_OPT: [0m
+🎯 LED Indicators:
+[0;32mI (693) MEM_OPT:   GPIO2  - Static Allocation Active[0m
+[0;32mI (703) MEM_OPT:   GPIO4  - Alignment Optimization[0m
+[0;32mI (703) MEM_OPT:   GPIO5  - Struct Packing Optimization[0m
+[0;32mI (713) MEM_OPT:   GPIO18 - Memory Saving Achieved[0m
+[0;32mI (713) MEM_OPT:   GPIO19 - Optimization in Progress[0m
+[0;32mI (723) MEM_OPT: [0m
+🔧 Optimization Features:
+[0;32mI (723) MEM_OPT:   • Static vs Dynamic Allocation Comparison[0m
+[0;32mI (733) MEM_OPT:   • Memory Alignment Optimization[0m
+[0;32mI (733) MEM_OPT:   • Struct Packing Optimization[0m
+[0;32mI (743) MEM_OPT: ═══════════════════════════════════════[0m
+[0;32mI (753) MEM_OPT:   • Memory Access Pattern Analysis[0m
+[0;32mI (753) MEM_OPT:   • Allocation Performance Benchmarking[0m
+[0;32mI (763) MEM_OPT:   • Memory Region Analysis[0m
+[0;32mI (763) MEM_OPT: Memory Optimization System operational![0m
+[0;32mI (773) main_task: Returned from app_main()[0m
+[0;32mI (2753) MEM_OPT: [0m
+🗺️ ═══ MEMORY REGION ANALYSIS ═══
+[0;32mI (2753) MEM_OPT: Internal RAM:[0m
+[0;32mI (2753) MEM_OPT:   Total:         355944 bytes (347.6 KB)[0m
+[0;32mI (2753) MEM_OPT:   Free:          340388 bytes (332.4 KB)[0m
+[0;32mI (2753) MEM_OPT:   Largest Block: 126976 bytes[0m
+[0;32mI (2763) MEM_OPT:   Utilization:   4.4%[0m
+[0;32mI (2763) MEM_OPT:   Fragmentation: 62.7%[0m
+[0;32mI (2763) MEM_OPT:   Executable:    No[0m
+[0;32mI (2773) MEM_OPT:   DMA Capable:   Yes[0m
+[0;32mI (2773) MEM_OPT: [0m
+[0;32mI (2773) MEM_OPT: DMA Capable:[0m
+[0;32mI (2783) MEM_OPT:   Total:         278112 bytes (271.6 KB)[0m
+[0;32mI (2783) MEM_OPT:   Free:          263452 bytes (257.3 KB)[0m
+[0;32mI (2793) MEM_OPT:   Largest Block: 126976 bytes[0m
+[0;32mI (2793) MEM_OPT:   Utilization:   5.3%[0m
+[0;32mI (2793) MEM_OPT:   Fragmentation: 51.8%[0m
+[0;32mI (2803) MEM_OPT:   Executable:    No[0m
+[0;32mI (2803) MEM_OPT:   DMA Capable:   Yes[0m
+[0;32mI (2813) MEM_OPT: [0m
+[0;32mI (2813) MEM_OPT: Executable:[0m
+[0;32mI (2813) MEM_OPT:   Total:         206744 bytes (201.9 KB)[0m
+[0;32mI (2813) MEM_OPT:   Free:          204560 bytes (199.8 KB)[0m
+[0;32mI (2823) MEM_OPT:   Largest Block: 110592 bytes[0m
+[0;32mI (2823) MEM_OPT:   Utilization:   1.1%[0m
+[0;32mI (2833) MEM_OPT:   Fragmentation: 45.9%[0m
+[0;32mI (2833) MEM_OPT:   Executable:    Yes[0m
+[0;32mI (2833) MEM_OPT:   DMA Capable:   No[0m
+[0;32mI (2843) MEM_OPT: [0m
+[0;32mI (2843) MEM_OPT: 32-bit Aligned:[0m
+[0;32mI (2843) MEM_OPT:   Total:         355944 bytes (347.6 KB)[0m
+[0;32mI (2853) MEM_OPT:   Free:          340388 bytes (332.4 KB)[0m
+[0;32mI (2853) MEM_OPT:   Largest Block: 126976 bytes[0m
+[0;32mI (2863) MEM_OPT:   Utilization:   4.4%[0m
+[0;32mI (2863) MEM_OPT:   Fragmentation: 62.7%[0m
+[0;32mI (2863) MEM_OPT:   Executable:    No[0m
+[0;32mI (2873) MEM_OPT:   DMA Capable:   Yes[0m
+[0;32mI (2873) MEM_OPT: [0m
+[0;32mI (2873) MEM_OPT: ═══════════════════════════════════════[0m
+[0;32mI (4893) MEM_OPT: [0m
+⚡ ═══ MEMORY ACCESS OPTIMIZATION ═══
+[0;32mI (5683) MEM_OPT:   Freed static buffer 0[0m
+[0;32mI (5683) MEM_OPT:   Freed static buffer 1[0m
+[0;32mI (5683) MEM_OPT:   Freed static buffer 2[0m
+[0;32mI (5683) MEM_OPT:   Freed static buffer 3[0m
+[0;32mI (5683) MEM_OPT: 📊 Testing aligned allocations...[0m
+[0;32mI (5843) MEM_OPT:   Aligned ptr 0: 0x3ffbd610 (aligned: Yes)[0m
+[0;32mI (5843) MEM_OPT:   Aligned ptr 1: 0x3ffbda60 (aligned: Yes)[0m
+[0;32mI (5843) MEM_OPT:   Aligned ptr 2: 0x3ffc1140 (aligned: Yes)[0m
+[0;32mI (5993) MEM_OPT: Access Pattern Performance (1000 iterations):[0m
+[0;32mI (5993) MEM_OPT:   Sequential: 121753 μs[0m
+[0;32mI (5993) MEM_OPT:   Random:     935658 μs[0m
+[0;32mI (5993) MEM_OPT:   Speedup:    7.68x (sequential vs random)[0m
+[0;32mI (6053) MEM_OPT: Matrix Access (128x128):[0m
+[0;32mI (6053) MEM_OPT:   Row-major:    2269 μs (cache-friendly)[0m
+[0;32mI (6053) MEM_OPT:   Column-major: 2269 μs (cache-unfriendly)[0m
+[0;32mI (6053) MEM_OPT:   Performance:  1.00x better with row-major[0m
+[0;32mI (6063) MEM_OPT: ═══════════════════════════════════════[0m
+[0;32mI (8073) MEM_OPT: [0m
+🏃 ═══ ALLOCATION BENCHMARK ═══
+[0;32mI (8103) MEM_OPT: Allocation Benchmark (1000 iterations, 256 bytes):[0m
+[0;32mI (8103) MEM_OPT:   malloc/free: 13223 μs (6.61 μs per operation)[0m
+[0;32mI (8103) MEM_OPT:   static pool: 16925 μs (8.46 μs per operation)[0m
+[0;32mI (15693) MEM_OPT: [0m
+📈 ═══ OPTIMIZATION STATISTICS ═══
+[0;32mI (15693) MEM_OPT: Static Allocations:      1004[0m
+[0;32mI (15693) MEM_OPT: Dynamic Allocations:     157[0m
+[0;32mI (15693) MEM_OPT: Alignment Optimizations: 157[0m
+[0;32mI (15693) MEM_OPT: Packing Optimizations:   2[0m
+[0;32mI (15703) MEM_OPT: Memory Saved:            -2000 bytes (4194302.0 KB)[0m
+[0;32mI (15703) MEM_OPT: Time Saved:              0 μs[0m
+[0;32mI (15713) MEM_OPT: [0m
+Heap Status:
+[0;32mI (15713) MEM_OPT:   Free: 262884 bytes[0m
+[0;32mI (15713) MEM_OPT:   Min Free: 185604 bytes[0m
+[0;32mI (15723) MEM_OPT: System uptime: 15472 ms[0m
+[0;32mI (15723) MEM_OPT: ═══════════════════════════════════════[0m
+
+[0;32mI (18843) MEM_OPT: 📊 Testing static buffer allocation...[0m
+[0;32mI (18843) MEM_OPT:   Allocated static buffer 0: 0x3ffb504c[0m
+[0;32mI (18843) MEM_OPT:   Allocated static buffer 1: 0x3ffb604c[0m
+[0;32mI (18843) MEM_OPT:   Allocated static buffer 2: 0x3ffb704c[0m
+[0;32mI (18843) MEM_OPT:   Allocated static buffer 3: 0x3ffb804c[0m
+[0;32mI (23853) MEM_OPT:   Freed static buffer 0[0m
+[0;32mI (23853) MEM_OPT:   Freed static buffer 1[0m
+[0;32mI (23853) MEM_OPT:   Freed static buffer 2[0m
+[0;32mI (23853) MEM_OPT:   Freed static buffer 3[0m
+[0;32mI (23853) MEM_OPT: 📊 Testing aligned allocations...[0m
+[0;32mI (24003) MEM_OPT:   Aligned ptr 0: 0x3ffbd610 (aligned: Yes)[0m
+[0;32mI (24003) MEM_OPT:   Aligned ptr 1: 0x3ffbda60 (aligned: Yes)[0m
+[0;32mI (24003) MEM_OPT:   Aligned ptr 2: 0x3ffc0040 (aligned: Yes)[0m
+[0;32mI (30733) MEM_OPT: [0m
+📈 ═══ OPTIMIZATION STATISTICS ═══
+[0;32mI (30733) MEM_OPT: Static Allocations:      1008[0m
+[0;32mI (30733) MEM_OPT: Dynamic Allocations:     460[0m
+[0;32mI (30733) MEM_OPT: Alignment Optimizations: 460[0m
+[0;32mI (30733) MEM_OPT: Packing Optimizations:   2[0m
+[0;32mI (30743) MEM_OPT: Memory Saved:            -2000 bytes (4194302.0 KB)[0m
+[0;32mI (30743) MEM_OPT: Time Saved:              0 μs[0m
+[0;32mI (30753) MEM_OPT: [0m
+Heap Status:
+[0;32mI (30753) MEM_OPT:   Free: 262884 bytes[0m
+[0;32mI (30753) MEM_OPT:   Min Free: 185604 bytes[0m
+[0;32mI (30763) MEM_OPT: System uptime: 30512 ms[0m
+[0;32mI (30763) MEM_OPT: ═══════════════════════════════════════[0m
+
+[0;32mI (33173) MEM_OPT: Alignment Benchmark:[0m
+[0;32mI (33173) MEM_OPT:   Unaligned: 6615 μs[0m
+[0;32mI (33173) MEM_OPT:   Aligned:   25056014 μs[0m
+[0;32mI (33173) MEM_OPT: ═══════════════════════════════════════[0m
+[0;32mI (37003) MEM_OPT: 📊 Testing static buffer allocation...[0m
+[0;32mI (37003) MEM_OPT:   Allocated static buffer 0: 0x3ffb504c[0m
+[0;32mI (37003) MEM_OPT:   Allocated static buffer 1: 0x3ffb604c[0m
+[0;32mI (37003) MEM_OPT:   Allocated static buffer 2: 0x3ffb704c[0m
+[0;32mI (37003) MEM_OPT:   Allocated static buffer 3: 0x3ffb804c[0m
+[0;32mI (42013) MEM_OPT:   Freed static buffer 0[0m
+[0;32mI (42013) MEM_OPT:   Freed static buffer 1[0m
+[0;32mI (42013) MEM_OPT:   Freed static buffer 2[0m
+[0;32mI (42013) MEM_OPT:   Freed static buffer 3[0m
+[0;32mI (42013) MEM_OPT: 📊 Testing aligned allocations...[0m
+[0;32mI (42163) MEM_OPT:   Aligned ptr 0: 0x3ffbd610 (aligned: Yes)[0m
+[0;32mI (42163) MEM_OPT:   Aligned ptr 1: 0x3ffbda60 (aligned: Yes)[0m
+[0;32mI (42163) MEM_OPT:   Aligned ptr 2: 0x3ffc0040 (aligned: Yes)[0m
+[0;32mI (45773) MEM_OPT: [0m
+📈 ═══ OPTIMIZATION STATISTICS ═══
+[0;32mI (45773) MEM_OPT: Static Allocations:      1012[0m
+[0;32mI (45773) MEM_OPT: Dynamic Allocations:     511[0m
+[0;32mI (45773) MEM_OPT: Alignment Optimizations: 511[0m
+[0;32mI (45773) MEM_OPT: Packing Optimizations:   2[0m
+[0;32mI (45783) MEM_OPT: Memory Saved:            -2000 bytes (4194302.0 KB)[0m
+[0;32mI (45783) MEM_OPT: Time Saved:              0 μs[0m
+[0;32mI (45793) MEM_OPT: [0m
+Heap Status:
+[0;32mI (45793) MEM_OPT:   Free: 263208 bytes[0m
+[0;32mI (45793) MEM_OPT:   Min Free: 185604 bytes[0m
+[0;32mI (45803) MEM_OPT: System uptime: 45552 ms[0m
+[0;32mI (45803) MEM_OPT: ═══════════════════════════════════════[0m
+
+[0;32mI (53183) MEM_OPT: [0m
+🏗️ ═══ STRUCT OPTIMIZATION DEMO ═══
+[0;32mI (53183) MEM_OPT: Bad struct size:  15 bytes[0m
+[0;32mI (53183) MEM_OPT: Good struct size: 16 bytes[0m
+[0;32mI (53183) MEM_OPT: Memory saved:     -1 bytes per instance[0m
+[0;32mI (53183) MEM_OPT: Array of 1000 elements:[0m
+[0;32mI (53193) MEM_OPT:   Bad alignment:  15000 bytes[0m
+[0;32mI (53193) MEM_OPT:   Good alignment: 16000 bytes[0m
+[0;32mI (53203) MEM_OPT:   Total saved:    -1000 bytes (4194303.0 KB)[0m
+[0;32mI (53303) MEM_OPT: ═══════════════════════════════════════[0m
+[0;32mI (55163) MEM_OPT: 📊 Testing static buffer allocation...[0m
+[0;32mI (55163) MEM_OPT:   Allocated static buffer 0: 0x3ffb504c[0m
+[0;32mI (55163) MEM_OPT:   Allocated static buffer 1: 0x3ffb604c[0m
+[0;32mI (55163) MEM_OPT:   Allocated static buffer 2: 0x3ffb704c[0m
+[0;32mI (55163) MEM_OPT:   Allocated static buffer 3: 0x3ffb804c[0m
+[0;32mI (55303) MEM_OPT: [0m
+🗺️ ═══ MEMORY REGION ANALYSIS ═══
+[0;32mI (55303) MEM_OPT: Internal RAM:[0m
+[0;32mI (55303) MEM_OPT:   Total:         355944 bytes (347.6 KB)[0m
+[0;32mI (55303) MEM_OPT:   Free:          340144 bytes (332.2 KB)[0m
+[0;32mI (55303) MEM_OPT:   Largest Block: 126976 bytes[0m
+[0;32mI (55313) MEM_OPT:   Utilization:   4.4%[0m
+[0;32mI (55313) MEM_OPT:   Fragmentation: 62.7%[0m
+[0;32mI (55323) MEM_OPT:   Executable:    No[0m
+[0;32mI (55323) MEM_OPT:   DMA Capable:   Yes[0m
+[0;32mI (55323) MEM_OPT: [0m
+[0;32mI (55323) MEM_OPT: DMA Capable:[0m
+[0;32mI (55333) MEM_OPT:   Total:         278112 bytes (271.6 KB)[0m
+[0;32mI (55333) MEM_OPT:   Free:          263208 bytes (257.0 KB)[0m
+[0;32mI (55343) MEM_OPT:   Largest Block: 126976 bytes[0m
+[0;32mI (55343) MEM_OPT:   Utilization:   5.4%[0m
+[0;32mI (55353) MEM_OPT:   Fragmentation: 51.8%[0m
+[0;32mI (55353) MEM_OPT:   Executable:    No[0m
+[0;32mI (55353) MEM_OPT:   DMA Capable:   Yes[0m
+[0;32mI (55363) MEM_OPT: [0m
+[0;32mI (55363) MEM_OPT: Executable:[0m
+[0;32mI (55363) MEM_OPT:   Total:         206744 bytes (201.9 KB)[0m
+[0;32mI (55373) MEM_OPT:   Free:          204560 bytes (199.8 KB)[0m
+[0;32mI (55373) MEM_OPT:   Largest Block: 110592 bytes[0m
+[0;32mI (55383) MEM_OPT:   Utilization:   1.1%[0m
+[0;32mI (55383) MEM_OPT:   Fragmentation: 45.9%[0m
+[0;32mI (55383) MEM_OPT:   Executable:    Yes[0m
+[0;32mI (55393) MEM_OPT:   DMA Capable:   No[0m
+[0;32mI (55393) MEM_OPT: [0m
+[0;32mI (55393) MEM_OPT: 32-bit Aligned:[0m
+[0;32mI (55403) MEM_OPT:   Total:         355944 bytes (347.6 KB)[0m
+[0;32mI (55403) MEM_OPT:   Free:          340144 bytes (332.2 KB)[0m
+[0;32mI (55413) MEM_OPT:   Largest Block: 126976 bytes[0m
+[0;32mI (55413) MEM_OPT:   Utilization:   4.4%[0m
+[0;32mI (55413) MEM_OPT:   Fragmentation: 62.7%[0m
+[0;32mI (55423) MEM_OPT:   Executable:    No[0m
+[0;32mI (55423) MEM_OPT:   DMA Capable:   Yes[0m
+[0;32mI (55423) MEM_OPT: [0m
+[0;32mI (55433) MEM_OPT: ═══════════════════════════════════════[0m

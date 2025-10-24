@@ -1,0 +1,493 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\User\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\STIC 1\Week-13-FreeRTOS_Worksheets\06-event-groups\w06\lab3\complex_event_patterns\build\complex_event_patterns.elf D:\STIC 1\Week-13-FreeRTOS_Worksheets\06-event-groups\w06\lab3\complex_event_patterns\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\User\esp\v5.5.1\esp-idf\tools\idf.py'
+ode       : DIO
+[0;32mI (41) �ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 25 2025 00:58:29[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0aea8h ( 44712) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001aed0 vaddr=3ffb0000 size=02428h (  9256) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d300 vaddr=40080000 size=02d18h ( 11544) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=14df4h ( 85492) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=00034e1c vaddr=40082d18 size=0a83ch ( 43068) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003f660 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (168) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (168) boot: Disabling RNG early entropy source...[0m
+[0;32mI (179) cpu_start: Multicore app[0m
+[0;32mI (187) cpu_start: Pro cpu start user code[0m
+[0;32mI (188) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (188) app_init: Application information:[0m
+[0;32mI (188) app_init: Project name:     complex_event_patterns[0m
+[0;32mI (193) app_init: App version:      8e74e47[0m
+[0;32mI (197) app_init: Compile time:     Oct 25 2025 00:57:51[0m
+[0;32mI (202) app_init: ELF file SHA256:  302a76efd...[0m
+[0;32mI (206) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (210) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (214) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (218) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (222) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (228) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (233) heap_init: At 3FFB2F00 len 0002D100 (180 KiB): DRAM[0m
+[0;32mI (238) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (244) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (249) heap_init: At 4008D554 len 00012AAC (74 KiB): IRAM[0m
+[0;32mI (256) spi_flash: detected chip: generic[0m
+[0;32mI (258) spi_flash: flash io: dio[0m
+[0;33mW (261) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (274) main_task: Started on CPU0[0m
+[0;32mI (284) main_task: Calling app_main()[0m
+[0;32mI (284) COMPLEX_EVENTS: 🚀 Complex Event Patterns - Smart Home System Starting...[0m
+[0;32mI (284) COMPLEX_EVENTS: Event groups created successfully[0m
+[0;32mI (284) COMPLEX_EVENTS: 🏠 State changed: Idle → Idle[0m
+[0;32mI (294) COMPLEX_EVENTS: Creating system tasks...[0m
+[0;32mI (294) COMPLEX_EVENTS: 🧠 Pattern recognition engine started[0m
+[0;32mI (304) COMPLEX_EVENTS: 🏠 Home state machine started[0m
+[0;32mI (304) COMPLEX_EVENTS: 🔄 System event: 0x00000001[0m
+[0;32mI (314) COMPLEX_EVENTS: 🧠 Adaptive learning system started[0m
+[0;32mI (314) COMPLEX_EVENTS: 📊 Status monitor started[0m
+[0;32mI (324) COMPLEX_EVENTS: 🏃 Motion sensor simulation started[0m
+[0;32mI (324) COMPLEX_EVENTS: 🚪 Door sensor simulation started[0m
+[0;32mI (334) COMPLEX_EVENTS: 💡 Light control system started[0m
+[0;32mI (334) COMPLEX_EVENTS: 🌡️ Environmental sensors started[0m
+[0;32mI (344) COMPLEX_EVENTS: 🧊 Low temperature detected: 21°C[0m
+[0;32mI (354) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x00000040[0m
+[0;32mI (354) COMPLEX_EVENTS: 🔊 Sound detected[0m
+[0;32mI (354) COMPLEX_EVENTS: All tasks created successfully[0m
+[0;32mI (364) COMPLEX_EVENTS: [0m
+🎯 Smart Home LED Indicators:
+[0;32mI (364) COMPLEX_EVENTS:   GPIO2  - Living Room Light[0m
+[0;32mI (374) COMPLEX_EVENTS:   GPIO4  - Kitchen Light[0m
+[0;32mI (374) COMPLEX_EVENTS:   GPIO5  - Bedroom Light[0m
+[0;32mI (384) COMPLEX_EVENTS:   GPIO18 - Security System[0m
+[0;32mI (384) COMPLEX_EVENTS:   GPIO19 - Emergency Mode[0m
+[0;32mI (394) COMPLEX_EVENTS: [0m
+🤖 System Features:
+[0;32mI (394) COMPLEX_EVENTS:   • Event-driven State Machine[0m
+[0;32mI (404) COMPLEX_EVENTS:   • Pattern Recognition Engine[0m
+[0;32mI (404) COMPLEX_EVENTS:   • Adaptive Learning System[0m
+[0;32mI (414) COMPLEX_EVENTS:   • Smart Home Automation[0m
+[0;32mI (414) COMPLEX_EVENTS:   • Complex Event Correlation[0m
+[0;32mI (424) COMPLEX_EVENTS: [0m
+🔍 Monitored Patterns:
+[0;32mI (424) COMPLEX_EVENTS:   • Normal Entry[0m
+[0;32mI (424) COMPLEX_EVENTS:   • Break-in Attempt[0m
+[0;32mI (434) COMPLEX_EVENTS:   • Goodnight Routine[0m
+[0;32mI (434) COMPLEX_EVENTS:   • Wake-up Routine[0m
+[0;32mI (444) COMPLEX_EVENTS:   • Leaving Home[0m
+[0;32mI (444) COMPLEX_EVENTS:   • Returning Home[0m
+[0;32mI (444) COMPLEX_EVENTS: Complex Event Pattern System operational![0m
+[0;32mI (454) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (464) main_task: Returned from app_main()[0m
+[0;32mI (564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (964) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (1064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (1164) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (1264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (1364) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (1464) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (1564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (1664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (1764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (1864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (1964) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (2064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (2164) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (2264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (2364) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (2464) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (2564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (2664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (2764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (2864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (2964) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (3064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (3164) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (3264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (3364) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (3464) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (3564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (3664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (3764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (3864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (3964) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (4064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (4164) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (4264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (4364) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (4464) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (4564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (4664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (4764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (4864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (4964) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (5064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (5164) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (5264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (5364) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (5464) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (5564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (5664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (5764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (5864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (5964) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (6064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (6164) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (6264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (6364) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (6464) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (6564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (6664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (6764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (6864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (6964) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (7064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (7164) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (7264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (7364) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (7464) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (7564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (7664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (7764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (7864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (7964) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (8064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (8164) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (8264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (8364) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (8464) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (8564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (8664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (8764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (8864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (8964) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (9064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (9164) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (9264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (9364) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (9464) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (9564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (9664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (9764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (9864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (9964) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (10064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (10164) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (10264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (10364) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (10464) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (10564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (10664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (10764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (10864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (10964) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (11064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (11164) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (11264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (11364) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (11464) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (11564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (11664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (11764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (11864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (11964) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (12064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (12164) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (12264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (12364) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (12464) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (12564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (12664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (12764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (12864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (12964) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (13064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (13164) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (13264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (13364) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (13464) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (13564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (13664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (13764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (13864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (13964) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (14064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (14164) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (14264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (14364) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (14464) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (14564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (14664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (14764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (14864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (14964) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (15064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (15164) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (15264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (15364) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (15464) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (15564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (15664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (15764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (15864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (15964) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (16064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (16164) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (16264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (16364) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (16464) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (16564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (16664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (16764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (16864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (16964) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (17064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (17164) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (17264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (17364) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (17464) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (17564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (17664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (17764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (17864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (17964) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (18064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (18164) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (18264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (18364) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (18464) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (18564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (18664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (18764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (18864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (18964) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (19064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (19164) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (19264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (19364) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (19464) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (19564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (19664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (19764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (19864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (19964) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (20064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (20164) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (20264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (20324) COMPLEX_EVENTS: [0m
+🏠 ═══ SMART HOME STATUS ═══
+[0;32mI (20324) COMPLEX_EVENTS: Current State:     Idle[0m
+[0;32mI (20324) COMPLEX_EVENTS: Living Room:       OFF[0m
+[0;32mI (20324) COMPLEX_EVENTS: Kitchen:           OFF[0m
+[0;32mI (20324) COMPLEX_EVENTS: Bedroom:           OFF[0m
+[0;32mI (20334) COMPLEX_EVENTS: Security:          DISARMED[0m
+[0;32mI (20334) COMPLEX_EVENTS: Emergency:         NORMAL[0m
+[0;32mI (20344) COMPLEX_EVENTS: Temperature:       25°C[0m
+[0;32mI (20344) COMPLEX_EVENTS: Light Level:       74%[0m
+[0;32mI (20354) COMPLEX_EVENTS: [0m
+📊 Event Group Status:
+[0;32mI (20354) COMPLEX_EVENTS: Sensor Events:     0x000000C0[0m
+[0;32mI (20364) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (20364) COMPLEX_EVENTS: System Events:     0x00000000[0m
+[0;32mI (20374) COMPLEX_EVENTS: Pattern Events:    0x00000000[0m
+[0;32mI (20374) COMPLEX_EVENTS: [0m
+🧠 Adaptive Parameters:
+[0;32mI (20384) COMPLEX_EVENTS: Motion Sensitivity: 0.70[0m
+[0;32mI (20384) COMPLEX_EVENTS: Light Timeout:      300000 ms[0m
+[0;32mI (20394) COMPLEX_EVENTS: Security Delay:     30000 ms[0m
+[0;32mI (20394) COMPLEX_EVENTS: Learning Mode:      ON[0m
+[0;32mI (20394) COMPLEX_EVENTS: [0m
+📈 Pattern Confidence:
+[0;32mI (20404) COMPLEX_EVENTS: Free Heap:         284180 bytes[0m
+[0;32mI (20404) COMPLEX_EVENTS: ════════════════════════════════════════[0m
+
+[0;32mI (20464) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (20564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (20664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (20764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (20864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (20964) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (21064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (21164) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (21264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (21364) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (21464) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (21564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (21664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (21764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (21864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (21964) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (22064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (22164) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (22264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (22364) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (22464) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (22564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (22664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (22764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (22864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (22964) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (23064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (23164) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (23264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (23364) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (23464) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (23564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (23664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (23764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (23864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (23964) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (24064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (24164) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (24264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (24364) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (24464) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (24564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (24664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (24764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (24864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (24964) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (25064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (25164) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (25264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (25364) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (25464) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (25564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (25664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (25764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (25864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (25964) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (26064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (26164) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (26264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (26364) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (26464) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (26564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (26664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (26764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (26864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (26964) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (27064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (27164) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (27264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (27364) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (27464) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (27564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (27664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (27764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (27864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (27964) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (28064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (28164) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (28264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (28364) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (28464) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (28564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (28664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (28764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (28864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (28964) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (29064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (29164) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (29264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (29364) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (29464) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (29564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (29664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (29764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (29864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (29964) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (30064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (30164) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (30264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (30314) COMPLEX_EVENTS: 📊 Learning from patterns...[0m
+[0;32mI (30314) COMPLEX_EVENTS: 🔧 Low motion activity - increasing sensitivity to 0.74[0m
+[0;32mI (30364) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (30464) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (30564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (30664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (30764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (30864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (30964) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (31064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (31164) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (31264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (31364) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (31464) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (31564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (31664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (31764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (31864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (31964) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (32064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (32164) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (32264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (32364) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (32464) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (32564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (32664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (32764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (32864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (32964) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (33064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (33164) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (33264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (33364) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (33464) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (33564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (33664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (33764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (33864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (33964) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (34064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (34164) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (34264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (34364) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (34464) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (34564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (34664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (34764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (34864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (34964) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (35064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (35164) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (35264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (35364) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (35464) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (35564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (35664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (35764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (35864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (35964) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (36064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (36164) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (36264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000C0[0m
+[0;32mI (36294) COMPLEX_EVENTS: 🔥 High temperature detected: 30°C[0m
+[0;32mI (36364) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000E0[0m
+[0;32mI (36464) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000E0[0m
+[0;32mI (36564) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000E0[0m
+[0;32mI (36664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000E0[0m
+[0;32mI (36764) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000E0[0m
+[0;32mI (36864) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x000000E0[0m

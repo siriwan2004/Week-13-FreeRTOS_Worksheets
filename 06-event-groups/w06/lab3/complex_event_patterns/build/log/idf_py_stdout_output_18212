@@ -1,0 +1,309 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\User\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\STIC 1\Week-13-FreeRTOS_Worksheets\06-event-groups\w06\lab3\complex_event_patterns\build\complex_event_patterns.elf D:\STIC 1\Week-13-FreeRTOS_Worksheets\06-event-groups\w06\lab3\complex_event_patterns\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\User\esp\v5.5.1\esp-idf\tools\idf.py'
+V�"%=5
+I �ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 25 2025 00:58:29[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0af88h ( 44936) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001afb0 vaddr=3ffb0000 size=02438h (  9272) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d3f0 vaddr=40080000 size=02c28h ( 11304) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=14f84h ( 85892) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=00034fac vaddr=40082c28 size=0a92ch ( 43308) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003f8e0 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (168) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (168) boot: Disabling RNG early entropy source...[0m
+[0;32mI (179) cpu_start: Multicore app[0m
+[0;32mI (188) cpu_start: Pro cpu start user code[0m
+[0;32mI (188) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (188) app_init: Application information:[0m
+[0;32mI (188) app_init: Project name:     complex_event_patterns[0m
+[0;32mI (193) app_init: App version:      8e74e47[0m
+[0;32mI (197) app_init: Compile time:     Oct 25 2025 00:57:51[0m
+[0;32mI (202) app_init: ELF file SHA256:  55cdf720e...[0m
+[0;32mI (206) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (210) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (214) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (218) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (222) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (228) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (233) heap_init: At 3FFB2F10 len 0002D0F0 (180 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (244) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (249) heap_init: At 4008D554 len 00012AAC (74 KiB): IRAM[0m
+[0;32mI (256) spi_flash: detected chip: generic[0m
+[0;32mI (258) spi_flash: flash io: dio[0m
+[0;33mW (261) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (274) main_task: Started on CPU0[0m
+[0;32mI (284) main_task: Calling app_main()[0m
+[0;32mI (284) COMPLEX_EVENTS: 🚀 Complex Event Patterns - Smart Home System Starting...[0m
+[0;32mI (284) COMPLEX_EVENTS: Event groups created successfully[0m
+[0;32mI (284) COMPLEX_EVENTS: 🏠 State changed: Idle → Idle[0m
+[0;32mI (294) COMPLEX_EVENTS: 🧠 Pattern recognition engine started[0m
+[0;32mI (294) COMPLEX_EVENTS: 🏠 Home state machine started[0m
+[0;32mI (304) COMPLEX_EVENTS: 🔄 System event: 0x00000001[0m
+[0;32mI (304) COMPLEX_EVENTS: 🧠 Adaptive learning system started[0m
+[0;32mI (314) COMPLEX_EVENTS: 📊 Status monitor started[0m
+[0;32mI (314) COMPLEX_EVENTS: 🏃 Motion sensor simulation started[0m
+[0;32mI (324) COMPLEX_EVENTS: 🚪 Door sensor simulation started[0m
+[0;32mI (324) COMPLEX_EVENTS: 💡 Light control system started[0m
+[0;32mI (334) COMPLEX_EVENTS: 🌡️ Environmental sensors started[0m
+[0;32mI (344) COMPLEX_EVENTS: 🧪 Scenario injector started (leaving, break-in, goodnight)[0m
+[0;32mI (344) COMPLEX_EVENTS: All tasks created successfully[0m
+[0;32mI (354) COMPLEX_EVENTS: [0m
+🎯 Smart Home LED Indicators:
+[0;32mI (354) COMPLEX_EVENTS:   GPIO2  - Living Room Light[0m
+[0;32mI (364) COMPLEX_EVENTS:   GPIO4  - Kitchen Light[0m
+[0;32mI (364) COMPLEX_EVENTS:   GPIO5  - Bedroom Light[0m
+[0;32mI (374) COMPLEX_EVENTS:   GPIO18 - Security System[0m
+[0;32mI (374) COMPLEX_EVENTS:   GPIO19 - Emergency Mode[0m
+[0;32mI (384) COMPLEX_EVENTS: [0m
+🤖 System Features:
+[0;32mI (384) COMPLEX_EVENTS:   • Event-driven State Machine[0m
+[0;32mI (384) COMPLEX_EVENTS:   • Pattern Recognition Engine[0m
+[0;32mI (394) COMPLEX_EVENTS:   • Adaptive Learning System[0m
+[0;32mI (394) COMPLEX_EVENTS:   • Smart Home Automation[0m
+[0;32mI (404) COMPLEX_EVENTS:   • Complex Event Correlation[0m
+[0;32mI (404) COMPLEX_EVENTS: [0m
+🔍 Monitored Patterns:
+[0;32mI (414) COMPLEX_EVENTS:   • Normal Entry[0m
+[0;32mI (414) COMPLEX_EVENTS:   • Break-in Attempt[0m
+[0;32mI (424) COMPLEX_EVENTS:   • Goodnight Routine[0m
+[0;32mI (424) COMPLEX_EVENTS:   • Wake-up Routine[0m
+[0;32mI (424) COMPLEX_EVENTS:   • Leaving Home[0m
+[0;32mI (434) COMPLEX_EVENTS:   • Returning Home[0m
+[0;32mI (434) COMPLEX_EVENTS: Complex Event Pattern System operational![0m
+[0;32mI (444) main_task: Returned from app_main()[0m
+[0;32mI (5344) COMPLEX_EVENTS: ➡️  Scenario: Leaving Home[0m
+[0;32mI (5344) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x00000010[0m
+[0;32mI (5344) COMPLEX_EVENTS: ✅ Pattern 'Goodnight Routine': matched step 1 (0x00000010)[0m
+[0;32mI (5344) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 1 (0x00000010)[0m
+[0;32mI (5454) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x00000010[0m
+[0;32mI (5454) COMPLEX_EVENTS: ✅ Pattern 'Goodnight Routine': matched step 1 (0x00000010)[0m
+[0;32mI (5454) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 1 (0x00000010)[0m
+[0;32mI (5554) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x00000010[0m
+[0;32mI (5554) COMPLEX_EVENTS: ✅ Pattern 'Goodnight Routine': matched step 1 (0x00000010)[0m
+[0;32mI (5554) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 1 (0x00000010)[0m
+[0;32mI (5654) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x00000010[0m
+[0;32mI (5654) COMPLEX_EVENTS: ✅ Pattern 'Goodnight Routine': matched step 1 (0x00000010)[0m
+[0;32mI (5654) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 1 (0x00000010)[0m
+[0;32mI (5754) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x00000010[0m
+[0;32mI (5754) COMPLEX_EVENTS: ✅ Pattern 'Goodnight Routine': matched step 1 (0x00000010)[0m
+[0;32mI (5754) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 1 (0x00000010)[0m
+[0;32mI (5854) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x00000010[0m
+[0;32mI (5854) COMPLEX_EVENTS: ✅ Pattern 'Goodnight Routine': matched step 1 (0x00000010)[0m
+[0;32mI (5854) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 1 (0x00000010)[0m
+[0;32mI (5954) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x00000012[0m
+[0;32mI (5954) COMPLEX_EVENTS: ✅ Pattern 'Normal Entry': matched step 1 (0x00000002)[0m
+[0;32mI (5954) COMPLEX_EVENTS: ✅ Pattern 'Goodnight Routine': matched step 1 (0x00000010)[0m
+[0;32mI (5954) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 1 (0x00000010)[0m
+[0;32mI (6064) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x00000012[0m
+[0;32mI (6064) COMPLEX_EVENTS: ✅ Pattern 'Normal Entry': matched step 1 (0x00000002)[0m
+[0;32mI (6064) COMPLEX_EVENTS: ✅ Pattern 'Goodnight Routine': matched step 1 (0x00000010)[0m
+[0;32mI (6064) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 1 (0x00000010)[0m
+[0;32mI (6074) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 2 (0x00000002)[0m
+[0;32mI (6184) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x00000012[0m
+[0;32mI (6184) COMPLEX_EVENTS: ✅ Pattern 'Normal Entry': matched step 1 (0x00000002)[0m
+[0;32mI (6184) COMPLEX_EVENTS: ✅ Pattern 'Goodnight Routine': matched step 1 (0x00000010)[0m
+[0;32mI (6184) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 1 (0x00000010)[0m
+[0;32mI (6194) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 2 (0x00000002)[0m
+[0;32mI (6304) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x00000012[0m
+[0;32mI (6304) COMPLEX_EVENTS: ✅ Pattern 'Normal Entry': matched step 1 (0x00000002)[0m
+[0;32mI (6304) COMPLEX_EVENTS: ✅ Pattern 'Goodnight Routine': matched step 1 (0x00000010)[0m
+[0;32mI (6304) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 1 (0x00000010)[0m
+[0;32mI (6314) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 2 (0x00000002)[0m
+[0;32mI (6424) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x00000012[0m
+[0;32mI (6424) COMPLEX_EVENTS: ✅ Pattern 'Normal Entry': matched step 1 (0x00000002)[0m
+[0;32mI (6424) COMPLEX_EVENTS: ✅ Pattern 'Goodnight Routine': matched step 1 (0x00000010)[0m
+[0;32mI (6424) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 1 (0x00000010)[0m
+[0;32mI (6434) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 2 (0x00000002)[0m
+[0;32mI (6544) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x00000012[0m
+[0;32mI (6544) COMPLEX_EVENTS: ✅ Pattern 'Normal Entry': matched step 1 (0x00000002)[0m
+[0;32mI (6544) COMPLEX_EVENTS: ✅ Pattern 'Goodnight Routine': matched step 1 (0x00000010)[0m
+[0;32mI (6544) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 1 (0x00000010)[0m
+[0;32mI (6554) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 2 (0x00000002)[0m
+[0;32mI (6664) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x00000012[0m
+[0;32mI (6664) COMPLEX_EVENTS: ✅ Pattern 'Normal Entry': matched step 1 (0x00000002)[0m
+[0;32mI (6664) COMPLEX_EVENTS: ✅ Pattern 'Goodnight Routine': matched step 1 (0x00000010)[0m
+[0;32mI (6664) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 1 (0x00000010)[0m
+[0;32mI (6674) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 2 (0x00000002)[0m
+[0;32mI (6784) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x00000012[0m
+[0;32mI (6784) COMPLEX_EVENTS: ✅ Pattern 'Normal Entry': matched step 1 (0x00000002)[0m
+[0;32mI (6784) COMPLEX_EVENTS: ✅ Pattern 'Goodnight Routine': matched step 1 (0x00000010)[0m
+[0;32mI (6784) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 1 (0x00000010)[0m
+[0;32mI (6794) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 2 (0x00000002)[0m
+[0;32mI (6904) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x00000012[0m
+[0;32mI (6904) COMPLEX_EVENTS: ✅ Pattern 'Normal Entry': matched step 1 (0x00000002)[0m
+[0;32mI (6904) COMPLEX_EVENTS: ✅ Pattern 'Goodnight Routine': matched step 1 (0x00000010)[0m
+[0;32mI (6904) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 1 (0x00000010)[0m
+[0;32mI (6914) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 2 (0x00000002)[0m
+[0;32mI (7024) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x00000012[0m
+[0;32mI (7024) COMPLEX_EVENTS: ✅ Pattern 'Normal Entry': matched step 1 (0x00000002)[0m
+[0;32mI (7024) COMPLEX_EVENTS: ✅ Pattern 'Goodnight Routine': matched step 1 (0x00000010)[0m
+[0;32mI (7024) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 1 (0x00000010)[0m
+[0;32mI (7034) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 2 (0x00000002)[0m
+[0;32mI (7144) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x00000012[0m
+[0;32mI (7144) COMPLEX_EVENTS: ✅ Pattern 'Normal Entry': matched step 1 (0x00000002)[0m
+[0;32mI (7144) COMPLEX_EVENTS: ✅ Pattern 'Goodnight Routine': matched step 1 (0x00000010)[0m
+[0;32mI (7144) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 1 (0x00000010)[0m
+[0;32mI (7154) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 2 (0x00000002)[0m
+[0;32mI (7264) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x00000012[0m
+[0;32mI (7264) COMPLEX_EVENTS: ✅ Pattern 'Normal Entry': matched step 1 (0x00000002)[0m
+[0;32mI (7264) COMPLEX_EVENTS: ✅ Pattern 'Goodnight Routine': matched step 1 (0x00000010)[0m
+[0;32mI (7264) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 1 (0x00000010)[0m
+[0;32mI (7274) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 2 (0x00000002)[0m
+[0;32mI (7384) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x00000012[0m
+[0;32mI (7384) COMPLEX_EVENTS: ✅ Pattern 'Normal Entry': matched step 1 (0x00000002)[0m
+[0;32mI (7384) COMPLEX_EVENTS: ✅ Pattern 'Goodnight Routine': matched step 1 (0x00000010)[0m
+[0;32mI (7384) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 1 (0x00000010)[0m
+[0;32mI (7394) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 2 (0x00000002)[0m
+[0;32mI (7504) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x00000016[0m
+[0;32mI (7504) COMPLEX_EVENTS: ✅ Pattern 'Normal Entry': matched step 1 (0x00000002)[0m
+[0;32mI (7504) COMPLEX_EVENTS: ✅ Pattern 'Goodnight Routine': matched step 1 (0x00000010)[0m
+[0;32mI (7504) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 1 (0x00000010)[0m
+[0;32mI (7514) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 2 (0x00000002)[0m
+[0;32mI (7624) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x00000016[0m
+[0;32mI (7624) COMPLEX_EVENTS: ✅ Pattern 'Normal Entry': matched step 1 (0x00000002)[0m
+[0;32mI (7624) COMPLEX_EVENTS: ✅ Pattern 'Goodnight Routine': matched step 1 (0x00000010)[0m
+[0;32mI (7624) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 1 (0x00000010)[0m
+[0;32mI (7634) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 2 (0x00000002)[0m
+[0;32mI (7744) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x00000016[0m
+[0;32mI (7744) COMPLEX_EVENTS: ✅ Pattern 'Normal Entry': matched step 1 (0x00000002)[0m
+[0;32mI (7744) COMPLEX_EVENTS: ✅ Pattern 'Goodnight Routine': matched step 1 (0x00000010)[0m
+[0;32mI (7744) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 1 (0x00000010)[0m
+[0;32mI (7754) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 2 (0x00000002)[0m
+[0;32mI (7764) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 3 (0x00000004)[0m
+[0;32mI (7774) COMPLEX_EVENTS: 🎯 Pattern matched: Leaving Home[0m
+[0;32mI (7774) COMPLEX_EVENTS: 🚪 Leaving pattern detected - Securing home[0m
+[0;32mI (7784) COMPLEX_EVENTS: 🔄 System event: 0x00000014[0m
+[0;32mI (7784) COMPLEX_EVENTS: 🏠 State changed: Idle → Away[0m
+[0;32mI (7794) COMPLEX_EVENTS: 🏠 State changed: Away → Security Armed[0m
+[0;32mI (10444) COMPLEX_EVENTS: ➡️  Scenario: Break-in[0m
+[0;32mI (10444) COMPLEX_EVENTS: 🔄 System event: 0x00000004[0m
+[0;32mI (10444) COMPLEX_EVENTS: 🏠 State changed: Security Armed → Away[0m
+[0;32mI (11444) COMPLEX_EVENTS: 🔄 System event: 0x00000010[0m
+[0;32mI (11444) COMPLEX_EVENTS: 🏠 State changed: Away → Security Armed[0m
+[0;32mI (12444) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x00000002[0m
+[0;32mI (12444) COMPLEX_EVENTS: ✅ Pattern 'Normal Entry': matched step 1 (0x00000002)[0m
+[0;32mI (12444) COMPLEX_EVENTS: ✅ Pattern 'Break-in Attempt': matched step 1 (0x00000002)[0m
+[0;32mI (12444) COMPLEX_EVENTS: ✅ Pattern 'Goodnight Routine': matched step 1 (0x00000010)[0m
+[0;32mI (12454) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 1 (0x00000010)[0m
+[0;32mI (12464) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 2 (0x00000002)[0m
+[0;32mI (12474) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 3 (0x00000004)[0m
+[0;32mI (12474) COMPLEX_EVENTS: 🎯 Pattern matched: Leaving Home[0m
+[0;32mI (12484) COMPLEX_EVENTS: 🚪 Leaving pattern detected - Securing home[0m
+[0;32mI (12494) COMPLEX_EVENTS: 🔄 System event: 0x00000014[0m
+[0;32mI (12494) COMPLEX_EVENTS: 🏠 State changed: Security Armed → Away[0m
+[0;32mI (12504) COMPLEX_EVENTS: 🏠 State changed: Away → Security Armed[0m
+[0;32mI (13444) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x00000001[0m
+[0;32mI (13444) COMPLEX_EVENTS: ✅ Pattern 'Normal Entry': matched step 1 (0x00000002)[0m
+[0;32mI (13444) COMPLEX_EVENTS: ✅ Pattern 'Break-in Attempt': matched step 1 (0x00000002)[0m
+[0;32mI (13444) COMPLEX_EVENTS: ✅ Pattern 'Goodnight Routine': matched step 1 (0x00000010)[0m
+[0;32mI (13454) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 1 (0x00000010)[0m
+[0;32mI (13464) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 2 (0x00000002)[0m
+[0;32mI (13474) COMPLEX_EVENTS: ✅ Pattern 'Leaving Home': matched step 3 (0x00000004)[0m
+[0;32mI (13474) COMPLEX_EVENTS: 🎯 Pattern matched: Leaving Home[0m
+[0;32mI (13484) COMPLEX_EVENTS: 🚪 Leaving pattern detected - Securing home[0m
+[0;32mI (13494) COMPLEX_EVENTS: 🔄 System event: 0x00000014[0m
+[0;32mI (13494) COMPLEX_EVENTS: 🏠 State changed: Security Armed → Away[0m
+[0;32mI (13504) COMPLEX_EVENTS: 🏠 State changed: Away → Security Armed[0m
+[0;32mI (20314) COMPLEX_EVENTS: [0m
+🏠 ═══ SMART HOME STATUS ═══
+[0;32mI (20314) COMPLEX_EVENTS: Current State:     Security Armed[0m
+[0;32mI (20314) COMPLEX_EVENTS: Living Room:       OFF[0m
+[0;32mI (20314) COMPLEX_EVENTS: Kitchen:           OFF[0m
+[0;32mI (20314) COMPLEX_EVENTS: Bedroom:           OFF[0m
+[0;32mI (20324) COMPLEX_EVENTS: Security:          ARMED[0m
+[0;32mI (20324) COMPLEX_EVENTS: Emergency:         NORMAL[0m
+[0;32mI (20334) COMPLEX_EVENTS: Temperature:       0°C[0m
+[0;32mI (20334) COMPLEX_EVENTS: Light Level:       0%[0m
+[0;32mI (20344) COMPLEX_EVENTS: [0m
+📊 Event Group Status:
+[0;32mI (20344) COMPLEX_EVENTS: Sensor Events:     0x00000000[0m
+[0;32mI (20354) COMPLEX_EVENTS: System Events:     0x00000000[0m
+[0;32mI (20354) COMPLEX_EVENTS: Pattern Events:    0x00000020[0m
+[0;32mI (20364) COMPLEX_EVENTS: [0m
+🧠 Adaptive Parameters:
+[0;32mI (20364) COMPLEX_EVENTS: Motion Sensitivity: 0.70[0m
+[0;32mI (20374) COMPLEX_EVENTS: Light Timeout:      300000 ms[0m
+[0;32mI (20374) COMPLEX_EVENTS: Security Delay:     30000 ms[0m
+[0;32mI (20374) COMPLEX_EVENTS: Learning Mode:      ON[0m
+[0;32mI (20384) COMPLEX_EVENTS: [0m
+📈 Pattern Confidence:
+[0;32mI (20384) COMPLEX_EVENTS:   Leaving Home: 3[0m
+[0;32mI (20394) COMPLEX_EVENTS: Free Heap:         280732 bytes[0m
+[0;32mI (20394) COMPLEX_EVENTS: ════════════════════════════════════════[0m
+
+[0;32mI (25444) COMPLEX_EVENTS: ➡️  Scenario: Goodnight[0m
+[0;32mI (25444) COMPLEX_EVENTS: 🔄 System event: 0x00000002[0m
+[0;32mI (26944) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x00000010[0m
+[0;32mI (26944) COMPLEX_EVENTS: ✅ Pattern 'Goodnight Routine': matched step 1 (0x00000010)[0m
+[0;32mI (26944) COMPLEX_EVENTS: ✅ Pattern 'Goodnight Routine': matched step 2 (0x00000001)[0m
+[0;32mI (26944) COMPLEX_EVENTS: ✅ Pattern 'Goodnight Routine': matched step 3 (0x00000010)[0m
+[0;32mI (26954) COMPLEX_EVENTS: 🎯 Pattern matched: Goodnight Routine[0m
+[0;32mI (26964) COMPLEX_EVENTS: 🌙 Goodnight pattern detected - Sleep mode activated[0m
+[0;32mI (26974) COMPLEX_EVENTS: 🔄 System event: 0x00000008[0m
+[0;32mI (27444) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x00000001[0m
+[0;32mI (27444) COMPLEX_EVENTS: ✅ Pattern 'Goodnight Routine': matched step 1 (0x00000010)[0m
+[0;32mI (27444) COMPLEX_EVENTS: ✅ Pattern 'Goodnight Routine': matched step 2 (0x00000001)[0m
+[0;32mI (27444) COMPLEX_EVENTS: ✅ Pattern 'Goodnight Routine': matched step 3 (0x00000010)[0m
+[0;32mI (27454) COMPLEX_EVENTS: 🎯 Pattern matched: Goodnight Routine[0m
+[0;32mI (27464) COMPLEX_EVENTS: 🌙 Goodnight pattern detected - Sleep mode activated[0m
+[0;32mI (27474) COMPLEX_EVENTS: 🔄 System event: 0x00000008[0m
+[0;32mI (28944) COMPLEX_EVENTS: ✅ Scenarios injected. Idling...[0m
+[0;32mI (28944) COMPLEX_EVENTS: 🔍 Sensor event detected: 0x00000010[0m
+[0;32mI (28944) COMPLEX_EVENTS: ✅ Pattern 'Goodnight Routine': matched step 1 (0x00000010)[0m
+[0;32mI (28944) COMPLEX_EVENTS: ✅ Pattern 'Goodnight Routine': matched step 2 (0x00000001)[0m
+[0;32mI (28954) COMPLEX_EVENTS: ✅ Pattern 'Goodnight Routine': matched step 3 (0x00000010)[0m
+[0;32mI (28964) COMPLEX_EVENTS: 🎯 Pattern matched: Goodnight Routine[0m
+[0;32mI (28964) COMPLEX_EVENTS: 🌙 Goodnight pattern detected - Sleep mode activated[0m
+[0;32mI (28974) COMPLEX_EVENTS: 🔄 System event: 0x00000008[0m
+[0;32mI (30314) COMPLEX_EVENTS: 📊 Learning from patterns...[0m
+[0;32mI (40414) COMPLEX_EVENTS: [0m
+🏠 ═══ SMART HOME STATUS ═══
+[0;32mI (40414) COMPLEX_EVENTS: Current State:     Security Armed[0m
+[0;32mI (40414) COMPLEX_EVENTS: Living Room:       OFF[0m
+[0;32mI (40414) COMPLEX_EVENTS: Kitchen:           OFF[0m
+[0;32mI (40414) COMPLEX_EVENTS: Bedroom:           OFF[0m
+[0;32mI (40424) COMPLEX_EVENTS: Security:          ARMED[0m
+[0;32mI (40424) COMPLEX_EVENTS: Emergency:         NORMAL[0m
+[0;32mI (40434) COMPLEX_EVENTS: Temperature:       0°C[0m
+[0;32mI (40434) COMPLEX_EVENTS: Light Level:       0%[0m
+[0;32mI (40444) COMPLEX_EVENTS: [0m
+📊 Event Group Status:
+[0;32mI (40444) COMPLEX_EVENTS: Sensor Events:     0x00000000[0m
+[0;32mI (40454) COMPLEX_EVENTS: System Events:     0x00000000[0m
+[0;32mI (40454) COMPLEX_EVENTS: Pattern Events:    0x00000028[0m
+[0;32mI (40464) COMPLEX_EVENTS: [0m
+🧠 Adaptive Parameters:
+[0;32mI (40464) COMPLEX_EVENTS: Motion Sensitivity: 0.70[0m
+[0;32mI (40474) COMPLEX_EVENTS: Light Timeout:      300000 ms[0m
+[0;32mI (40474) COMPLEX_EVENTS: Security Delay:     30000 ms[0m
+[0;32mI (40474) COMPLEX_EVENTS: Learning Mode:      ON[0m
+[0;32mI (40484) COMPLEX_EVENTS: [0m
+📈 Pattern Confidence:
+[0;32mI (40484) COMPLEX_EVENTS:   Goodnight Routine: 3[0m
+[0;32mI (40494) COMPLEX_EVENTS:   Leaving Home: 3[0m
+[0;32mI (40494) COMPLEX_EVENTS: Free Heap:         280732 bytes[0m
+[0;32mI (40504) COMPLEX_EVENTS: ════════════════════════════════════════[0m
+

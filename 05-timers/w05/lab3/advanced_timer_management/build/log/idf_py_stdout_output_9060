@@ -1,0 +1,398 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\User\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\STIC 1\Week-13-FreeRTOS_Worksheets\05-timers\w05\lab3\advanced_timer_management\build\advanced_timer_management.elf D:\STIC 1\Week-13-FreeRTOS_Worksheets\05-timers\w05\lab3\advanced_timer_management\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\User\esp\v5.5.1\esp-idf\tools\idf.py'
+�"%=5
+I (41) bo�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+I (29) boot: ESP-IDF v5.5.1 2nd stage bootloader
+I (29) boot: compile time Oct 24 2025 23:36:19
+I (29) boot: Multicore bootloader
+I (31) boot: chip revision: v3.0
+I (33) boot.esp32: SPI Speed      : 40MHz
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a530h ( 42288) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001a558 vaddr=3ffb0000 size=02408h (  9224) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c968 vaddr=40080000 size=036b0h ( 14000) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=14524h ( 83236) map[0m
+[0;32mI (142) esp_image: segment 4: paddr=0003454c vaddr=400836b0 size=0a1b0h ( 41392) load[0m
+[0;32mI (159) esp_image: segment 5: paddr=0003e704 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (166) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (166) boot: Disabling RNG early entropy source...[0m
+[0;32mI (177) cpu_start: Multicore app[0m
+[0;32mI (185) cpu_start: Pro cpu start user code[0m
+[0;32mI (185) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (185) app_init: Application information:[0m
+[0;32mI (185) app_init: Project name:     advanced_timer_management[0m
+[0;32mI (191) app_init: App version:      8e74e47[0m
+[0;32mI (195) app_init: Compile time:     Oct 24 2025 23:35:47[0m
+[0;32mI (200) app_init: ELF file SHA256:  183530006...[0m
+[0;32mI (204) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (208) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (212) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (216) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (220) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (226) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (231) heap_init: At 3FFB3C30 len 0002C3D0 (176 KiB): DRAM[0m
+[0;32mI (236) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (242) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (247) heap_init: At 4008D860 len 000127A0 (73 KiB): IRAM[0m
+[0;32mI (254) spi_flash: detected chip: generic[0m
+[0;32mI (256) spi_flash: flash io: dio[0m
+[0;33mW (259) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (272) main_task: Started on CPU0[0m
+[0;32mI (282) main_task: Calling app_main()[0m
+[0;32mI (282) ADV_TIMERS: Advanced Timer Management Lab Starting...[0m
+[0;32mI (282) ADV_TIMERS: Timer pool initialized with 20 slots[0m
+[0;32mI (282) ADV_TIMERS: Monitoring systems initialized[0m
+[0;32mI (292) ADV_TIMERS: [EXP1] Timer Pool Management[0m
+[0;32mI (292) ADV_TIMERS: Created dynamic timer: Dyn1[0m
+[0;32mI (292) ADV_TIMERS: Created dynamic timer: Dyn2[0m
+[0;32mI (302) ADV_TIMERS: Performance analysis task started[0m
+[0;32mI (302) ADV_TIMERS: 🚀 Advanced Timer Management System Running (EXP=1)[0m
+[0;32mI (312) ADV_TIMERS: Monitor LEDs:[0m
+[0;32mI (312) ADV_TIMERS:   GPIO2  - Performance Warning[0m
+[0;32mI (322) ADV_TIMERS:   GPIO4  - Health Status[0m
+[0;32mI (322) ADV_TIMERS:   GPIO5  - Stress Test Activity[0m
+[0;32mI (332) ADV_TIMERS:   GPIO18 - Error/Memory Warning[0m
+[0;32mI (332) main_task: Returned from app_main()[0m
+[0;32mI (1292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (1292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (1292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (1292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (1292) ADV_TIMERS:   Free Heap: 299172 bytes[0m
+[0;32mI (1292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (2292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (2292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (2292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (2292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (2292) ADV_TIMERS:   Free Heap: 299172 bytes[0m
+[0;32mI (2292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (3292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (3292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (3292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (3292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (3292) ADV_TIMERS:   Free Heap: 299172 bytes[0m
+[0;32mI (3292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (4292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (4292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (4292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (4292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (4292) ADV_TIMERS:   Free Heap: 299172 bytes[0m
+[0;32mI (4292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (5292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (5292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (5292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (5292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (5292) ADV_TIMERS:   Free Heap: 299172 bytes[0m
+[0;32mI (5292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (6292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (6292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (6292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (6292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (6292) ADV_TIMERS:   Free Heap: 299172 bytes[0m
+[0;32mI (6292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (7292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (7292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (7292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (7292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (7292) ADV_TIMERS:   Free Heap: 299172 bytes[0m
+[0;32mI (7292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (8292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (8292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (8292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (8292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (8292) ADV_TIMERS:   Free Heap: 299172 bytes[0m
+[0;32mI (8292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (9292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (9292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (9292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (9292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (9292) ADV_TIMERS:   Free Heap: 299172 bytes[0m
+[0;32mI (9292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (10292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (10292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (10292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (10292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (10292) ADV_TIMERS:   Free Heap: 299172 bytes[0m
+[0;32mI (10292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (10302) ADV_TIMERS: 📊 Performance Analysis:[0m
+[0;32mI (10302) ADV_TIMERS:   Callback Duration: Avg=50μs, Max=85μs, Min=17μs[0m
+[0;32mI (10312) ADV_TIMERS:   Timer Accuracy: 0.0% (0/100)[0m
+[0;32mI (10312) ADV_TIMERS:   Callback Overruns: 0[0m
+[0;32mI (10322) ADV_TIMERS: [0m
+═══ PERFORMANCE REPORT ═══
+[0;32mI (10322) ADV_TIMERS: Total Timers Created: 3[0m
+[0;32mI (10332) ADV_TIMERS: Current Active: 3[0m
+[0;32mI (10332) ADV_TIMERS: Pool Utilization: 15%[0m
+[0;32mI (10332) ADV_TIMERS: Average Accuracy: 0.0%[0m
+[0;32mI (10342) ADV_TIMERS: Callback Overruns: 0[0m
+[0;32mI (10342) ADV_TIMERS: Command Failures: 0[0m
+[0;32mI (10352) ADV_TIMERS: ═════════════════════════[0m
+
+[0;32mI (11292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (11292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (11292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (11292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (11292) ADV_TIMERS:   Free Heap: 299152 bytes[0m
+[0;32mI (11292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (12292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (12292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (12292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (12292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (12292) ADV_TIMERS:   Free Heap: 299152 bytes[0m
+[0;32mI (12292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (13292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (13292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (13292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (13292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (13292) ADV_TIMERS:   Free Heap: 299152 bytes[0m
+[0;32mI (13292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (14292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (14292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (14292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (14292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (14292) ADV_TIMERS:   Free Heap: 299152 bytes[0m
+[0;32mI (14292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (15292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (15292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (15292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (15292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (15292) ADV_TIMERS:   Free Heap: 299152 bytes[0m
+[0;32mI (15292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (16292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (16292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (16292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (16292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (16292) ADV_TIMERS:   Free Heap: 299152 bytes[0m
+[0;32mI (16292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (17292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (17292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (17292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (17292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (17292) ADV_TIMERS:   Free Heap: 299152 bytes[0m
+[0;32mI (17292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (18292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (18292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (18292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (18292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (18292) ADV_TIMERS:   Free Heap: 299152 bytes[0m
+[0;32mI (18292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (19292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (19292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (19292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (19292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (19292) ADV_TIMERS:   Free Heap: 299152 bytes[0m
+[0;32mI (19292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (20292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (20292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (20292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (20292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (20292) ADV_TIMERS:   Free Heap: 299152 bytes[0m
+[0;32mI (20292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (20352) ADV_TIMERS: 📊 Performance Analysis:[0m
+[0;32mI (20352) ADV_TIMERS:   Callback Duration: Avg=50μs, Max=85μs, Min=17μs[0m
+[0;32mI (20352) ADV_TIMERS:   Timer Accuracy: 0.0% (0/100)[0m
+[0;32mI (20352) ADV_TIMERS:   Callback Overruns: 0[0m
+[0;32mI (20352) ADV_TIMERS: [0m
+═══ PERFORMANCE REPORT ═══
+[0;32mI (20362) ADV_TIMERS: Total Timers Created: 3[0m
+[0;32mI (20362) ADV_TIMERS: Current Active: 3[0m
+[0;32mI (20372) ADV_TIMERS: Pool Utilization: 15%[0m
+[0;32mI (20372) ADV_TIMERS: Average Accuracy: 0.0%[0m
+[0;32mI (20372) ADV_TIMERS: Callback Overruns: 0[0m
+[0;32mI (20382) ADV_TIMERS: Command Failures: 0[0m
+[0;32mI (20382) ADV_TIMERS: ═════════════════════════[0m
+
+[0;32mI (21292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (21292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (21292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (21292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (21292) ADV_TIMERS:   Free Heap: 299152 bytes[0m
+[0;32mI (21292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (22292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (22292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (22292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (22292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (22292) ADV_TIMERS:   Free Heap: 299152 bytes[0m
+[0;32mI (22292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (23292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (23292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (23292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (23292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (23292) ADV_TIMERS:   Free Heap: 299152 bytes[0m
+[0;32mI (23292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (24292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (24292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (24292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (24292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (24292) ADV_TIMERS:   Free Heap: 299152 bytes[0m
+[0;32mI (24292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (25292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (25292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (25292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (25292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (25292) ADV_TIMERS:   Free Heap: 299152 bytes[0m
+[0;32mI (25292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (26292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (26292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (26292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (26292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (26292) ADV_TIMERS:   Free Heap: 299152 bytes[0m
+[0;32mI (26292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (27292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (27292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (27292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (27292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (27292) ADV_TIMERS:   Free Heap: 299152 bytes[0m
+[0;32mI (27292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (28292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (28292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (28292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (28292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (28292) ADV_TIMERS:   Free Heap: 299152 bytes[0m
+[0;32mI (28292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (29292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (29292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (29292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (29292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (29292) ADV_TIMERS:   Free Heap: 299152 bytes[0m
+[0;32mI (29292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (30292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (30292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (30292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (30292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (30292) ADV_TIMERS:   Free Heap: 299152 bytes[0m
+[0;32mI (30292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (30392) ADV_TIMERS: 📊 Performance Analysis:[0m
+[0;32mI (30392) ADV_TIMERS:   Callback Duration: Avg=50μs, Max=85μs, Min=17μs[0m
+[0;32mI (30392) ADV_TIMERS:   Timer Accuracy: 0.0% (0/100)[0m
+[0;32mI (30392) ADV_TIMERS:   Callback Overruns: 0[0m
+[0;32mI (30392) ADV_TIMERS: [0m
+═══ PERFORMANCE REPORT ═══
+[0;32mI (30402) ADV_TIMERS: Total Timers Created: 3[0m
+[0;32mI (30402) ADV_TIMERS: Current Active: 3[0m
+[0;32mI (30412) ADV_TIMERS: Pool Utilization: 15%[0m
+[0;32mI (30412) ADV_TIMERS: Average Accuracy: 0.0%[0m
+[0;32mI (30412) ADV_TIMERS: Callback Overruns: 0[0m
+[0;32mI (30422) ADV_TIMERS: Command Failures: 0[0m
+[0;32mI (30422) ADV_TIMERS: ═════════════════════════[0m
+
+[0;32mI (31292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (31292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (31292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (31292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (31292) ADV_TIMERS:   Free Heap: 299152 bytes[0m
+[0;32mI (31292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (32292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (32292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (32292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (32292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (32292) ADV_TIMERS:   Free Heap: 299152 bytes[0m
+[0;32mI (32292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (33292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (33292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (33292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (33292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (33292) ADV_TIMERS:   Free Heap: 299152 bytes[0m
+[0;32mI (33292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (34292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (34292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (34292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (34292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (34292) ADV_TIMERS:   Free Heap: 299152 bytes[0m
+[0;32mI (34292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (35292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (35292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (35292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (35292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (35292) ADV_TIMERS:   Free Heap: 299152 bytes[0m
+[0;32mI (35292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (36292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (36292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (36292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (36292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (36292) ADV_TIMERS:   Free Heap: 299152 bytes[0m
+[0;32mI (36292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (37292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (37292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (37292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (37292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (37292) ADV_TIMERS:   Free Heap: 299152 bytes[0m
+[0;32mI (37292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (38292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (38292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (38292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (38292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (38292) ADV_TIMERS:   Free Heap: 299152 bytes[0m
+[0;32mI (38292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (39292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (39292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (39292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (39292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (39292) ADV_TIMERS:   Free Heap: 299152 bytes[0m
+[0;32mI (39292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (40292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (40292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (40292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (40292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (40292) ADV_TIMERS:   Free Heap: 299152 bytes[0m
+[0;32mI (40292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (40432) ADV_TIMERS: 📊 Performance Analysis:[0m
+[0;32mI (40432) ADV_TIMERS:   Callback Duration: Avg=54μs, Max=84μs, Min=19μs[0m
+[0;32mI (40432) ADV_TIMERS:   Timer Accuracy: 0.0% (0/100)[0m
+[0;32mI (40432) ADV_TIMERS:   Callback Overruns: 0[0m
+[0;32mI (40432) ADV_TIMERS: [0m
+═══ PERFORMANCE REPORT ═══
+[0;32mI (40442) ADV_TIMERS: Total Timers Created: 3[0m
+[0;32mI (40442) ADV_TIMERS: Current Active: 3[0m
+[0;32mI (40452) ADV_TIMERS: Pool Utilization: 15%[0m
+[0;32mI (40452) ADV_TIMERS: Average Accuracy: 0.0%[0m
+[0;32mI (40452) ADV_TIMERS: Callback Overruns: 0[0m
+[0;32mI (40462) ADV_TIMERS: Command Failures: 0[0m
+[0;32mI (40462) ADV_TIMERS: ═════════════════════════[0m
+
+[0;32mI (41292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (41292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (41292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (41292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (41292) ADV_TIMERS:   Free Heap: 299152 bytes[0m
+[0;32mI (41292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (42292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (42292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (42292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (42292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (42292) ADV_TIMERS:   Free Heap: 299152 bytes[0m
+[0;32mI (42292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (43292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (43292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (43292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (43292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (43292) ADV_TIMERS:   Free Heap: 299152 bytes[0m
+[0;32mI (43292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (44292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (44292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (44292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (44292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (44292) ADV_TIMERS:   Free Heap: 299152 bytes[0m
+[0;32mI (44292) ADV_TIMERS:   Failed Creations: 0[0m
+[0;32mI (45292) ADV_TIMERS: 🏥 Health Monitor:[0m
+[0;32mI (45292) ADV_TIMERS:   Active Timers: 3/3[0m
+[0;32mI (45292) ADV_TIMERS:   Pool Utilization: 15%[0m
+[0;32mI (45292) ADV_TIMERS:   Dynamic Timers: 2/10[0m
+[0;32mI (45292) ADV_TIMERS:   Free Heap: 299152 bytes[0m
+[0;32mI (45292) ADV_TIMERS:   Failed Creations: 0[0m

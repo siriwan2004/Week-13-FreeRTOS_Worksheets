@@ -1,0 +1,491 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\User\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\STIC 1\Week-13-FreeRTOS_Worksheets\05-timers\w05\lab1\software_timers\build\software_timers.elf D:\STIC 1\Week-13-FreeRTOS_Worksheets\05-timers\w05\lab1\software_timers\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\User\esp\v5.5.1\esp-idf\tools\idf.py'
+ode       : DIO
+[0;32mI (41) �ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 24 2025 22:08:44[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a720h ( 42784) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001a748 vaddr=3ffb0000 size=02408h (  9224) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001cb58 vaddr=40080000 size=034c0h ( 13504) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=14340h ( 82752) map[0m
+[0;32mI (142) esp_image: segment 4: paddr=00034368 vaddr=400834c0 size=0a350h ( 41808) load[0m
+[0;32mI (159) esp_image: segment 5: paddr=0003e6c0 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (166) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (166) boot: Disabling RNG early entropy source...[0m
+[0;32mI (177) cpu_start: Multicore app[0m
+[0;32mI (185) cpu_start: Pro cpu start user code[0m
+[0;32mI (185) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (185) app_init: Application information:[0m
+[0;32mI (185) app_init: Project name:     software_timers[0m
+[0;32mI (190) app_init: App version:      8e74e47[0m
+[0;32mI (194) app_init: Compile time:     Oct 24 2025 22:06:23[0m
+[0;32mI (199) app_init: ELF file SHA256:  d1489886b...[0m
+[0;32mI (203) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (207) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (211) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (215) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (219) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (225) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (230) heap_init: At 3FFB2E30 len 0002D1D0 (180 KiB): DRAM[0m
+[0;32mI (235) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (241) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (246) heap_init: At 4008D810 len 000127F0 (73 KiB): IRAM[0m
+[0;32mI (253) spi_flash: detected chip: generic[0m
+[0;32mI (255) spi_flash: flash io: dio[0m
+[0;33mW (258) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (271) main_task: Started on CPU0[0m
+[0;32mI (281) main_task: Calling app_main()[0m
+[0;32mI (281) SW_TIMERS: Software Timers Lab Starting...[0m
+[0;32mI (281) SW_TIMERS: Creating software timers...[0m
+[0;32mI (281) SW_TIMERS: All timers created successfully[0m
+[0;32mI (281) SW_TIMERS: Starting timers...[0m
+[0;32mI (291) SW_TIMERS: Timer control task started[0m
+[0;32mI (291) SW_TIMERS: Timer system operational![0m
+[0;32mI (301) SW_TIMERS: LEDs indicate different timer activities:[0m
+[0;32mI (301) SW_TIMERS:   GPIO2  - Blink Timer (toggles every 500ms)[0m
+[0;32mI (311) SW_TIMERS:   GPIO4  - Heartbeat Timer (double blink every 2s)[0m
+[0;32mI (311) SW_TIMERS:   GPIO5  - Status Timer (flash every 5s)[0m
+[0;32mI (321) SW_TIMERS:   GPIO18 - One-shot Timer (5 quick flashes)[0m
+[0;32mI (321) main_task: Returned from app_main()[0m
+[0;32mI (791) SW_TIMERS: 💫 Blink Timer: Toggle #1 (LED: ON)[0m
+[0;32mI (1291) SW_TIMERS: 💫 Blink Timer: Toggle #2 (LED: OFF)[0m
+[0;32mI (1791) SW_TIMERS: 💫 Blink Timer: Toggle #3 (LED: ON)[0m
+[0;32mI (2291) SW_TIMERS: 💓 Heartbeat Timer: Beat #1[0m
+[0;32mI (2591) SW_TIMERS: 💫 Blink Timer: Toggle #4 (LED: OFF)[0m
+[0;32mI (2791) SW_TIMERS: 💫 Blink Timer: Toggle #5 (LED: ON)[0m
+[0;32mI (3291) SW_TIMERS: 💫 Blink Timer: Toggle #6 (LED: OFF)[0m
+[0;32mI (3791) SW_TIMERS: 💫 Blink Timer: Toggle #7 (LED: ON)[0m
+[0;32mI (4291) SW_TIMERS: 💓 Heartbeat Timer: Beat #2[0m
+[0;32mI (4591) SW_TIMERS: 🔧 Adjusting blink period to 307ms[0m
+[0;32mI (4891) SW_TIMERS: 💫 Blink Timer: Toggle #8 (LED: OFF)[0m
+[0;32mI (5191) SW_TIMERS: 💫 Blink Timer: Toggle #9 (LED: ON)[0m
+[0;32mI (5291) SW_TIMERS: 📊 Status Timer: Update #1[0m
+[0;32mI (5491) SW_TIMERS: ═══ TIMER STATISTICS ═══[0m
+[0;32mI (5491) SW_TIMERS: Blink events:     9[0m
+[0;32mI (5491) SW_TIMERS: Heartbeat events: 2[0m
+[0;32mI (5491) SW_TIMERS: Status updates:   1[0m
+[0;32mI (5491) SW_TIMERS: One-shot events:  0[0m
+[0;32mI (5491) SW_TIMERS: Dynamic events:   0[0m
+[0;32mI (5501) SW_TIMERS: ═══════════════════════[0m
+[0;32mI (5501) SW_TIMERS: Timer States:[0m
+[0;32mI (5511) SW_TIMERS:   Blink:     ACTIVE (Period: 300ms)[0m
+[0;32mI (5511) SW_TIMERS:   Heartbeat: ACTIVE (Period: 2000ms)[0m
+[0;32mI (5521) SW_TIMERS:   Status:    ACTIVE (Period: 5000ms)[0m
+[0;32mI (5521) SW_TIMERS:   One-shot:  INACTIVE[0m
+[0;32mI (5531) SW_TIMERS: 💫 Blink Timer: Toggle #10 (LED: OFF)[0m
+[0;32mI (5791) SW_TIMERS: 💫 Blink Timer: Toggle #11 (LED: ON)[0m
+[0;32mI (6091) SW_TIMERS: 💫 Blink Timer: Toggle #12 (LED: OFF)[0m
+[0;32mI (6291) SW_TIMERS: 💓 Heartbeat Timer: Beat #3[0m
+[0;32mI (6591) SW_TIMERS: 💫 Blink Timer: Toggle #13 (LED: ON)[0m
+[0;32mI (6691) SW_TIMERS: 💫 Blink Timer: Toggle #14 (LED: OFF)[0m
+[0;32mI (6991) SW_TIMERS: 💫 Blink Timer: Toggle #15 (LED: ON)[0m
+[0;32mI (7291) SW_TIMERS: 💫 Blink Timer: Toggle #16 (LED: OFF)[0m
+[0;32mI (7591) SW_TIMERS: 💫 Blink Timer: Toggle #17 (LED: ON)[0m
+[0;32mI (7891) SW_TIMERS: 💫 Blink Timer: Toggle #18 (LED: OFF)[0m
+[0;32mI (8191) SW_TIMERS: 💫 Blink Timer: Toggle #19 (LED: ON)[0m
+[0;32mI (8291) SW_TIMERS: 💓 Heartbeat Timer: Beat #4[0m
+[0;32mI (8591) SW_TIMERS: 🔧 Adjusting blink period to 544ms[0m
+[0;32mI (9131) SW_TIMERS: 💫 Blink Timer: Toggle #20 (LED: OFF)[0m
+[0;32mI (9131) SW_TIMERS: 🚀 Creating one-shot timer (3 second delay)[0m
+[0;32mI (9671) SW_TIMERS: 💫 Blink Timer: Toggle #21 (LED: ON)[0m
+[0;32mI (10211) SW_TIMERS: 💫 Blink Timer: Toggle #22 (LED: OFF)[0m
+[0;32mI (10291) SW_TIMERS: 📊 Status Timer: Update #2[0m
+[0;32mI (10491) SW_TIMERS: ═══ TIMER STATISTICS ═══[0m
+[0;32mI (10491) SW_TIMERS: Blink events:     22[0m
+[0;32mI (10491) SW_TIMERS: Heartbeat events: 4[0m
+[0;32mI (10491) SW_TIMERS: Status updates:   2[0m
+[0;32mI (10491) SW_TIMERS: One-shot events:  0[0m
+[0;32mI (10491) SW_TIMERS: Dynamic events:   0[0m
+[0;32mI (10501) SW_TIMERS: ═══════════════════════[0m
+[0;32mI (10511) SW_TIMERS: Timer States:[0m
+[0;32mI (10511) SW_TIMERS:   Blink:     ACTIVE (Period: 540ms)[0m
+[0;32mI (10511) SW_TIMERS:   Heartbeat: ACTIVE (Period: 2000ms)[0m
+[0;32mI (10521) SW_TIMERS:   Status:    ACTIVE (Period: 5000ms)[0m
+[0;32mI (10521) SW_TIMERS:   One-shot:  ACTIVE[0m
+[0;32mI (10531) SW_TIMERS: 💓 Heartbeat Timer: Beat #5[0m
+[0;32mI (10831) SW_TIMERS: 💫 Blink Timer: Toggle #23 (LED: ON)[0m
+[0;32mI (11291) SW_TIMERS: 💫 Blink Timer: Toggle #24 (LED: OFF)[0m
+[0;32mI (11831) SW_TIMERS: 💫 Blink Timer: Toggle #25 (LED: ON)[0m
+[0;32mI (12131) SW_TIMERS: ⚡ One-shot Timer: Event #1[0m
+[0;32mI (12631) SW_TIMERS: 🎲 Creating dynamic timer (period: 3021ms)[0m
+[0;32mI (12631) SW_TIMERS: 💓 Heartbeat Timer: Beat #6[0m
+[0;32mI (12931) SW_TIMERS: 🔧 Adjusting blink period to 457ms[0m
+[0;32mI (13381) SW_TIMERS: 💫 Blink Timer: Toggle #26 (LED: OFF)[0m
+[0;32mI (13831) SW_TIMERS: 💫 Blink Timer: Toggle #27 (LED: ON)[0m
+[0;32mI (14281) SW_TIMERS: 💫 Blink Timer: Toggle #28 (LED: OFF)[0m
+[0;32mI (14291) SW_TIMERS: 💓 Heartbeat Timer: Beat #7[0m
+[0;32mI (14731) SW_TIMERS: 💫 Blink Timer: Toggle #29 (LED: ON)[0m
+[0;32mI (15181) SW_TIMERS: 💫 Blink Timer: Toggle #30 (LED: OFF)[0m
+[0;32mI (15291) SW_TIMERS: [0m
+🎛️  TIMER CONTROL: Performing maintenance...
+[0;32mI (15291) SW_TIMERS: ⚙️  Changing blink timer period[0m
+[0;32mI (15291) SW_TIMERS: New blink period: 545ms[0m
+[0;32mI (15291) SW_TIMERS: 📊 Status Timer: Update #3[0m
+[0;32mI (15291) SW_TIMERS: Maintenance completed[0m
+
+[0;32mI (15501) SW_TIMERS: ═══ TIMER STATISTICS ═══[0m
+[0;32mI (15501) SW_TIMERS: Blink events:     30[0m
+[0;32mI (15501) SW_TIMERS: Heartbeat events: 7[0m
+[0;32mI (15501) SW_TIMERS: Status updates:   3[0m
+[0;32mI (15501) SW_TIMERS: One-shot events:  1[0m
+[0;32mI (15501) SW_TIMERS: Dynamic events:   0[0m
+[0;32mI (15511) SW_TIMERS: ═══════════════════════[0m
+[0;32mI (15521) SW_TIMERS: Timer States:[0m
+[0;32mI (15521) SW_TIMERS:   Blink:     ACTIVE (Period: 540ms)[0m
+[0;32mI (15521) SW_TIMERS:   Heartbeat: ACTIVE (Period: 2000ms)[0m
+[0;32mI (15531) SW_TIMERS:   Status:    ACTIVE (Period: 5000ms)[0m
+[0;32mI (15531) SW_TIMERS:   One-shot:  INACTIVE[0m
+[0;32mI (15651) SW_TIMERS: 🌟 Dynamic Timer: Event #1[0m
+[0;32mI (15951) SW_TIMERS: Dynamic timer deleted[0m
+[0;32mI (15951) SW_TIMERS: 💫 Blink Timer: Toggle #31 (LED: ON)[0m
+[0;32mI (16291) SW_TIMERS: 💓 Heartbeat Timer: Beat #8[0m
+[0;32mI (16591) SW_TIMERS: 💫 Blink Timer: Toggle #32 (LED: OFF)[0m
+[0;32mI (16911) SW_TIMERS: 💫 Blink Timer: Toggle #33 (LED: ON)[0m
+[0;32mI (17451) SW_TIMERS: 💫 Blink Timer: Toggle #34 (LED: OFF)[0m
+[0;32mI (17991) SW_TIMERS: 💫 Blink Timer: Toggle #35 (LED: ON)[0m
+[0;32mI (18291) SW_TIMERS: 💓 Heartbeat Timer: Beat #9[0m
+[0;32mI (18591) SW_TIMERS: 🔧 Adjusting blink period to 542ms[0m
+[0;32mI (19131) SW_TIMERS: 💫 Blink Timer: Toggle #36 (LED: OFF)[0m
+[0;32mI (19671) SW_TIMERS: 💫 Blink Timer: Toggle #37 (LED: ON)[0m
+[0;32mI (20211) SW_TIMERS: 💫 Blink Timer: Toggle #38 (LED: OFF)[0m
+[0;32mI (20291) SW_TIMERS: 📊 Status Timer: Update #4[0m
+[0;32mI (20491) SW_TIMERS: ═══ TIMER STATISTICS ═══[0m
+[0;32mI (20491) SW_TIMERS: Blink events:     38[0m
+[0;32mI (20491) SW_TIMERS: Heartbeat events: 9[0m
+[0;32mI (20491) SW_TIMERS: Status updates:   4[0m
+[0;32mI (20491) SW_TIMERS: One-shot events:  1[0m
+[0;32mI (20491) SW_TIMERS: Dynamic events:   1[0m
+[0;32mI (20501) SW_TIMERS: ═══════════════════════[0m
+[0;32mI (20511) SW_TIMERS: Timer States:[0m
+[0;32mI (20511) SW_TIMERS:   Blink:     ACTIVE (Period: 540ms)[0m
+[0;32mI (20511) SW_TIMERS:   Heartbeat: ACTIVE (Period: 2000ms)[0m
+[0;32mI (20521) SW_TIMERS:   Status:    ACTIVE (Period: 5000ms)[0m
+[0;32mI (20521) SW_TIMERS:   One-shot:  INACTIVE[0m
+[0;32mI (20531) SW_TIMERS: 💓 Heartbeat Timer: Beat #10[0m
+[0;32mI (20831) SW_TIMERS: 🔧 Adjusting blink period to 482ms[0m
+[0;32mI (21311) SW_TIMERS: 💫 Blink Timer: Toggle #39 (LED: ON)[0m
+[0;32mI (21791) SW_TIMERS: 💫 Blink Timer: Toggle #40 (LED: OFF)[0m
+[0;32mI (21791) SW_TIMERS: 🚀 Creating one-shot timer (3 second delay)[0m
+[0;32mI (22271) SW_TIMERS: 💫 Blink Timer: Toggle #41 (LED: ON)[0m
+[0;32mI (22291) SW_TIMERS: 💓 Heartbeat Timer: Beat #11[0m
+[0;32mI (22751) SW_TIMERS: 💫 Blink Timer: Toggle #42 (LED: OFF)[0m
+[0;32mI (23231) SW_TIMERS: 💫 Blink Timer: Toggle #43 (LED: ON)[0m
+[0;32mI (23711) SW_TIMERS: 💫 Blink Timer: Toggle #44 (LED: OFF)[0m
+[0;32mI (24191) SW_TIMERS: 💫 Blink Timer: Toggle #45 (LED: ON)[0m
+[0;32mI (24291) SW_TIMERS: 💓 Heartbeat Timer: Beat #12[0m
+[0;32mI (24591) SW_TIMERS: 🔧 Adjusting blink period to 480ms[0m
+[0;32mI (24791) SW_TIMERS: ⚡ One-shot Timer: Event #2[0m
+[0;32mI (25291) SW_TIMERS: 🎲 Creating dynamic timer (period: 2924ms)[0m
+[0;32mI (25291) SW_TIMERS: 💫 Blink Timer: Toggle #46 (LED: OFF)[0m
+[0;32mI (25291) SW_TIMERS: 📊 Status Timer: Update #5[0m
+[0;32mI (25491) SW_TIMERS: ═══ TIMER STATISTICS ═══[0m
+[0;32mI (25491) SW_TIMERS: Blink events:     46[0m
+[0;32mI (25491) SW_TIMERS: Heartbeat events: 12[0m
+[0;32mI (25491) SW_TIMERS: Status updates:   5[0m
+[0;32mI (25491) SW_TIMERS: One-shot events:  2[0m
+[0;32mI (25491) SW_TIMERS: Dynamic events:   1[0m
+[0;32mI (25501) SW_TIMERS: ═══════════════════════[0m
+[0;32mI (25511) SW_TIMERS: Timer States:[0m
+[0;32mI (25511) SW_TIMERS:   Blink:     ACTIVE (Period: 480ms)[0m
+[0;32mI (25511) SW_TIMERS:   Heartbeat: ACTIVE (Period: 2000ms)[0m
+[0;32mI (25521) SW_TIMERS:   Status:    ACTIVE (Period: 5000ms)[0m
+[0;32mI (25521) SW_TIMERS:   One-shot:  INACTIVE[0m
+[0;32mI (25551) SW_TIMERS: 💫 Blink Timer: Toggle #47 (LED: ON)[0m
+[0;32mI (26031) SW_TIMERS: 💫 Blink Timer: Toggle #48 (LED: OFF)[0m
+[0;32mI (26291) SW_TIMERS: 💓 Heartbeat Timer: Beat #13[0m
+[0;32mI (26591) SW_TIMERS: 💫 Blink Timer: Toggle #49 (LED: ON)[0m
+[0;32mI (26991) SW_TIMERS: 💫 Blink Timer: Toggle #50 (LED: OFF)[0m
+[0;32mI (27471) SW_TIMERS: 💫 Blink Timer: Toggle #51 (LED: ON)[0m
+[0;32mI (27951) SW_TIMERS: 💫 Blink Timer: Toggle #52 (LED: OFF)[0m
+[0;32mI (28211) SW_TIMERS: 🌟 Dynamic Timer: Event #2[0m
+[0;32mI (28511) SW_TIMERS: Dynamic timer deleted[0m
+[0;32mI (28511) SW_TIMERS: 💓 Heartbeat Timer: Beat #14[0m
+[0;32mI (28811) SW_TIMERS: 💫 Blink Timer: Toggle #53 (LED: ON)[0m
+[0;32mI (28911) SW_TIMERS: 💫 Blink Timer: Toggle #54 (LED: OFF)[0m
+[0;32mI (29391) SW_TIMERS: 💫 Blink Timer: Toggle #55 (LED: ON)[0m
+[0;32mI (29871) SW_TIMERS: 💫 Blink Timer: Toggle #56 (LED: OFF)[0m
+[0;32mI (30291) SW_TIMERS: 📊 Status Timer: Update #6[0m
+[0;32mI (30301) SW_TIMERS: [0m
+🎛️  TIMER CONTROL: Performing maintenance...
+[0;32mI (30301) SW_TIMERS: ⚙️  Changing blink timer period[0m
+[0;32mI (30301) SW_TIMERS: New blink period: 468ms[0m
+[0;32mI (30301) SW_TIMERS: Maintenance completed[0m
+
+[0;32mI (30491) SW_TIMERS: ═══ TIMER STATISTICS ═══[0m
+[0;32mI (30491) SW_TIMERS: Blink events:     56[0m
+[0;32mI (30491) SW_TIMERS: Heartbeat events: 14[0m
+[0;32mI (30491) SW_TIMERS: Status updates:   6[0m
+[0;32mI (30491) SW_TIMERS: One-shot events:  2[0m
+[0;32mI (30491) SW_TIMERS: Dynamic events:   2[0m
+[0;32mI (30501) SW_TIMERS: ═══════════════════════[0m
+[0;32mI (30511) SW_TIMERS: Timer States:[0m
+[0;32mI (30511) SW_TIMERS:   Blink:     ACTIVE (Period: 480ms)[0m
+[0;32mI (30511) SW_TIMERS:   Heartbeat: ACTIVE (Period: 2000ms)[0m
+[0;32mI (30521) SW_TIMERS:   Status:    ACTIVE (Period: 5000ms)[0m
+[0;32mI (30521) SW_TIMERS:   One-shot:  INACTIVE[0m
+[0;32mI (30531) SW_TIMERS: 💓 Heartbeat Timer: Beat #15[0m
+[0;32mI (30991) SW_TIMERS: 💫 Blink Timer: Toggle #57 (LED: ON)[0m
+[0;32mI (31451) SW_TIMERS: 💫 Blink Timer: Toggle #58 (LED: OFF)[0m
+[0;32mI (31911) SW_TIMERS: 💫 Blink Timer: Toggle #59 (LED: ON)[0m
+[0;32mI (32291) SW_TIMERS: 💓 Heartbeat Timer: Beat #16[0m
+[0;32mI (32591) SW_TIMERS: 💫 Blink Timer: Toggle #60 (LED: OFF)[0m
+[0;32mI (32591) SW_TIMERS: 🚀 Creating one-shot timer (3 second delay)[0m
+[0;32mI (32831) SW_TIMERS: 💫 Blink Timer: Toggle #61 (LED: ON)[0m
+[0;32mI (33291) SW_TIMERS: 💫 Blink Timer: Toggle #62 (LED: OFF)[0m
+[0;32mI (33751) SW_TIMERS: 💫 Blink Timer: Toggle #63 (LED: ON)[0m
+[0;32mI (34211) SW_TIMERS: 💫 Blink Timer: Toggle #64 (LED: OFF)[0m
+[0;32mI (34291) SW_TIMERS: 💓 Heartbeat Timer: Beat #17[0m
+[0;32mI (34671) SW_TIMERS: 💫 Blink Timer: Toggle #65 (LED: ON)[0m
+[0;32mI (35131) SW_TIMERS: 💫 Blink Timer: Toggle #66 (LED: OFF)[0m
+[0;32mI (35291) SW_TIMERS: 📊 Status Timer: Update #7[0m
+[0;32mI (35491) SW_TIMERS: ═══ TIMER STATISTICS ═══[0m
+[0;32mI (35491) SW_TIMERS: Blink events:     66[0m
+[0;32mI (35491) SW_TIMERS: Heartbeat events: 17[0m
+[0;32mI (35491) SW_TIMERS: Status updates:   7[0m
+[0;32mI (35491) SW_TIMERS: One-shot events:  2[0m
+[0;32mI (35491) SW_TIMERS: Dynamic events:   2[0m
+[0;32mI (35501) SW_TIMERS: ═══════════════════════[0m
+[0;32mI (35511) SW_TIMERS: Timer States:[0m
+[0;32mI (35511) SW_TIMERS:   Blink:     ACTIVE (Period: 460ms)[0m
+[0;32mI (35511) SW_TIMERS:   Heartbeat: ACTIVE (Period: 2000ms)[0m
+[0;32mI (35521) SW_TIMERS:   Status:    ACTIVE (Period: 5000ms)[0m
+[0;32mI (35521) SW_TIMERS:   One-shot:  ACTIVE[0m
+[0;32mI (35591) SW_TIMERS: ⚡ One-shot Timer: Event #3[0m
+[0;32mI (36091) SW_TIMERS: 🎲 Creating dynamic timer (period: 3995ms)[0m
+[0;32mI (36091) SW_TIMERS: 💫 Blink Timer: Toggle #67 (LED: ON)[0m
+[0;32mI (36091) SW_TIMERS: 💫 Blink Timer: Toggle #68 (LED: OFF)[0m
+[0;32mI (36291) SW_TIMERS: 💓 Heartbeat Timer: Beat #18[0m
+[0;32mI (36591) SW_TIMERS: 💫 Blink Timer: Toggle #69 (LED: ON)[0m
+[0;32mI (36971) SW_TIMERS: 💫 Blink Timer: Toggle #70 (LED: OFF)[0m
+[0;32mI (37431) SW_TIMERS: 💫 Blink Timer: Toggle #71 (LED: ON)[0m
+[0;32mI (37891) SW_TIMERS: 💫 Blink Timer: Toggle #72 (LED: OFF)[0m
+[0;32mI (38291) SW_TIMERS: 💓 Heartbeat Timer: Beat #19[0m
+[0;32mI (38591) SW_TIMERS: 💫 Blink Timer: Toggle #73 (LED: ON)[0m
+[0;32mI (38811) SW_TIMERS: 💫 Blink Timer: Toggle #74 (LED: OFF)[0m
+[0;32mI (39271) SW_TIMERS: 💫 Blink Timer: Toggle #75 (LED: ON)[0m
+[0;32mI (39731) SW_TIMERS: 💫 Blink Timer: Toggle #76 (LED: OFF)[0m
+[0;32mI (40081) SW_TIMERS: 🌟 Dynamic Timer: Event #3[0m
+[0;32mI (40381) SW_TIMERS: Dynamic timer deleted[0m
+[0;32mI (40381) SW_TIMERS: 💫 Blink Timer: Toggle #77 (LED: ON)[0m
+[0;32mI (40381) SW_TIMERS: 📊 Status Timer: Update #8[0m
+[0;32mI (40581) SW_TIMERS: ═══ TIMER STATISTICS ═══[0m
+[0;32mI (40581) SW_TIMERS: Blink events:     77[0m
+[0;32mI (40581) SW_TIMERS: Heartbeat events: 19[0m
+[0;32mI (40581) SW_TIMERS: Status updates:   8[0m
+[0;32mI (40581) SW_TIMERS: One-shot events:  3[0m
+[0;32mI (40581) SW_TIMERS: Dynamic events:   3[0m
+[0;32mI (40591) SW_TIMERS: ═══════════════════════[0m
+[0;32mI (40601) SW_TIMERS: Timer States:[0m
+[0;32mI (40601) SW_TIMERS:   Blink:     ACTIVE (Period: 460ms)[0m
+[0;32mI (40601) SW_TIMERS:   Heartbeat: ACTIVE (Period: 2000ms)[0m
+[0;32mI (40611) SW_TIMERS:   Status:    ACTIVE (Period: 5000ms)[0m
+[0;32mI (40611) SW_TIMERS:   One-shot:  INACTIVE[0m
+[0;32mI (40621) SW_TIMERS: 💓 Heartbeat Timer: Beat #20[0m
+[0;32mI (40921) SW_TIMERS: 🔧 Adjusting blink period to 609ms[0m
+[0;32mI (41521) SW_TIMERS: 💫 Blink Timer: Toggle #78 (LED: OFF)[0m
+[0;32mI (42121) SW_TIMERS: 💫 Blink Timer: Toggle #79 (LED: ON)[0m
+[0;32mI (42291) SW_TIMERS: 💓 Heartbeat Timer: Beat #21[0m
+[0;32mI (42721) SW_TIMERS: 💫 Blink Timer: Toggle #80 (LED: OFF)[0m
+[0;32mI (42721) SW_TIMERS: 🚀 Creating one-shot timer (3 second delay)[0m
+[0;32mI (43321) SW_TIMERS: 💫 Blink Timer: Toggle #81 (LED: ON)[0m
+[0;32mI (43921) SW_TIMERS: 💫 Blink Timer: Toggle #82 (LED: OFF)[0m
+[0;32mI (44291) SW_TIMERS: 💓 Heartbeat Timer: Beat #22[0m
+[0;32mI (44591) SW_TIMERS: 💫 Blink Timer: Toggle #83 (LED: ON)[0m
+[0;32mI (45121) SW_TIMERS: 💫 Blink Timer: Toggle #84 (LED: OFF)[0m
+[0;32mI (45291) SW_TIMERS: 📊 Status Timer: Update #9[0m
+[0;32mI (45301) SW_TIMERS: [0m
+🎛️  TIMER CONTROL: Performing maintenance...
+[0;32mI (45301) SW_TIMERS: ⏸️  Stopping heartbeat timer for 5 seconds[0m
+[0;32mI (45491) SW_TIMERS: ═══ TIMER STATISTICS ═══[0m
+[0;32mI (45491) SW_TIMERS: Blink events:     84[0m
+[0;32mI (45491) SW_TIMERS: Heartbeat events: 22[0m
+[0;32mI (45491) SW_TIMERS: Status updates:   9[0m
+[0;32mI (45491) SW_TIMERS: One-shot events:  3[0m
+[0;32mI (45491) SW_TIMERS: Dynamic events:   3[0m
+[0;32mI (45501) SW_TIMERS: ═══════════════════════[0m
+[0;32mI (45511) SW_TIMERS: Timer States:[0m
+[0;32mI (45511) SW_TIMERS:   Blink:     ACTIVE (Period: 600ms)[0m
+[0;32mI (45511) SW_TIMERS:   Heartbeat: ACTIVE (Period: 2000ms)[0m
+[0;32mI (45521) SW_TIMERS:   Status:    ACTIVE (Period: 5000ms)[0m
+[0;32mI (45521) SW_TIMERS:   One-shot:  ACTIVE[0m
+[0;32mI (45721) SW_TIMERS: ⚡ One-shot Timer: Event #4[0m
+[0;32mI (46221) SW_TIMERS: 🎲 Creating dynamic timer (period: 3120ms)[0m
+[0;32mI (46221) SW_TIMERS: 💫 Blink Timer: Toggle #85 (LED: ON)[0m
+[0;32mI (46321) SW_TIMERS: 💫 Blink Timer: Toggle #86 (LED: OFF)[0m
+[0;32mI (46921) SW_TIMERS: 💫 Blink Timer: Toggle #87 (LED: ON)[0m
+[0;32mI (47521) SW_TIMERS: 💫 Blink Timer: Toggle #88 (LED: OFF)[0m
+[0;32mI (48121) SW_TIMERS: 💫 Blink Timer: Toggle #89 (LED: ON)[0m
+[0;32mI (48721) SW_TIMERS: 💫 Blink Timer: Toggle #90 (LED: OFF)[0m
+[0;32mI (49321) SW_TIMERS: 💫 Blink Timer: Toggle #91 (LED: ON)[0m
+[0;32mI (49341) SW_TIMERS: 🌟 Dynamic Timer: Event #4[0m
+[0;32mI (49641) SW_TIMERS: Dynamic timer deleted[0m
+[0;32mI (49921) SW_TIMERS: 💫 Blink Timer: Toggle #92 (LED: OFF)[0m
+[0;32mI (50291) SW_TIMERS: 📊 Status Timer: Update #10[0m
+[0;32mI (50301) SW_TIMERS: ▶️  Restarting heartbeat timer[0m
+[0;32mI (50301) SW_TIMERS: Maintenance completed[0m
+
+[0;32mI (50491) SW_TIMERS: ═══ TIMER STATISTICS ═══[0m
+[0;32mI (50491) SW_TIMERS: Blink events:     92[0m
+[0;32mI (50491) SW_TIMERS: Heartbeat events: 22[0m
+[0;32mI (50491) SW_TIMERS: Status updates:   10[0m
+[0;32mI (50491) SW_TIMERS: One-shot events:  4[0m
+[0;32mI (50491) SW_TIMERS: Dynamic events:   4[0m
+[0;32mI (50501) SW_TIMERS: ═══════════════════════[0m
+[0;32mI (50511) SW_TIMERS: Timer States:[0m
+[0;32mI (50511) SW_TIMERS:   Blink:     ACTIVE (Period: 600ms)[0m
+[0;32mI (50511) SW_TIMERS:   Heartbeat: INACTIVE (Period: 2000ms)[0m
+[0;32mI (50521) SW_TIMERS:   Status:    ACTIVE (Period: 5000ms)[0m
+[0;32mI (50521) SW_TIMERS:   One-shot:  INACTIVE[0m
+[0;32mI (50531) SW_TIMERS: 💫 Blink Timer: Toggle #93 (LED: ON)[0m
+[0;32mI (51121) SW_TIMERS: 💫 Blink Timer: Toggle #94 (LED: OFF)[0m
+[0;32mI (51721) SW_TIMERS: 💫 Blink Timer: Toggle #95 (LED: ON)[0m
+[0;32mI (52301) SW_TIMERS: 💓 Heartbeat Timer: Beat #23[0m
+[0;32mI (52601) SW_TIMERS: 💫 Blink Timer: Toggle #96 (LED: OFF)[0m
+[0;32mI (52921) SW_TIMERS: 💫 Blink Timer: Toggle #97 (LED: ON)[0m
+[0;32mI (53521) SW_TIMERS: 💫 Blink Timer: Toggle #98 (LED: OFF)[0m
+[0;32mI (54121) SW_TIMERS: 💫 Blink Timer: Toggle #99 (LED: ON)[0m
+[0;32mI (54301) SW_TIMERS: 💓 Heartbeat Timer: Beat #24[0m
+[0;32mI (54601) SW_TIMERS: 🔧 Adjusting blink period to 447ms[0m
+[0;32mI (55041) SW_TIMERS: 💫 Blink Timer: Toggle #100 (LED: OFF)[0m
+[0;32mI (55041) SW_TIMERS: 🚀 Creating one-shot timer (3 second delay)[0m
+[0;32mI (55291) SW_TIMERS: 📊 Status Timer: Update #11[0m
+[0;32mI (55491) SW_TIMERS: ═══ TIMER STATISTICS ═══[0m
+[0;32mI (55491) SW_TIMERS: Blink events:     100[0m
+[0;32mI (55491) SW_TIMERS: Heartbeat events: 24[0m
+[0;32mI (55491) SW_TIMERS: Status updates:   11[0m
+[0;32mI (55491) SW_TIMERS: One-shot events:  4[0m
+[0;32mI (55491) SW_TIMERS: Dynamic events:   4[0m
+[0;32mI (55501) SW_TIMERS: ═══════════════════════[0m
+[0;32mI (55511) SW_TIMERS: Timer States:[0m
+[0;32mI (55511) SW_TIMERS:   Blink:     ACTIVE (Period: 440ms)[0m
+[0;32mI (55511) SW_TIMERS:   Heartbeat: ACTIVE (Period: 2000ms)[0m
+[0;32mI (55521) SW_TIMERS:   Status:    ACTIVE (Period: 5000ms)[0m
+[0;32mI (55521) SW_TIMERS:   One-shot:  ACTIVE[0m
+[0;32mI (55531) SW_TIMERS: 💫 Blink Timer: Toggle #101 (LED: ON)[0m
+[0;32mI (55921) SW_TIMERS: 💫 Blink Timer: Toggle #102 (LED: OFF)[0m
+[0;32mI (56301) SW_TIMERS: 💓 Heartbeat Timer: Beat #25[0m
+[0;32mI (56601) SW_TIMERS: 💫 Blink Timer: Toggle #103 (LED: ON)[0m
+[0;32mI (56801) SW_TIMERS: 💫 Blink Timer: Toggle #104 (LED: OFF)[0m
+[0;32mI (57241) SW_TIMERS: 💫 Blink Timer: Toggle #105 (LED: ON)[0m
+[0;32mI (57681) SW_TIMERS: 💫 Blink Timer: Toggle #106 (LED: OFF)[0m
+[0;32mI (58041) SW_TIMERS: ⚡ One-shot Timer: Event #5[0m
+[0;32mI (58541) SW_TIMERS: 🎲 Creating dynamic timer (period: 1227ms)[0m
+[0;32mI (58541) SW_TIMERS: 💫 Blink Timer: Toggle #107 (LED: ON)[0m
+[0;32mI (58541) SW_TIMERS: 💓 Heartbeat Timer: Beat #26[0m
+[0;32mI (58841) SW_TIMERS: 💫 Blink Timer: Toggle #108 (LED: OFF)[0m
+[0;32mI (59001) SW_TIMERS: 💫 Blink Timer: Toggle #109 (LED: ON)[0m
+[0;32mI (59441) SW_TIMERS: 💫 Blink Timer: Toggle #110 (LED: OFF)[0m
+[0;32mI (59761) SW_TIMERS: 🌟 Dynamic Timer: Event #5[0m
+[0;32mI (60061) SW_TIMERS: Dynamic timer deleted[0m
+[0;32mI (60061) SW_TIMERS: 💫 Blink Timer: Toggle #111 (LED: ON)[0m
+[0;32mI (60291) SW_TIMERS: 📊 Status Timer: Update #12[0m
+[0;32mI (60491) SW_TIMERS: ═══ TIMER STATISTICS ═══[0m
+[0;32mI (60491) SW_TIMERS: Blink events:     111[0m
+[0;32mI (60491) SW_TIMERS: Heartbeat events: 26[0m
+[0;32mI (60491) SW_TIMERS: Status updates:   12[0m
+[0;32mI (60491) SW_TIMERS: One-shot events:  5[0m
+[0;32mI (60491) SW_TIMERS: Dynamic events:   5[0m
+[0;32mI (60501) SW_TIMERS: ═══════════════════════[0m
+[0;32mI (60511) SW_TIMERS: Timer States:[0m
+[0;32mI (60511) SW_TIMERS:   Blink:     ACTIVE (Period: 440ms)[0m
+[0;32mI (60511) SW_TIMERS:   Heartbeat: ACTIVE (Period: 2000ms)[0m
+[0;32mI (60521) SW_TIMERS:   Status:    ACTIVE (Period: 5000ms)[0m
+[0;32mI (60521) SW_TIMERS:   One-shot:  INACTIVE[0m
+[0;32mI (60531) SW_TIMERS: 💓 Heartbeat Timer: Beat #27[0m
+[0;32mI (60831) SW_TIMERS: 💫 Blink Timer: Toggle #112 (LED: OFF)[0m
+[0;32mI (60831) SW_TIMERS: 💫 Blink Timer: Toggle #113 (LED: ON)[0m
+[0;32mI (61201) SW_TIMERS: 💫 Blink Timer: Toggle #114 (LED: OFF)[0m
+[0;32mI (61641) SW_TIMERS: 💫 Blink Timer: Toggle #115 (LED: ON)[0m
+[0;32mI (62081) SW_TIMERS: 💫 Blink Timer: Toggle #116 (LED: OFF)[0m
+[0;32mI (62301) SW_TIMERS: 💓 Heartbeat Timer: Beat #28[0m
+[0;32mI (62601) SW_TIMERS: 💫 Blink Timer: Toggle #117 (LED: ON)[0m
+[0;32mI (62961) SW_TIMERS: 💫 Blink Timer: Toggle #118 (LED: OFF)[0m
+[0;32mI (63401) SW_TIMERS: 💫 Blink Timer: Toggle #119 (LED: ON)[0m
+[0;32mI (63841) SW_TIMERS: 💫 Blink Timer: Toggle #120 (LED: OFF)[0m
+[0;32mI (63841) SW_TIMERS: 🚀 Creating one-shot timer (3 second delay)[0m
+[0;32mI (64281) SW_TIMERS: 💫 Blink Timer: Toggle #121 (LED: ON)[0m
+[0;32mI (64301) SW_TIMERS: 💓 Heartbeat Timer: Beat #29[0m
+[0;32mI (64721) SW_TIMERS: 💫 Blink Timer: Toggle #122 (LED: OFF)[0m
+[0;32mI (65161) SW_TIMERS: 💫 Blink Timer: Toggle #123 (LED: ON)[0m
+[0;32mI (65291) SW_TIMERS: 📊 Status Timer: Update #13[0m
+[0;32mI (65301) SW_TIMERS: [0m
+🎛️  TIMER CONTROL: Performing maintenance...
+[0;32mI (65301) SW_TIMERS: ⏸️  Stopping heartbeat timer for 5 seconds[0m
+[0;32mI (65491) SW_TIMERS: ═══ TIMER STATISTICS ═══[0m
+[0;32mI (65491) SW_TIMERS: Blink events:     123[0m
+[0;32mI (65491) SW_TIMERS: Heartbeat events: 29[0m
+[0;32mI (65491) SW_TIMERS: Status updates:   13[0m
+[0;32mI (65491) SW_TIMERS: One-shot events:  5[0m
+[0;32mI (65491) SW_TIMERS: Dynamic events:   5[0m
+[0;32mI (65501) SW_TIMERS: ═══════════════════════[0m
+[0;32mI (65511) SW_TIMERS: Timer States:[0m
+[0;32mI (65511) SW_TIMERS:   Blink:     ACTIVE (Period: 440ms)[0m
+[0;32mI (65511) SW_TIMERS:   Heartbeat: ACTIVE (Period: 2000ms)[0m
+[0;32mI (65521) SW_TIMERS:   Status:    ACTIVE (Period: 5000ms)[0m
+[0;32mI (65521) SW_TIMERS:   One-shot:  ACTIVE[0m
+[0;32mI (65601) SW_TIMERS: 💫 Blink Timer: Toggle #124 (LED: OFF)[0m
+[0;32mI (66041) SW_TIMERS: 💫 Blink Timer: Toggle #125 (LED: ON)[0m
+[0;32mI (66481) SW_TIMERS: 💫 Blink Timer: Toggle #126 (LED: OFF)[0m
+[0;32mI (66841) SW_TIMERS: ⚡ One-shot Timer: Event #6[0m
+[0;32mI (67341) SW_TIMERS: 🎲 Creating dynamic timer (period: 3724ms)[0m
+[0;32mI (67341) SW_TIMERS: 💫 Blink Timer: Toggle #127 (LED: ON)[0m
+[0;32mI (67361) SW_TIMERS: 💫 Blink Timer: Toggle #128 (LED: OFF)[0m
+[0;32mI (67801) SW_TIMERS: 💫 Blink Timer: Toggle #129 (LED: ON)[0m
+[0;32mI (68241) SW_TIMERS: 💫 Blink Timer: Toggle #130 (LED: OFF)[0m
+[0;32mI (68681) SW_TIMERS: 💫 Blink Timer: Toggle #131 (LED: ON)[0m
+[0;32mI (69121) SW_TIMERS: 💫 Blink Timer: Toggle #132 (LED: OFF)[0m
+[0;32mI (69561) SW_TIMERS: 💫 Blink Timer: Toggle #133 (LED: ON)[0m
+[0;32mI (70001) SW_TIMERS: 💫 Blink Timer: Toggle #134 (LED: OFF)[0m
+[0;32mI (70291) SW_TIMERS: 📊 Status Timer: Update #14[0m
+[0;32mI (70301) SW_TIMERS: ▶️  Restarting heartbeat timer[0m
+[0;32mI (70301) SW_TIMERS: Maintenance completed[0m
+
+[0;32mI (70491) SW_TIMERS: ═══ TIMER STATISTICS ═══[0m
+[0;32mI (70491) SW_TIMERS: Blink events:     134[0m
+[0;32mI (70491) SW_TIMERS: Heartbeat events: 29[0m
+[0;32mI (70491) SW_TIMERS: Status updates:   14[0m
+[0;32mI (70491) SW_TIMERS: One-shot events:  6[0m
+[0;32mI (70491) SW_TIMERS: Dynamic events:   5[0m
+[0;32mI (70501) SW_TIMERS: ═══════════════════════[0m
+[0;32mI (70511) SW_TIMERS: Timer States:[0m
+[0;32mI (70511) SW_TIMERS:   Blink:     ACTIVE (Period: 440ms)[0m
+[0;32mI (70511) SW_TIMERS:   Heartbeat: INACTIVE (Period: 2000ms)[0m
+[0;32mI (70521) SW_TIMERS:   Status:    ACTIVE (Period: 5000ms)[0m
+[0;32mI (70521) SW_TIMERS:   One-shot:  INACTIVE[0m
+[0;32mI (70531) SW_TIMERS: 💫 Blink Timer: Toggle #135 (LED: ON)[0m
+[0;32mI (70881) SW_TIMERS: 💫 Blink Timer: Toggle #136 (LED: OFF)[0m
+[0;32mI (71061) SW_TIMERS: 🌟 Dynamic Timer: Event #6[0m
+[0;32mI (71361) SW_TIMERS: Dynamic timer deleted[0m
+[0;32mI (71361) SW_TIMERS: 💫 Blink Timer: Toggle #137 (LED: ON)[0m
+[0;32mI (71761) SW_TIMERS: 💫 Blink Timer: Toggle #138 (LED: OFF)[0m
+[0;32mI (72201) SW_TIMERS: 💫 Blink Timer: Toggle #139 (LED: ON)[0m
+[0;32mI (72301) SW_TIMERS: 💓 Heartbeat Timer: Beat #30[0m
+[0;32mI (72641) SW_TIMERS: 💫 Blink Timer: Toggle #140 (LED: OFF)[0m
+[0;32mI (72641) SW_TIMERS: 🚀 Creating one-shot timer (3 second delay)[0m
+[0;32mI (73081) SW_TIMERS: 💫 Blink Timer: Toggle #141 (LED: ON)[0m
+[0;32mI (73521) SW_TIMERS: 💫 Blink Timer: Toggle #142 (LED: OFF)[0m
+[0;32mI (73961) SW_TIMERS: 💫 Blink Timer: Toggle #143 (LED: ON)[0m
+[0;32mI (74301) SW_TIMERS: 💓 Heartbeat Timer: Beat #31[0m
+[0;32mI (74601) SW_TIMERS: 💫 Blink Timer: Toggle #144 (LED: OFF)[0m
+[0;32mI (74841) SW_TIMERS: 💫 Blink Timer: Toggle #145 (LED: ON)[0m

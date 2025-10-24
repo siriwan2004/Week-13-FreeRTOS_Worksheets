@@ -1,0 +1,167 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\User\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\STIC 1\Week-13-FreeRTOS_Worksheets\05-timers\w05\lab2\timer_applications\build\timer_applications.elf D:\STIC 1\Week-13-FreeRTOS_Worksheets\05-timers\w05\lab2\timer_applications\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\User\esp\v5.5.1\esp-idf\tools\idf.py'
+       : DIO
+[0;32mI (41) boot.e�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 24 2025 22:25:27[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b0dch ( 45276) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b104 vaddr=3ffb0000 size=02438h (  9272) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d544 vaddr=40080000 size=02ad4h ( 10964) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=15c84h ( 89220) map[0m
+[0;32mI (145) esp_image: segment 4: paddr=00035cac vaddr=40082ad4 size=0ad1ch ( 44316) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=000409d0 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (170) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (170) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) app_init: Application information:[0m
+[0;32mI (190) app_init: Project name:     timer_applications[0m
+[0;32mI (194) app_init: App version:      8e74e47[0m
+I (198) app_init: Compile time:     Oct 24 2025 22:24:56
+[0;32mI (203) app_init: ELF file SHA256:  5f7876943...[0m
+[0;32mI (208) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (230) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2E70 len 0002D190 (180 KiB): DRAM[0m
+[0;32mI (240) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (251) heap_init: At 4008D7F0 len 00012810 (74 KiB): IRAM[0m
+[0;32mI (257) spi_flash: detected chip: generic[0m
+[0;32mI (260) spi_flash: flash io: dio[0m
+[0;33mW (263) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (275) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (283) main_task: Started on CPU0[0m
+[0;32mI (293) main_task: Calling app_main()[0m
+[0;32mI (293) TIMER_APPS: Timer Applications Lab Starting...[0m
+[0;32mI (293) TIMER_APPS: Hardware initialization complete[0m
+[0;32mI (293) TIMER_APPS: Queues created successfully[0m
+[0;32mI (293) TIMER_APPS: All timers created successfully[0m
+[0;32mI (303) TIMER_APPS: Starting timer system...[0m
+[0;32mI (303) TIMER_APPS: Sensor processing task started[0m
+[0;32mI (313) TIMER_APPS: System monitor task started[0m
+[0;32mI (313) TIMER_APPS: 🚀 Timer Applications System Started![0m
+[0;32mI (323) TIMER_APPS: Watch the LEDs for different patterns and system status[0m
+[0;32mI (323) TIMER_APPS: 🎨 Changing pattern: OFF -> SLOW_BLINK[0m
+[0;32mI (333) TIMER_APPS: System operational - monitoring started[0m
+[0;32mI (333) main_task: Returned from app_main()[0m
+[0;32mI (833) TIMER_APPS: 💡 Slow Blink: ON[0m
+[0;32mI (1313) TIMER_APPS: 🌡️ Sensor: 17.83°C at 103 ms[0m
+[0;32mI (1833) TIMER_APPS: 💡 Slow Blink: OFF[0m
+[0;32mI (2303) TIMER_APPS: 🍖 Feeding watchdog (feed #1)[0m
+[0;32mI (2833) TIMER_APPS: 💡 Slow Blink: ON[0m
+[0;32mI (3303) TIMER_APPS: [0m
+═══════ SYSTEM STATUS ═══════
+[0;32mI (3303) TIMER_APPS: Uptime: 3 seconds[0m
+[0;32mI (3303) TIMER_APPS: System Health: ✅ HEALTHY[0m
+[0;32mI (3303) TIMER_APPS: Watchdog Feeds: 1[0m
+[0;32mI (3303) TIMER_APPS: Watchdog Timeouts: 0[0m
+[0;32mI (3313) TIMER_APPS: Pattern Changes: 1[0m
+[0;32mI (3313) TIMER_APPS: Sensor Readings: 1[0m
+[0;32mI (3313) TIMER_APPS: Current Pattern: 1[0m
+[0;32mI (3323) TIMER_APPS: Timer States:[0m
+[0;32mI (3323) TIMER_APPS:   Watchdog: ACTIVE[0m
+[0;32mI (3323) TIMER_APPS:   Feed: ACTIVE[0m
+[0;32mI (3333) TIMER_APPS:   Pattern: ACTIVE[0m
+[0;32mI (3333) TIMER_APPS:   Sensor: ACTIVE[0m
+[0;32mI (3333) TIMER_APPS: ════════════════════════════[0m
+
+[0;32mI (3553) TIMER_APPS: 🌡️ Sensor: 7.51°C at 327 ms[0m
+[0;32mI (3833) TIMER_APPS: 💡 Slow Blink: OFF[0m
+[0;32mI (4303) TIMER_APPS: 🍖 Feeding watchdog (feed #2)[0m
+[0;32mI (4833) TIMER_APPS: 💡 Slow Blink: ON[0m
+[0;32mI (5563) TIMER_APPS: 🌡️ Sensor: 6.67°C at 528 ms[0m
+[0;32mI (5833) TIMER_APPS: 💡 Slow Blink: OFF[0m
+[0;32mI (6303) TIMER_APPS: [0m
+═══════ SYSTEM STATUS ═══════
+[0;32mI (6303) TIMER_APPS: Uptime: 6 seconds[0m
+[0;32mI (6303) TIMER_APPS: System Health: ✅ HEALTHY[0m
+[0;32mI (6303) TIMER_APPS: Watchdog Feeds: 2[0m
+[0;32mI (6303) TIMER_APPS: Watchdog Timeouts: 0[0m
+[0;32mI (6313) TIMER_APPS: Pattern Changes: 1[0m
+[0;32mI (6313) TIMER_APPS: Sensor Readings: 3[0m
+[0;32mI (6313) TIMER_APPS: Current Pattern: 1[0m
+[0;32mI (6323) TIMER_APPS: Timer States:[0m
+[0;32mI (6323) TIMER_APPS:   Watchdog: ACTIVE[0m
+[0;32mI (6323) TIMER_APPS:   Feed: ACTIVE[0m
+[0;32mI (6333) TIMER_APPS:   Pattern: ACTIVE[0m
+[0;32mI (6333) TIMER_APPS:   Sensor: ACTIVE[0m
+[0;32mI (6333) TIMER_APPS: ════════════════════════════[0m
+
+[0;32mI (6543) TIMER_APPS: 🍖 Feeding watchdog (feed #3)[0m
+[0;32mI (6833) TIMER_APPS: 💡 Slow Blink: ON[0m
+[0;32mI (7573) TIMER_APPS: 🌡️ Sensor: 6.74°C at 729 ms[0m
+[0;32mI (7833) TIMER_APPS: 💡 Slow Blink: OFF[0m
+[0;32mI (8303) TIMER_APPS: 🍖 Feeding watchdog (feed #4)[0m
+[0;32mI (8833) TIMER_APPS: 💡 Slow Blink: ON[0m
+[0;32mI (9303) TIMER_APPS: [0m
+═══════ SYSTEM STATUS ═══════
+[0;32mI (9303) TIMER_APPS: Uptime: 9 seconds[0m
+[0;32mI (9303) TIMER_APPS: System Health: ✅ HEALTHY[0m
+[0;32mI (9303) TIMER_APPS: Watchdog Feeds: 4[0m
+[0;32mI (9303) TIMER_APPS: Watchdog Timeouts: 0[0m
+[0;32mI (9313) TIMER_APPS: Pattern Changes: 1[0m
+[0;32mI (9313) TIMER_APPS: Sensor Readings: 4[0m
+[0;32mI (9313) TIMER_APPS: Current Pattern: 1[0m
+[0;32mI (9323) TIMER_APPS: Timer States:[0m
+[0;32mI (9323) TIMER_APPS:   Watchdog: ACTIVE[0m
+[0;32mI (9323) TIMER_APPS:   Feed: ACTIVE[0m
+[0;32mI (9333) TIMER_APPS:   Pattern: ACTIVE[0m
+[0;32mI (9333) TIMER_APPS:   Sensor: ACTIVE[0m
+[0;32mI (9333) TIMER_APPS: ════════════════════════════[0m
+
+[0;32mI (9583) TIMER_APPS: 🌡️ Sensor: 7.10°C at 930 ms[0m
+[0;32mI (9833) TIMER_APPS: 💡 Slow Blink: OFF[0m
+[0;32mI (10303) TIMER_APPS: 🍖 Feeding watchdog (feed #5)[0m
+[0;32mI (10833) TIMER_APPS: 💡 Slow Blink: ON[0m
+[0;32mI (11593) TIMER_APPS: 🌡️ Sensor: 6.73°C at 1131 ms[0m
+[0;32mI (11833) TIMER_APPS: 💡 Slow Blink: OFF[0m
+[0;32mI (12303) TIMER_APPS: [0m
+═══════ SYSTEM STATUS ═══════
+[0;32mI (12303) TIMER_APPS: Uptime: 12 seconds[0m
+[0;32mI (12303) TIMER_APPS: System Health: ✅ HEALTHY[0m
+[0;32mI (12303) TIMER_APPS: Watchdog Feeds: 5[0m
+[0;32mI (12303) TIMER_APPS: Watchdog Timeouts: 0[0m
+[0;32mI (12313) TIMER_APPS: Pattern Changes: 1[0m
+[0;32mI (12313) TIMER_APPS: Sensor Readings: 6[0m
+[0;32mI (12313) TIMER_APPS: Current Pattern: 1[0m
+[0;32mI (12323) TIMER_APPS: Timer States:[0m
+[0;32mI (12323) TIMER_APPS:   Watchdog: ACTIVE[0m
+[0;32mI (12323) TIMER_APPS:   Feed: ACTIVE[0m
+[0;32mI (12333) TIMER_APPS:   Pattern: ACTIVE[0m
+[0;32mI (12333) TIMER_APPS:   Sensor: ACTIVE[0m
+[0;32mI (12333) TIMER_APPS: ════════════════════════════[0m
+
+[0;32mI (12543) TIMER_APPS: 🍖 Feeding watchdog (feed #6)[0m
+[0;32mI (12833) TIMER_APPS: 💡 Slow Blink: ON[0m
+[0;32mI (13603) TIMER_APPS: 🌡️ Sensor: 7.14°C at 1332 ms[0m
+[0;32mI (13833) TIMER_APPS: 💡 Slow Blink: OFF[0m
+[0;32mI (14303) TIMER_APPS: 🍖 Feeding watchdog (feed #7)[0m
+[0;32mI (14833) TIMER_APPS: 💡 Slow Blink: ON[0m
+[0;32mI (15303) TIMER_APPS: [0m
+═══════ SYSTEM STATUS ═══════
+[0;32mI (15303) TIMER_APPS: Uptime: 15 seconds[0m

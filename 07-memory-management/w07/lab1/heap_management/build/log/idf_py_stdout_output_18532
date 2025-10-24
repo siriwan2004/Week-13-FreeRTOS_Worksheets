@@ -1,0 +1,583 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\User\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\STIC 1\Week-13-FreeRTOS_Worksheets\07-memory-management\w07\lab1\heap_management\build\heap_management.elf D:\STIC 1\Week-13-FreeRTOS_Worksheets\07-memory-management\w07\lab1\heap_management\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\User\esp\v5.5.1\esp-idf\tools\idf.py'
+���      : DIO
+[0;32mI (41) boot.esp32:�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 25 2025 01:12:04[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0af58h ( 44888) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001af80 vaddr=3ffb0000 size=023f8h (  9208) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d380 vaddr=40080000 size=02c98h ( 11416) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17fcch ( 98252) map[0m
+[0;32mI (148) esp_image: segment 4: paddr=00037ff4 vaddr=40082c98 size=0a360h ( 41824) load[0m
+[0;32mI (165) esp_image: segment 5: paddr=0004235c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (172) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (172) boot: Disabling RNG early entropy source...[0m
+[0;32mI (183) cpu_start: Multicore app[0m
+[0;32mI (191) cpu_start: Pro cpu start user code[0m
+[0;32mI (191) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (191) app_init: Application information:[0m
+[0;32mI (192) app_init: Project name:     heap_management[0m
+[0;32mI (196) app_init: App version:      8e74e47[0m
+[0;32mI (200) app_init: Compile time:     Oct 25 2025 01:10:46[0m
+[0;32mI (205) app_init: ELF file SHA256:  2392e2623...[0m
+[0;32mI (209) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (213) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (217) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (221) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (225) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (231) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (236) heap_init: At 3FFB3980 len 0002C680 (177 KiB): DRAM[0m
+[0;32mI (241) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (247) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (252) heap_init: At 4008CFF8 len 00013008 (76 KiB): IRAM[0m
+[0;32mI (259) spi_flash: detected chip: generic[0m
+[0;32mI (261) spi_flash: flash io: dio[0m
+[0;33mW (264) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (277) main_task: Started on CPU0[0m
+[0;32mI (287) main_task: Calling app_main()[0m
+[0;32mI (287) HEAP_MGMT: 🚀 Heap Management Lab Starting...[0m
+[0;32mI (287) HEAP_MGMT: Memory tracking system initialized[0m
+[0;32mI (287) HEAP_MGMT: [0m
+📊 ═══ MEMORY STATUS ═══
+[0;32mI (297) HEAP_MGMT: Internal RAM Free:    378704 bytes[0m
+[0;32mI (297) HEAP_MGMT: Largest Free Block:   172032 bytes[0m
+[0;32mI (307) HEAP_MGMT: SPIRAM Free:          0 bytes[0m
+[0;32mI (307) HEAP_MGMT: Total Free:           301768 bytes[0m
+[0;32mI (307) HEAP_MGMT: Minimum Ever Free:    301768 bytes[0m
+[0;32mI (317) HEAP_MGMT: Internal Fragmentation: 54.6%[0m
+[0;33mW (317) HEAP_MGMT: ⚠️ High fragmentation detected![0m
+[0;32mI (327) HEAP_MGMT: ═══════════════════════════════[0m
+[0;32mI (337) HEAP_MGMT: [0m
+🏗️ ═══ INITIAL HEAP INFORMATION ═══
+Heap summary for capabilities 0x00000800:
+  At 0x3ffae6e0 len 6432 free 148 allocated 5764 min_free 148
+    largest_free_block 128 alloc_blocks 35 free_blocks 1 total_blocks 36
+  At 0x3ffe0440 len 15072 free 14656 allocated 0 min_free 14656
+    largest_free_block 14336 alloc_blocks 0 free_blocks 1 total_blocks 1
+  At 0x4008cff8 len 77832 free 76936 allocated 20 min_free 76936
+    largest_free_block 73728 alloc_blocks 1 free_blocks 1 total_blocks 2
+  At 0x3ffe4350 len 113840 free 112968 allocated 0 min_free 112968
+    largest_free_block 110592 alloc_blocks 0 free_blocks 1 total_blocks 1
+  At 0x3ffb3980 len 181888 free 173768 allocated 7168 min_free 173768
+    largest_free_block 172032 alloc_blocks 3 free_blocks 1 total_blocks 4
+  Totals:
+    free 378476 allocated 12952 min_free 378476 largest_free_block 172032
+[0;32mI (417) HEAP_MGMT: Creating memory test tasks...[0m
+[0;32mI (417) HEAP_MGMT: 📊 Memory monitor started[0m
+[0;32mI (427) HEAP_MGMT: 🧪 Memory stress test started[0m
+[0;32mI (427) HEAP_MGMT: [0m
+📊 ═══ MEMORY STATUS ═══
+[0;32mI (437) HEAP_MGMT: Internal RAM Free:    370588 bytes[0m
+[0;32mI (437) HEAP_MGMT: Largest Free Block:   163840 bytes[0m
+[0;32mI (447) HEAP_MGMT: SPIRAM Free:          0 bytes[0m
+[0;32mI (447) HEAP_MGMT: Total Free:           293652 bytes[0m
+[0;32mI (447) HEAP_MGMT: Minimum Ever Free:    293652 bytes[0m
+[0;32mI (457) HEAP_MGMT: Internal Fragmentation: 55.8%[0m
+[0;33mW (457) HEAP_MGMT: ⚠️ High fragmentation detected![0m
+[0;32mI (467) HEAP_MGMT: ═══════════════════════════════[0m
+[0;32mI (477) HEAP_MGMT: 🏊 Memory pool test started[0m
+[0;32mI (477) HEAP_MGMT: 🏊 Allocating memory pools...[0m
+[0;32mI (487) HEAP_MGMT: ✅ Allocated 64 bytes at 0x4008d37c (Pool0_0) - Slot 0[0m
+[0;32mI (487) HEAP_MGMT: ✅ Allocated 64 bytes at 0x4008d3c0 (Pool0_1) - Slot 1[0m
+[0;32mI (497) HEAP_MGMT: ✅ Allocated 64 bytes at 0x4008d404 (Pool0_2) - Slot 2[0m
+[0;32mI (507) HEAP_MGMT: ✅ Allocated 64 bytes at 0x4008d448 (Pool0_3) - Slot 3[0m
+[0;32mI (507) HEAP_MGMT: ✅ Allocated 64 bytes at 0x4008d48c (Pool0_4) - Slot 4[0m
+[0;32mI (517) HEAP_MGMT: ✅ Allocated 64 bytes at 0x4008d4d0 (Pool0_5) - Slot 5[0m
+[0;32mI (527) HEAP_MGMT: ✅ Allocated 64 bytes at 0x4008d514 (Pool0_6) - Slot 6[0m
+[0;32mI (527) HEAP_MGMT: ✅ Allocated 64 bytes at 0x4008d558 (Pool0_7) - Slot 7[0m
+[0;32mI (537) HEAP_MGMT: ✅ Allocated 64 bytes at 0x4008d59c (Pool0_8) - Slot 8[0m
+[0;32mI (547) HEAP_MGMT: ✅ Allocated 64 bytes at 0x4008d5e0 (Pool0_9) - Slot 9[0m
+[0;32mI (547) HEAP_MGMT: ✅ Allocated 128 bytes at 0x4008d624 (Pool1_0) - Slot 10[0m
+[0;32mI (557) HEAP_MGMT: ✅ Allocated 128 bytes at 0x4008d6a8 (Pool1_1) - Slot 11[0m
+[0;32mI (567) HEAP_MGMT: ✅ Allocated 128 bytes at 0x4008d72c (Pool1_2) - Slot 12[0m
+[0;32mI (567) HEAP_MGMT: ✅ Allocated 128 bytes at 0x4008d7b0 (Pool1_3) - Slot 13[0m
+[0;32mI (577) HEAP_MGMT: ✅ Allocated 128 bytes at 0x4008d834 (Pool1_4) - Slot 14[0m
+[0;32mI (587) HEAP_MGMT: ✅ Allocated 128 bytes at 0x4008d8b8 (Pool1_5) - Slot 15[0m
+[0;32mI (587) HEAP_MGMT: ✅ Allocated 128 bytes at 0x4008d93c (Pool1_6) - Slot 16[0m
+[0;32mI (597) HEAP_MGMT: ✅ Allocated 128 bytes at 0x4008d9c0 (Pool1_7) - Slot 17[0m
+[0;32mI (607) HEAP_MGMT: ✅ Allocated 128 bytes at 0x4008da44 (Pool1_8) - Slot 18[0m
+[0;32mI (607) HEAP_MGMT: ✅ Allocated 128 bytes at 0x4008dac8 (Pool1_9) - Slot 19[0m
+[0;32mI (617) HEAP_MGMT: ✅ Allocated 256 bytes at 0x4008db4c (Pool2_0) - Slot 20[0m
+[0;32mI (627) HEAP_MGMT: ✅ Allocated 256 bytes at 0x4008dc50 (Pool2_1) - Slot 21[0m
+[0;32mI (627) HEAP_MGMT: ✅ Allocated 256 bytes at 0x4008dd54 (Pool2_2) - Slot 22[0m
+[0;32mI (637) HEAP_MGMT: ✅ Allocated 256 bytes at 0x4008de58 (Pool2_3) - Slot 23[0m
+[0;32mI (647) HEAP_MGMT: ✅ Allocated 256 bytes at 0x4008df5c (Pool2_4) - Slot 24[0m
+[0;32mI (647) HEAP_MGMT: ✅ Allocated 256 bytes at 0x4008e060 (Pool2_5) - Slot 25[0m
+[0;32mI (657) HEAP_MGMT: ✅ Allocated 256 bytes at 0x4008e164 (Pool2_6) - Slot 26[0m
+[0;32mI (667) HEAP_MGMT: ✅ Allocated 256 bytes at 0x4008e268 (Pool2_7) - Slot 27[0m
+[0;32mI (677) HEAP_MGMT: ✅ Allocated 256 bytes at 0x4008e36c (Pool2_8) - Slot 28[0m
+[0;32mI (677) HEAP_MGMT: ✅ Allocated 256 bytes at 0x4008e470 (Pool2_9) - Slot 29[0m
+[0;32mI (687) HEAP_MGMT: ✅ Allocated 512 bytes at 0x4008e574 (Pool3_0) - Slot 30[0m
+[0;32mI (697) HEAP_MGMT: ✅ Allocated 512 bytes at 0x4008e778 (Pool3_1) - Slot 31[0m
+[0;32mI (697) HEAP_MGMT: ✅ Allocated 512 bytes at 0x4008e97c (Pool3_2) - Slot 32[0m
+[0;32mI (707) HEAP_MGMT: ✅ Allocated 512 bytes at 0x4008eb80 (Pool3_3) - Slot 33[0m
+[0;32mI (717) HEAP_MGMT: ✅ Allocated 512 bytes at 0x4008ed84 (Pool3_4) - Slot 34[0m
+[0;32mI (717) HEAP_MGMT: ✅ Allocated 512 bytes at 0x4008ef88 (Pool3_5) - Slot 35[0m
+[0;32mI (727) HEAP_MGMT: ✅ Allocated 512 bytes at 0x4008f18c (Pool3_6) - Slot 36[0m
+[0;32mI (737) HEAP_MGMT: ✅ Allocated 512 bytes at 0x4008f390 (Pool3_7) - Slot 37[0m
+[0;32mI (737) HEAP_MGMT: ✅ Allocated 512 bytes at 0x4008f594 (Pool3_8) - Slot 38[0m
+[0;32mI (747) HEAP_MGMT: ✅ Allocated 512 bytes at 0x4008f798 (Pool3_9) - Slot 39[0m
+[0;32mI (757) HEAP_MGMT: ✅ Allocated 1024 bytes at 0x4008f99c (Pool4_0) - Slot 40[0m
+[0;32mI (757) HEAP_MGMT: ✅ Allocated 1024 bytes at 0x4008fda0 (Pool4_1) - Slot 41[0m
+[0;32mI (767) HEAP_MGMT: ✅ Allocated 1024 bytes at 0x400901a4 (Pool4_2) - Slot 42[0m
+[0;32mI (777) HEAP_MGMT: ✅ Allocated 1024 bytes at 0x400905a8 (Pool4_3) - Slot 43[0m
+[0;32mI (777) HEAP_MGMT: ✅ Allocated 1024 bytes at 0x400909ac (Pool4_4) - Slot 44[0m
+[0;32mI (787) HEAP_MGMT: ✅ Allocated 1024 bytes at 0x40090db0 (Pool4_5) - Slot 45[0m
+[0;32mI (797) HEAP_MGMT: ✅ Allocated 1024 bytes at 0x400911b4 (Pool4_6) - Slot 46[0m
+[0;32mI (797) HEAP_MGMT: ✅ Allocated 1024 bytes at 0x400915b8 (Pool4_7) - Slot 47[0m
+[0;32mI (807) HEAP_MGMT: ✅ Allocated 1024 bytes at 0x400919bc (Pool4_8) - Slot 48[0m
+[0;32mI (817) HEAP_MGMT: ✅ Allocated 1024 bytes at 0x40091dc0 (Pool4_9) - Slot 49[0m
+[0;32mI (817) HEAP_MGMT: 🐘 Large allocation test started[0m
+[0;32mI (827) HEAP_MGMT: 🐘 Attempting large allocation: 86517 bytes[0m
+[0;32mI (837) HEAP_MGMT: ✅ Allocated 86517 bytes at 0x3ffe46bc (LargeInternal) - Slot 50[0m
+[0;32mI (837) HEAP_MGMT: 🐘 Large allocation successful: 0x3ffe46bc[0m
+[0;32mI (847) HEAP_MGMT: 🐘 Memory access time: 0 ms[0m
+[0;32mI (847) HEAP_MGMT: 🔍 Heap integrity test started[0m
+[0;32mI (857) HEAP_MGMT: All tasks created successfully[0m
+[0;32mI (857) HEAP_MGMT: [0m
+🎯 LED Indicators:
+[0;32mI (867) HEAP_MGMT:   GPIO2  - Memory System OK (Green)[0m
+[0;32mI (867) HEAP_MGMT:   GPIO4  - Low Memory Warning (Yellow)[0m
+[0;32mI (877) HEAP_MGMT:   GPIO5  - Memory Error/Leak (Red)[0m
+[0;32mI (877) HEAP_MGMT:   GPIO18 - High Fragmentation (Orange)[0m
+[0;32mI (887) HEAP_MGMT:   GPIO19 - SPIRAM Active (Blue)[0m
+[0;32mI (887) HEAP_MGMT: [0m
+🔬 Test Features:
+[0;32mI (887) HEAP_MGMT:   • Dynamic Memory Allocation Tracking[0m
+[0;32mI (897) HEAP_MGMT:   • Real-time Memory Status Monitoring[0m
+[0;32mI (897) HEAP_MGMT:   • Memory Leak Detection[0m
+[0;32mI (907) HEAP_MGMT:   • Fragmentation Analysis[0m
+[0;32mI (907) HEAP_MGMT:   • Heap Integrity Checking[0m
+[0;32mI (917) HEAP_MGMT:   • Memory Performance Testing[0m
+[0;32mI (917) HEAP_MGMT: Heap Management System operational![0m
+[0;32mI (927) main_task: Returned from app_main()[0m
+[0;32mI (3287) HEAP_MGMT: ✅ Allocated 1672 bytes at 0x400921c4 (StressTest) - Slot 51[0m
+[0;32mI (3287) HEAP_MGMT: 🔧 Stress test: allocated 1672 bytes (1/20)[0m
+[0;32mI (5507) HEAP_MGMT: ✅ Allocated 1524 bytes at 0x3ffb3d30 (StressTest) - Slot 52[0m
+[0;32mI (5507) HEAP_MGMT: 🔧 Stress test: allocated 1524 bytes (2/20)[0m
+[0;32mI (5817) HEAP_MGMT: 🏊 Freeing memory pools (reverse order)...[0m
+[0;32mI (5817) HEAP_MGMT: 🗑️ Freed 1024 bytes at 0x40091dc0 (Pool) - Slot 49[0m
+[0;32mI (5817) HEAP_MGMT: 🗑️ Freed 1024 bytes at 0x400919bc (Pool) - Slot 48[0m
+[0;32mI (5817) HEAP_MGMT: 🗑️ Freed 1024 bytes at 0x400915b8 (Pool) - Slot 47[0m
+[0;32mI (5827) HEAP_MGMT: 🗑️ Freed 1024 bytes at 0x400911b4 (Pool) - Slot 46[0m
+[0;32mI (5837) HEAP_MGMT: 🗑️ Freed 1024 bytes at 0x40090db0 (Pool) - Slot 45[0m
+[0;32mI (5837) HEAP_MGMT: 🗑️ Freed 1024 bytes at 0x400909ac (Pool) - Slot 44[0m
+[0;32mI (5847) HEAP_MGMT: 🗑️ Freed 1024 bytes at 0x400905a8 (Pool) - Slot 43[0m
+[0;32mI (5857) HEAP_MGMT: 🗑️ Freed 1024 bytes at 0x400901a4 (Pool) - Slot 42[0m
+[0;32mI (5857) HEAP_MGMT: 🗑️ Freed 1024 bytes at 0x4008fda0 (Pool) - Slot 41[0m
+[0;32mI (5867) HEAP_MGMT: 🗑️ Freed 1024 bytes at 0x4008f99c (Pool) - Slot 40[0m
+[0;32mI (5877) HEAP_MGMT: 🗑️ Freed 512 bytes at 0x4008f798 (Pool) - Slot 39[0m
+[0;32mI (5877) HEAP_MGMT: 🗑️ Freed 512 bytes at 0x4008f594 (Pool) - Slot 38[0m
+[0;32mI (5887) HEAP_MGMT: 🗑️ Freed 512 bytes at 0x4008f390 (Pool) - Slot 37[0m
+[0;32mI (5897) HEAP_MGMT: 🗑️ Freed 512 bytes at 0x4008f18c (Pool) - Slot 36[0m
+[0;32mI (5897) HEAP_MGMT: 🗑️ Freed 512 bytes at 0x4008ef88 (Pool) - Slot 35[0m
+[0;32mI (5907) HEAP_MGMT: 🗑️ Freed 512 bytes at 0x4008ed84 (Pool) - Slot 34[0m
+[0;32mI (5917) HEAP_MGMT: 🗑️ Freed 512 bytes at 0x4008eb80 (Pool) - Slot 33[0m
+[0;32mI (5917) HEAP_MGMT: 🗑️ Freed 512 bytes at 0x4008e97c (Pool) - Slot 32[0m
+[0;32mI (5927) HEAP_MGMT: 🗑️ Freed 512 bytes at 0x4008e778 (Pool) - Slot 31[0m
+[0;32mI (5937) HEAP_MGMT: 🗑️ Freed 512 bytes at 0x4008e574 (Pool) - Slot 30[0m
+[0;32mI (5937) HEAP_MGMT: 🗑️ Freed 256 bytes at 0x4008e470 (Pool) - Slot 29[0m
+[0;32mI (5947) HEAP_MGMT: 🗑️ Freed 256 bytes at 0x4008e36c (Pool) - Slot 28[0m
+[0;32mI (5957) HEAP_MGMT: 🗑️ Freed 256 bytes at 0x4008e268 (Pool) - Slot 27[0m
+[0;32mI (5957) HEAP_MGMT: 🗑️ Freed 256 bytes at 0x4008e164 (Pool) - Slot 26[0m
+[0;32mI (5967) HEAP_MGMT: 🗑️ Freed 256 bytes at 0x4008e060 (Pool) - Slot 25[0m
+[0;32mI (5977) HEAP_MGMT: 🗑️ Freed 256 bytes at 0x4008df5c (Pool) - Slot 24[0m
+[0;32mI (5977) HEAP_MGMT: 🗑️ Freed 256 bytes at 0x4008de58 (Pool) - Slot 23[0m
+[0;32mI (5987) HEAP_MGMT: 🗑️ Freed 256 bytes at 0x4008dd54 (Pool) - Slot 22[0m
+[0;32mI (5997) HEAP_MGMT: 🗑️ Freed 256 bytes at 0x4008dc50 (Pool) - Slot 21[0m
+[0;32mI (5997) HEAP_MGMT: 🗑️ Freed 256 bytes at 0x4008db4c (Pool) - Slot 20[0m
+[0;32mI (6007) HEAP_MGMT: 🗑️ Freed 128 bytes at 0x4008dac8 (Pool) - Slot 19[0m
+[0;32mI (6017) HEAP_MGMT: 🗑️ Freed 128 bytes at 0x4008da44 (Pool) - Slot 18[0m
+[0;32mI (6017) HEAP_MGMT: 🗑️ Freed 128 bytes at 0x4008d9c0 (Pool) - Slot 17[0m
+[0;32mI (6027) HEAP_MGMT: 🗑️ Freed 128 bytes at 0x4008d93c (Pool) - Slot 16[0m
+[0;32mI (6027) HEAP_MGMT: 🗑️ Freed 128 bytes at 0x4008d8b8 (Pool) - Slot 15[0m
+[0;32mI (6037) HEAP_MGMT: 🗑️ Freed 128 bytes at 0x4008d834 (Pool) - Slot 14[0m
+[0;32mI (6047) HEAP_MGMT: 🗑️ Freed 128 bytes at 0x4008d7b0 (Pool) - Slot 13[0m
+[0;32mI (6047) HEAP_MGMT: 🗑️ Freed 128 bytes at 0x4008d72c (Pool) - Slot 12[0m
+[0;32mI (6057) HEAP_MGMT: 🗑️ Freed 128 bytes at 0x4008d6a8 (Pool) - Slot 11[0m
+[0;32mI (6067) HEAP_MGMT: 🗑️ Freed 128 bytes at 0x4008d624 (Pool) - Slot 10[0m
+[0;32mI (6067) HEAP_MGMT: 🗑️ Freed 64 bytes at 0x4008d5e0 (Pool) - Slot 9[0m
+[0;32mI (6077) HEAP_MGMT: 🗑️ Freed 64 bytes at 0x4008d59c (Pool) - Slot 8[0m
+[0;32mI (6087) HEAP_MGMT: 🗑️ Freed 64 bytes at 0x4008d558 (Pool) - Slot 7[0m
+[0;32mI (6087) HEAP_MGMT: 🗑️ Freed 64 bytes at 0x4008d514 (Pool) - Slot 6[0m
+[0;32mI (6097) HEAP_MGMT: 🗑️ Freed 64 bytes at 0x4008d4d0 (Pool) - Slot 5[0m
+[0;32mI (6107) HEAP_MGMT: 🗑️ Freed 64 bytes at 0x4008d48c (Pool) - Slot 4[0m
+[0;32mI (6107) HEAP_MGMT: 🗑️ Freed 64 bytes at 0x4008d448 (Pool) - Slot 3[0m
+[0;32mI (6117) HEAP_MGMT: 🗑️ Freed 64 bytes at 0x4008d404 (Pool) - Slot 2[0m
+[0;32mI (6127) HEAP_MGMT: 🗑️ Freed 64 bytes at 0x4008d3c0 (Pool) - Slot 1[0m
+[0;32mI (6127) HEAP_MGMT: 🗑️ Freed 64 bytes at 0x4008d37c (Pool) - Slot 0[0m
+[0;32mI (6137) HEAP_MGMT: [0m
+📊 ═══ MEMORY STATUS ═══
+[0;32mI (6137) HEAP_MGMT: Internal RAM Free:    272392 bytes[0m
+[0;32mI (6147) HEAP_MGMT: Largest Free Block:   155648 bytes[0m
+[0;32mI (6147) HEAP_MGMT: SPIRAM Free:          0 bytes[0m
+[0;32mI (6157) HEAP_MGMT: Total Free:           197188 bytes[0m
+[0;32mI (6157) HEAP_MGMT: Minimum Ever Free:    194044 bytes[0m
+[0;32mI (6167) HEAP_MGMT: Internal Fragmentation: 42.9%[0m
+[0;33mW (6167) HEAP_MGMT: ⚠️ High fragmentation detected![0m
+[0;32mI (6177) HEAP_MGMT: ═══════════════════════════════[0m
+[0;32mI (7097) HEAP_MGMT: 🗑️ Freed 1672 bytes at 0x400921c4 (StressTest) - Slot 51[0m
+[0;32mI (7097) HEAP_MGMT: 🗑️ Stress test: freed memory (1/20)[0m
+[0;32mI (8477) HEAP_MGMT: ✅ Allocated 1369 bytes at 0x4008d37c (StressTest) - Slot 0[0m
+Guru Meditation Error: Core  0 panic'ed (LoadStoreError). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4000c493  PS      : 0x00060b30  A0      : 0x800d694e  A1      : 0x3ffb7590  
+A2      : 0x4008d37c  A3      : 0xaaaaaaaa  A4      : 0x00000559  A5      : 0x4008d8d4  
+A6      : 0x3ffb2b00  A7      : 0x00000055  A8      : 0x800d64bc  A9      : 0x3ffb7530  
+A10     : 0x00000001  A11     : 0x00000000  A12     : 0x00000000  A13     : 0x00000000  
+A14     : 0x00000000  A15     : 0x3ffafe7c  SAR     : 0x00000004  EXCCAUSE: 0x00000003  
+EXCVADDR: 0x4008d8d4  LBEG    : 0x4000c46c  LEND    : 0x4000c477  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x4000c490:0x3ffb7590 0x400d694b:0x3ffb75a0 0x40085d35:0x3ffb7620
+
+
+
+
+ELF file SHA256: 2392e2623
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 25 2025 01:12:04[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0af58h ( 44888) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001af80 vaddr=3ffb0000 size=023f8h (  9208) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d380 vaddr=40080000 size=02c98h ( 11416) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17fcch ( 98252) map[0m
+[0;32mI (148) esp_image: segment 4: paddr=00037ff4 vaddr=40082c98 size=0a360h ( 41824) load[0m
+[0;32mI (165) esp_image: segment 5: paddr=0004235c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (171) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (172) boot: Disabling RNG early entropy source...[0m
+[0;32mI (183) cpu_start: Multicore app[0m
+[0;32mI (191) cpu_start: Pro cpu start user code[0m
+[0;32mI (191) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (191) app_init: Application information:[0m
+[0;32mI (191) app_init: Project name:     heap_management[0m
+[0;32mI (196) app_init: App version:      8e74e47[0m
+[0;32mI (200) app_init: Compile time:     Oct 25 2025 01:10:46[0m
+[0;32mI (205) app_init: ELF file SHA256:  2392e2623...[0m
+[0;32mI (209) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (213) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (217) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (221) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (225) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (231) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (236) heap_init: At 3FFB3980 len 0002C680 (177 KiB): DRAM[0m
+[0;32mI (241) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (247) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (252) heap_init: At 4008CFF8 len 00013008 (76 KiB): IRAM[0m
+[0;32mI (259) spi_flash: detected chip: generic[0m
+[0;32mI (261) spi_flash: flash io: dio[0m
+[0;33mW (264) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (277) main_task: Started on CPU0[0m
+[0;32mI (287) main_task: Calling app_main()[0m
+[0;32mI (287) HEAP_MGMT: 🚀 Heap Management Lab Starting...[0m
+[0;32mI (287) HEAP_MGMT: Memory tracking system initialized[0m
+[0;32mI (287) HEAP_MGMT: [0m
+📊 ═══ MEMORY STATUS ═══
+[0;32mI (297) HEAP_MGMT: Internal RAM Free:    378704 bytes[0m
+[0;32mI (297) HEAP_MGMT: Largest Free Block:   172032 bytes[0m
+[0;32mI (307) HEAP_MGMT: SPIRAM Free:          0 bytes[0m
+[0;32mI (307) HEAP_MGMT: Total Free:           301768 bytes[0m
+[0;32mI (307) HEAP_MGMT: Minimum Ever Free:    301768 bytes[0m
+[0;32mI (317) HEAP_MGMT: Internal Fragmentation: 54.6%[0m
+[0;33mW (317) HEAP_MGMT: ⚠️ High fragmentation detected![0m
+[0;32mI (327) HEAP_MGMT: ═══════════════════════════════[0m
+[0;32mI (337) HEAP_MGMT: [0m
+🏗️ ═══ INITIAL HEAP INFORMATION ═══
+Heap summary for capabilities 0x00000800:
+  At 0x3ffae6e0 len 6432 free 148 allocated 5764 min_free 148
+    largest_free_block 128 alloc_blocks 35 free_blocks 1 total_blocks 36
+  At 0x3ffe0440 len 15072 free 14656 allocated 0 min_free 14656
+    largest_free_block 14336 alloc_blocks 0 free_blocks 1 total_blocks 1
+  At 0x4008cff8 len 77832 free 76936 allocated 20 min_free 76936
+    largest_free_block 73728 alloc_blocks 1 free_blocks 1 total_blocks 2
+  At 0x3ffe4350 len 113840 free 112968 allocated 0 min_free 112968
+    largest_free_block 110592 alloc_blocks 0 free_blocks 1 total_blocks 1
+  At 0x3ffb3980 len 181888 free 173768 allocated 7168 min_free 173768
+    largest_free_block 172032 alloc_blocks 3 free_blocks 1 total_blocks 4
+  Totals:
+    free 378476 allocated 12952 min_free 378476 largest_free_block 172032
+[0;32mI (417) HEAP_MGMT: Creating memory test tasks...[0m
+[0;32mI (417) HEAP_MGMT: 📊 Memory monitor started[0m
+[0;32mI (427) HEAP_MGMT: 🧪 Memory stress test started[0m
+[0;32mI (427) HEAP_MGMT: 🏊 Memory pool test started[0m
+[0;32mI (427) HEAP_MGMT: 🏊 Allocating memory pools...[0m
+[0;32mI (437) HEAP_MGMT: ✅ Allocated 64 bytes at 0x4008d37c (Pool0_0) - Slot 0[0m
+[0;32mI (447) HEAP_MGMT: ✅ Allocated 64 bytes at 0x4008d3c0 (Pool0_1) - Slot 1[0m
+[0;32mI (447) HEAP_MGMT: ✅ Allocated 64 bytes at 0x4008d404 (Pool0_2) - Slot 2[0m
+[0;32mI (457) HEAP_MGMT: ✅ Allocated 64 bytes at 0x4008d448 (Pool0_3) - Slot 3[0m
+[0;32mI (467) HEAP_MGMT: ✅ Allocated 64 bytes at 0x4008d48c (Pool0_4) - Slot 4[0m
+[0;32mI (467) HEAP_MGMT: ✅ Allocated 64 bytes at 0x4008d4d0 (Pool0_5) - Slot 5[0m
+[0;32mI (477) HEAP_MGMT: ✅ Allocated 64 bytes at 0x4008d514 (Pool0_6) - Slot 6[0m
+[0;32mI (487) HEAP_MGMT: ✅ Allocated 64 bytes at 0x4008d558 (Pool0_7) - Slot 7[0m
+[0;32mI (487) HEAP_MGMT: ✅ Allocated 64 bytes at 0x4008d59c (Pool0_8) - Slot 8[0m
+[0;32mI (497) HEAP_MGMT: ✅ Allocated 64 bytes at 0x4008d5e0 (Pool0_9) - Slot 9[0m
+[0;32mI (507) HEAP_MGMT: ✅ Allocated 128 bytes at 0x4008d624 (Pool1_0) - Slot 10[0m
+[0;32mI (507) HEAP_MGMT: ✅ Allocated 128 bytes at 0x4008d6a8 (Pool1_1) - Slot 11[0m
+[0;32mI (517) HEAP_MGMT: ✅ Allocated 128 bytes at 0x4008d72c (Pool1_2) - Slot 12[0m
+[0;32mI (527) HEAP_MGMT: ✅ Allocated 128 bytes at 0x4008d7b0 (Pool1_3) - Slot 13[0m
+[0;32mI (527) HEAP_MGMT: ✅ Allocated 128 bytes at 0x4008d834 (Pool1_4) - Slot 14[0m
+[0;32mI (537) HEAP_MGMT: ✅ Allocated 128 bytes at 0x4008d8b8 (Pool1_5) - Slot 15[0m
+[0;32mI (547) HEAP_MGMT: ✅ Allocated 128 bytes at 0x4008d93c (Pool1_6) - Slot 16[0m
+[0;32mI (547) HEAP_MGMT: ✅ Allocated 128 bytes at 0x4008d9c0 (Pool1_7) - Slot 17[0m
+[0;32mI (557) HEAP_MGMT: ✅ Allocated 128 bytes at 0x4008da44 (Pool1_8) - Slot 18[0m
+[0;32mI (567) HEAP_MGMT: ✅ Allocated 128 bytes at 0x4008dac8 (Pool1_9) - Slot 19[0m
+[0;32mI (567) HEAP_MGMT: ✅ Allocated 256 bytes at 0x4008db4c (Pool2_0) - Slot 20[0m
+[0;32mI (577) HEAP_MGMT: ✅ Allocated 256 bytes at 0x4008dc50 (Pool2_1) - Slot 21[0m
+[0;32mI (587) HEAP_MGMT: ✅ Allocated 256 bytes at 0x4008dd54 (Pool2_2) - Slot 22[0m
+[0;32mI (587) HEAP_MGMT: ✅ Allocated 256 bytes at 0x4008de58 (Pool2_3) - Slot 23[0m
+[0;32mI (597) HEAP_MGMT: ✅ Allocated 256 bytes at 0x4008df5c (Pool2_4) - Slot 24[0m
+[0;32mI (607) HEAP_MGMT: ✅ Allocated 256 bytes at 0x4008e060 (Pool2_5) - Slot 25[0m
+[0;32mI (607) HEAP_MGMT: ✅ Allocated 256 bytes at 0x4008e164 (Pool2_6) - Slot 26[0m
+[0;32mI (617) HEAP_MGMT: ✅ Allocated 256 bytes at 0x4008e268 (Pool2_7) - Slot 27[0m
+[0;32mI (627) HEAP_MGMT: ✅ Allocated 256 bytes at 0x4008e36c (Pool2_8) - Slot 28[0m
+[0;32mI (627) HEAP_MGMT: ✅ Allocated 256 bytes at 0x4008e470 (Pool2_9) - Slot 29[0m
+[0;32mI (637) HEAP_MGMT: ✅ Allocated 512 bytes at 0x4008e574 (Pool3_0) - Slot 30[0m
+[0;32mI (647) HEAP_MGMT: ✅ Allocated 512 bytes at 0x4008e778 (Pool3_1) - Slot 31[0m
+[0;32mI (647) HEAP_MGMT: ✅ Allocated 512 bytes at 0x4008e97c (Pool3_2) - Slot 32[0m
+[0;32mI (657) HEAP_MGMT: ✅ Allocated 512 bytes at 0x4008eb80 (Pool3_3) - Slot 33[0m
+[0;32mI (667) HEAP_MGMT: ✅ Allocated 512 bytes at 0x4008ed84 (Pool3_4) - Slot 34[0m
+[0;32mI (667) HEAP_MGMT: ✅ Allocated 512 bytes at 0x4008ef88 (Pool3_5) - Slot 35[0m
+[0;32mI (677) HEAP_MGMT: ✅ Allocated 512 bytes at 0x4008f18c (Pool3_6) - Slot 36[0m
+[0;32mI (687) HEAP_MGMT: ✅ Allocated 512 bytes at 0x4008f390 (Pool3_7) - Slot 37[0m
+[0;32mI (687) HEAP_MGMT: ✅ Allocated 512 bytes at 0x4008f594 (Pool3_8) - Slot 38[0m
+[0;32mI (697) HEAP_MGMT: ✅ Allocated 512 bytes at 0x4008f798 (Pool3_9) - Slot 39[0m
+[0;32mI (707) HEAP_MGMT: ✅ Allocated 1024 bytes at 0x4008f99c (Pool4_0) - Slot 40[0m
+[0;32mI (717) HEAP_MGMT: ✅ Allocated 1024 bytes at 0x4008fda0 (Pool4_1) - Slot 41[0m
+[0;32mI (717) HEAP_MGMT: ✅ Allocated 1024 bytes at 0x400901a4 (Pool4_2) - Slot 42[0m
+[0;32mI (727) HEAP_MGMT: ✅ Allocated 1024 bytes at 0x400905a8 (Pool4_3) - Slot 43[0m
+[0;32mI (737) HEAP_MGMT: ✅ Allocated 1024 bytes at 0x400909ac (Pool4_4) - Slot 44[0m
+[0;32mI (737) HEAP_MGMT: ✅ Allocated 1024 bytes at 0x40090db0 (Pool4_5) - Slot 45[0m
+[0;32mI (747) HEAP_MGMT: ✅ Allocated 1024 bytes at 0x400911b4 (Pool4_6) - Slot 46[0m
+[0;32mI (757) HEAP_MGMT: ✅ Allocated 1024 bytes at 0x400915b8 (Pool4_7) - Slot 47[0m
+[0;32mI (757) HEAP_MGMT: ✅ Allocated 1024 bytes at 0x400919bc (Pool4_8) - Slot 48[0m
+[0;32mI (767) HEAP_MGMT: ✅ Allocated 1024 bytes at 0x40091dc0 (Pool4_9) - Slot 49[0m
+[0;32mI (777) HEAP_MGMT: 🐘 Large allocation test started[0m
+[0;32mI (777) HEAP_MGMT: 🐘 Attempting large allocation: 66425 bytes[0m
+[0;32mI (787) HEAP_MGMT: ✅ Allocated 66425 bytes at 0x3ffe46bc (LargeInternal) - Slot 50[0m
+[0;32mI (787) HEAP_MGMT: 🐘 Large allocation successful: 0x3ffe46bc[0m
+[0;32mI (797) HEAP_MGMT: 🐘 Memory access time: 0 ms[0m
+[0;32mI (797) HEAP_MGMT: 🔍 Heap integrity test started[0m
+[0;32mI (807) HEAP_MGMT: All tasks created successfully[0m
+[0;32mI (807) HEAP_MGMT: [0m
+🎯 LED Indicators:
+[0;32mI (817) HEAP_MGMT:   GPIO2  - Memory System OK (Green)[0m
+[0;32mI (817) HEAP_MGMT:   GPIO4  - Low Memory Warning (Yellow)[0m
+[0;32mI (827) HEAP_MGMT:   GPIO5  - Memory Error/Leak (Red)[0m
+[0;32mI (827) HEAP_MGMT:   GPIO18 - High Fragmentation (Orange)[0m
+[0;32mI (837) HEAP_MGMT:   GPIO19 - SPIRAM Active (Blue)[0m
+[0;32mI (837) HEAP_MGMT: [0m
+🔬 Test Features:
+[0;32mI (847) HEAP_MGMT:   • Dynamic Memory Allocation Tracking[0m
+[0;32mI (847) HEAP_MGMT:   • Real-time Memory Status Monitoring[0m
+[0;32mI (857) HEAP_MGMT:   • Memory Leak Detection[0m
+[0;32mI (857) HEAP_MGMT:   • Fragmentation Analysis[0m
+[0;32mI (857) HEAP_MGMT:   • Heap Integrity Checking[0m
+[0;32mI (867) HEAP_MGMT:   • Memory Performance Testing[0m
+[0;32mI (867) HEAP_MGMT: Heap Management System operational![0m
+[0;32mI (877) main_task: Returned from app_main()[0m
+[0;32mI (5777) HEAP_MGMT: 🏊 Freeing memory pools (reverse order)...[0m
+[0;32mI (5777) HEAP_MGMT: 🗑️ Freed 1024 bytes at 0x40091dc0 (Pool) - Slot 49[0m
+[0;32mI (5777) HEAP_MGMT: 🗑️ Freed 1024 bytes at 0x400919bc (Pool) - Slot 48[0m
+[0;32mI (5777) HEAP_MGMT: 🗑️ Freed 1024 bytes at 0x400915b8 (Pool) - Slot 47[0m
+[0;32mI (5787) HEAP_MGMT: 🗑️ Freed 1024 bytes at 0x400911b4 (Pool) - Slot 46[0m
+[0;32mI (5797) HEAP_MGMT: 🗑️ Freed 1024 bytes at 0x40090db0 (Pool) - Slot 45[0m
+[0;32mI (5797) HEAP_MGMT: 🗑️ Freed 1024 bytes at 0x400909ac (Pool) - Slot 44[0m
+[0;32mI (5807) HEAP_MGMT: 🗑️ Freed 1024 bytes at 0x400905a8 (Pool) - Slot 43[0m
+[0;32mI (5817) HEAP_MGMT: 🗑️ Freed 1024 bytes at 0x400901a4 (Pool) - Slot 42[0m
+[0;32mI (5817) HEAP_MGMT: 🗑️ Freed 1024 bytes at 0x4008fda0 (Pool) - Slot 41[0m
+[0;32mI (5827) HEAP_MGMT: 🗑️ Freed 1024 bytes at 0x4008f99c (Pool) - Slot 40[0m
+[0;32mI (5837) HEAP_MGMT: 🗑️ Freed 512 bytes at 0x4008f798 (Pool) - Slot 39[0m
+[0;32mI (5837) HEAP_MGMT: 🗑️ Freed 512 bytes at 0x4008f594 (Pool) - Slot 38[0m
+[0;32mI (5847) HEAP_MGMT: 🗑️ Freed 512 bytes at 0x4008f390 (Pool) - Slot 37[0m
+[0;32mI (5857) HEAP_MGMT: 🗑️ Freed 512 bytes at 0x4008f18c (Pool) - Slot 36[0m
+[0;32mI (5857) HEAP_MGMT: 🗑️ Freed 512 bytes at 0x4008ef88 (Pool) - Slot 35[0m
+[0;32mI (5867) HEAP_MGMT: 🗑️ Freed 512 bytes at 0x4008ed84 (Pool) - Slot 34[0m
+[0;32mI (5877) HEAP_MGMT: 🗑️ Freed 512 bytes at 0x4008eb80 (Pool) - Slot 33[0m
+[0;32mI (5877) HEAP_MGMT: 🗑️ Freed 512 bytes at 0x4008e97c (Pool) - Slot 32[0m
+[0;32mI (5887) HEAP_MGMT: 🗑️ Freed 512 bytes at 0x4008e778 (Pool) - Slot 31[0m
+[0;32mI (5897) HEAP_MGMT: 🗑️ Freed 512 bytes at 0x4008e574 (Pool) - Slot 30[0m
+[0;32mI (5897) HEAP_MGMT: 🗑️ Freed 256 bytes at 0x4008e470 (Pool) - Slot 29[0m
+[0;32mI (5907) HEAP_MGMT: 🗑️ Freed 256 bytes at 0x4008e36c (Pool) - Slot 28[0m
+[0;32mI (5917) HEAP_MGMT: 🗑️ Freed 256 bytes at 0x4008e268 (Pool) - Slot 27[0m
+[0;32mI (5917) HEAP_MGMT: 🗑️ Freed 256 bytes at 0x4008e164 (Pool) - Slot 26[0m
+[0;32mI (5927) HEAP_MGMT: 🗑️ Freed 256 bytes at 0x4008e060 (Pool) - Slot 25[0m
+[0;32mI (5937) HEAP_MGMT: 🗑️ Freed 256 bytes at 0x4008df5c (Pool) - Slot 24[0m
+[0;32mI (5937) HEAP_MGMT: 🗑️ Freed 256 bytes at 0x4008de58 (Pool) - Slot 23[0m
+[0;32mI (5947) HEAP_MGMT: 🗑️ Freed 256 bytes at 0x4008dd54 (Pool) - Slot 22[0m
+[0;32mI (5957) HEAP_MGMT: 🗑️ Freed 256 bytes at 0x4008dc50 (Pool) - Slot 21[0m
+[0;32mI (5957) HEAP_MGMT: 🗑️ Freed 256 bytes at 0x4008db4c (Pool) - Slot 20[0m
+[0;32mI (5967) HEAP_MGMT: 🗑️ Freed 128 bytes at 0x4008dac8 (Pool) - Slot 19[0m
+[0;32mI (5977) HEAP_MGMT: 🗑️ Freed 128 bytes at 0x4008da44 (Pool) - Slot 18[0m
+[0;32mI (5977) HEAP_MGMT: 🗑️ Freed 128 bytes at 0x4008d9c0 (Pool) - Slot 17[0m
+[0;32mI (5987) HEAP_MGMT: 🗑️ Freed 128 bytes at 0x4008d93c (Pool) - Slot 16[0m
+[0;32mI (5987) HEAP_MGMT: 🗑️ Freed 128 bytes at 0x4008d8b8 (Pool) - Slot 15[0m
+[0;32mI (5997) HEAP_MGMT: 🗑️ Freed 128 bytes at 0x4008d834 (Pool) - Slot 14[0m
+[0;32mI (6007) HEAP_MGMT: 🗑️ Freed 128 bytes at 0x4008d7b0 (Pool) - Slot 13[0m
+[0;32mI (6007) HEAP_MGMT: 🗑️ Freed 128 bytes at 0x4008d72c (Pool) - Slot 12[0m
+[0;32mI (6017) HEAP_MGMT: 🗑️ Freed 128 bytes at 0x4008d6a8 (Pool) - Slot 11[0m
+[0;32mI (6027) HEAP_MGMT: 🗑️ Freed 128 bytes at 0x4008d624 (Pool) - Slot 10[0m
+[0;32mI (6027) HEAP_MGMT: 🗑️ Freed 64 bytes at 0x4008d5e0 (Pool) - Slot 9[0m
+[0;32mI (6037) HEAP_MGMT: 🗑️ Freed 64 bytes at 0x4008d59c (Pool) - Slot 8[0m
+[0;32mI (6047) HEAP_MGMT: 🗑️ Freed 64 bytes at 0x4008d558 (Pool) - Slot 7[0m
+[0;32mI (6047) HEAP_MGMT: 🗑️ Freed 64 bytes at 0x4008d514 (Pool) - Slot 6[0m
+[0;32mI (6057) HEAP_MGMT: 🗑️ Freed 64 bytes at 0x4008d4d0 (Pool) - Slot 5[0m
+[0;32mI (6067) HEAP_MGMT: 🗑️ Freed 64 bytes at 0x4008d48c (Pool) - Slot 4[0m
+[0;32mI (6067) HEAP_MGMT: 🗑️ Freed 64 bytes at 0x4008d448 (Pool) - Slot 3[0m
+[0;32mI (6077) HEAP_MGMT: 🗑️ Freed 64 bytes at 0x4008d404 (Pool) - Slot 2[0m
+[0;32mI (6087) HEAP_MGMT: 🗑️ Freed 64 bytes at 0x4008d3c0 (Pool) - Slot 1[0m
+[0;32mI (6087) HEAP_MGMT: 🗑️ Freed 64 bytes at 0x4008d37c (Pool) - Slot 0[0m
+[0;32mI (6097) HEAP_MGMT: [0m
+📊 ═══ MEMORY STATUS ═══
+[0;32mI (6097) HEAP_MGMT: Internal RAM Free:    296364 bytes[0m
+[0;32mI (6107) HEAP_MGMT: Largest Free Block:   155648 bytes[0m
+[0;32mI (6107) HEAP_MGMT: SPIRAM Free:          0 bytes[0m
+[0;32mI (6117) HEAP_MGMT: Total Free:           219428 bytes[0m
+[0;32mI (6117) HEAP_MGMT: Minimum Ever Free:    214744 bytes[0m
+[0;32mI (6127) HEAP_MGMT: Internal Fragmentation: 47.5%[0m
+[0;33mW (6127) HEAP_MGMT: ⚠️ High fragmentation detected![0m
+[0;32mI (6137) HEAP_MGMT: ═══════════════════════════════[0m
+[0;32mI (9897) HEAP_MGMT: ✅ Allocated 1405 bytes at 0x3ffb3d30 (StressTest) - Slot 0[0m
+[0;32mI (9897) HEAP_MGMT: 🔧 Stress test: allocated 1405 bytes (1/20)[0m
+[0;32mI (10427) HEAP_MGMT: [0m
+📊 ═══ MEMORY STATUS ═══
+[0;32mI (10427) HEAP_MGMT: Internal RAM Free:    294724 bytes[0m
+[0;32mI (10427) HEAP_MGMT: Largest Free Block:   155648 bytes[0m
+[0;32mI (10427) HEAP_MGMT: SPIRAM Free:          0 bytes[0m
+[0;32mI (10427) HEAP_MGMT: Total Free:           217788 bytes[0m
+[0;32mI (10437) HEAP_MGMT: Minimum Ever Free:    214744 bytes[0m
+[0;32mI (10437) HEAP_MGMT: Internal Fragmentation: 47.2%[0m
+[0;33mW (10447) HEAP_MGMT: ⚠️ High fragmentation detected![0m
+[0;32mI (10447) HEAP_MGMT: ═══════════════════════════════[0m
+[0;32mI (10457) HEAP_MGMT: [0m
+📈 ═══ ALLOCATION STATISTICS ═══
+[0;32mI (10467) HEAP_MGMT: Total Allocations:    52[0m
+[0;32mI (10467) HEAP_MGMT: Total Deallocations:  50[0m
+[0;32mI (10477) HEAP_MGMT: Current Allocations:  2[0m
+[0;32mI (10477) HEAP_MGMT: Total Allocated:      87670 bytes[0m
+[0;32mI (10487) HEAP_MGMT: Total Deallocated:    19840 bytes[0m
+[0;32mI (10487) HEAP_MGMT: Peak Usage:           86265 bytes[0m
+[0;32mI (10497) HEAP_MGMT: Allocation Failures:  0[0m
+[0;32mI (10497) HEAP_MGMT: Fragmentation Events: 3[0m
+[0;32mI (10497) HEAP_MGMT: Low Memory Events:    0[0m
+[0;32mI (10507) HEAP_MGMT: [0m
+🔍 ═══ ACTIVE ALLOCATIONS ═══
+[0;32mI (10507) HEAP_MGMT: Slot 0: 1405 bytes at 0x3ffb3d30 (StressTest) - Age: 619 ms[0m
+[0;32mI (10517) HEAP_MGMT: Slot 50: 66425 bytes at 0x3ffe46bc (LargeInternal) - Age: 9733 ms[0m
+[0;32mI (10527) HEAP_MGMT: [0m
+🔍 ═══ MEMORY LEAK DETECTION ═══
+[0;32mI (10537) HEAP_MGMT: No memory leaks detected[0m
+[0;32mI (10537) HEAP_MGMT: Free heap: 217560 bytes[0m
+[0;32mI (10537) HEAP_MGMT: System uptime: 10287 ms[0m
+
+[0;32mI (10797) HEAP_MGMT: 🗑️ Freed 66425 bytes at 0x3ffe46bc (Large) - Slot 50[0m
+[0;32mI (12327) HEAP_MGMT: [0m
+📊 ═══ MEMORY STATUS ═══
+[0;32mI (12327) HEAP_MGMT: Internal RAM Free:    364132 bytes[0m
+[0;32mI (12327) HEAP_MGMT: Largest Free Block:   155648 bytes[0m
+[0;32mI (12327) HEAP_MGMT: SPIRAM Free:          0 bytes[0m
+[0;32mI (12327) HEAP_MGMT: Total Free:           287196 bytes[0m
+[0;32mI (12337) HEAP_MGMT: Minimum Ever Free:    214744 bytes[0m
+[0;32mI (12337) HEAP_MGMT: Internal Fragmentation: 57.3%[0m
+[0;33mW (12347) HEAP_MGMT: ⚠️ High fragmentation detected![0m
+[0;32mI (12347) HEAP_MGMT: ═══════════════════════════════[0m
+[0;32mI (13707) HEAP_MGMT: 🗑️ Freed 1405 bytes at 0x3ffb3d30 (StressTest) - Slot 0[0m
+[0;32mI (13707) HEAP_MGMT: 🗑️ Stress test: freed memory (0/20)[0m
+[0;32mI (14147) HEAP_MGMT: 🏊 Allocating memory pools...[0m
+[0;32mI (14147) HEAP_MGMT: ✅ Allocated 64 bytes at 0x4008d37c (Pool0_0) - Slot 0[0m
+[0;32mI (14147) HEAP_MGMT: ✅ Allocated 64 bytes at 0x4008d3c0 (Pool0_1) - Slot 1[0m
+[0;32mI (14147) HEAP_MGMT: ✅ Allocated 64 bytes at 0x4008d404 (Pool0_2) - Slot 2[0m
+[0;32mI (14157) HEAP_MGMT: ✅ Allocated 64 bytes at 0x4008d448 (Pool0_3) - Slot 3[0m
+[0;32mI (14167) HEAP_MGMT: ✅ Allocated 64 bytes at 0x4008d48c (Pool0_4) - Slot 4[0m
+[0;32mI (14167) HEAP_MGMT: ✅ Allocated 64 bytes at 0x4008d4d0 (Pool0_5) - Slot 5[0m
+[0;32mI (14177) HEAP_MGMT: ✅ Allocated 64 bytes at 0x4008d514 (Pool0_6) - Slot 6[0m
+[0;32mI (14187) HEAP_MGMT: ✅ Allocated 64 bytes at 0x4008d558 (Pool0_7) - Slot 7[0m
+[0;32mI (14187) HEAP_MGMT: ✅ Allocated 64 bytes at 0x4008d59c (Pool0_8) - Slot 8[0m
+[0;32mI (14197) HEAP_MGMT: ✅ Allocated 64 bytes at 0x4008d5e0 (Pool0_9) - Slot 9[0m
+[0;32mI (14207) HEAP_MGMT: ✅ Allocated 128 bytes at 0x4008d624 (Pool1_0) - Slot 10[0m
+[0;32mI (14207) HEAP_MGMT: ✅ Allocated 128 bytes at 0x4008d6a8 (Pool1_1) - Slot 11[0m
+[0;32mI (14217) HEAP_MGMT: ✅ Allocated 128 bytes at 0x4008d72c (Pool1_2) - Slot 12[0m
+[0;32mI (14227) HEAP_MGMT: ✅ Allocated 128 bytes at 0x4008d7b0 (Pool1_3) - Slot 13[0m
+[0;32mI (14227) HEAP_MGMT: ✅ Allocated 128 bytes at 0x4008d834 (Pool1_4) - Slot 14[0m
+[0;32mI (14237) HEAP_MGMT: ✅ Allocated 128 bytes at 0x4008d8b8 (Pool1_5) - Slot 15[0m
+[0;32mI (14247) HEAP_MGMT: ✅ Allocated 128 bytes at 0x4008d93c (Pool1_6) - Slot 16[0m
+[0;32mI (14247) HEAP_MGMT: ✅ Allocated 128 bytes at 0x4008d9c0 (Pool1_7) - Slot 17[0m
+[0;32mI (14257) HEAP_MGMT: ✅ Allocated 128 bytes at 0x4008da44 (Pool1_8) - Slot 18[0m
+[0;32mI (14267) HEAP_MGMT: ✅ Allocated 128 bytes at 0x4008dac8 (Pool1_9) - Slot 19[0m
+[0;32mI (14277) HEAP_MGMT: ✅ Allocated 256 bytes at 0x4008db4c (Pool2_0) - Slot 20[0m
+[0;32mI (14277) HEAP_MGMT: ✅ Allocated 256 bytes at 0x4008dc50 (Pool2_1) - Slot 21[0m
+[0;32mI (14287) HEAP_MGMT: ✅ Allocated 256 bytes at 0x4008dd54 (Pool2_2) - Slot 22[0m
+[0;32mI (14297) HEAP_MGMT: ✅ Allocated 256 bytes at 0x4008de58 (Pool2_3) - Slot 23[0m
+[0;32mI (14297) HEAP_MGMT: ✅ Allocated 256 bytes at 0x4008df5c (Pool2_4) - Slot 24[0m
+[0;32mI (14307) HEAP_MGMT: ✅ Allocated 256 bytes at 0x4008e060 (Pool2_5) - Slot 25[0m
+[0;32mI (14317) HEAP_MGMT: ✅ Allocated 256 bytes at 0x4008e164 (Pool2_6) - Slot 26[0m
+[0;32mI (14317) HEAP_MGMT: ✅ Allocated 256 bytes at 0x4008e268 (Pool2_7) - Slot 27[0m
+[0;32mI (14327) HEAP_MGMT: ✅ Allocated 256 bytes at 0x4008e36c (Pool2_8) - Slot 28[0m
+[0;32mI (14337) HEAP_MGMT: ✅ Allocated 256 bytes at 0x4008e470 (Pool2_9) - Slot 29[0m
+[0;32mI (14347) HEAP_MGMT: ✅ Allocated 512 bytes at 0x4008e574 (Pool3_0) - Slot 30[0m
+[0;32mI (14347) HEAP_MGMT: ✅ Allocated 512 bytes at 0x4008e778 (Pool3_1) - Slot 31[0m
+[0;32mI (14357) HEAP_MGMT: ✅ Allocated 512 bytes at 0x4008e97c (Pool3_2) - Slot 32[0m
+[0;32mI (14367) HEAP_MGMT: ✅ Allocated 512 bytes at 0x4008eb80 (Pool3_3) - Slot 33[0m
+[0;32mI (14367) HEAP_MGMT: ✅ Allocated 512 bytes at 0x4008ed84 (Pool3_4) - Slot 34[0m
+[0;32mI (14377) HEAP_MGMT: ✅ Allocated 512 bytes at 0x4008ef88 (Pool3_5) - Slot 35[0m
+[0;32mI (14387) HEAP_MGMT: ✅ Allocated 512 bytes at 0x4008f18c (Pool3_6) - Slot 36[0m
+[0;32mI (14387) HEAP_MGMT: ✅ Allocated 512 bytes at 0x4008f390 (Pool3_7) - Slot 37[0m
+[0;32mI (14397) HEAP_MGMT: ✅ Allocated 512 bytes at 0x4008f594 (Pool3_8) - Slot 38[0m
+[0;32mI (14407) HEAP_MGMT: ✅ Allocated 512 bytes at 0x4008f798 (Pool3_9) - Slot 39[0m
+[0;32mI (14407) HEAP_MGMT: ✅ Allocated 1024 bytes at 0x4008f99c (Pool4_0) - Slot 40[0m
+[0;32mI (14417) HEAP_MGMT: ✅ Allocated 1024 bytes at 0x4008fda0 (Pool4_1) - Slot 41[0m
+[0;32mI (14427) HEAP_MGMT: ✅ Allocated 1024 bytes at 0x400901a4 (Pool4_2) - Slot 42[0m
+[0;32mI (14437) HEAP_MGMT: ✅ Allocated 1024 bytes at 0x400905a8 (Pool4_3) - Slot 43[0m
+[0;32mI (14437) HEAP_MGMT: ✅ Allocated 1024 bytes at 0x400909ac (Pool4_4) - Slot 44[0m
+[0;32mI (14447) HEAP_MGMT: ✅ Allocated 1024 bytes at 0x40090db0 (Pool4_5) - Slot 45[0m
+[0;32mI (14457) HEAP_MGMT: ✅ Allocated 1024 bytes at 0x400911b4 (Pool4_6) - Slot 46[0m
+[0;32mI (14457) HEAP_MGMT: ✅ Allocated 1024 bytes at 0x400915b8 (Pool4_7) - Slot 47[0m
+[0;32mI (14467) HEAP_MGMT: ✅ Allocated 1024 bytes at 0x400919bc (Pool4_8) - Slot 48[0m
+[0;32mI (14477) HEAP_MGMT: ✅ Allocated 1024 bytes at 0x40091dc0 (Pool4_9) - Slot 49[0m
+[0;32mI (15347) HEAP_MGMT: ✅ Allocated 1991 bytes at 0x3ffb3d30 (StressTest) - Slot 50[0m
+[0;32mI (15347) HEAP_MGMT: 🔧 Stress test: allocated 1991 bytes (1/20)[0m

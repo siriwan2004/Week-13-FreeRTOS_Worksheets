@@ -1,0 +1,678 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\User\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\STIC 1\Week-13-FreeRTOS_Worksheets\06-event-groups\w06\lab2\event_synchronization\build\event_synchronization.elf D:\STIC 1\Week-13-FreeRTOS_Worksheets\06-event-groups\w06\lab2\event_synchronization\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\User\esp\v5.5.1\esp-idf\tools\idf.py'
+�"%=5
+I (41) boot.esp32�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+I (29) boot: ESP-IDF v5.5.1 2nd stage bootloader
+I (29) boot: compile time Oct 25 2025 00:47:14
+I (29) boot: Multicore bootloader
+I (31) boot: chip revision: v3.0
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b2d8h ( 45784) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001b300 vaddr=3ffb0000 size=023f8h (  9208) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d700 vaddr=40080000 size=02918h ( 10520) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17d30h ( 97584) map[0m
+[0;32mI (148) esp_image: segment 4: paddr=00037d58 vaddr=40082918 size=0ad30h ( 44336) load[0m
+[0;32mI (166) esp_image: segment 5: paddr=00042a90 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (173) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (173) boot: Disabling RNG early entropy source...[0m
+[0;32mI (184) cpu_start: Multicore app[0m
+[0;32mI (192) cpu_start: Pro cpu start user code[0m
+[0;32mI (192) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (193) app_init: Application information:[0m
+[0;32mI (193) app_init: Project name:     event_synchronization[0m
+[0;32mI (198) app_init: App version:      8e74e47[0m
+[0;32mI (202) app_init: Compile time:     Oct 25 2025 00:46:37[0m
+[0;32mI (207) app_init: ELF file SHA256:  f7e5a38fa...[0m
+[0;32mI (211) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (215) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (219) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (223) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (227) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (233) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (238) heap_init: At 3FFB2D00 len 0002D300 (180 KiB): DRAM[0m
+[0;32mI (243) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (248) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (254) heap_init: At 4008D648 len 000129B8 (74 KiB): IRAM[0m
+[0;32mI (261) spi_flash: detected chip: generic[0m
+[0;32mI (263) spi_flash: flash io: dio[0m
+[0;33mW (266) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (279) main_task: Started on CPU0[0m
+[0;32mI (289) main_task: Calling app_main()[0m
+[0;32mI (289) EVENT_SYNC: 🚀 Event Synchronization Lab Starting...[0m
+[0;32mI (289) EVENT_SYNC: Event groups and queues created successfully[0m
+[0;32mI (289) EVENT_SYNC: Creating barrier synchronization tasks...[0m
+[0;32mI (299) EVENT_SYNC: 🏃 Barrier Worker 0 started[0m
+[0;32mI (299) EVENT_SYNC: 👷 Worker 0: Cycle 1 - Independent work (3134 ms)[0m
+[0;32mI (309) EVENT_SYNC: 🏃 Barrier Worker 1 started[0m
+[0;32mI (309) EVENT_SYNC: 👷 Worker 1: Cycle 1 - Independent work (1820 ms)[0m
+[0;32mI (319) EVENT_SYNC: 🏃 Barrier Worker 2 started[0m
+[0;32mI (319) EVENT_SYNC: 👷 Worker 2: Cycle 1 - Independent work (2336 ms)[0m
+[0;32mI (329) EVENT_SYNC: 🏃 Barrier Worker 3 started[0m
+[0;32mI (329) EVENT_SYNC: 👷 Worker 3: Cycle 1 - Independent work (2866 ms)[0m
+[0;32mI (339) EVENT_SYNC: Creating pipeline processing tasks...[0m
+[0;32mI (349) EVENT_SYNC: 🏭 Pipeline Stage 0 (Input) started[0m
+[0;32mI (349) EVENT_SYNC: ⏳ Stage 0: Waiting for input...[0m
+[0;32mI (359) EVENT_SYNC: 🏭 Pipeline Stage 1 (Processing) started[0m
+[0;32mI (359) EVENT_SYNC: ⏳ Stage 1: Waiting for input...[0m
+[0;32mI (369) EVENT_SYNC: 🏭 Pipeline Stage 2 (Filtering) started[0m
+[0;32mI (369) EVENT_SYNC: ⏳ Stage 2: Waiting for input...[0m
+[0;32mI (379) EVENT_SYNC: 🏭 Pipeline Stage 3 (Output) started[0m
+[0;32mI (379) EVENT_SYNC: ⏳ Stage 3: Waiting for input...[0m
+[0;32mI (389) EVENT_SYNC: 🏭 Pipeline data generator started[0m
+[0;32mI (389) EVENT_SYNC: 🚀 Generating pipeline data ID: 1[0m
+[0;32mI (399) EVENT_SYNC: 📦 Stage 0: Processing pipeline ID 1[0m
+[0;32mI (399) EVENT_SYNC: 📥 Stage 0: Data input and validation[0m
+[0;32mI (409) EVENT_SYNC: ✅ Pipeline data 1 injected[0m
+[0;32mI (409) EVENT_SYNC: Creating workflow management tasks...[0m
+[0;32mI (419) EVENT_SYNC: 📋 Workflow manager started[0m
+[0;32mI (419) EVENT_SYNC: 👨‍💼 Approval task started[0m
+[0;32mI (429) EVENT_SYNC: 🏗️ Resource manager started[0m
+[0;32mI (429) EVENT_SYNC: 🟢 Resources available[0m
+[0;32mI (429) EVENT_SYNC: 📋 Workflow generator started[0m
+[0;32mI (439) EVENT_SYNC: 🚀 Generated workflow: Performance Test (ID: 1, Priority: 3, Approval: Required)[0m
+[0;32mI (449) EVENT_SYNC: 📝 New workflow: ID 1 - Performance Test (Priority: 3)[0m
+[0;32mI (449) EVENT_SYNC: 📋 Workflow 1 requires approval[0m
+[0;32mI (449) EVENT_SYNC: 📋 Approval process initiated...[0m
+[0;32mI (459) EVENT_SYNC: ⏳ Waiting for workflow requirements (0x00000006)...[0m
+[0;32mI (459) EVENT_SYNC: 📊 Statistics monitor started[0m
+[0;32mI (459) EVENT_SYNC: All tasks created successfully[0m
+[0;32mI (479) EVENT_SYNC: [0m
+🎯 LED Indicators:
+[0;32mI (479) EVENT_SYNC:   GPIO2  - Barrier Synchronization[0m
+[0;32mI (489) EVENT_SYNC:   GPIO4  - Pipeline Stage 1[0m
+[0;32mI (489) EVENT_SYNC:   GPIO5  - Pipeline Stage 2[0m
+[0;32mI (499) EVENT_SYNC:   GPIO18 - Pipeline Stage 3[0m
+[0;32mI (499) EVENT_SYNC:   GPIO19 - Workflow Active[0m
+[0;32mI (509) EVENT_SYNC: [0m
+🔄 System Features:
+[0;32mI (509) EVENT_SYNC:   • Barrier Synchronization (4 workers)[0m
+[0;32mI (509) EVENT_SYNC:   • Pipeline Processing (4 stages)[0m
+[0;32mI (519) EVENT_SYNC:   • Workflow Management (approval & resources)[0m
+[0;32mI (529) EVENT_SYNC:   • Real-time Statistics Monitoring[0m
+[0;32mI (529) EVENT_SYNC: Event Synchronization System operational![0m
+[0;32mI (539) main_task: Returned from app_main()[0m
+[0;32mI (1719) EVENT_SYNC: ➡️ Stage 0: Data passed to next stage[0m
+[0;32mI (1719) EVENT_SYNC: 📦 Stage 1: Processing pipeline ID 1[0m
+[0;32mI (1719) EVENT_SYNC: ⏳ Stage 0: Waiting for input...[0m
+[0;32mI (1719) EVENT_SYNC: ⚙️ Stage 1: Data processing and transformation[0m
+[0;32mI (2139) EVENT_SYNC: 🚧 Worker 1: Ready for barrier (cycle 1)[0m
+[0;32mI (2659) EVENT_SYNC: 🚧 Worker 2: Ready for barrier (cycle 1)[0m
+[0;32mI (2729) EVENT_SYNC: ➡️ Stage 1: Data passed to next stage[0m
+[0;32mI (2729) EVENT_SYNC: 📦 Stage 2: Processing pipeline ID 1[0m
+[0;32mI (2729) EVENT_SYNC: ⏳ Stage 1: Waiting for input...[0m
+[0;32mI (2729) EVENT_SYNC: 🔍 Stage 2: Data filtering and validation[0m
+[0;32mI (2739) EVENT_SYNC: Average value: 64.13, Quality: 83[0m
+[0;33mW (3169) EVENT_SYNC: ❌ Approval denied[0m
+[0;32mI (3199) EVENT_SYNC: 🚧 Worker 3: Ready for barrier (cycle 1)[0m
+[0;32mI (3439) EVENT_SYNC: 🚧 Worker 0: Ready for barrier (cycle 1)[0m
+[0;32mI (3439) EVENT_SYNC: 🎯 Worker 3: Barrier passed! (waited 240 ms)[0m
+[0;32mI (3439) EVENT_SYNC: 🎯 Worker 1: Barrier passed! (waited 1300 ms)[0m
+[0;32mI (3439) EVENT_SYNC: 🎯 Worker 2: Barrier passed! (waited 780 ms)[0m
+[0;32mI (3439) EVENT_SYNC: 🤝 Worker 3: Synchronized work phase[0m
+[0;32mI (3439) EVENT_SYNC: 🤝 Worker 1: Synchronized work phase[0m
+[0;32mI (3449) EVENT_SYNC: 🤝 Worker 2: Synchronized work phase[0m
+[0;32mI (3509) EVENT_SYNC: ➡️ Stage 2: Data passed to next stage[0m
+[0;32mI (3509) EVENT_SYNC: 📦 Stage 3: Processing pipeline ID 1[0m
+[0;32mI (3509) EVENT_SYNC: ⏳ Stage 2: Waiting for input...[0m
+[0;32mI (3509) EVENT_SYNC: 📤 Stage 3: Data output and delivery[0m
+[0;32mI (3519) EVENT_SYNC: ✅ Pipeline 1 completed in 3114 ms (Quality: 83)[0m
+[0;32mI (3589) EVENT_SYNC: 🚀 Generating pipeline data ID: 2[0m
+[0;32mI (3589) EVENT_SYNC: 📦 Stage 0: Processing pipeline ID 2[0m
+[0;32mI (3589) EVENT_SYNC: 📥 Stage 0: Data input and validation[0m
+[0;32mI (3589) EVENT_SYNC: ✅ Pipeline data 2 injected[0m
+[0;32mI (4239) EVENT_SYNC: ⏳ Stage 3: Waiting for input...[0m
+[0;32mI (4339) EVENT_SYNC: ➡️ Stage 0: Data passed to next stage[0m
+[0;32mI (4339) EVENT_SYNC: 📦 Stage 1: Processing pipeline ID 2[0m
+[0;32mI (4339) EVENT_SYNC: ⏳ Stage 0: Waiting for input...[0m
+[0;32mI (4339) EVENT_SYNC: ⚙️ Stage 1: Data processing and transformation[0m
+[0;32mI (5199) EVENT_SYNC: ➡️ Stage 1: Data passed to next stage[0m
+[0;32mI (5199) EVENT_SYNC: 📦 Stage 2: Processing pipeline ID 2[0m
+[0;32mI (5199) EVENT_SYNC: ⏳ Stage 1: Waiting for input...[0m
+[0;32mI (5199) EVENT_SYNC: 🔍 Stage 2: Data filtering and validation[0m
+[0;32mI (5209) EVENT_SYNC: Average value: 76.29, Quality: 66[0m
+[0;32mI (6079) EVENT_SYNC: 👷 Worker 3: Cycle 2 - Independent work (3207 ms)[0m
+[0;33mW (6099) EVENT_SYNC: ⏰ Workflow 1 timeout - requirements not met[0m
+[0;32mI (6159) EVENT_SYNC: ➡️ Stage 2: Data passed to next stage[0m
+[0;32mI (6159) EVENT_SYNC: 📦 Stage 3: Processing pipeline ID 2[0m
+[0;32mI (6159) EVENT_SYNC: ⏳ Stage 2: Waiting for input...[0m
+[0;32mI (6159) EVENT_SYNC: 📤 Stage 3: Data output and delivery[0m
+[0;32mI (6169) EVENT_SYNC: ✅ Pipeline 2 completed in 2580 ms (Quality: 66)[0m
+[0;32mI (6349) EVENT_SYNC: 🔴 Resources temporarily unavailable[0m
+[0;32mI (6349) EVENT_SYNC: ⏳ Waiting for resources to become available...[0m
+[0;32mI (6409) EVENT_SYNC: 👷 Worker 1: Cycle 2 - Independent work (2829 ms)[0m
+[0;32mI (6449) EVENT_SYNC: 👷 Worker 2: Cycle 2 - Independent work (1398 ms)[0m
+[0;32mI (7299) EVENT_SYNC: ⏳ Stage 3: Waiting for input...[0m
+[0;32mI (7839) EVENT_SYNC: 🚧 Worker 2: Ready for barrier (cycle 2)[0m
+[0;32mI (8419) EVENT_SYNC: 🚀 Generating pipeline data ID: 3[0m
+[0;32mI (8419) EVENT_SYNC: 📦 Stage 0: Processing pipeline ID 3[0m
+[0;32mI (8419) EVENT_SYNC: 📥 Stage 0: Data input and validation[0m
+[0;32mI (8419) EVENT_SYNC: ✅ Pipeline data 3 injected[0m
+[0;32mI (9229) EVENT_SYNC: 🚧 Worker 1: Ready for barrier (cycle 2)[0m
+[0;32mI (9279) EVENT_SYNC: 🚧 Worker 3: Ready for barrier (cycle 2)[0m
+[0;32mI (9389) EVENT_SYNC: ➡️ Stage 0: Data passed to next stage[0m
+[0;32mI (9389) EVENT_SYNC: 📦 Stage 1: Processing pipeline ID 3[0m
+[0;32mI (9389) EVENT_SYNC: ⏳ Stage 0: Waiting for input...[0m
+[0;32mI (9389) EVENT_SYNC: ⚙️ Stage 1: Data processing and transformation[0m
+[0;32mI (9699) EVENT_SYNC: 🚀 Generated workflow: Performance Test (ID: 2, Priority: 5, Approval: Not Required)[0m
+[0;32mI (9699) EVENT_SYNC: 📝 New workflow: ID 2 - Performance Test (Priority: 5)[0m
+[0;32mI (9699) EVENT_SYNC: ⏳ Waiting for workflow requirements (0x00000004)...[0m
+[0;32mI (9699) EVENT_SYNC: 📋 Approval process initiated...[0m
+[0;32mI (10479) EVENT_SYNC: 🟢 Resources recovered and available[0m
+[0;32mI (10479) EVENT_SYNC: ✅ Workflow 2: Requirements met, starting execution[0m
+[0;32mI (10479) EVENT_SYNC: 🟢 Resources available[0m
+[0;32mI (10479) EVENT_SYNC: ⚙️ Executing workflow 2 (3087 ms estimated)[0m
+[0;32mI (10739) EVENT_SYNC: ➡️ Stage 1: Data passed to next stage[0m
+[0;32mI (10739) EVENT_SYNC: 📦 Stage 2: Processing pipeline ID 3[0m
+[0;32mI (10739) EVENT_SYNC: ⏳ Stage 1: Waiting for input...[0m
+[0;32mI (10739) EVENT_SYNC: 🔍 Stage 2: Data filtering and validation[0m
+[0;32mI (10749) EVENT_SYNC: Average value: 39.85, Quality: 82[0m
+[0;32mI (11989) EVENT_SYNC: ✅ Approval granted (took 2286 ms)[0m
+[0;32mI (12119) EVENT_SYNC: ➡️ Stage 2: Data passed to next stage[0m
+[0;32mI (12119) EVENT_SYNC: 📦 Stage 3: Processing pipeline ID 3[0m
+[0;32mI (12119) EVENT_SYNC: ⏳ Stage 2: Waiting for input...[0m
+[0;32mI (12119) EVENT_SYNC: 📤 Stage 3: Data output and delivery[0m
+[0;32mI (12129) EVENT_SYNC: ✅ Pipeline 3 completed in 3710 ms (Quality: 82)[0m
+[0;33mW (13439) EVENT_SYNC: ⏰ Worker 0: Barrier timeout![0m
+[0;32mI (13569) EVENT_SYNC: ✅ Workflow 2 completed successfully (Quality: 99%)[0m
+[0;32mI (13619) EVENT_SYNC: ⏳ Stage 3: Waiting for input...[0m
+[0;32mI (14869) EVENT_SYNC: 🚀 Generating pipeline data ID: 4[0m
+[0;32mI (14869) EVENT_SYNC: 📦 Stage 0: Processing pipeline ID 4[0m
+[0;32mI (14869) EVENT_SYNC: 📥 Stage 0: Data input and validation[0m
+[0;32mI (14869) EVENT_SYNC: ✅ Pipeline data 4 injected[0m
+[0;32mI (15069) EVENT_SYNC: 🚀 Generated workflow: Report Generation (ID: 3, Priority: 1, Approval: Required)[0m
+[0;32mI (15069) EVENT_SYNC: 📝 New workflow: ID 3 - Report Generation (Priority: 1)[0m
+[0;32mI (15069) EVENT_SYNC: 📋 Workflow 3 requires approval[0m
+[0;32mI (15079) EVENT_SYNC: ⏳ Waiting for workflow requirements (0x00000006)...[0m
+[0;32mI (15079) EVENT_SYNC: ✅ Workflow 3: Requirements met, starting execution[0m
+[0;32mI (15089) EVENT_SYNC: ⚙️ Executing workflow 3 (4252 ms estimated)[0m
+[0;32mI (15439) EVENT_SYNC: 👷 Worker 0: Cycle 2 - Independent work (2873 ms)[0m
+[0;32mI (15479) EVENT_SYNC: [0m
+📈 ═══ SYNCHRONIZATION STATISTICS ═══
+[0;32mI (15479) EVENT_SYNC: Barrier cycles:        0[0m
+[0;32mI (15479) EVENT_SYNC: Pipeline completions:  3[0m
+[0;32mI (15479) EVENT_SYNC: Workflow completions:  1[0m
+[0;32mI (15479) EVENT_SYNC: Max sync time:         1300 ms[0m
+[0;32mI (15489) EVENT_SYNC: Avg sync time:         745 ms[0m
+[0;32mI (15489) EVENT_SYNC: Avg pipeline time:     3135 ms[0m
+[0;32mI (15499) EVENT_SYNC: Free heap:             268408 bytes[0m
+[0;32mI (15499) EVENT_SYNC: System uptime:         15246 ms[0m
+[0;32mI (15509) EVENT_SYNC: ═══════════════════════════════════════[0m
+
+[0;32mI (15519) EVENT_SYNC: 📊 Event Group Status:[0m
+[0;32mI (15519) EVENT_SYNC:   Barrier events:   0x0000000E[0m
+[0;32mI (15529) EVENT_SYNC:   Pipeline events:  0x00000000[0m
+[0;32mI (15529) EVENT_SYNC:   Workflow events:  0x00000007[0m
+[0;32mI (16149) EVENT_SYNC: ➡️ Stage 0: Data passed to next stage[0m
+[0;32mI (16149) EVENT_SYNC: 📦 Stage 1: Processing pipeline ID 4[0m
+[0;32mI (16149) EVENT_SYNC: ⏳ Stage 0: Waiting for input...[0m
+[0;32mI (16149) EVENT_SYNC: ⚙️ Stage 1: Data processing and transformation[0m
+[0;32mI (16729) EVENT_SYNC: ➡️ Stage 1: Data passed to next stage[0m
+[0;32mI (16729) EVENT_SYNC: 📦 Stage 2: Processing pipeline ID 4[0m
+[0;32mI (16729) EVENT_SYNC: ⏳ Stage 1: Waiting for input...[0m
+[0;32mI (16729) EVENT_SYNC: 🔍 Stage 2: Data filtering and validation[0m
+[0;32mI (16739) EVENT_SYNC: Average value: 74.69, Quality: 95[0m
+[0;32mI (16989) EVENT_SYNC: 📋 Approval process initiated...[0m
+[0;32mI (17759) EVENT_SYNC: 🟢 Resources available[0m
+[0;33mW (17839) EVENT_SYNC: ⏰ Worker 2: Barrier timeout![0m
+[0;32mI (18169) EVENT_SYNC: ➡️ Stage 2: Data passed to next stage[0m
+[0;32mI (18169) EVENT_SYNC: 📦 Stage 3: Processing pipeline ID 4[0m
+[0;32mI (18169) EVENT_SYNC: ⏳ Stage 2: Waiting for input...[0m
+[0;32mI (18169) EVENT_SYNC: 📤 Stage 3: Data output and delivery[0m
+[0;32mI (18179) EVENT_SYNC: ✅ Pipeline 4 completed in 3310 ms (Quality: 95)[0m
+[0;32mI (18309) EVENT_SYNC: 🚧 Worker 0: Ready for barrier (cycle 2)[0m
+[0;32mI (18309) EVENT_SYNC: 🎯 Worker 3: Barrier passed! (waited 9030 ms)[0m
+[0;32mI (18309) EVENT_SYNC: 🎯 Worker 1: Barrier passed! (waited 9080 ms)[0m
+[0;32mI (18309) EVENT_SYNC: 🤝 Worker 3: Synchronized work phase[0m
+[0;32mI (18309) EVENT_SYNC: 🤝 Worker 1: Synchronized work phase[0m
+[0;32mI (19259) EVENT_SYNC: ⏳ Stage 3: Waiting for input...[0m
+[0;32mI (19339) EVENT_SYNC: ✅ Workflow 3 completed successfully (Quality: 89%)[0m
+[0;32mI (19839) EVENT_SYNC: 👷 Worker 2: Cycle 3 - Independent work (3142 ms)[0m
+[0;33mW (19889) EVENT_SYNC: ❌ Approval denied[0m
+[0;32mI (20829) EVENT_SYNC: 👷 Worker 3: Cycle 3 - Independent work (1807 ms)[0m
+[0;32mI (21159) EVENT_SYNC: 👷 Worker 1: Cycle 3 - Independent work (1581 ms)[0m
+[0;32mI (21219) EVENT_SYNC: 🚀 Generated workflow: Quality Analysis (ID: 4, Priority: 5, Approval: Not Required)[0m
+[0;32mI (21219) EVENT_SYNC: 📝 New workflow: ID 4 - Quality Analysis (Priority: 5)[0m
+[0;32mI (21219) EVENT_SYNC: ⏳ Waiting for workflow requirements (0x00000004)...[0m
+[0;32mI (21229) EVENT_SYNC: ✅ Workflow 4: Requirements met, starting execution[0m
+[0;32mI (21229) EVENT_SYNC: ⚙️ Executing workflow 4 (3254 ms estimated)[0m
+[0;32mI (21249) EVENT_SYNC: 🚀 Generating pipeline data ID: 5[0m
+[0;32mI (21249) EVENT_SYNC: 📦 Stage 0: Processing pipeline ID 5[0m
+[0;32mI (21249) EVENT_SYNC: ✅ Pipeline data 5 injected[0m
+[0;32mI (21249) EVENT_SYNC: 📥 Stage 0: Data input and validation[0m
+[0;32mI (22519) EVENT_SYNC: ➡️ Stage 0: Data passed to next stage[0m
+[0;32mI (22519) EVENT_SYNC: 📦 Stage 1: Processing pipeline ID 5[0m
+[0;32mI (22519) EVENT_SYNC: ⏳ Stage 0: Waiting for input...[0m
+[0;32mI (22519) EVENT_SYNC: ⚙️ Stage 1: Data processing and transformation[0m
+[0;32mI (22629) EVENT_SYNC: 🚧 Worker 3: Ready for barrier (cycle 3)[0m
+[0;32mI (22739) EVENT_SYNC: 🚧 Worker 1: Ready for barrier (cycle 3)[0m
+[0;32mI (22979) EVENT_SYNC: 🚧 Worker 2: Ready for barrier (cycle 3)[0m
+[0;32mI (23899) EVENT_SYNC: ➡️ Stage 1: Data passed to next stage[0m
+[0;32mI (23899) EVENT_SYNC: 📦 Stage 2: Processing pipeline ID 5[0m
+[0;32mI (23899) EVENT_SYNC: ⏳ Stage 1: Waiting for input...[0m
+[0;32mI (23899) EVENT_SYNC: 🔍 Stage 2: Data filtering and validation[0m
+[0;32mI (23909) EVENT_SYNC: Average value: 39.79, Quality: 89[0m
+[0;32mI (24489) EVENT_SYNC: ✅ Workflow 4 completed successfully (Quality: 93%)[0m
+[0;32mI (24809) EVENT_SYNC: ➡️ Stage 2: Data passed to next stage[0m
+[0;32mI (24809) EVENT_SYNC: 📦 Stage 3: Processing pipeline ID 5[0m
+[0;32mI (24809) EVENT_SYNC: ⏳ Stage 2: Waiting for input...[0m
+[0;32mI (24809) EVENT_SYNC: 📤 Stage 3: Data output and delivery[0m
+[0;32mI (24819) EVENT_SYNC: ✅ Pipeline 5 completed in 3565 ms (Quality: 89)[0m
+[0;32mI (25629) EVENT_SYNC: ⏳ Stage 3: Waiting for input...[0m
+[0;32mI (26429) EVENT_SYNC: 🚀 Generating pipeline data ID: 6[0m
+[0;32mI (26429) EVENT_SYNC: 📦 Stage 0: Processing pipeline ID 6[0m
+[0;32mI (26429) EVENT_SYNC: 📥 Stage 0: Data input and validation[0m
+[0;32mI (26429) EVENT_SYNC: ✅ Pipeline data 6 injected[0m
+[0;32mI (26559) EVENT_SYNC: 🟢 Resources available[0m
+[0;32mI (27249) EVENT_SYNC: ➡️ Stage 0: Data passed to next stage[0m
+[0;32mI (27249) EVENT_SYNC: 📦 Stage 1: Processing pipeline ID 6[0m
+[0;32mI (27249) EVENT_SYNC: ⏳ Stage 0: Waiting for input...[0m
+[0;32mI (27249) EVENT_SYNC: ⚙️ Stage 1: Data processing and transformation[0m
+[0;32mI (27279) EVENT_SYNC: 🚀 Generated workflow: System Backup (ID: 5, Priority: 5, Approval: Not Required)[0m
+[0;32mI (27279) EVENT_SYNC: 📝 New workflow: ID 5 - System Backup (Priority: 5)[0m
+[0;32mI (27279) EVENT_SYNC: ⏳ Waiting for workflow requirements (0x00000004)...[0m
+[0;32mI (27279) EVENT_SYNC: 📋 Approval process initiated...[0m
+[0;32mI (27289) EVENT_SYNC: ✅ Workflow 5: Requirements met, starting execution[0m
+[0;32mI (27299) EVENT_SYNC: ⚙️ Executing workflow 5 (4039 ms estimated)[0m
+[0;32mI (28249) EVENT_SYNC: ➡️ Stage 1: Data passed to next stage[0m
+[0;32mI (28249) EVENT_SYNC: 📦 Stage 2: Processing pipeline ID 6[0m
+[0;32mI (28249) EVENT_SYNC: ⏳ Stage 1: Waiting for input...[0m
+[0;32mI (28249) EVENT_SYNC: 🔍 Stage 2: Data filtering and validation[0m
+[0;32mI (28259) EVENT_SYNC: Average value: 34.92, Quality: 82[0m
+[0;33mW (28309) EVENT_SYNC: ⏰ Worker 0: Barrier timeout![0m
+[0;32mI (28759) EVENT_SYNC: ✅ Approval granted (took 1461 ms)[0m
+[0;32mI (29249) EVENT_SYNC: ➡️ Stage 2: Data passed to next stage[0m
+[0;32mI (29249) EVENT_SYNC: 📦 Stage 3: Processing pipeline ID 6[0m
+[0;32mI (29249) EVENT_SYNC: ⏳ Stage 2: Waiting for input...[0m
+[0;32mI (29249) EVENT_SYNC: 📤 Stage 3: Data output and delivery[0m
+[0;32mI (29259) EVENT_SYNC: ✅ Pipeline 6 completed in 2830 ms (Quality: 82)[0m
+[0;32mI (30309) EVENT_SYNC: 👷 Worker 0: Cycle 3 - Independent work (2601 ms)[0m
+[0;32mI (30539) EVENT_SYNC: [0m
+📈 ═══ SYNCHRONIZATION STATISTICS ═══
+[0;32mI (30539) EVENT_SYNC: Barrier cycles:        0[0m
+[0;32mI (30539) EVENT_SYNC: Pipeline completions:  6[0m
+[0;32mI (30539) EVENT_SYNC: Workflow completions:  3[0m
+[0;32mI (30539) EVENT_SYNC: Max sync time:         9080 ms[0m
+[0;32mI (30549) EVENT_SYNC: Avg sync time:         6983 ms[0m
+[0;32mI (30549) EVENT_SYNC: Avg pipeline time:     3185 ms[0m
+[0;32mI (30559) EVENT_SYNC: Free heap:             268408 bytes[0m
+[0;32mI (30559) EVENT_SYNC: System uptime:         30306 ms[0m
+[0;32mI (30569) EVENT_SYNC: ═══════════════════════════════════════[0m
+
+[0;32mI (30579) EVENT_SYNC: 📊 Event Group Status:[0m
+[0;32mI (30579) EVENT_SYNC:   Barrier events:   0x0000000E[0m
+[0;32mI (30589) EVENT_SYNC:   Pipeline events:  0x00000000[0m
+[0;32mI (30589) EVENT_SYNC:   Workflow events:  0x00000007[0m
+[0;32mI (30599) EVENT_SYNC: ⏳ Stage 3: Waiting for input...[0m
+[0;33mW (31329) EVENT_SYNC: ⚠️ Workflow 5 quality check failed (75%), retrying...[0m
+[0;32mI (31329) EVENT_SYNC: 📝 New workflow: ID 5 - System Backup (Priority: 5)[0m
+[0;32mI (31329) EVENT_SYNC: ⏳ Waiting for workflow requirements (0x00000004)...[0m
+[0;32mI (31329) EVENT_SYNC: ✅ Workflow 5: Requirements met, starting execution[0m
+[0;32mI (31339) EVENT_SYNC: ⚙️ Executing workflow 5 (3512 ms estimated)[0m
+[0;32mI (32319) EVENT_SYNC: 🚀 Generating pipeline data ID: 7[0m
+[0;32mI (32319) EVENT_SYNC: 📦 Stage 0: Processing pipeline ID 7[0m
+[0;32mI (32319) EVENT_SYNC: 📥 Stage 0: Data input and validation[0m
+[0;32mI (32319) EVENT_SYNC: ✅ Pipeline data 7 injected[0m
+[0;33mW (32629) EVENT_SYNC: ⏰ Worker 3: Barrier timeout![0m
+[0;33mW (32739) EVENT_SYNC: ⏰ Worker 1: Barrier timeout![0m
+[0;32mI (32909) EVENT_SYNC: 🚧 Worker 0: Ready for barrier (cycle 3)[0m
+[0;32mI (32909) EVENT_SYNC: 🎯 Worker 2: Barrier passed! (waited 9930 ms)[0m
+[0;32mI (32909) EVENT_SYNC: 🤝 Worker 2: Synchronized work phase[0m
+[0;32mI (32929) EVENT_SYNC: 🟢 Resources available[0m
+[0;32mI (33339) EVENT_SYNC: ➡️ Stage 0: Data passed to next stage[0m
+[0;32mI (33339) EVENT_SYNC: 📦 Stage 1: Processing pipeline ID 7[0m
+[0;32mI (33339) EVENT_SYNC: ⏳ Stage 0: Waiting for input...[0m
+[0;32mI (33339) EVENT_SYNC: ⚙️ Stage 1: Data processing and transformation[0m
+[0;32mI (33759) EVENT_SYNC: 📋 Approval process initiated...[0m
+[0;32mI (33939) EVENT_SYNC: ➡️ Stage 1: Data passed to next stage[0m
+[0;32mI (33939) EVENT_SYNC: 📦 Stage 2: Processing pipeline ID 7[0m
+[0;32mI (33939) EVENT_SYNC: ⏳ Stage 1: Waiting for input...[0m
+[0;32mI (33939) EVENT_SYNC: 🔍 Stage 2: Data filtering and validation[0m
+[0;32mI (33949) EVENT_SYNC: Average value: 70.84, Quality: 82[0m
+[0;32mI (34629) EVENT_SYNC: 👷 Worker 3: Cycle 4 - Independent work (2403 ms)[0m
+[0;32mI (34739) EVENT_SYNC: 👷 Worker 1: Cycle 4 - Independent work (2265 ms)[0m
+[0;32mI (34859) EVENT_SYNC: ✅ Workflow 5 completed successfully (Quality: 86%)[0m
+[0;32mI (35199) EVENT_SYNC: ➡️ Stage 2: Data passed to next stage[0m
+[0;32mI (35199) EVENT_SYNC: 📦 Stage 3: Processing pipeline ID 7[0m
+[0;32mI (35199) EVENT_SYNC: ⏳ Stage 2: Waiting for input...[0m
+[0;32mI (35199) EVENT_SYNC: 📤 Stage 3: Data output and delivery[0m
+[0;32mI (35209) EVENT_SYNC: ✅ Pipeline 7 completed in 2890 ms (Quality: 82)[0m
+[0;32mI (35639) EVENT_SYNC: 🚀 Generated workflow: Performance Test (ID: 6, Priority: 4, Approval: Not Required)[0m
+[0;32mI (35639) EVENT_SYNC: 📝 New workflow: ID 6 - Performance Test (Priority: 4)[0m
+[0;32mI (35639) EVENT_SYNC: ⏳ Waiting for workflow requirements (0x00000004)...[0m
+[0;32mI (35649) EVENT_SYNC: ✅ Workflow 6: Requirements met, starting execution[0m
+[0;32mI (35649) EVENT_SYNC: ⚙️ Executing workflow 6 (3370 ms estimated)[0m
+[0;32mI (35769) EVENT_SYNC: 👷 Worker 2: Cycle 4 - Independent work (3915 ms)[0m
+[0;33mW (36059) EVENT_SYNC: ❌ Approval denied[0m
+[0;32mI (36159) EVENT_SYNC: ⏳ Stage 3: Waiting for input...[0m
+[0;32mI (36999) EVENT_SYNC: 🚧 Worker 1: Ready for barrier (cycle 4)[0m
+[0;32mI (37029) EVENT_SYNC: 🚧 Worker 3: Ready for barrier (cycle 4)[0m
+[0;32mI (37489) EVENT_SYNC: 🚀 Generating pipeline data ID: 8[0m
+[0;32mI (37489) EVENT_SYNC: 📦 Stage 0: Processing pipeline ID 8[0m
+[0;32mI (37489) EVENT_SYNC: 📥 Stage 0: Data input and validation[0m
+[0;32mI (37489) EVENT_SYNC: ✅ Pipeline data 8 injected[0m
+[0;32mI (38429) EVENT_SYNC: ➡️ Stage 0: Data passed to next stage[0m
+[0;32mI (38429) EVENT_SYNC: 📦 Stage 1: Processing pipeline ID 8[0m
+[0;32mI (38429) EVENT_SYNC: ⏳ Stage 0: Waiting for input...[0m
+[0;32mI (38429) EVENT_SYNC: ⚙️ Stage 1: Data processing and transformation[0m
+[0;32mI (38969) EVENT_SYNC: ➡️ Stage 1: Data passed to next stage[0m
+[0;32mI (38969) EVENT_SYNC: 📦 Stage 2: Processing pipeline ID 8[0m
+[0;32mI (38969) EVENT_SYNC: ⏳ Stage 1: Waiting for input...[0m
+[0;32mI (38969) EVENT_SYNC: 🔍 Stage 2: Data filtering and validation[0m
+[0;32mI (38979) EVENT_SYNC: Average value: 70.81, Quality: 74[0m
+[0;32mI (39029) EVENT_SYNC: ✅ Workflow 6 completed successfully (Quality: 86%)[0m
+[0;32mI (39679) EVENT_SYNC: 🚧 Worker 2: Ready for barrier (cycle 4)[0m
+[0;32mI (40259) EVENT_SYNC: ➡️ Stage 2: Data passed to next stage[0m
+[0;32mI (40259) EVENT_SYNC: 📦 Stage 3: Processing pipeline ID 8[0m
+[0;32mI (40259) EVENT_SYNC: ⏳ Stage 2: Waiting for input...[0m
+[0;32mI (40259) EVENT_SYNC: 📤 Stage 3: Data output and delivery[0m
+[0;32mI (40269) EVENT_SYNC: 🚀 Generated workflow: Security Scan (ID: 7, Priority: 3, Approval: Required)[0m
+[0;32mI (40269) EVENT_SYNC: ✅ Pipeline 8 completed in 2780 ms (Quality: 74)[0m
+[0;32mI (40279) EVENT_SYNC: 📝 New workflow: ID 7 - Security Scan (Priority: 3)[0m
+[0;32mI (40289) EVENT_SYNC: 📋 Workflow 7 requires approval[0m
+[0;32mI (40289) EVENT_SYNC: ⏳ Waiting for workflow requirements (0x00000006)...[0m
+[0;32mI (40599) EVENT_SYNC: 🚀 Generating pipeline data ID: 9[0m
+[0;32mI (40599) EVENT_SYNC: 📦 Stage 0: Processing pipeline ID 9[0m
+[0;32mI (40599) EVENT_SYNC: 📥 Stage 0: Data input and validation[0m
+[0;32mI (40599) EVENT_SYNC: ✅ Pipeline data 9 injected[0m
+[0;32mI (41059) EVENT_SYNC: 📋 Approval process initiated...[0m
+[0;32mI (41409) EVENT_SYNC: ⏳ Stage 3: Waiting for input...[0m
+[0;32mI (41449) EVENT_SYNC: 🔴 Resources temporarily unavailable[0m
+[0;32mI (41449) EVENT_SYNC: ⏳ Waiting for resources to become available...[0m
+[0;32mI (41629) EVENT_SYNC: ➡️ Stage 0: Data passed to next stage[0m
+[0;32mI (41629) EVENT_SYNC: 📦 Stage 1: Processing pipeline ID 9[0m
+[0;32mI (41629) EVENT_SYNC: ⏳ Stage 0: Waiting for input...[0m
+[0;32mI (41629) EVENT_SYNC: ⚙️ Stage 1: Data processing and transformation[0m
+[0;32mI (42579) EVENT_SYNC: ➡️ Stage 1: Data passed to next stage[0m
+[0;32mI (42579) EVENT_SYNC: 📦 Stage 2: Processing pipeline ID 9[0m
+[0;32mI (42579) EVENT_SYNC: ⏳ Stage 1: Waiting for input...[0m
+[0;32mI (42579) EVENT_SYNC: 🔍 Stage 2: Data filtering and validation[0m
+[0;32mI (42589) EVENT_SYNC: Average value: 62.97, Quality: 74[0m
+[0;33mW (42909) EVENT_SYNC: ⏰ Worker 0: Barrier timeout![0m
+[0;32mI (43129) EVENT_SYNC: ✅ Approval granted (took 2079 ms)[0m
+[0;32mI (43779) EVENT_SYNC: ➡️ Stage 2: Data passed to next stage[0m
+[0;32mI (43779) EVENT_SYNC: 📦 Stage 3: Processing pipeline ID 9[0m
+[0;32mI (43779) EVENT_SYNC: ⏳ Stage 2: Waiting for input...[0m
+[0;32mI (43779) EVENT_SYNC: 📤 Stage 3: Data output and delivery[0m
+[0;32mI (43789) EVENT_SYNC: ✅ Pipeline 9 completed in 3190 ms (Quality: 74)[0m
+[0;32mI (44659) EVENT_SYNC: ⏳ Stage 3: Waiting for input...[0m
+[0;32mI (44909) EVENT_SYNC: 👷 Worker 0: Cycle 4 - Independent work (1524 ms)[0m
+[0;32mI (45599) EVENT_SYNC: [0m
+📈 ═══ SYNCHRONIZATION STATISTICS ═══
+[0;32mI (45599) EVENT_SYNC: Barrier cycles:        0[0m
+[0;32mI (45599) EVENT_SYNC: Pipeline completions:  9[0m
+[0;32mI (45599) EVENT_SYNC: Workflow completions:  5[0m
+[0;32mI (45599) EVENT_SYNC: Max sync time:         9930 ms[0m
+[0;32mI (45609) EVENT_SYNC: Avg sync time:         8456 ms[0m
+[0;32mI (45609) EVENT_SYNC: Avg pipeline time:     3108 ms[0m
+[0;32mI (45619) EVENT_SYNC: Free heap:             268408 bytes[0m
+[0;32mI (45619) EVENT_SYNC: System uptime:         45366 ms[0m
+[0;32mI (45629) EVENT_SYNC: ═══════════════════════════════════════[0m
+
+[0;32mI (45639) EVENT_SYNC: 📊 Event Group Status:[0m
+[0;32mI (45639) EVENT_SYNC:   Barrier events:   0x0000000E[0m
+[0;32mI (45649) EVENT_SYNC:   Pipeline events:  0x00000000[0m
+[0;32mI (45649) EVENT_SYNC:   Workflow events:  0x00000003[0m
+[0;32mI (45709) EVENT_SYNC: 🚀 Generated workflow: Quality Analysis (ID: 8, Priority: 2, Approval: Not Required)[0m
+[0;32mI (46429) EVENT_SYNC: 🚧 Worker 0: Ready for barrier (cycle 4)[0m
+[0;32mI (46429) EVENT_SYNC: 🎯 Worker 3: Barrier passed! (waited 9400 ms)[0m
+[0;32mI (46429) EVENT_SYNC: 🎯 Worker 1: Barrier passed! (waited 9430 ms)[0m
+[0;32mI (46429) EVENT_SYNC: 🎯 Worker 2: Barrier passed! (waited 6750 ms)[0m
+[0;32mI (46429) EVENT_SYNC: 🤝 Worker 3: Synchronized work phase[0m
+[0;32mI (46429) EVENT_SYNC: 🤝 Worker 1: Synchronized work phase[0m
+[0;32mI (46439) EVENT_SYNC: 🤝 Worker 2: Synchronized work phase[0m
+[0;32mI (46889) EVENT_SYNC: 🚀 Generating pipeline data ID: 10[0m
+[0;32mI (46889) EVENT_SYNC: 📦 Stage 0: Processing pipeline ID 10[0m
+[0;32mI (46889) EVENT_SYNC: 📥 Stage 0: Data input and validation[0m
+[0;32mI (46889) EVENT_SYNC: ✅ Pipeline data 10 injected[0m
+[0;33mW (46969) EVENT_SYNC: ⏰ Workflow 7 timeout - requirements not met[0m
+[0;32mI (46969) EVENT_SYNC: 📝 New workflow: ID 8 - Quality Analysis (Priority: 2)[0m
+[0;32mI (46969) EVENT_SYNC: ⏳ Waiting for workflow requirements (0x00000004)...[0m
+[0;32mI (47779) EVENT_SYNC: 🟢 Resources recovered and available[0m
+[0;32mI (47779) EVENT_SYNC: ✅ Workflow 8: Requirements met, starting execution[0m
+[0;32mI (47779) EVENT_SYNC: 🟢 Resources available[0m
+[0;32mI (47779) EVENT_SYNC: ⚙️ Executing workflow 8 (3115 ms estimated)[0m
+[0;32mI (47799) EVENT_SYNC: ➡️ Stage 0: Data passed to next stage[0m
+[0;32mI (47799) EVENT_SYNC: 📦 Stage 1: Processing pipeline ID 10[0m
+[0;32mI (47799) EVENT_SYNC: ⏳ Stage 0: Waiting for input...[0m
+[0;32mI (47799) EVENT_SYNC: ⚙️ Stage 1: Data processing and transformation[0m
+[0;32mI (48129) EVENT_SYNC: 📋 Approval process initiated...[0m
+[0;32mI (49099) EVENT_SYNC: 👷 Worker 3: Cycle 5 - Independent work (1915 ms)[0m
+[0;32mI (49159) EVENT_SYNC: 👷 Worker 1: Cycle 5 - Independent work (2488 ms)[0m
+[0;32mI (49199) EVENT_SYNC: 👷 Worker 2: Cycle 5 - Independent work (2822 ms)[0m
+[0;32mI (49289) EVENT_SYNC: ➡️ Stage 1: Data passed to next stage[0m
+[0;32mI (49289) EVENT_SYNC: 📦 Stage 2: Processing pipeline ID 10[0m
+[0;32mI (49289) EVENT_SYNC: ⏳ Stage 1: Waiting for input...[0m
+[0;32mI (49289) EVENT_SYNC: 🔍 Stage 2: Data filtering and validation[0m
+[0;32mI (49299) EVENT_SYNC: Average value: 48.26, Quality: 89[0m
+[0;32mI (50329) EVENT_SYNC: ✅ Approval granted (took 2207 ms)[0m
+[0;32mI (50769) EVENT_SYNC: ➡️ Stage 2: Data passed to next stage[0m
+[0;32mI (50769) EVENT_SYNC: 📦 Stage 3: Processing pipeline ID 10[0m
+[0;32mI (50769) EVENT_SYNC: ⏳ Stage 2: Waiting for input...[0m
+[0;32mI (50769) EVENT_SYNC: 📤 Stage 3: Data output and delivery[0m
+[0;32mI (50779) EVENT_SYNC: ✅ Pipeline 10 completed in 3890 ms (Quality: 89)[0m
+[0;33mW (50899) EVENT_SYNC: ⚠️ Workflow 8 quality check failed (65%), retrying...[0m
+[0;32mI (50899) EVENT_SYNC: 📝 New workflow: ID 8 - Quality Analysis (Priority: 2)[0m
+[0;32mI (50899) EVENT_SYNC: ⏳ Waiting for workflow requirements (0x00000004)...[0m
+[0;32mI (50899) EVENT_SYNC: ✅ Workflow 8: Requirements met, starting execution[0m
+[0;32mI (50909) EVENT_SYNC: ⚙️ Executing workflow 8 (2989 ms estimated)[0m
+[0;32mI (51009) EVENT_SYNC: 🚧 Worker 3: Ready for barrier (cycle 5)[0m
+[0;32mI (51429) EVENT_SYNC: 🚀 Generating pipeline data ID: 11[0m
+[0;32mI (51429) EVENT_SYNC: 📦 Stage 0: Processing pipeline ID 11[0m
+[0;32mI (51429) EVENT_SYNC: 📥 Stage 0: Data input and validation[0m
+[0;32mI (51429) EVENT_SYNC: ✅ Pipeline data 11 injected[0m
+[0;32mI (51579) EVENT_SYNC: ⏳ Stage 3: Waiting for input...[0m
+[0;32mI (51639) EVENT_SYNC: 🚧 Worker 1: Ready for barrier (cycle 5)[0m
+[0;32mI (52019) EVENT_SYNC: 🚧 Worker 2: Ready for barrier (cycle 5)[0m
+[0;32mI (52749) EVENT_SYNC: ➡️ Stage 0: Data passed to next stage[0m
+[0;32mI (52749) EVENT_SYNC: 📦 Stage 1: Processing pipeline ID 11[0m
+[0;32mI (52749) EVENT_SYNC: ⏳ Stage 0: Waiting for input...[0m
+[0;32mI (52749) EVENT_SYNC: ⚙️ Stage 1: Data processing and transformation[0m
+[0;32mI (53369) EVENT_SYNC: 🟢 Resources available[0m
+[0;32mI (53739) EVENT_SYNC: 🚀 Generated workflow: System Backup (ID: 9, Priority: 3, Approval: Required)[0m
+[0;32mI (53749) EVENT_SYNC: ➡️ Stage 1: Data passed to next stage[0m
+[0;32mI (53749) EVENT_SYNC: 📦 Stage 2: Processing pipeline ID 11[0m
+[0;32mI (53749) EVENT_SYNC: ⏳ Stage 1: Waiting for input...[0m
+[0;32mI (53749) EVENT_SYNC: 🔍 Stage 2: Data filtering and validation[0m
+[0;32mI (53759) EVENT_SYNC: Average value: 49.64, Quality: 88[0m
+[0;32mI (53899) EVENT_SYNC: ✅ Workflow 8 completed successfully (Quality: 94%)[0m
+[0;32mI (53899) EVENT_SYNC: 📝 New workflow: ID 9 - System Backup (Priority: 3)[0m
+[0;32mI (53899) EVENT_SYNC: 📋 Workflow 9 requires approval[0m
+[0;32mI (53899) EVENT_SYNC: ⏳ Waiting for workflow requirements (0x00000006)...[0m
+[0;32mI (53909) EVENT_SYNC: ✅ Workflow 9: Requirements met, starting execution[0m
+[0;32mI (53919) EVENT_SYNC: ⚙️ Executing workflow 9 (3731 ms estimated)[0m
+[0;32mI (54669) EVENT_SYNC: ➡️ Stage 2: Data passed to next stage[0m
+[0;32mI (54669) EVENT_SYNC: 📦 Stage 3: Processing pipeline ID 11[0m
+[0;32mI (54669) EVENT_SYNC: ⏳ Stage 2: Waiting for input...[0m
+[0;32mI (54669) EVENT_SYNC: 📤 Stage 3: Data output and delivery[0m
+[0;32mI (54679) EVENT_SYNC: ✅ Pipeline 11 completed in 3250 ms (Quality: 88)[0m
+[0;32mI (55329) EVENT_SYNC: 📋 Approval process initiated...[0m
+[0;32mI (55919) EVENT_SYNC: 🚀 Generating pipeline data ID: 12[0m
+[0;32mI (55919) EVENT_SYNC: 📦 Stage 0: Processing pipeline ID 12[0m
+[0;32mI (55919) EVENT_SYNC: 📥 Stage 0: Data input and validation[0m
+[0;32mI (55919) EVENT_SYNC: ✅ Pipeline data 12 injected[0m
+[0;32mI (55969) EVENT_SYNC: ⏳ Stage 3: Waiting for input...[0m
+[0;33mW (56429) EVENT_SYNC: ⏰ Worker 0: Barrier timeout![0m
+[0;32mI (56949) EVENT_SYNC: 🔴 Resources temporarily unavailable[0m
+[0;32mI (56949) EVENT_SYNC: ⏳ Waiting for resources to become available...[0m
+[0;32mI (57219) EVENT_SYNC: ➡️ Stage 0: Data passed to next stage[0m
+[0;32mI (57219) EVENT_SYNC: 📦 Stage 1: Processing pipeline ID 12[0m
+[0;32mI (57219) EVENT_SYNC: ⏳ Stage 0: Waiting for input...[0m
+[0;32mI (57219) EVENT_SYNC: ⚙️ Stage 1: Data processing and transformation[0m
+[0;33mW (57649) EVENT_SYNC: ⚠️ Workflow 9 quality check failed (78%), retrying...[0m
+[0;32mI (57649) EVENT_SYNC: 📝 New workflow: ID 9 - System Backup (Priority: 3)[0m
+[0;32mI (57649) EVENT_SYNC: 📋 Workflow 9 requires approval[0m
+[0;32mI (57649) EVENT_SYNC: ⏳ Waiting for workflow requirements (0x00000006)...[0m
+[0;32mI (57769) EVENT_SYNC: ✅ Approval granted (took 2443 ms)[0m
+[0;32mI (58279) EVENT_SYNC: ➡️ Stage 1: Data passed to next stage[0m
+[0;32mI (58279) EVENT_SYNC: 📦 Stage 2: Processing pipeline ID 12[0m
+[0;32mI (58279) EVENT_SYNC: ⏳ Stage 1: Waiting for input...[0m
+[0;32mI (58279) EVENT_SYNC: 🔍 Stage 2: Data filtering and validation[0m
+[0;32mI (58289) EVENT_SYNC: Average value: 36.11, Quality: 107[0m
+[0;32mI (58319) EVENT_SYNC: 🚀 Generated workflow: Report Generation (ID: 10, Priority: 5, Approval: Not Required)[0m
+[0;32mI (58429) EVENT_SYNC: 👷 Worker 0: Cycle 5 - Independent work (1990 ms)[0m
+[0;32mI (59119) EVENT_SYNC: ➡️ Stage 2: Data passed to next stage[0m
+[0;32mI (59119) EVENT_SYNC: 📦 Stage 3: Processing pipeline ID 12[0m
+[0;32mI (59119) EVENT_SYNC: ⏳ Stage 2: Waiting for input...[0m
+[0;32mI (59119) EVENT_SYNC: 📤 Stage 3: Data output and delivery[0m
+[0;32mI (59129) EVENT_SYNC: ✅ Pipeline 12 completed in 3210 ms (Quality: 107)[0m
+[0;32mI (59669) EVENT_SYNC: ⏳ Stage 3: Waiting for input...[0m
+[0;32mI (60019) EVENT_SYNC: 🟢 Resources recovered and available[0m
+[0;32mI (60019) EVENT_SYNC: ✅ Workflow 9: Requirements met, starting execution[0m
+[0;32mI (60019) EVENT_SYNC: 🟢 Resources available[0m
+[0;32mI (60019) EVENT_SYNC: ⚙️ Executing workflow 9 (3545 ms estimated)[0m
+[0;32mI (60419) EVENT_SYNC: 🚧 Worker 0: Ready for barrier (cycle 5)[0m
+[0;32mI (60419) EVENT_SYNC: 🎯 Worker 1: Barrier passed! (waited 8780 ms)[0m
+[0;32mI (60419) EVENT_SYNC: 🎯 Worker 3: Barrier passed! (waited 9410 ms)[0m
+[0;32mI (60419) EVENT_SYNC: 🎯 Worker 2: Barrier passed! (waited 8400 ms)[0m
+[0;32mI (60419) EVENT_SYNC: 🤝 Worker 1: Synchronized work phase[0m
+[0;32mI (60419) EVENT_SYNC: 🤝 Worker 3: Synchronized work phase[0m
+[0;32mI (60429) EVENT_SYNC: 🤝 Worker 2: Synchronized work phase[0m
+[0;32mI (60519) EVENT_SYNC: 🚀 Generating pipeline data ID: 13[0m
+[0;32mI (60519) EVENT_SYNC: 📦 Stage 0: Processing pipeline ID 13[0m
+[0;32mI (60519) EVENT_SYNC: 📥 Stage 0: Data input and validation[0m
+[0;32mI (60519) EVENT_SYNC: ✅ Pipeline data 13 injected[0m
+[0;32mI (60659) EVENT_SYNC: [0m
+📈 ═══ SYNCHRONIZATION STATISTICS ═══
+[0;32mI (60659) EVENT_SYNC: Barrier cycles:        0[0m
+[0;32mI (60659) EVENT_SYNC: Pipeline completions:  12[0m
+[0;32mI (60659) EVENT_SYNC: Workflow completions:  6[0m
+[0;32mI (60659) EVENT_SYNC: Max sync time:         9930 ms[0m
+[0;32mI (60669) EVENT_SYNC: Avg sync time:         8645 ms[0m
+[0;32mI (60669) EVENT_SYNC: Avg pipeline time:     3193 ms[0m
+[0;32mI (60679) EVENT_SYNC: Free heap:             268408 bytes[0m
+[0;32mI (60679) EVENT_SYNC: System uptime:         60426 ms[0m
+[0;32mI (60689) EVENT_SYNC: ═══════════════════════════════════════[0m
+
+[0;32mI (60699) EVENT_SYNC: 📊 Event Group Status:[0m
+[0;32mI (60699) EVENT_SYNC:   Barrier events:   0x00000000[0m
+[0;32mI (60709) EVENT_SYNC:   Pipeline events:  0x00000000[0m
+[0;32mI (60709) EVENT_SYNC:   Workflow events:  0x00000007[0m
+[0;32mI (61729) EVENT_SYNC: ➡️ Stage 0: Data passed to next stage[0m
+[0;32mI (61729) EVENT_SYNC: 📦 Stage 1: Processing pipeline ID 13[0m
+[0;32mI (61729) EVENT_SYNC: ⏳ Stage 0: Waiting for input...[0m
+[0;32mI (61729) EVENT_SYNC: ⚙️ Stage 1: Data processing and transformation[0m
+[0;32mI (62769) EVENT_SYNC: 📋 Approval process initiated...[0m
+[0;32mI (62909) EVENT_SYNC: ➡️ Stage 1: Data passed to next stage[0m
+[0;32mI (62909) EVENT_SYNC: 📦 Stage 2: Processing pipeline ID 13[0m
+[0;32mI (62909) EVENT_SYNC: ⏳ Stage 1: Waiting for input...[0m
+[0;32mI (62909) EVENT_SYNC: 🔍 Stage 2: Data filtering and validation[0m
+[0;32mI (62919) EVENT_SYNC: Average value: 60.50, Quality: 92[0m
+[0;32mI (63109) EVENT_SYNC: 👷 Worker 3: Cycle 6 - Independent work (2530 ms)[0m
+[0;32mI (63229) EVENT_SYNC: 👷 Worker 1: Cycle 6 - Independent work (2088 ms)[0m
+[0;32mI (63239) EVENT_SYNC: 👷 Worker 2: Cycle 6 - Independent work (2163 ms)[0m
+[0;32mI (63569) EVENT_SYNC: ✅ Workflow 9 completed successfully (Quality: 81%)[0m
+[0;32mI (63569) EVENT_SYNC: 📝 New workflow: ID 10 - Report Generation (Priority: 5)[0m
+[0;32mI (63569) EVENT_SYNC: ⏳ Waiting for workflow requirements (0x00000004)...[0m
+[0;32mI (63569) EVENT_SYNC: ✅ Workflow 10: Requirements met, starting execution[0m
+[0;32mI (63579) EVENT_SYNC: ⚙️ Executing workflow 10 (5585 ms estimated)[0m
+[0;32mI (63609) EVENT_SYNC: ➡️ Stage 2: Data passed to next stage[0m
+[0;32mI (63609) EVENT_SYNC: 📦 Stage 3: Processing pipeline ID 13[0m
+[0;32mI (63609) EVENT_SYNC: ⏳ Stage 2: Waiting for input...[0m
+[0;32mI (63609) EVENT_SYNC: 📤 Stage 3: Data output and delivery[0m
+[0;32mI (63619) EVENT_SYNC: ✅ Pipeline 13 completed in 3100 ms (Quality: 92)[0m
+[0;32mI (63709) EVENT_SYNC: 🟢 Resources available[0m
+[0;32mI (64509) EVENT_SYNC: ⏳ Stage 3: Waiting for input...[0m
+[0;32mI (65079) EVENT_SYNC: ✅ Approval granted (took 2316 ms)[0m
+[0;32mI (65309) EVENT_SYNC: 🚧 Worker 1: Ready for barrier (cycle 6)[0m
+[0;32mI (65399) EVENT_SYNC: 🚧 Worker 2: Ready for barrier (cycle 6)[0m
+[0;32mI (65639) EVENT_SYNC: 🚧 Worker 3: Ready for barrier (cycle 6)[0m
+[0;32mI (65839) EVENT_SYNC: 🚀 Generated workflow: Security Scan (ID: 11, Priority: 5, Approval: Required)[0m
+[0;32mI (66129) EVENT_SYNC: 🚀 Generating pipeline data ID: 14[0m
+[0;32mI (66129) EVENT_SYNC: 📦 Stage 0: Processing pipeline ID 14[0m
+[0;32mI (66129) EVENT_SYNC: 📥 Stage 0: Data input and validation[0m
+[0;32mI (66129) EVENT_SYNC: ✅ Pipeline data 14 injected[0m
+[0;32mI (66949) EVENT_SYNC: ➡️ Stage 0: Data passed to next stage[0m
+[0;32mI (66949) EVENT_SYNC: 📦 Stage 1: Processing pipeline ID 14[0m
+[0;32mI (66949) EVENT_SYNC: ⏳ Stage 0: Waiting for input...[0m
+[0;32mI (66949) EVENT_SYNC: ⚙️ Stage 1: Data processing and transformation[0m
+[0;32mI (68069) EVENT_SYNC: ➡️ Stage 1: Data passed to next stage[0m
+[0;32mI (68069) EVENT_SYNC: 📦 Stage 2: Processing pipeline ID 14[0m
+[0;32mI (68069) EVENT_SYNC: ⏳ Stage 1: Waiting for input...[0m
+[0;32mI (68069) EVENT_SYNC: 🔍 Stage 2: Data filtering and validation[0m
+[0;32mI (68079) EVENT_SYNC: Average value: 53.02, Quality: 77[0m
+[0;32mI (69149) EVENT_SYNC: ➡️ Stage 2: Data passed to next stage[0m
+[0;32mI (69149) EVENT_SYNC: 📦 Stage 3: Processing pipeline ID 14[0m
+[0;32mI (69149) EVENT_SYNC: ⏳ Stage 2: Waiting for input...[0m
+[0;32mI (69149) EVENT_SYNC: 📤 Stage 3: Data output and delivery[0m
+[0;32mI (69159) EVENT_SYNC: ✅ Pipeline 14 completed in 3030 ms (Quality: 77)[0m
+[0;32mI (69169) EVENT_SYNC: ✅ Workflow 10 completed successfully (Quality: 87%)[0m
+[0;32mI (69169) EVENT_SYNC: 📝 New workflow: ID 11 - Security Scan (Priority: 5)[0m
+[0;32mI (69179) EVENT_SYNC: 📋 Workflow 11 requires approval[0m
+[0;32mI (69179) EVENT_SYNC: ⏳ Waiting for workflow requirements (0x00000006)...[0m
+[0;32mI (69189) EVENT_SYNC: ✅ Workflow 11: Requirements met, starting execution[0m
+[0;32mI (69189) EVENT_SYNC: ⚙️ Executing workflow 11 (4630 ms estimated)[0m
+[0;32mI (70079) EVENT_SYNC: 📋 Approval process initiated...[0m
+[0;32mI (70189) EVENT_SYNC: ⏳ Stage 3: Waiting for input...[0m
+[0;32mI (70319) EVENT_SYNC: 🚀 Generating pipeline data ID: 15[0m
+[0;32mI (70319) EVENT_SYNC: 📦 Stage 0: Processing pipeline ID 15[0m
+[0;32mI (70319) EVENT_SYNC: 📥 Stage 0: Data input and validation[0m
+[0;32mI (70319) EVENT_SYNC: ✅ Pipeline data 15 injected[0m
+[0;33mW (70419) EVENT_SYNC: ⏰ Worker 0: Barrier timeout![0m
+[0;32mI (70919) EVENT_SYNC: ➡️ Stage 0: Data passed to next stage[0m
+[0;32mI (70919) EVENT_SYNC: 📦 Stage 1: Processing pipeline ID 15[0m
+[0;32mI (70919) EVENT_SYNC: ⏳ Stage 0: Waiting for input...[0m
+[0;32mI (70919) EVENT_SYNC: ⚙️ Stage 1: Data processing and transformation[0m
+[0;32mI (71909) EVENT_SYNC: 🟢 Resources available[0m
+[0;32mI (72089) EVENT_SYNC: ➡️ Stage 1: Data passed to next stage[0m
+[0;32mI (72089) EVENT_SYNC: 📦 Stage 2: Processing pipeline ID 15[0m
+[0;32mI (72089) EVENT_SYNC: ⏳ Stage 1: Waiting for input...[0m
+[0;32mI (72089) EVENT_SYNC: 🔍 Stage 2: Data filtering and validation[0m
+[0;32mI (72099) EVENT_SYNC: Average value: 65.06, Quality: 76[0m
+[0;32mI (72419) EVENT_SYNC: 👷 Worker 0: Cycle 6 - Independent work (3028 ms)[0m
+[0;32mI (72799) EVENT_SYNC: ✅ Approval granted (took 2729 ms)[0m
+[0;32mI (73169) EVENT_SYNC: 🚀 Generated workflow: Quality Analysis (ID: 12, Priority: 5, Approval: Required)[0m
+[0;32mI (73229) EVENT_SYNC: ➡️ Stage 2: Data passed to next stage[0m
+[0;32mI (73229) EVENT_SYNC: 📦 Stage 3: Processing pipeline ID 15[0m
+[0;32mI (73229) EVENT_SYNC: ⏳ Stage 2: Waiting for input...[0m
+[0;32mI (73229) EVENT_SYNC: 📤 Stage 3: Data output and delivery[0m
+[0;32mI (73239) EVENT_SYNC: ✅ Pipeline 15 completed in 2920 ms (Quality: 76)[0m
+[0;32mI (73829) EVENT_SYNC: ✅ Workflow 11 completed successfully (Quality: 91%)[0m
+[0;32mI (73829) EVENT_SYNC: 📝 New workflow: ID 12 - Quality Analysis (Priority: 5)[0m
+[0;32mI (73829) EVENT_SYNC: 📋 Workflow 12 requires approval[0m
+[0;32mI (73829) EVENT_SYNC: ⏳ Waiting for workflow requirements (0x00000006)...[0m
+[0;32mI (73839) EVENT_SYNC: ✅ Workflow 12: Requirements met, starting execution[0m
+[0;32mI (73849) EVENT_SYNC: ⚙️ Executing workflow 12 (2689 ms estimated)[0m
+[0;32mI (74439) EVENT_SYNC: ⏳ Stage 3: Waiting for input...[0m
+[0;32mI (74859) EVENT_SYNC: 🚀 Generating pipeline data ID: 16[0m
+[0;32mI (74859) EVENT_SYNC: 📦 Stage 0: Processing pipeline ID 16[0m
+[0;32mI (74859) EVENT_SYNC: 📥 Stage 0: Data input and validation[0m
+[0;32mI (74859) EVENT_SYNC: ✅ Pipeline data 16 injected[0m
+[0;33mW (75309) EVENT_SYNC: ⏰ Worker 1: Barrier timeout![0m
+[0;33mW (75399) EVENT_SYNC: ⏰ Worker 2: Barrier timeout![0m
+[0;32mI (75439) EVENT_SYNC: 🚧 Worker 0: Ready for barrier (cycle 6)[0m
+[0;32mI (75439) EVENT_SYNC: 🎯 Worker 3: Barrier passed! (waited 9800 ms)[0m
+[0;32mI (75439) EVENT_SYNC: 🤝 Worker 3: Synchronized work phase[0m
+[0;32mI (75719) EVENT_SYNC: [0m
+📈 ═══ SYNCHRONIZATION STATISTICS ═══
+[0;32mI (75719) EVENT_SYNC: Barrier cycles:        0[0m
+[0;32mI (75719) EVENT_SYNC: Pipeline completions:  15[0m
+[0;32mI (75719) EVENT_SYNC: Workflow completions:  9[0m
+[0;32mI (75719) EVENT_SYNC: Max sync time:         9930 ms[0m
+[0;32mI (75729) EVENT_SYNC: Avg sync time:         9222 ms[0m
+[0;32mI (75729) EVENT_SYNC: Avg pipeline time:     3158 ms[0m
+[0;32mI (75739) EVENT_SYNC: Free heap:             268408 bytes[0m
+[0;32mI (75739) EVENT_SYNC: System uptime:         75486 ms[0m
+[0;32mI (75749) EVENT_SYNC: ═══════════════════════════════════════[0m
+
+[0;32mI (75759) EVENT_SYNC: 📊 Event Group Status:[0m
+[0;32mI (75759) EVENT_SYNC:   Barrier events:   0x00000000[0m
+[0;32mI (75769) EVENT_SYNC:   Pipeline events:  0x00000000[0m
+[0;32mI (75769) EVENT_SYNC:   Workflow events:  0x00000007[0m

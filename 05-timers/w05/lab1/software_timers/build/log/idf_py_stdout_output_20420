@@ -1,0 +1,182 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\User\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\STIC 1\Week-13-FreeRTOS_Worksheets\05-timers\w05\lab1\software_timers\build\software_timers.elf D:\STIC 1\Week-13-FreeRTOS_Worksheets\05-timers\w05\lab1\software_timers\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\User\esp\v5.5.1\esp-idf\tools\idf.py'
+Y�"%=5
+[0;32mI (41) bo�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 24 2025 22:08:44[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a5d0h ( 42448) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001a5f8 vaddr=3ffb0000 size=02408h (  9224) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001ca08 vaddr=40080000 size=03610h ( 13840) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1432ch ( 82732) map[0m
+[0;32mI (142) esp_image: segment 4: paddr=00034354 vaddr=40083610 size=0a200h ( 41472) load[0m
+[0;32mI (159) esp_image: segment 5: paddr=0003e55c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (166) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (166) boot: Disabling RNG early entropy source...[0m
+[0;32mI (177) cpu_start: Multicore app[0m
+[0;32mI (185) cpu_start: Pro cpu start user code[0m
+[0;32mI (185) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (185) app_init: Application information:[0m
+[0;32mI (185) app_init: Project name:     software_timers[0m
+[0;32mI (190) app_init: App version:      8e74e47[0m
+[0;32mI (194) app_init: Compile time:     Oct 24 2025 22:06:23[0m
+[0;32mI (199) app_init: ELF file SHA256:  a9ee17bae...[0m
+[0;32mI (203) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (207) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (211) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (215) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (219) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (225) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (230) heap_init: At 3FFB2E30 len 0002D1D0 (180 KiB): DRAM[0m
+[0;32mI (235) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (241) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (246) heap_init: At 4008D810 len 000127F0 (73 KiB): IRAM[0m
+[0;32mI (253) spi_flash: detected chip: generic[0m
+[0;32mI (255) spi_flash: flash io: dio[0m
+[0;33mW (258) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (271) main_task: Started on CPU0[0m
+[0;32mI (281) main_task: Calling app_main()[0m
+[0;32mI (281) SW_TIMERS_EXP2: Software Timers Lab (EXP2: Timer Configuration)[0m
+[0;32mI (281) SW_TIMERS_EXP2: FreeRTOS timers ENABLED[0m
+[0;32mI (281) SW_TIMERS_EXP2: Timer task priority : 1[0m
+[0;32mI (291) SW_TIMERS_EXP2: Timer queue length  : 10[0m
+[0;32mI (291) SW_TIMERS_EXP2: All timers created. Starting...[0m
+[0;33mW (301) SW_TIMERS_EXP2: Timer stress task started (will flood timer commands periodically)[0m
+[0;32mI (301) SW_TIMERS_EXP2: LED map: GPIO2=blink, GPIO4=heartbeat, GPIO5=status, GPIO18=oneshot[0m
+[0;32mI (311) SW_TIMERS_EXP2: Timer control task started[0m
+[0;32mI (311) SW_TIMERS_EXP2: NOTE: ตั้งค่าใน menuconfig เป็น PRIORITY=1, QUEUE_LEN=5 ตามโจทย์[0m
+[0;32mI (331) main_task: Returned from app_main()[0m
+[0;32mI (801) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #1 (LED ON)[0m
+[0;32mI (1301) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #2 (LED OFF)[0m
+[0;32mI (1801) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #3 (LED ON)[0m
+[0;32mI (2301) SW_TIMERS_EXP2: 💓 Heartbeat #1[0m
+[0;32mI (2601) SW_TIMERS_EXP2: 🔧 Change blink period -> 383ms[0m
+[0;32mI (2981) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #4 (LED OFF)[0m
+[0;32mI (3361) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #5 (LED ON)[0m
+[0;32mI (3741) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #6 (LED OFF)[0m
+[0;32mI (4121) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #7 (LED ON)[0m
+[0;32mI (4301) SW_TIMERS_EXP2: 💓 Heartbeat #2[0m
+[0;32mI (4601) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #8 (LED OFF)[0m
+[0;32mI (4881) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #9 (LED ON)[0m
+[0;32mI (5261) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #10 (LED OFF)[0m
+[0;32mI (5301) SW_TIMERS_EXP2: 📊 Status #1[0m
+[0;32mI (5501) SW_TIMERS_EXP2: ═══ TIMER STATS ═══[0m
+[0;32mI (5501) SW_TIMERS_EXP2: Blink: 10  Heartbeat: 2  Status: 1  OneShot: 0  Dynamic: 0[0m
+[0;32mI (5501) SW_TIMERS_EXP2: Timer states:[0m
+[0;32mI (5501) SW_TIMERS_EXP2:   Blink     : ACTIVE (Period 380 ms)[0m
+[0;32mI (5511) SW_TIMERS_EXP2:   Heartbeat : ACTIVE (Period 2000 ms)[0m
+[0;32mI (5511) SW_TIMERS_EXP2:   Status    : ACTIVE (Period 5000 ms)[0m
+[0;32mI (5521) SW_TIMERS_EXP2:   One-shot  : INACTIVE[0m
+[0;32mI (5641) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #11 (LED ON)[0m
+[0;32mI (6021) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #12 (LED OFF)[0m
+[0;32mI (6301) SW_TIMERS_EXP2: 💓 Heartbeat #3[0m
+[0;32mI (6601) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #13 (LED ON)[0m
+[0;32mI (6781) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #14 (LED OFF)[0m
+[0;32mI (7161) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #15 (LED ON)[0m
+[0;32mI (7541) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #16 (LED OFF)[0m
+[0;32mI (7921) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #17 (LED ON)[0m
+[0;32mI (8301) SW_TIMERS_EXP2: 💓 Heartbeat #4[0m
+[0;32mI (8601) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #18 (LED OFF)[0m
+[0;32mI (8681) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #19 (LED ON)[0m
+[0;32mI (9061) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #20 (LED OFF)[0m
+[0;32mI (9061) SW_TIMERS_EXP2: 🚀 Start One-shot (delay 3s)[0m
+[0;32mI (9441) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #21 (LED ON)[0m
+[0;32mI (9821) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #22 (LED OFF)[0m
+[0;32mI (10201) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #23 (LED ON)[0m
+[0;33mW (10301) SW_TIMERS_EXP2: 🚧 Flooding timer commands (no wait) ...[0m
+[0;33mW (10301) SW_TIMERS_EXP2: Stress batch done: sent=10, fail=50 (queue len=10, timer prio=1)[0m
+[0;32mI (10681) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #24 (LED OFF)[0m
+[0;32mI (11061) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #25 (LED ON)[0m
+[0;32mI (11441) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #26 (LED OFF)[0m
+[0;32mI (11821) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #27 (LED ON)[0m
+[0;32mI (12061) SW_TIMERS_EXP2: ⚡ One-shot #1[0m
+[0;32mI (12561) SW_TIMERS_EXP2: 🎲 Create Dynamic (period 3792ms)[0m
+[0;32mI (12561) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #28 (LED OFF)[0m
+[0;32mI (12561) SW_TIMERS_EXP2: 💓 Heartbeat #5[0m
+[0;32mI (12861) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #29 (LED ON)[0m
+[0;32mI (12961) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #30 (LED OFF)[0m
+[0;32mI (13341) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #31 (LED ON)[0m
+[0;32mI (13721) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #32 (LED OFF)[0m
+[0;32mI (14101) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #33 (LED ON)[0m
+[0;32mI (14301) SW_TIMERS_EXP2: 💓 Heartbeat #6[0m
+[0;32mI (14601) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #34 (LED OFF)[0m
+[0;32mI (14861) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #35 (LED ON)[0m
+[0;32mI (15241) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #36 (LED OFF)[0m
+[0;32mI (15301) SW_TIMERS_EXP2: 📊 Status #2[0m
+[0;32mI (15321) SW_TIMERS_EXP2: ⏸ stop heartbeat 5s[0m
+[0;32mI (15501) SW_TIMERS_EXP2: ═══ TIMER STATS ═══[0m
+[0;32mI (15501) SW_TIMERS_EXP2: Blink: 36  Heartbeat: 6  Status: 2  OneShot: 1  Dynamic: 0[0m
+[0;32mI (15501) SW_TIMERS_EXP2: Timer states:[0m
+[0;32mI (15501) SW_TIMERS_EXP2:   Blink     : ACTIVE (Period 380 ms)[0m
+[0;32mI (15511) SW_TIMERS_EXP2:   Heartbeat : ACTIVE (Period 2000 ms)[0m
+[0;32mI (15511) SW_TIMERS_EXP2:   Status    : ACTIVE (Period 5000 ms)[0m
+[0;32mI (15521) SW_TIMERS_EXP2:   One-shot  : INACTIVE[0m
+[0;32mI (15621) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #37 (LED ON)[0m
+[0;32mI (16001) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #38 (LED OFF)[0m
+[0;32mI (16351) SW_TIMERS_EXP2: 🌟 Dynamic #1[0m
+[0;32mI (16651) SW_TIMERS_EXP2: Dynamic deleted[0m
+[0;32mI (16651) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #39 (LED ON)[0m
+[0;32mI (16761) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #40 (LED OFF)[0m
+[0;32mI (16761) SW_TIMERS_EXP2: 🚀 Start One-shot (delay 3s)[0m
+[0;32mI (17141) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #41 (LED ON)[0m
+[0;32mI (17521) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #42 (LED OFF)[0m
+[0;32mI (17901) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #43 (LED ON)[0m
+[0;32mI (18281) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #44 (LED OFF)[0m
+[0;32mI (18661) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #45 (LED ON)[0m
+[0;32mI (19041) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #46 (LED OFF)[0m
+[0;32mI (19421) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #47 (LED ON)[0m
+[0;32mI (19761) SW_TIMERS_EXP2: ⚡ One-shot #2[0m
+[0;32mI (20261) SW_TIMERS_EXP2: 🎲 Create Dynamic (period 2470ms)[0m
+[0;32mI (20261) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #48 (LED OFF)[0m
+[0;32mI (20261) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #49 (LED ON)[0m
+[0;33mW (20301) SW_TIMERS_EXP2: 🚧 Flooding timer commands (no wait) ...[0m
+[0;33mW (20301) SW_TIMERS_EXP2: Stress batch done: sent=10, fail=50 (queue len=10, timer prio=1)[0m
+[0;32mI (20321) SW_TIMERS_EXP2: ▶ start heartbeat[0m
+[0;32mI (20681) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #50 (LED OFF)[0m
+[0;32mI (21061) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #51 (LED ON)[0m
+[0;32mI (21441) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #52 (LED OFF)[0m
+[0;32mI (21821) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #53 (LED ON)[0m
+[0;32mI (22201) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #54 (LED OFF)[0m
+[0;32mI (22321) SW_TIMERS_EXP2: 💓 Heartbeat #7[0m
+[0;32mI (22621) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #55 (LED ON)[0m
+[0;32mI (22731) SW_TIMERS_EXP2: 🌟 Dynamic #2[0m
+[0;32mI (23031) SW_TIMERS_EXP2: Dynamic deleted[0m
+[0;32mI (23031) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #56 (LED OFF)[0m
+[0;32mI (23341) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #57 (LED ON)[0m
+[0;32mI (23721) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #58 (LED OFF)[0m
+[0;32mI (24101) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #59 (LED ON)[0m
+[0;32mI (24321) SW_TIMERS_EXP2: 💓 Heartbeat #8[0m
+[0;32mI (24621) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #60 (LED OFF)[0m
+[0;32mI (24621) SW_TIMERS_EXP2: 🚀 Start One-shot (delay 3s)[0m
+[0;32mI (24861) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #61 (LED ON)[0m
+[0;32mI (25241) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #62 (LED OFF)[0m
+[0;32mI (25301) SW_TIMERS_EXP2: 📊 Status #3[0m
+[0;32mI (25501) SW_TIMERS_EXP2: ═══ TIMER STATS ═══[0m
+[0;32mI (25501) SW_TIMERS_EXP2: Blink: 62  Heartbeat: 8  Status: 3  OneShot: 2  Dynamic: 2[0m
+[0;32mI (25501) SW_TIMERS_EXP2: Timer states:[0m
+[0;32mI (25501) SW_TIMERS_EXP2:   Blink     : ACTIVE (Period 380 ms)[0m
+[0;32mI (25511) SW_TIMERS_EXP2:   Heartbeat : ACTIVE (Period 2000 ms)[0m
+[0;32mI (25511) SW_TIMERS_EXP2:   Status    : ACTIVE (Period 5000 ms)[0m
+[0;32mI (25521) SW_TIMERS_EXP2:   One-shot  : ACTIVE[0m
+[0;32mI (25621) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #63 (LED ON)[0m
+[0;32mI (26001) SW_TIMERS_EXP2: 💫 Blink Timer: Toggle #64 (LED OFF)[0m

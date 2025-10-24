@@ -1,0 +1,123 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\User\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\STIC 1\Week-13-FreeRTOS_Worksheets\05-timers\w05\lab2\timer_applications\build\timer_applications.elf D:\STIC 1\Week-13-FreeRTOS_Worksheets\05-timers\w05\lab2\timer_applications\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\User\esp\v5.5.1\esp-idf\tools\idf.py'
+$�"%=5
+[0;32mI (41) boot.esp32�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 24 2025 22:25:27[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0aedch ( 44764) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001af04 vaddr=3ffb0000 size=02438h (  9272) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d344 vaddr=40080000 size=02cd4h ( 11476) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=15c1ch ( 89116) map[0m
+[0;32mI (145) esp_image: segment 4: paddr=00035c44 vaddr=40082cd4 size=0ab1ch ( 43804) load[0m
+[0;32mI (162) esp_image: segment 5: paddr=00040768 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) app_init: Application information:[0m
+[0;32mI (189) app_init: Project name:     timer_applications[0m
+[0;32mI (194) app_init: App version:      8e74e47[0m
+[0;32mI (198) app_init: Compile time:     Oct 24 2025 22:24:56[0m
+[0;32mI (203) app_init: ELF file SHA256:  5ef6d7136...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2E70 len 0002D190 (180 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008D7F0 len 00012810 (74 KiB): IRAM[0m
+[0;32mI (257) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (274) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (282) main_task: Started on CPU0[0m
+[0;32mI (292) main_task: Calling app_main()[0m
+[0;32mI (292) TIMER_APPS_EXP2: ===== Timer Applications: EXP2 (Pattern Evolution) =====[0m
+[0;32mI (292) TIMER_APPS_EXP2: Hardware init OK (Sensor on GPIO36/ADC1_CH0)[0m
+[0;32mI (292) TIMER_APPS_EXP2: Queues created[0m
+[0;32mI (302) TIMER_APPS_EXP2: All timers created[0m
+[0;32mI (302) TIMER_APPS_EXP2: Starting timers & tasks...[0m
+[0;32mI (312) TIMER_APPS_EXP2: SensorProc started[0m
+[0;32mI (312) TIMER_APPS_EXP2: SysMonitor started[0m
+[0;32mI (312) TIMER_APPS_EXP2: 🚀 System Started[0m
+[0;32mI (322) TIMER_APPS_EXP2: 🎨 Pattern: OFF -> SLOW_BLINK[0m
+[0;32mI (322) TIMER_APPS_EXP2: Ready. Observe LEDs & logs.[0m
+[0;32mI (332) main_task: Returned from app_main()[0m
+[0;32mI (1322) TIMER_APPS_EXP2: 🌡️ Sensor: 23.12°C @ 1040ms[0m
+[0;32mI (2312) TIMER_APPS_EXP2: 🍖 Feed watchdog (1)[0m
+[0;32mI (3312) TIMER_APPS_EXP2: [0m
+══════ SYSTEM STATUS ══════
+[0;32mI (3312) TIMER_APPS_EXP2: Uptime: 3s[0m
+[0;32mI (3312) TIMER_APPS_EXP2: Health: ✅ OK[0m
+[0;32mI (3312) TIMER_APPS_EXP2: Watchdog Feeds: 1  Timeouts: 0[0m
+[0;32mI (3312) TIMER_APPS_EXP2: Pattern Changes: 1  Sensor Readings: 1[0m
+[0;32mI (3322) TIMER_APPS_EXP2: Current Pattern: 1[0m
+[0;32mI (3322) TIMER_APPS_EXP2: Timers: WD=ON  Feed=ON  Pat=ON  Sensor=ON[0m
+[0;32mI (3332) TIMER_APPS_EXP2: ═══════════════════════════[0m
+
+[0;32mI (3472) TIMER_APPS_EXP2: 🌡️ Sensor: 7.17°C @ 3190ms[0m
+[0;32mI (4312) TIMER_APPS_EXP2: 🍖 Feed watchdog (2)[0m
+[0;32mI (5482) TIMER_APPS_EXP2: 🌡️ Sensor: 6.78°C @ 5200ms[0m
+[0;32mI (6312) TIMER_APPS_EXP2: [0m
+══════ SYSTEM STATUS ══════
+[0;32mI (6312) TIMER_APPS_EXP2: Uptime: 6s[0m
+[0;32mI (6312) TIMER_APPS_EXP2: Health: ✅ OK[0m
+[0;32mI (6312) TIMER_APPS_EXP2: Watchdog Feeds: 2  Timeouts: 0[0m
+[0;32mI (6312) TIMER_APPS_EXP2: Pattern Changes: 1  Sensor Readings: 3[0m
+[0;32mI (6322) TIMER_APPS_EXP2: Current Pattern: 1[0m
+[0;32mI (6322) TIMER_APPS_EXP2: Timers: WD=ON  Feed=ON  Pat=ON  Sensor=ON[0m
+[0;32mI (6332) TIMER_APPS_EXP2: ═══════════════════════════[0m
+
+[0;32mI (6462) TIMER_APPS_EXP2: 🍖 Feed watchdog (3)[0m
+[0;32mI (7492) TIMER_APPS_EXP2: 🌡️ Sensor: 7.58°C @ 7210ms[0m
+[0;32mI (8312) TIMER_APPS_EXP2: 🍖 Feed watchdog (4)[0m
+[0;32mI (9312) TIMER_APPS_EXP2: [0m
+══════ SYSTEM STATUS ══════
+[0;32mI (9312) TIMER_APPS_EXP2: Uptime: 9s[0m
+[0;32mI (9312) TIMER_APPS_EXP2: Health: ✅ OK[0m
+[0;32mI (9312) TIMER_APPS_EXP2: Watchdog Feeds: 4  Timeouts: 0[0m
+[0;32mI (9312) TIMER_APPS_EXP2: Pattern Changes: 1  Sensor Readings: 4[0m
+[0;32mI (9322) TIMER_APPS_EXP2: Current Pattern: 1[0m
+[0;32mI (9322) TIMER_APPS_EXP2: Timers: WD=ON  Feed=ON  Pat=ON  Sensor=ON[0m
+[0;32mI (9332) TIMER_APPS_EXP2: ═══════════════════════════[0m
+
+[0;32mI (9502) TIMER_APPS_EXP2: 🌡️ Sensor: 7.02°C @ 9220ms[0m
+[0;32mI (10312) TIMER_APPS_EXP2: 🍖 Feed watchdog (5)[0m
+[0;32mI (11512) TIMER_APPS_EXP2: 🌡️ Sensor: 6.81°C @ 11230ms[0m
+[0;32mI (12312) TIMER_APPS_EXP2: [0m
+══════ SYSTEM STATUS ══════
+[0;32mI (12312) TIMER_APPS_EXP2: Uptime: 12s[0m
+[0;32mI (12312) TIMER_APPS_EXP2: Health: ✅ OK[0m
+[0;32mI (12312) TIMER_APPS_EXP2: Watchdog Feeds: 5  Timeouts: 0[0m
+[0;32mI (12312) TIMER_APPS_EXP2: Pattern Changes: 1  Sensor Readings: 6[0m
+[0;32mI (12322) TIMER_APPS_EXP2: Current Pattern: 1[0m
+[0;32mI (12322) TIMER_APPS_EXP2: Timers: WD=ON  Feed=ON  Pat=ON  Sensor=ON[0m
+[0;32mI (12332) TIMER_APPS_EXP2: ═══════════════════════════[0m
+
+[0;32mI (12462) TIMER_APPS_EXP2: 🍖 Feed watchdog (6)[0m
+[0;32mI (13522) TIMER_APPS_EXP2: 🌡️ Sensor: 7.05°C @ 13240ms[0m
