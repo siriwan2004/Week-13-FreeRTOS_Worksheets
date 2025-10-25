@@ -202,9 +202,9 @@ vTaskDelay(pdMS_TO_TICKS(100)); // ประมวลผลเร็วขึ้
 ### ตารางบันทึกผล
 | ทดลอง | Sender Rate | Receiver Rate | Queue Status | สังเกต |
 |-------|-------------|---------------|--------------|---------|
-| 1 | 2s | 1.5s | Normal | |
-| 2 | 0.5s | 1.5s | Full | |
-| 3 | 2s | 0.1s | Empty | |
+| 1 | 2s | 1.5s | Normal |ข้อความส่งและรับได้ต่อเนื่อง |
+| 2 | 0.5s | 1.5s | Full |Sender รอหรือ drop message |
+| 3 | 2s | 0.1s | Empty |Receiver รอ message ใหม่ |
 
 ### คำถามสำหรับการทดลอง
 1. เมื่อ Queue เต็ม การเรียก `xQueueSend` จะเกิดอะไรขึ้น?
