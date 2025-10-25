@@ -324,9 +324,9 @@ if (xSemaphoreTake(xBinarySemaphore, pdMS_TO_TICKS(3000)) == pdTRUE) {
 ### ตารางบันทึกผล
 | ทดลอง | Events Sent | Events Received | Timer Events | Button Presses | Efficiency |
 |-------|-------------|-----------------|--------------|----------------|------------|
-| 1 (Normal) | | | | | |
-| 2 (Multiple Give) | | | | | |
-| 3 (Short Timeout) | | | | | |
+| 1 (Normal) | 14| | 13|3 |3 |92.9 |
+| 2 (Multiple Give) |95 |95 |40 |5 |100 |
+| 3 (Short Timeout) |18 | 18| 5|4 |100 |
 
 ### คำถามสำหรับการทดลоง
 1. เมื่อ give semaphore หลายครั้งติดต่อกัน จะเกิดอะไรขึ้น?
