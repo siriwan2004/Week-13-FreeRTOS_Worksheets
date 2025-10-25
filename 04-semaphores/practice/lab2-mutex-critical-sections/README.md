@@ -413,17 +413,18 @@ Task ที่มี priority สูงกว่า จะได้สิทธ�
 ## 📋 สรุปผลการทดลอง
 
 ### สิ่งที่เรียนรู้:
-- [ ] หลักการทำงานของ Mutex
-- [ ] การป้องกัน Race Condition
-- [ ] Priority Inheritance Mechanism
-- [ ] การตรวจจับ Data Corruption
-- [ ] Critical Section Management
+- [/] หลักการทำงานของ Mutex
+- [/] การป้องกัน Race Condition
+- [/] Priority Inheritance Mechanism
+- [/] การตรวจจับ Data Corruption
+- [/] Critical Section Management
 
 ### APIs ที่ใช้:
 - `xSemaphoreCreateMutex()` - สร้าง Mutex
 - `xSemaphoreTake()` - ขอ Mutex (เข้า critical section)
 - `xSemaphoreGive()` - คืน Mutex (ออกจาก critical section)
 - `uxSemaphoreGetCount()` - ตรวจสอบสถานะ Mutex
+
 
 ### ความแตกต่าง Mutex vs Binary Semaphore:
 | คุณสมบัติ | Mutex | Binary Semaphore |
