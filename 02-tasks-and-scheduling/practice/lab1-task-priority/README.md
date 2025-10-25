@@ -366,10 +366,46 @@ xTaskCreatePinnedToCore(low_priority_task, "LowPrio", 3072, NULL, 1, NULL, 1);  
 ## คำถามสำหรับวิเคราะห์
 
 1. Priority ไหนทำงานมากที่สุด? เพราะอะไร?
+
+High (5) ทำงานมากสุด เพราะ preemptive, priority-based scheduler ของ FreeRTOS จะจัดคิวให้ งานที่มี priority สูงสุดที่อยู่ในสถานะ Ready ได้ CPU ก่อนเสมอ เมื่อ High พร้อมรัน จะ ขัดจังหวะ (preempt) งานที่ต่ำกว่า
+
 2. เกิด Priority Inversion หรือไม่? จะแก้ไขได้อย่างไร?
+
+ในเดโมที่ใช้ shared_resource_busy แบบแฟลกธรรมดา อาจเกิดได้: Low จับทรัพยากร—High ต้องรอ—ถ้ามี Medium แทรก High จะยิ่งรอ (inversion)
+
 3. Tasks ที่มี priority เดียวกันทำงานอย่างไร?
+
+Round-Robin (time slicing) สลับกันรันตาม tick หาก configUSE_TIME_SLICING=1 (ค่าปกติใน ESP-IDF) และ task ทั้งคู่ Ready
+
+ถ้า task ไม่ vTaskDelay() หรือไม่บล็อกเลย ก็ยังถูกสลับโดย time slice แต่จะ กิน CPU ต่อเนื่องภายใน slice นั้น
+
+ทำให้เห็น log/LED ของ tasks เท่า priority สลับกัน อย่างเป็นจังหวะ
+
 4. การเปลี่ยน Priority แบบ dynamic ส่งผลอย่างไร?
+
+การ เพิ่ม priority ให้ task หนึ่ง จะทำให้มัน แซงคิว และอาจไป แย่ง CPU จากงานอื่น—ตอบสนองเร็วขึ้นแต่เสี่ยง starve งานต่ำกว่า
+
+การ ลด priority จะทำให้ task นั้นถูกรันน้อยลงเมื่อมีงานสูงกว่าพร้อมรัน
+
+ใช้อย่างระวัง: เปลี่ยนเฉพาะช่วงที่ต้องการ “boost” สั้น ๆ แล้ว restore กลับตามเดิม
+
 5. CPU utilization ของแต่ละ priority เป็นอย่างไร?
+
+โดยพฤติกรรมคาดหวังตามโค้ด:
+
+High (5): มากสุด (เช่น ~40–50%) เพราะพร้อมรันถี่ + preempt งานอื่น
+
+Medium (3): ปานกลาง (เช่น ~25–35%) ถูก High แย่งบ่อย
+
+Low (1): น้อยสุด (เช่น ~15–25%) ได้รันเมื่อไม่มีงานสูงกว่า Ready
+
+การวัดจริงที่แนะนำ: เปิด Run-Time Stats แล้วเรียก
+
+vTaskGetRunTimeStats() เพื่อดู % เวลา/Task
+
+vTaskList() เพื่อดูสถานะ/สแตก
+
+ตั้งค่าใน menuconfig → Component config → FreeRTOS → Run time stats (เลือกแหล่ง clock และเปิดเก็บสถิติ)
 
 ## ผลการทดลองที่คาดหวัง
 

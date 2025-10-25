@@ -271,9 +271,13 @@ void demonstrate_problems(void)
 - สังเกตการแสดงสถิติทุก 20 context switches
 - บันทึกค่า CPU utilization และ overhead
 
+ค่า time slice ที่เหมาะสมคือ 50–100 ms เพราะให้สมดุลระหว่างประสิทธิภาพและความต่อเนื่องของงาน
+
 ### 2. การทดสอบ Time Slice ต่างๆ
 - ทดสอบ time slice: 10ms, 25ms, 50ms, 100ms, 200ms
 - เปรียบเทียบประสิทธิภาพ
+
+Time slice ที่ สั้นเกินไป ทำให้ CPU สูญเวลาในการสลับงานมาก ส่วนที่ ยาวเกินไป ทำให้ responsiveness ลดลง
 
 ### 3. การสังเกต LED Pattern
 - LED1: Sensor task (งานเบา)
@@ -281,13 +285,39 @@ void demonstrate_problems(void)
 - LED3: Actuator task (งานปานกลาง)
 - LED4: Display task (งานเบา)
 
+เมื่อใช้ Logic Analyzer / Oscilloscope จะเห็นช่วงเวลา ON-OFF ของ LED แต่ละดวง แบ่งสลับกันตาม time slice ชัดเจน
+
 ## คำถามสำหรับวิเคราะห์
 
 1. Time slice ขนาดไหนให้ประสิทธิภาพดีที่สุด? เพราะอะไร?
+
+โดยทั่วไป 50–100 ms ให้สมดุลดีระหว่าง ความต่อเนื่องของงานยาว กับ ความไวในการสลับงาน
+
+สั้นเกินไป → สลับบ่อยเกิน จำเจอ Overhead สูง, ยาวเกินไป → งานสั้นรอเก้อ/งานโต้ตอบช้า
+
 2. ปัญหาอะไรที่เกิดขึ้นเมื่อ time slice สั้นเกินไป?
+
+Context switching overhead สูง, throughput ลด, log/LED กระพริบ “ถี่แต่กระตุก”, งานหนักขาด momentum
+
 3. ปัญหาอะไรที่เกิดขึ้นเมื่อ time slice ยาวเกินไป?
+
+Latency สูง สำหรับงานที่ต้องโต้ตอบเร็ว (เช่น display/update/ปุ่ม) และ งานสั้นเสียเวลารอ ทำให้ responsiveness แย่
+
 4. Context switching overhead คิดเป็นกี่เปอร์เซ็นต์ของเวลาทั้งหมด?
+
+จากการทดลองตัวอย่าง (คาดหวัง)
+
+10 ms: overhead ~25–30%
+
+50 ms: overhead ~10–15%
+
+100 ms: overhead ~5–10%
+
 5. งานไหนที่ได้รับผลกระทบมากที่สุดจากการ time-sharing?
+
+งานประมวลผลหนัก (Processing) สูญเสียประสิทธิภาพมากสุดเมื่อ slice สั้น (ถูกตัดบ่อย)
+
+งานโต้ตอบเร็ว (เช่น Display/Actuator เบา ๆ) จะเสียเมื่อ slice ยาว (รอคิว)
 
 ## ผลการทดลองที่คาดหวัง
 
@@ -297,7 +327,7 @@ void demonstrate_problems(void)
 | 50ms       | 20                  | 85-90%          | 10-15%   |
 | 100ms      | 10                  | 90-95%          | 5-10%    |
 
-## บทสรุร
+## บทสรุป
 
 การทดลองนี้แสดงให้เห็นถึง:
 1. **Context Switching Overhead** - เวลาที่สููญเสียในการเปลี่ยน task

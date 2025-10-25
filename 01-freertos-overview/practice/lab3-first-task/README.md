@@ -407,20 +407,48 @@ ESP_LOGI(TAG, "Task state: %s", state_names[state]);
 
 ## Checklist การทำงาน
 
-- [ ] สร้าง Task พื้นฐานสำเร็จ
-- [ ] เข้าใจ Task parameters และ return values
-- [ ] ทดสอบ Task priorities
-- [ ] ใช้ Task management APIs (suspend/resume)
-- [ ] แสดง runtime statistics
-- [ ] ทำแบบฝึกหัดครบ
+- [/] สร้าง Task พื้นฐานสำเร็จ
+- [/] เข้าใจ Task parameters และ return values
+- [/] ทดสอบ Task priorities
+- [/] ใช้ Task management APIs (suspend/resume)
+- [/] แสดง runtime statistics
+- [/] ทำแบบฝึกหัดครบ
 
 ## คำถามทบทวน
 
 1. เหตุใด Task function ต้องมี infinite loop?
+
+Task ของ FreeRTOS ต้อง คงอยู่และทำงานซ้ำ จนกว่าจะถูกลบเอง (vTaskDelete(NULL)) หรือถูกลบโดยตัวอื่น
+
+ถ้า task return ออก ฟังก์ชันจะจบและ task ถูกทำลายทันที → งานไม่ทำต่อ
+
+ในลูปควรมี vTaskDelay()/vTaskDelayUntil() เพื่อ ยอม CPU ให้ task อื่นรัน
+
 2. ความหมายของ stack size ใน xTaskCreate() คืออะไร?
+
+พารามิเตอร์ stack depth ของ FreeRTOS คือ จำนวนคำ (words) ไม่ใช่ไบต์
+
+บน ESP32: 1 word = 4 ไบต์ → เช่น 2048 = ~8192 ไบต์
+
+ใช้สำหรับเก็บ ตัวแปรท้องถิ่น, call stack, context ของ task นั้น ๆ
+
 3. ความแตกต่างระหว่าง vTaskDelay() และ vTaskDelayUntil()?
+
+vTaskDelay(t) = หน่วงแบบสัมพัทธ์ จากเวลาที่เรียก (อาจเกิด drift สะสม)
+
+vTaskDelayUntil(&last, period) = หน่วงแบบสัมบูรณ์/คาบคงที่ รักษาอัตรา (anti-drift) เหมาะกับงาน periodic
+
 4. การใช้ vTaskDelete(NULL) vs vTaskDelete(handle) ต่างกันอย่างไร?
+
+vTaskDelete(NULL) = ให้ task ปัจจุบันลบตัวเอง
+
+vTaskDelete(handle) = ลบ task อื่น ที่มี handle นั้น (ต้องแน่ใจว่า handle ยัง valid และจัดการทรัพยากรก่อน)
+
 5. Priority 0 กับ Priority 24 อันไหนสูงกว่า?
+
+ตัวเลขมากกว่า = Priority สูงกว่า
+
+ดังนั้น 24 สูงกว่า 0 (บน ESP32 ค่าปกติ configMAX_PRIORITIES มัก = 25 → ช่วง 0…24)
 
 ## บทสรุป
 
